@@ -1,18 +1,21 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "我的笔记",
   description: "My Notes Site",
-  base: '/notes/',
+  base: "/notes/",
+  // head: [
+  //   ['link', { rel: 'icon', href: '/notes/favicon.ico' }]
+  // ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '主页', link: '/' },
-      { text: '笔记', link: '/notes/money' },
-      { text: '技术文档', link: '/dev/directory' },
-      { text: '日记', link: '/diary/2024-01-18' },
-      { text: '好用工具', link: '/tools/life' },
+      { text: "主页", link: "/" },
+      { text: "笔记", link: "/notes/money", activeMatch: "/notes/" },
+      { text: "技术文档", link: "/dev/directory", activeMatch: "/dev/" },
+      { text: "日记", link: "/diary/2024-01-18", activeMatch: "/diary/" },
+      { text: "好用工具", link: "/tools/life", activeMatch: "/life/" },
     ],
 
     sidebar: {
@@ -38,6 +41,21 @@ export default defineConfig({
                 { text: "Vue", link: "/dev/language-vue" },
               ],
             },
+            {
+              text: "教程（tutorials）",
+              collapsed: true,
+              items: [
+                {
+                  text: "GitHub",
+                  items: [
+                    {
+                      text: "GitHub Pages",
+                    },
+                  ],
+                },
+                { text: "其它", link: "" },
+              ],
+            },
           ],
         },
       ],
@@ -45,7 +63,7 @@ export default defineConfig({
         {
           text: "钱",
           link: "/notes/money",
-        }
+        },
       ],
       "/tools/": [
         {
@@ -65,9 +83,7 @@ export default defineConfig({
       ],
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/liudid' }
-    ],
+    socialLinks: [{ icon: "github", link: "https://github.com/liudid" }],
 
     search: {
       provider: "local",
@@ -95,5 +111,5 @@ export default defineConfig({
       prev: "上一页",
       next: "下一页",
     },
-  }
-})
+  },
+});

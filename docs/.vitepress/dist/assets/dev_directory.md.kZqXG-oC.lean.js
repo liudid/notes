@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,V as e}from"./chunks/framework.PfYlUHt8.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"dev/directory.md","filePath":"dev/directory.md"}'),p={name:"dev/directory.md"},i=e("",2),l=[i];function c(t,r,d,o,b,m){return a(),n("div",null,l)}const _=s(p,[["render",c]]);export{h as __pageData,_ as default};
