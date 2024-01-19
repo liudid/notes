@@ -9,5 +9,5 @@ hero:
   actions:
     - theme: brand
       text: 进入
-      link: /dev/directory
+      link: /zh/dev/directory
 ---
