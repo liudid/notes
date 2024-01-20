@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: "我的笔记"
-  text: "笔记地点"
-  tagline: 记点东西!
+  name: "My Notes"
+  text: "Notes Site"
+  tagline: Take notes!
   actions:
     - theme: brand
-      text: 进入
+      text: Go
       link: /zh/tools/life
 ---

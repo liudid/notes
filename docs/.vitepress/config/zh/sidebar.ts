@@ -79,5 +79,9 @@ function sidebarTools(): DefaultTheme.SidebarItem[] {
       text: "开发工具",
       link: "/zh/tools/dev",
     },
+    {
+      text: "Open-Source Library",
+      link: "/zh/tools/open",
+    },
   ];
 }
