@@ -9,7 +9,7 @@ hero:
   text:     ✏️
   tagline: 一个记笔记的地方 🛠️
   image:
-    src: /img/home.png
+    src: /home.png
     alt: 江初鸭
   actions:
     - theme: brand
