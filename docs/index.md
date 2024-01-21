@@ -1,4 +1,5 @@
 ---
+# frontmatter - 元数据
 layout: home
 
 title: 江初鸭
@@ -6,7 +7,7 @@ titleTemplate: 一个记笔记的地方
 
 hero:
   name: 江初鸭
-  text:     ✏️
+  text: ✏️
   tagline: 一个记笔记的地方 🛠️
   image:
     src: /home.png
@@ -35,3 +36,28 @@ features:
 ---
 
 
+<script setup>
+// 在 Markdown 使用 Vue
+import { useData, useRoute, useRouter } from 'vitepress'
+import { ref } from 'vue'
+
+const router = useRouter()
+
+function onButtonClick(){
+  router.go('/notes/zh/emoji/')
+}
+const count = ref(0)
+</script>
+
+<!-- ## Markdown Content
+
+The count is: {{ count }}
+
+<button :class="$style.button" @click="onButtonClick">Increment</button> -->
+
+<style module>
+.button {
+  color: red;
+  font-weight: bold;
+}
+</style>
