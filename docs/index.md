@@ -13,11 +13,11 @@ hero:
     alt: 江初鸭
   actions:
     - theme: brand
-      text: 开始
-      link: /guide/
-    # - theme: alt
-    #   text: 在 GitHub 上查看
-    #   link: https://github.com/liudid
+      text: Go
+      link: /zh/tools/life
+    - theme: alt
+      text: 在 GitHub 上查看
+      link: https://github.com/liudid
 
 features:
   - icon: ☕️
@@ -33,3 +33,5 @@ features:
     details: 各种好用工具 🔧
     link: "/zh/tools/life"
 ---
+
+
