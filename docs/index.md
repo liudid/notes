@@ -6,7 +6,7 @@ titleTemplate: 一个记笔记的地方
 
 hero:
   name: 江初鸭
-  # text: ~~~
+  text:     ✏️
   tagline: 一个记笔记的地方 🛠️
   image:
     src: /img/home.png
