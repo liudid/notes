@@ -15,9 +15,9 @@ hero:
     - theme: brand
       text: 开始
       link: /guide/
-    - theme: alt
-      text: 在 GitHub 上查看
-      link: https://github.com/liudid
+    # - theme: alt
+    #   text: 在 GitHub 上查看
+    #   link: https://github.com/liudid
 
 features:
   - icon: ☕️

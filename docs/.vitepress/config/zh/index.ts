@@ -3,7 +3,7 @@ import { getNav } from "./nav";
 import { getSidebar } from "./sidebar";
 export const zh = defineConfig({
   lang: "zh-Hans",
-  title: "我的笔记",
+  title: "江初鸭",
   description: "我的笔记站点",
   themeConfig: {
     nav: getNav(),
