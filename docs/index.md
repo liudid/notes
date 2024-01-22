@@ -36,28 +36,51 @@ features:
 ---
 
 
-<script setup>
+<script setup lang="ts">
 // 在 Markdown 使用 Vue
 import { useData, useRoute, useRouter } from 'vitepress'
 import { ref } from 'vue'
+import { ElMessage } from 'element-plus'
 
 const router = useRouter()
+const route = useRoute()
+
+const dialogVisible = ref(false)
+const password = ref('')
 
 function onButtonClick(){
+  if(password.value !== '123456.'){
+    return ElMessage({
+      showClose: true,
+      message: 'The password is incorrect.',
+      type: 'error',
+    })
+  }
+  ElMessage({
+    showClose: true,
+    message: '登录成功.',
+    type: 'success',
+  })
+  dialogVisible.value = false
   router.go('/notes/zh/emoji/')
 }
-const count = ref(0)
+
 </script>
 
-<!-- ## Markdown Content
-
-The count is: {{ count }}
-
-<button :class="$style.button" @click="onButtonClick">Increment</button> -->
+<el-dialog v-model="dialogVisible" title="Account" width="30%" draggable>
+    <el-input v-model="password" />
+    <template #footer>
+     <el-button type="primary" @click="onButtonClick">
+        Go
+      </el-button>
+    </template>
+  </el-dialog>
+<el-button :class="$style.button" type="primary" plain @click="dialogVisible = true">Login</el-button>
 
 <style module>
 .button {
-  color: red;
-  font-weight: bold;
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
 </style>

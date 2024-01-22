@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+
 export const shared = defineConfig({
   base: "/notes/",
   head: [

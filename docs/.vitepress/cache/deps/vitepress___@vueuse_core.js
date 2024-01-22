@@ -1,7 +1,7 @@
 import {
   Fragment,
   TransitionGroup,
-  computed,
+  computed2 as computed,
   customRef,
   defineComponent,
   effectScope,
@@ -33,7 +33,8 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-3YS4HNIT.js";
+} from "./chunk-UTXOFFT5.js";
+import "./chunk-LQ2VYIYD.js";
 
 // node_modules/@vueuse/shared/node_modules/vue-demi/lib/index.mjs
 var isVue2 = false;
