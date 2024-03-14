@@ -5,6 +5,7 @@ export function getSidebar(): DefaultTheme.Sidebar {
     "/zh/dev/": sidebarDev(),
     "/zh/diary/": sidebarDiary(),
     "/zh/tools/": sidebarTools(),
+    "/zh/english/": sidebarEnglish(),
   };
 }
 
@@ -84,4 +85,13 @@ function sidebarTools(): DefaultTheme.SidebarItem[] {
       link: "/zh/tools/open",
     },
   ];
+}
+
+function sidebarEnglish():DefaultTheme.SidebarItem[]{
+  return [
+    {
+      text:'MiddleSchoolWords-1500',
+      link: "/zh/english/middle-school-words",
+    }
+  ]
 }
