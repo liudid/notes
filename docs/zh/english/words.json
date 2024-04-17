@@ -2,7 +2,7 @@
   "words": [
     {
       "word": "view",
-      "definition": ["n. 看；看法，观点"],
+      "definitions": ["n. 看；看法，观点"],
       "compose": {
         "prefix": "",
         "root": "",
@@ -29,7 +29,7 @@
     },
     {
       "word": "review",
-      "definition": ["n. 审查，检查", "v. 回顾，复习"],
+      "definitions": ["n. 审查，检查", "v. 回顾，复习"],
       "compose": {
         "prefix": "re",
         "root": "",

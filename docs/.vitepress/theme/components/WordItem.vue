@@ -31,7 +31,7 @@
           </div>
           <div>
             <el-tag
-              v-for="item in props.definition"
+              v-for="item in props.definitions"
               :key="item"
               type="info"
               effect="light"
@@ -67,7 +67,7 @@ const props = defineProps({
     required: true,
   },
   // 释义
-  definition: {
+  definitions: {
     type: Array,
     required: true,
   },

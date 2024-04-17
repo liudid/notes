@@ -3,12 +3,14 @@
         <WordItem
             :number="index+1" 
             :word="item.word"
-            :definition="item.definition"
+            :definitions="item.definitions"
             :compose="item.compose" 
             :examples="item.examples">
         </WordItem>
       </el-collapse-item>
     </el-collapse>
+
+    
     
 <script setup>
 import { reactive } from 'vue'
