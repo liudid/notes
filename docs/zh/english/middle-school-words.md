@@ -1,8 +1,9 @@
    <el-collapse>
-      <el-collapse-item v-for="(item,index) in words" :title="item.word" :name="index" :key="index">
+      <el-collapse-item v-for="(item,index) in words" :title="`${index+1}-${item.word}`" :name="index" :key="index">
         <WordItem
             :number="index+1" 
-            :word="item.word" 
+            :word="item.word"
+            :definition="item.definition"
             :compose="item.compose" 
             :examples="item.examples">
         </WordItem>
@@ -12,7 +13,6 @@
 <script setup>
 import { reactive } from 'vue'
 import { words } from './words.json'
-console.log(words)
 
 </script>
 

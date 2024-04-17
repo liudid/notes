@@ -3,25 +3,41 @@
     <el-card>
       <template #header>
         <div class="card__header">
-          <div>
-            <span>(1). </span>&nbsp;
-            <span>{{ props.word }}</span>
+          <div class="card__title">
+            <div>
+              <span>({{ props.number }}). </span>&nbsp;
+              <span>{{ props.word }}</span>
+            </div>
+            <div>
+              <div class="compose" v-if="props.compose">
+                <span class="compose__item" v-if="props?.compose?.prefix">
+                  <el-tag type="danger">Prefix</el-tag>
+                  -<span class="compose--prefix">{{
+                    props.compose.prefix
+                  }}</span>
+                </span>
+                <span class="compose__item" v-if="props?.compose?.root">
+                  <el-tag type="primary">Root</el-tag>
+                  -<span class="compose--root">{{ props.compose.root }}</span>
+                </span>
+                <span class="compose__item" v-if="props?.compose?.suffix">
+                  <el-tag type="warning">Suffix</el-tag>
+                  -<span class="compose--suffix">{{
+                    props.compose.suffix
+                  }}</span>
+                </span>
+              </div>
+            </div>
           </div>
           <div>
-            <div class="compose" v-if="props.compose">
-              <span class="compose__item" v-if="props?.compose?.prefix">
-                <el-tag type="danger">Prefix</el-tag>
-                -<span class="compose--prefix">{{ props.compose.prefix }}</span>
-              </span>
-              <span class="compose__item" v-if="props?.compose?.root">
-                <el-tag type="primary">Root</el-tag>
-                -<span class="compose--root">{{ props.compose.root }}</span>
-              </span>
-              <span class="compose__item" v-if="props?.compose?.suffix">
-                <el-tag type="warning">Suffix</el-tag>
-                -<span class="compose--suffix">{{ props.compose.suffix }}</span>
-              </span>
-            </div>
+            <el-tag
+              v-for="item in props.definition"
+              :key="item"
+              type="info"
+              effect="light"
+            >
+              {{ item }}
+            </el-tag>
           </div>
         </div>
       </template>
@@ -40,24 +56,34 @@
 
 <script setup lang="ts">
 const props = defineProps({
+  // 编号
   number: {
     type: [String, Number],
     required: true,
   },
+  // 单词
   word: {
     type: String,
     required: true,
   },
+  // 释义
+  definition: {
+    type: Array,
+    required: true,
+  },
+  // 组成
   compose: {
     type: Object,
     default: () => {
       return {};
     },
   },
+  // 例句
   examples: {
     type: Array,
     required: true,
   },
+  // 补充说明
   further: {
     type: String,
   },
@@ -84,10 +110,13 @@ function render(template, callback) {
 
 <style lang="scss">
 .word__item {
+  font-size: 16px;
   .card__header {
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
+    .card__title {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
   }
   .example__highlight {
     color: red;

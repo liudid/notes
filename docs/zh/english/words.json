@@ -2,24 +2,52 @@
   "words": [
     {
       "word": "view",
+      "definition": ["n. 看；看法，观点"],
       "compose": {
-        "prefix": "re",
-        "root": "vss",
-        "suffix": "ww"
+        "prefix": "",
+        "root": "",
+        "suffix": ""
       },
       "examples": [
         {
           "sentence": "In my {view}, English is easier than Chinese.",
-          "explanation": "哈哈哈哈",
+          "explanation": "在我看来，英语比中文简单。",
           "highlight": "view"
         },
         {
-          "sentence": "In my view, {English} is easier than Chinese.",
-          "explanation": "哈哈哈哈",
-          "highlight": "English"
+          "sentence": "She {views} the situation with optimism.",
+          "explanation": "她以乐观的态度看待这种情况。",
+          "highlight": "views"
+        },
+        {
+          "sentence": "I like to {view} the sunset from my balcony every evening.",
+          "explanation": "我喜欢每天晚上在我的阳台上观看日落。",
+          "highlight": "view"
         }
       ],
-      "further": "深爱的"
+      "further": "sunset n. 日落（将太阳放置下来sun + set）"
+    },
+    {
+      "word": "review",
+      "definition": ["n. 审查，检查", "v. 回顾，复习"],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "You should {review} what you have learned last class.",
+          "explanation": "你应该复习上一节课的学过的东西。",
+          "highlight": "review"
+        },
+        {
+          "sentence": "The professor wrote a {review} of the new book.",
+          "explanation": "教授写了一篇关于新书的评论。",
+          "highlight": "review"
+        }
+      ],
+      "further": ""
     }
   ]
 }
