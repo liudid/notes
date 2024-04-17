@@ -1,0 +1,25 @@
+{
+  "words": [
+    {
+      "word": "view",
+      "compose": {
+        "prefix": "re",
+        "root": "vss",
+        "suffix": "ww"
+      },
+      "examples": [
+        {
+          "sentence": "In my {view}, English is easier than Chinese.",
+          "explanation": "哈哈哈哈",
+          "highlight": "view"
+        },
+        {
+          "sentence": "In my view, {English} is easier than Chinese.",
+          "explanation": "哈哈哈哈",
+          "highlight": "English"
+        }
+      ],
+      "further": "深爱的"
+    }
+  ]
+}
