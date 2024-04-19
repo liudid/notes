@@ -94,6 +94,10 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
       link: "/zh/english/middle-school-words",
     },
     {
+      text: "Words-Manager",
+      link: "/zh/english/words-manager",
+    },
+    {
       text: "语法（Grammar）",
       collapsed: false,
       items: [
