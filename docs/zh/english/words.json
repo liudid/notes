@@ -331,6 +331,1833 @@
         "natural adj.自然的;天然的;天生的;正常的",
         "pain n.疼痛;痛苦;烦恼;苦恼;"
       ]
+    },
+    {
+      "word": "report",
+      "definitions": [
+        "n. 报道，宣布",
+        "v. 汇报"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Nancy, I'm happy to {report} that your arm is in good shape.",
+          "explanation": "南希，很高兴地告诉你，你的胳膊状况很好。",
+          "highlight": "report"
+        },
+        {
+          "sentence": "I just {report} what I observe.",
+          "explanation": "我只是根据观察据实报告。",
+          "highlight": "report"
+        }
+      ],
+      "furthers": [
+        "arm  n.手臂",
+        "shape  n. 形状",
+        "just  adv. 只是",
+        "observe  v. 观察，注释   读音"
+      ]
+    },
+    {
+      "word": "reporter",
+      "definitions": [
+        "n. 记者"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I spoke to the {reporter} at the magazine.",
+          "explanation": "我跟杂志社的记者谈过了。",
+          "highlight": "reporter"
+        },
+        {
+          "sentence": "Before that, I was a newspaper {reporter}.",
+          "explanation": "在那之前，我曾是一名报社记者。",
+          "highlight": "reporter"
+        }
+      ],
+      "furthers": [
+        "speak  n. 说话，讲话，交谈",
+        "magazine  n. 杂志",
+        "newspaper  n. 报纸，报社",
+        "news n. 消息；新闻报道",
+        "paper n. 纸；报纸"
+      ]
+    },
+    {
+      "word": "turn",
+      "definitions": [
+        "n. 旋转，翻转",
+        "v. 旋转；转身"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "He {turned} the key, opened the door and walked in.",
+          "explanation": "他转动钥匙，打开门，走了进去。",
+          "highlight": "turned"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "repeat",
+      "definitions": [
+        "v. 重复"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I {repeat} that the lady is his wife, and not his sister.",
+          "explanation": "我再说一遍，那位女士就是他的妻子，而不是他的妹妹。",
+          "highlight": "repeat"
+        },
+        {
+          "sentence": "Try {repeating} sentences after me.",
+          "explanation": "试着跟我复述这些句子。",
+          "highlight": "repeating"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "request",
+      "definitions": [
+        "n. 请求"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Her {request} was quickly approved.",
+          "explanation": "她的请求很快得到了批准。",
+          "highlight": "request"
+        },
+        {
+          "sentence": "Paisley ignored a friend {request} from Jenny.",
+          "explanation": "佩斯丽拒绝了珍妮的好友请求。",
+          "highlight": "request"
+        }
+      ],
+      "furthers": [
+        "quickly  adv. 迅速地，不久，立即",
+        "approve  v. 批准；同意；赞成；通过",
+        "ignore  v. 不理；忽视"
+      ]
+    },
+    {
+      "word": "require",
+      "definitions": [
+        "v. 需要；要求；规定"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "You are children and you {require} guidance.",
+          "explanation": "你们是孩子，你们需要引导。",
+          "highlight": "require"
+        },
+        {
+          "sentence": "I {require} a special saddle to keep me from falling off my horse.",
+          "explanation": "我需要特殊打造的马鞍，才不会摔下马去。",
+          "highlight": "require"
+        }
+      ],
+      "furthers": [
+        "guidance  n. 引导；指导",
+        "special  adj. 特殊的，专门的",
+        "saddle  n. 马鞍",
+        "keep  v. 保持",
+        "fall v.落下；跌倒",
+        "off adv. 离开",
+        "horse n. 马；赛马"
+      ]
+    },
+    {
+      "word": "reusable",
+      "definitions": [
+        " adj. 可重复使用的"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Wait, you seriously forgot your {reusable} bag?",
+          "explanation": "等一下，你们真的忘记带可重复使用的手提袋了吗？",
+          "highlight": "reusable"
+        }
+      ],
+      "furthers": [
+        "wait v.等待 ",
+        "seriously  adv. 严肃的；严重的",
+        "forget  v. 忘记"
+      ]
+    },
+    {
+      "word": "cycle",
+      "definitions": [
+        "n. 循环；周期；自行车"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I enjoy the {cycle} of the seasons.",
+          "explanation": "我喜欢四季的交替循环。",
+          "highlight": "cycle"
+        },
+        {
+          "sentence": "For example, I'm in a bad {cycle} of going to bed late, then oversleeping in the morning.",
+          "explanation": "例如，“我陷入了晚睡晚起的恶性循环。",
+          "highlight": "cycle"
+        }
+      ],
+      "furthers": [
+        "enjoy v.享受",
+        "season  n. 季节",
+        "bad  adj. 坏的；差的；不擅长的",
+        "bed  n. 床；河床",
+        "late  adj.迟到的；接近末期的",
+        "then  adv. 那时；然后；那么",
+        "oversleep  v. 睡过头"
+      ]
+    },
+    {
+      "word": "recycle",
+      "definitions": [
+        "v. 回收利用；循环利用"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "We can {recycle} glass bottles to use them again.",
+          "explanation": "我们可以回收玻璃瓶再次使用。",
+          "highlight": "recycle"
+        }
+      ],
+      "furthers": [
+        "again  adv. 又一次；再一次"
+      ]
+    },
+    {
+      "word": "solve",
+      "definitions": [
+        "v. 解决"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "We can get the money. It will {solve} your problems.",
+          "explanation": "我们会把钱搞到的，这样问题就解决了。",
+          "highlight": "solve"
+        }
+      ],
+      "furthers": [
+        "money  n. 钱"
+      ]
+    },
+    {
+      "word": "resolve",
+      "definitions": [
+        "v. 决心；解决；决定"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "We sit down and {resolve} the issue.",
+          "explanation": "我们会坐下来把问题解决。",
+          "highlight": "resolve"
+        }
+      ],
+      "furthers": [
+        "issue n.问题；期号；一期；议题 v. 宣布；公布；发版；发行",
+        "sit  v. 坐，坐落在",
+        "名词形式：resolution"
+      ]
+    },
+    {
+      "word": "remind",
+      "definitions": [
+        "v. 使想起"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "{Remind} me to send flowers.",
+          "explanation": "记得提醒我给他送花。",
+          "highlight": "Remind"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "repair",
+      "definitions": [
+        "v. 维修"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "There's a hole in the roof. I must {repair} it.\"",
+          "explanation": "“屋顶那儿有个洞。我必须得修修。”",
+          "highlight": "repair"
+        }
+      ],
+      "furthers": [
+        "roof  n. 屋顶；车顶",
+        "hole  n. 洞；坑；裂口"
+      ]
+    },
+    {
+      "word": "search",
+      "definitions": [
+        "v. 寻找；寻搜"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "But in winter, wolves often leave the forests in {search} of food.",
+          "explanation": "冬天的时候，狼经常离开森林寻找食物。",
+          "highlight": "search"
+        }
+      ],
+      "furthers": [
+        "winter  n. 冬天",
+        "wolf  n. 狼",
+        "often adv. 经常；多次；往往",
+        "leave v.离开；离职；离校",
+        "forest n.森林"
+      ]
+    },
+    {
+      "word": "research",
+      "definitions": [
+        "v. 研究；调查"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "There is a lot of {research} that shows hugging is good for us.",
+          "explanation": "许多研究表明，拥抱有益身心健康。",
+          "highlight": "research"
+        }
+      ],
+      "furthers": [
+        "lot  prep. 许多大量",
+        "show  v. 显示;表明;展示;描绘，描述",
+        "hug v.拥抱"
+      ]
+    },
+    {
+      "word": "cover",
+      "definitions": [
+        "v. 覆盖"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "{Cover} your mouth with your hand.",
+          "explanation": "用手捂住你的嘴。",
+          "highlight": "Cover"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "agree",
+      "definitions": [
+        "v. 同意"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "If we help you, you have to {agree} to let us go.",
+          "explanation": "如果我们帮了你，你要答应放我们走。",
+          "highlight": "agree"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "disappoint",
+      "definitions": [
+        "v. 使…失望"
+      ],
+      "compose": {
+        "prefix": "dis",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "You get their hopes up. You {disappoint} them again.",
+          "explanation": "你勾起他们的希望，你又让他们失望。",
+          "highlight": "disappoint"
+        },
+        {
+          "sentence": "I am {disappointed} with the grade.",
+          "explanation": "我对这个分数是失望的",
+          "highlight": "disappointed"
+        }
+      ],
+      "furthers": [
+        "hope  v. 希望"
+      ]
+    },
+    {
+      "word": "belief",
+      "definitions": [
+        "n. 信任；信念；信仰"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Her {belief} gave her hope.",
+          "explanation": "她的信念给了她希望",
+          "highlight": "belief"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "appear",
+      "definitions": [
+        "n. 出现；起源；问世"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "A window was pushed up and Dr. White's head {appeared}.",
+          "explanation": "一扇窗子被推上去，怀特大夫的头探了出来。",
+          "highlight": "appeared"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "express",
+      "definitions": [
+        " v. 表达；表现"
+      ],
+      "compose": {
+        "prefix": "ex",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Get it out. {Express} the anger.",
+          "explanation": "把你的怒火发泄出来。",
+          "highlight": "Express"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "exchange",
+      "definitions": [
+        "v. 交换"
+      ],
+      "compose": {
+        "prefix": "ex",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "But in {exchange}, I'd like you to do a few things for me.",
+          "explanation": "但作为交换，我要你为我做些事。",
+          "highlight": "exchange"
+        }
+      ],
+      "furthers": [
+        "few  prep. 很少数；几乎没有",
+        "thing n. 事情"
+      ]
+    },
+    {
+      "word": "except",
+      "definitions": [
+        "v. 除…之外"
+      ],
+      "compose": {
+        "prefix": "ex",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Troy invited every boy in class {except} me.",
+          "explanation": "特洛伊邀请了全班男生，就没邀请我。",
+          "highlight": "except"
+        }
+      ],
+      "furthers": [
+        "invite  v. 邀请"
+      ]
+    },
+    {
+      "word": "elbow",
+      "definitions": [
+        "n.肘部"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "He had a {patch} on the elbows of his jacket.",
+          "explanation": "他的夹克衫肘部各有一块补丁。",
+          "highlight": "patch"
+        }
+      ],
+      "furthers": [
+        "patch  n. 小块；斑点；补丁"
+      ]
+    },
+    {
+      "word": "bow",
+      "definitions": [
+        "v.鞠躬，点头"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Let me {bow} before the king.",
+          "explanation": "请允许我向国王鞠躬。",
+          "highlight": "bow"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "explain",
+      "definitions": [
+        "v.解释"
+      ],
+      "compose": {
+        "prefix": "ex",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "You don't need to be able to {explain} all the grammar rules.",
+          "explanation": "你不需要能够解释所有的语法规则。",
+          "highlight": "explain"
+        }
+      ],
+      "furthers": [
+        "grammar n.语法；语法书"
+      ]
+    },
+    {
+      "word": "explanation",
+      "definitions": [
+        "n.解释；理由"
+      ],
+      "compose": {
+        "prefix": "ex",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Is there a scientific {explanation} for this?",
+          "explanation": "这其中有科学解释吗？",
+          "highlight": "explanation"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "expensive",
+      "definitions": [
+        "adj. 昂贵的"
+      ],
+      "compose": {
+        "prefix": "ex",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Liberty and freedom is the most {expensive}.",
+          "explanation": "自由和自在才是最昂贵的。",
+          "highlight": "expensive"
+        }
+      ],
+      "furthers": [
+        "liberty  n.自由",
+        "freedom  n. 自由",
+        "most adv. 最多的",
+        "many n. 许多的",
+        "more adv.更多的"
+      ]
+    },
+    {
+      "word": "convenient",
+      "definitions": [
+        "adj. 便利"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "There are two {convenience} stores near my house.",
+          "explanation": "在我家附近有两个便利店。",
+          "highlight": "convenience"
+        }
+      ],
+      "furthers": [
+        "store  n.商店；店铺；储存，储备；仓库"
+      ]
+    },
+    {
+      "word": "depend",
+      "definitions": [
+        "v. 依靠；依赖；取决于"
+      ],
+      "compose": {
+        "prefix": "de",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Many children {depend} heavily on their families.",
+          "explanation": "很多孩子严重依赖他们的家人",
+          "highlight": "depend"
+        }
+      ],
+      "furthers": [
+        "heavily adv.非常；大量；严重"
+      ]
+    },
+    {
+      "word": "independent",
+      "definitions": [
+        "adj. 独立的；自立的；自主的"
+      ],
+      "compose": {
+        "prefix": "in",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "He planned to introduce testing by an {independent} body.",
+          "explanation": "他打算把测试交给独立机构进行。",
+          "highlight": "independent"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "include",
+      "definitions": [
+        "v. 包括"
+      ],
+      "compose": {
+        "prefix": "in",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The price {includes} the postage.",
+          "explanation": "这个价格包括邮费。",
+          "highlight": "includes"
+        }
+      ],
+      "furthers": [
+        "postage n.邮费"
+      ]
+    },
+    {
+      "word": "introduction",
+      "definitions": [
+        "n. 介绍"
+      ],
+      "compose": {
+        "prefix": "in",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Let me {introduce} myself first.",
+          "explanation": "首先让我自我介绍一下。",
+          "highlight": "introduce"
+        }
+      ],
+      "furthers": [
+        "(duct = 引导)"
+      ]
+    },
+    {
+      "word": "embarrass",
+      "definitions": [
+        "v. 尴尬"
+      ],
+      "compose": {
+        "prefix": "em",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Do not {embarrass} them in public.",
+          "explanation": "别在公众场合让他们难堪。",
+          "highlight": "embarrass"
+        }
+      ],
+      "furthers": [
+        "public adj.大众的；公开的"
+      ]
+    },
+    {
+      "word": "polite",
+      "definitions": [
+        "adj. 礼貌的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "It is {impolite} to ask girls’ ages directly.",
+          "explanation": "直接问女孩的年龄是不礼貌的。",
+          "highlight": "impolite"
+        }
+      ],
+      "furthers": [
+        "directly adv.直接地",
+        "impolite adj.不礼貌的"
+      ]
+    },
+    {
+      "word": "possible",
+      "definitions": [
+        "adj. 可能的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Nothing is {impossible}.",
+          "explanation": "没有什么事是不可能的。",
+          "highlight": "impossible"
+        }
+      ],
+      "furthers": [
+        "nothing pron.没有什么"
+      ]
+    },
+    {
+      "word": "crowd",
+      "definitions": [
+        "n.群"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The bus is very {crowded}.",
+          "explanation": "公交车很拥挤。",
+          "highlight": "crowded"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "comfortable",
+      "definitions": [
+        "adj.舒适的；自在的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The weather is {comfortable} spring.",
+          "explanation": "春天的天气是很舒适的。",
+          "highlight": "comfortable"
+        }
+      ],
+      "furthers": [
+        "weather n.天气",
+        "spring n.春天"
+      ]
+    },
+    {
+      "word": "easy",
+      "definitions": [
+        "adj.安心的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "He had a nice {easy} day at home.",
+          "explanation": "他在家舒舒服服过了一天",
+          "highlight": "easy"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "expect",
+      "definitions": [
+        "adj.期望中的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "My goodness. I didn’t {expect} to see you here.",
+          "explanation": "天啊，我真没想道在这儿会碰见你。",
+          "highlight": "expect"
+        }
+      ],
+      "furthers": [
+        "goodness int. 天呐(表示惊讶)"
+      ]
+    },
+    {
+      "word": "usual",
+      "definitions": [
+        "adj.寻常的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I had an {unusual} childhood.",
+          "explanation": "我的童年很不同寻常。",
+          "highlight": "unusual"
+        }
+      ],
+      "furthers": [
+        "childhood n. 童年"
+      ]
+    },
+    {
+      "word": "absent",
+      "definitions": [
+        "adj.缺席的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "He has been {absent} from class for two weeks.",
+          "explanation": "他已经两个星期没来上课了",
+          "highlight": "absent"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "surface",
+      "definitions": [
+        "n. 表面"
+      ],
+      "compose": {
+        "prefix": "sur",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The {surface} of the phone is so smooth.",
+          "explanation": "手机的表面非常的光滑。",
+          "highlight": "surface"
+        }
+      ],
+      "furthers": [
+        "smooth adj. 光滑的；顺利的；平稳的"
+      ]
+    },
+    {
+      "word": "compete",
+      "definitions": [
+        "v. 竞争"
+      ],
+      "compose": {
+        "prefix": "com",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "But the machines are taking over. We can’t {compete} with that.",
+          "explanation": "但现在都是机器的天下，咱怎么跟机器比？",
+          "highlight": "compete"
+        }
+      ],
+      "furthers": [
+        "take v. 拿；带去；做",
+        "competition n.竞争"
+      ]
+    },
+    {
+      "word": "competitor",
+      "definitions": [
+        "n. 竞争者"
+      ],
+      "compose": {
+        "prefix": "com",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "These {competitors} made us better.",
+          "explanation": "这些竞争对手使我们变得更好。",
+          "highlight": "competitors"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "complete",
+      "definitions": [
+        "v. 完成"
+      ],
+      "compose": {
+        "prefix": "com",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "It took two years to {complete} the building. ",
+          "explanation": "这幢大楼花了两年时间才完工。",
+          "highlight": "complete"
+        }
+      ],
+      "furthers": [
+        "build  v.建筑；建造"
+      ]
+    },
+    {
+      "word": "translate",
+      "definitions": [
+        "v. 翻译"
+      ],
+      "compose": {
+        "prefix": "trans",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "{Translate} the text from Italian into English.",
+          "explanation": "把这篇文章从意大利语翻译成英语。 ",
+          "highlight": "Translate"
+        }
+      ],
+      "furthers": [
+        "translator n.翻译官",
+        "translation n.翻译"
+      ]
+    },
+    {
+      "word": "transport",
+      "definitions": [
+        "v. 运输"
+      ],
+      "compose": {
+        "prefix": "trans",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The goods are {transported} to London.",
+          "explanation": "货物被运到了伦敦。",
+          "highlight": "transported"
+        },
+        {
+          "sentence": "public {transportation}.",
+          "explanation": "公共交通",
+          "highlight": "transportation"
+        }
+      ],
+      "furthers": [
+        "goods n.商品;货品;"
+      ]
+    },
+    {
+      "word": "support",
+      "definitions": [
+        "v./n. 支持"
+      ],
+      "compose": {
+        "prefix": "sup",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Nobody {supports} him.",
+          "explanation": "没有人支持他",
+          "highlight": "supports"
+        }
+      ],
+      "furthers": [
+        "nobody  pron.没有人"
+      ]
+    },
+    {
+      "word": "suppose",
+      "definitions": [
+        "v.推断"
+      ],
+      "compose": {
+        "prefix": "sup",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I {suppose} you are right.",
+          "explanation": "我猜你是正确的。",
+          "highlight": "suppose"
+        }
+      ],
+      "furthers": [
+        "right  adj.正确的；右边的"
+      ]
+    },
+    {
+      "word": "prefer",
+      "definitions": [
+        "v.更喜欢"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I {prefer} staying at home to going out during such hot days.",
+          "explanation": "和大热天出去相比，我更喜欢待在家里。",
+          "highlight": "prefer"
+        }
+      ],
+      "furthers": [
+        "stay v. 停留",
+        "during prep.在期间",
+        "such det.这样的"
+      ]
+    },
+    {
+      "word": "president",
+      "definitions": [
+        "n.总统"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Mr {President}, you have to make the call.",
+          "explanation": "总统先生，你必须打这个电话。",
+          "highlight": "President"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "predict",
+      "definitions": [
+        "v.预测"
+      ],
+      "compose": {
+        "prefix": "pre",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Newspapers {predicted} that Trump would be re-elected.",
+          "explanation": "总统先生，你必须打这个电话。",
+          "highlight": "predicted"
+        }
+      ],
+      "furthers": [
+        "prediction n.预测",
+        "re-elect v.再次选举"
+      ]
+    },
+    {
+      "word": "prepare",
+      "definitions": [
+        "v.准备"
+      ],
+      "compose": {
+        "prefix": "pre",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The students are busy {preparing} for the final exam.",
+          "explanation": "学生们正忙于准备期末考试。",
+          "highlight": "preparing"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "dialog",
+      "definitions": [
+        "n.对话"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "{Dialog} gives a story color, makes it exciting and moves it forward.",
+          "explanation": "对话使故事变得生动有趣，推动着情节发展。",
+          "highlight": "Dialog"
+        }
+      ],
+      "furthers": [
+        "excite v.使激动；使兴奋",
+        "forward adv.前进",
+        "move v.移动"
+      ]
+    },
+    {
+      "word": "dialogue",
+      "definitions": [
+        "n.对话(正式)"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Practice the {dialogue} with your partner.",
+          "explanation": "和你打同伴演练这段对话。",
+          "highlight": "dialogue"
+        }
+      ],
+      "furthers": [
+        "practice n.实践",
+        "partner n.伙伴"
+      ]
+    },
+    {
+      "word": "decide",
+      "definitions": [
+        "v.决定"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I {decide} to lean English from Allen.",
+          "explanation": "我决定和宇哥学英语了。",
+          "highlight": "decide"
+        }
+      ],
+      "furthers": [
+        "decision n.决定"
+      ]
+    },
+    {
+      "word": "courage",
+      "definitions": [
+        "n.勇气"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I know change takes a lot of {courage}.",
+          "explanation": "我知道做出改变是需要很大勇气的。",
+          "highlight": "courage"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "encourage",
+      "definitions": [
+        "v.鼓励"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "We should {encourage} him together.",
+          "explanation": "我们应该一起鼓励他。",
+          "highlight": "encourage"
+        }
+      ],
+      "furthers": [
+        "together adv.共同；一起"
+      ]
+    },
+    {
+      "word": "danger",
+      "definitions": [
+        "n.危险"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The doctor said she's out of {danger}.",
+          "explanation": "医生说她已脱离危险了。",
+          "highlight": "danger"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "endanger",
+      "definitions": [
+        "v.使…处于危险"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Red-crowned cranes are one of the world's most {endangered} species.",
+          "explanation": "丹顶鹤是世界上最濒危物种之一。",
+          "highlight": "endangered"
+        }
+      ],
+      "furthers": [
+        "cranes n.鹤",
+        "species n.种；种类"
+      ]
+    },
+    {
+      "word": "oppose",
+      "definitions": [
+        "v.反对"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The president {opposed} the medical reform plan.",
+          "explanation": "总统反对这个医疗改革计划。",
+          "highlight": "opposed"
+        }
+      ],
+      "furthers": [
+        "medical adj.医疗的",
+        "reform v.改革"
+      ]
+    },
+    {
+      "word": "opposite",
+      "definitions": [
+        "prep.与…对面"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The bank is {opposite} the convenience store.",
+          "explanation": "银行在便利店的对面。",
+          "highlight": "opposite"
+        }
+      ],
+      "furthers": [
+        "bank n.银行"
+      ]
+    },
+    {
+      "word": "educate",
+      "definitions": [
+        "v.教育"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "{Education} is the key to happy life.",
+          "explanation": "教育是通向幸福生活之门的钥匙。",
+          "highlight": "Education"
+        }
+      ],
+      "furthers": [
+        "education 名词形式 （duct=引导）"
+      ]
+    },
+    {
+      "word": "graduate",
+      "definitions": [
+        "v.毕业"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "He {graduated} from Tsinghua University.",
+          "explanation": "他毕业于清华大学。",
+          "highlight": "graduated"
+        }
+      ],
+      "furthers": [
+        "（duct=引导） graduation 名词形式",
+        "university n.大学",
+        "universe n.天地万物;宇宙"
+      ]
+    },
+    {
+      "word": "instruct",
+      "definitions": [
+        "v.指示"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "We should follow the {instructions} on the screen.",
+          "explanation": "我们应该遵循屏幕上的引导",
+          "highlight": "instructions"
+        }
+      ],
+      "furthers": [
+        "（duct=引导）",
+        "follow v.跟随",
+        "screen n.屏幕"
+      ]
+    },
+    {
+      "word": "suggest",
+      "definitions": [
+        "v.建议"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Lily {suggested} meeting for a drink after work.",
+          "explanation": "李莉提议下班后一起喝一杯。",
+          "highlight": "suggested"
+        },
+        {
+          "sentence": "Here are some {suggestions} for further activities.",
+          "explanation": "以下是有关更多东西的一些建议。",
+          "highlight": "suggestions"
+        }
+      ],
+      "furthers": [
+        "suggestion 名词形式",
+        "further adj.更多的，更进一步的",
+        "activity n.活动"
+      ]
+    },
+    {
+      "word": "collect",
+      "definitions": [
+        "v.收集"
+      ],
+      "compose": {
+        "prefix": "col",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I love {collecting} coins. ",
+          "explanation": "我喜欢收集硬币。",
+          "highlight": "collecting"
+        },
+        {
+          "sentence": "I have a large {collection} of coins.",
+          "explanation": "我收集了很多货币。",
+          "highlight": "collection"
+        }
+      ],
+      "furthers": [
+        "large adj.巨大的，大量的，大的",
+        "coin n.硬币 v.创造"
+      ]
+    },
+    {
+      "word": "communicate",
+      "definitions": [
+        "v.交流"
+      ],
+      "compose": {
+        "prefix": "com",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "We {communicated} by e-mail.",
+          "explanation": "我们是用电子邮件沟通。",
+          "highlight": "communicated"
+        }
+      ],
+      "furthers": [
+        "communication 名词形式",
+        "e-mail n.电子邮件"
+      ]
+    },
+    {
+      "word": "compare",
+      "definitions": [
+        "v.比较"
+      ],
+      "compose": {
+        "prefix": "com",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The customer {compares} iphones with Xiaomi Phones.",
+          "explanation": "这个顾客在比较苹果手机和小米手机。",
+          "highlight": "compares"
+        }
+      ],
+      "furthers": [
+        "comparison 名词形式",
+        "customer n.顾客"
+      ]
+    },
+    {
+      "word": "congratulate",
+      "definitions": [
+        "v.祝贺"
+      ],
+      "compose": {
+        "prefix": "con",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "She {congratulated} me on my exam results.",
+          "explanation": "她祝贺我考试取得好成绩。",
+          "highlight": "congratulated"
+        }
+      ],
+      "furthers": [
+        "congratulation 名词形式"
+      ]
+    },
+    {
+      "word": "friendship",
+      "definitions": [
+        "n.友谊"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "A lifelong {friendship}.",
+          "explanation": "一生的友谊。",
+          "highlight": "friendship"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "relationship",
+      "definitions": [
+        "n.关系"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I have quite a good {relationship} with my parents.",
+          "explanation": "我和父母关系很好",
+          "highlight": "relationship"
+        }
+      ],
+      "furthers": [
+        "relation 关系",
+        "quite adv.相当"
+      ]
+    },
+    {
+      "word": "agreement",
+      "definitions": [
+        "n.协定"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "In 1904, France and Britain signed an {agreement} on North Africa.",
+          "explanation": "1904 年，英法两国就北非问题签署了一项协议",
+          "highlight": "agreement"
+        }
+      ],
+      "furthers": [
+        "sign v.签名；签字",
+        "north n.北部；北方；北",
+        "Africa n.非洲"
+      ]
+    },
+    {
+      "word": "shy",
+      "definitions": [
+        "adj.害羞的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "But I’m trying to help you overcome your {shyness}.",
+          "explanation": "但我正在努力帮助你克服害羞。",
+          "highlight": "shyness"
+        }
+      ],
+      "furthers": [
+        "overcome v.克服"
+      ]
+    },
+    {
+      "word": "shyness",
+      "definitions": [
+        "n.害羞"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "But I’m trying to help you overcome your {shyness}.",
+          "explanation": "但我正在努力帮助你克服害羞。",
+          "highlight": "shyness"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "kind",
+      "definitions": [
+        "adj.友好的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I can’t thank you enough for your {kindness}.",
+          "explanation": "你的好意我感激不尽。",
+          "highlight": "kindness"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "kindness",
+      "definitions": [
+        "n.好"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I can’t thank you enough for your {kindness}.",
+          "explanation": "你的好意我感激不尽。",
+          "highlight": "kindness"
+        }
+      ],
+      "furthers": [
+        "enough det.足够的；充足的"
+      ]
+    },
+    {
+      "word": "sad",
+      "definitions": [
+        "adj.悲伤的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Happiness is a pop song. {Sadness} is a poem.",
+          "explanation": "快乐是流行歌曲。而悲伤是诗。",
+          "highlight": "Sadness"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "sadness",
+      "definitions": [
+        "n.悲伤"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Happiness is a pop song. {Sadness} is a poem.",
+          "explanation": "快乐是流行歌曲。而悲伤是诗。",
+          "highlight": "Sadness"
+        }
+      ],
+      "furthers": [
+        "pop n.流行音乐",
+        "song n.歌曲",
+        "poem n.诗"
+      ]
+    },
+    {
+      "word": "fair",
+      "definitions": [
+        "adj.公平的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Gaokao is a {fair} enough exam.",
+          "explanation": "高考是个相当公平的考试。",
+          "highlight": "fair"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "fairness",
+      "definitions": [
+        "n.公平的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Gaokao is a {fair} enough exam.",
+          "explanation": "高考是个相当公平的考试。",
+          "highlight": "fair"
+        }
+      ],
+      "furthers": [
+        "enough det.足够的；充足的 "
+      ]
+    },
+    {
+      "word": "ill",
+      "definitions": [
+        "adj.病的"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "He didn’t come to class because of {illness}.",
+          "explanation": "高考是个相当公平的考试。",
+          "highlight": "illness"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "illness",
+      "definitions": [
+        "n.病"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "He didn’t come to class because of {illness}.",
+          "explanation": "高考是个相当公平的考试。",
+          "highlight": "illness"
+        }
+      ],
+      "furthers": []
     }
   ]
 }
