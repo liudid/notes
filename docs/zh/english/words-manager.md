@@ -121,7 +121,7 @@ const activeType = {
 
 const formType = ref(null)
 
-const activeIndex = ref(0)
+const activeUpdateWord = ref('')
 
 async function init(){
   const response  = await fetch('http://localhost:9292/api/words')
@@ -138,7 +138,7 @@ function addWord(){
 
 async function deleteWord(item,index){
   const params = new URLSearchParams();
-  params.append('index', index);
+  params.append('word', item.word);
   const response  = await fetch('http://localhost:9292/api/word-delete?'+ params.toString())
 }
 
@@ -155,7 +155,7 @@ async function updateWord(row,index){
   })
   data.furthers = data.furthers.map(item=>({item:item}))
   Object.assign(form, data)
-  activeIndex.value = index
+  activeUpdateWord.value = row.word
 }
 
 function addDefinition(index){
@@ -244,12 +244,14 @@ async function onConfirm(){
     )
   }else if(formType.value === activeType.UPDATE){
     const cloneForm = JSON.parse(JSON.stringify(data))
-    cloneForm.activeIndex = activeIndex.value
+    const params = new URLSearchParams();
+    params.append('word', activeUpdateWord.value);
     cloneForm.examples.forEach(example=>{
       const regex = new RegExp(`\\b${example.highlight}\\b`, 'g');
       example.sentence = example.sentence.replace(regex, `{${example.highlight}}`);
     })
-     const response  = await fetch('http://localhost:9292/api/word-update',{ 
+     const response = await fetch('http://localhost:9292/api/word-update?'+params.toString(),
+     { 
       method:'POST',
       headers:{
         'Content-Type':'application/json'
