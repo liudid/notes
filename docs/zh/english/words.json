@@ -2,7 +2,9 @@
   "words": [
     {
       "word": "view",
-      "definitions": ["n. 看；看法，观点"],
+      "definitions": [
+        "n. 看；看法，观点"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -29,7 +31,10 @@
     },
     {
       "word": "review",
-      "definitions": ["n. 审查，检查", "v. 回顾，复习"],
+      "definitions": [
+        "n. 审查，检查",
+        "v. 回顾，复习"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -48,6 +53,174 @@
         }
       ],
       "further": ""
+    },
+    {
+      "word": "remain",
+      "definitions": [
+        "v.保持不变 ",
+        "n.剩余（物），遗迹；遗体，残骸"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Please {remain} seated. It's probably just a false alarm.",
+          "explanation": "请保持就座。这可能只是虚惊一场。",
+          "highlight": "remain"
+        }
+      ],
+      "further": "seat n. 座位\nprobably adv. 大概，或许\njust adv. 只是\nfalse n. 错误的；虚假的\nalarm n. 警报"
+    },
+    {
+      "word": "reflect",
+      "definitions": [
+        "v.反映；反射"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Mirrors have a very particular function. They {reflect} the image in front of them.",
+          "explanation": "镜子的一个独特功能就是：映射出在其前面的影像。",
+          "highlight": "reflect"
+        }
+      ],
+      "further": "mirror n. 镜子\nparticular adj. 特定的\nimage n. 画像；图像；形象；印象\nfront n. 前面；前线  adj. 前面的   [读音纠正]"
+    },
+    {
+      "word": "relief",
+      "definitions": [
+        "n.宽慰；轻松；缓和；救济"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "That's a {relief}. I was really worried.",
+          "explanation": "这下放心了。我刚才可真急坏了",
+          "highlight": "relief"
+        }
+      ],
+      "further": "really n. 真正地，事实上；确实的，的确   [读音纠正]\nworry v. 担心，发愁；使担忧，使发愁，使焦虑；"
+    },
+    {
+      "word": "relax",
+      "definitions": [
+        "n. 放松；休息"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Now let's all {relax} with some romantic music.",
+          "explanation": "现在，让我们听点浪漫音乐放松下。",
+          "highlight": "relax"
+        }
+      ],
+      "further": "romantic  adj. 浪漫的，有情调的；\nsome  det. 一些；若干"
+    },
+    {
+      "word": "regret",
+      "definitions": [
+        "n. 懊悔，惋惜；"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "You may {regret} saying that.",
+          "explanation": "你会后悔说这话的。",
+          "highlight": "regret"
+        }
+      ],
+      "further": "may  aux. 也许可能\nsay  v. 说；讲；告诉"
+    },
+    {
+      "word": "receive",
+      "definitions": [
+        "n. 得到；收到"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The next morning, I {received} a letter from Henry.",
+          "explanation": "第二天早上，我收到了亨利的一封信。",
+          "highlight": "received"
+        },
+        {
+          "sentence": "I {received} a call from my lawyer.",
+          "explanation": "我的律师给我来了个电话。",
+          "highlight": "received"
+        }
+      ],
+      "further": "letter  n. 信\ncall v. 给……命名，称呼；认为……是，把……看作  n. 通话；呼叫\nlawyer n. 律师"
+    },
+    {
+      "word": "reply",
+      "definitions": [
+        "n. 得到；收到"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "Why do you not {reply} to my letters?",
+          "explanation": "为什么不回我的信？",
+          "highlight": "reply"
+        },
+        {
+          "sentence": "4 days later, Roosevelt {replied} with a flat lie.",
+          "explanation": "4天后，罗斯福的回信显然一片谎言。",
+          "highlight": "replied"
+        }
+      ],
+      "further": "letter  n. 信\nlater adv. 后来，以后；再见  adj. 后来的；以后的\nflat adj. 平的；枯燥的；平淡的；\nlie v. 躺；平放；位于  n. 谎言；假话"
+    },
+    {
+      "word": "refuse",
+      "definitions": [
+        "v. 拒绝"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": " He {refused} to go out at night.",
+          "explanation": "他拒绝在晚上外出。",
+          "highlight": "refused"
+        },
+        {
+          "sentence": "I {refuse} to accept your apologies!",
+          "explanation": "我拒绝接受你的道歉。",
+          "highlight": "refuse"
+        }
+      ],
+      "further": "accept  v.接受；同意\napology n. 道歉；认错"
     }
   ]
 }

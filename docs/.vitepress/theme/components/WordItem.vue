@@ -5,7 +5,7 @@
         <div class="card__header">
           <div class="card__title">
             <div>
-              <span>({{ props.number }}). </span>&nbsp;
+              <!-- <span>({{ props.number }}). </span>&nbsp; -->
               <span>{{ props.word }}</span>
             </div>
             <div>
@@ -49,7 +49,7 @@
           </dl>
         </li>
       </ul>
-      <template #footer v-if="props.further">1</template>
+      <template #footer v-if="props.further">{{ props.further }}</template>
     </el-card>
   </div>
 </template>
