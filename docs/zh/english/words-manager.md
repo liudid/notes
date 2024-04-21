@@ -124,6 +124,7 @@ const formType = ref(null)
 const activeUpdateWord = ref('')
 
 async function init(){
+  if(process.env.NODE_ENV !== 'development') return
   const response  = await fetch('http://localhost:9292/api/words')
   const data = await response.json()
   Object.assign(tableData,data.words)
