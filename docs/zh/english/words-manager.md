@@ -224,7 +224,6 @@ async function onConfirm(){
     examples:form.examples,
     furthers:form.furthers.map(item=>item.item),
   }
-  return
 
   if(formType.value === activeType.ADD){
     const wordNames = words.map(item=>item.word)

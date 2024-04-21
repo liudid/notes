@@ -2,7 +2,9 @@
   "words": [
     {
       "word": "view",
-      "definitions": ["n. 看；看法，观点"],
+      "definitions": [
+        "n. 看；看法，观点"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -25,11 +27,16 @@
           "highlight": "view"
         }
       ],
-      "furthers": ["sunset n. 日落（将太阳放置下来sun + set）"]
+      "furthers": [
+        "sunset n. 日落（将太阳放置下来sun + set）"
+      ]
     },
     {
       "word": "review",
-      "definitions": ["n. 审查，检查", "v. 回顾，复习"],
+      "definitions": [
+        "n. 审查，检查",
+        "v. 回顾，复习"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -51,7 +58,10 @@
     },
     {
       "word": "remain",
-      "definitions": ["v.保持不变 ", "n.剩余（物），遗迹；遗体，残骸"],
+      "definitions": [
+        "v.保持不变 ",
+        "n.剩余（物），遗迹；遗体，残骸"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -74,7 +84,9 @@
     },
     {
       "word": "reflect",
-      "definitions": ["v.反映；反射"],
+      "definitions": [
+        "v.反映；反射"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -96,7 +108,9 @@
     },
     {
       "word": "relief",
-      "definitions": ["n.宽慰；轻松；缓和；救济"],
+      "definitions": [
+        "n.宽慰；轻松；缓和；救济"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -116,7 +130,9 @@
     },
     {
       "word": "relax",
-      "definitions": ["n. 放松；休息"],
+      "definitions": [
+        "n. 放松；休息"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -129,11 +145,16 @@
           "highlight": "relax"
         }
       ],
-      "furthers": ["romantic  adj. 浪漫的，有情调的；", "some  det. 一些；若干"]
+      "furthers": [
+        "romantic  adj. 浪漫的，有情调的；",
+        "some  det. 一些；若干"
+      ]
     },
     {
       "word": "regret",
-      "definitions": ["n. 懊悔，惋惜；"],
+      "definitions": [
+        "n. 懊悔，惋惜；"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -146,11 +167,16 @@
           "highlight": "regret"
         }
       ],
-      "furthers": ["may  aux. 也许可能", "say  v. 说；讲；告诉"]
+      "furthers": [
+        "may  aux. 也许可能",
+        "say  v. 说；讲；告诉"
+      ]
     },
     {
       "word": "receive",
-      "definitions": ["n. 得到；收到"],
+      "definitions": [
+        "n. 得到；收到"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -176,7 +202,9 @@
     },
     {
       "word": "reply",
-      "definitions": ["n. 得到；收到"],
+      "definitions": [
+        "n. 得到；收到"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -203,7 +231,9 @@
     },
     {
       "word": "refuse",
-      "definitions": ["v. 拒绝"],
+      "definitions": [
+        "v. 拒绝"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -221,7 +251,86 @@
           "highlight": "refuse"
         }
       ],
-      "furthers": ["apology n. 道歉；认错"]
+      "furthers": [
+        "apology n. 道歉；认错"
+      ]
+    },
+    {
+      "word": "recall",
+      "definitions": [
+        "v.回忆起"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I'm sorry. I don't {recall} your name.",
+          "explanation": "对不起。我不记得你的名字了。",
+          "highlight": "recall"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "respond",
+      "definitions": [
+        " v. 回复，回答"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "She's not {responding} to my texts!",
+          "explanation": "她不回我短信！",
+          "highlight": "responding"
+        },
+        {
+          "sentence": "And he {responded} by pulling her towards him and kissing her.",
+          "explanation": "他的反应是将她拉过来并亲吻了她。",
+          "highlight": "responded"
+        }
+      ],
+      "furthers": [
+        "pull  v.拉",
+        "toward  prep. 朝向，向，朝，面对",
+        "towards prep.向;朝;朝着;趋向",
+        "kiss v.亲吻；接吻"
+      ]
+    },
+    {
+      "word": "response",
+      "definitions": [
+        "n. 回答，回复；响应"
+      ],
+      "compose": {
+        "prefix": "re",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "I ask a question. I want a {response}.",
+          "explanation": "我提出一个问题，想要得到回答。",
+          "highlight": "response"
+        },
+        {
+          "sentence": "Crying is a natural {response} to pain.",
+          "explanation": "哭泣是对疼痛的自然反应。",
+          "highlight": "response"
+        }
+      ],
+      "furthers": [
+        "ask  v.问;要求;请;询问",
+        "cry  v. 哭；喊叫",
+        "natural adj.自然的;天然的;天生的;正常的",
+        "pain n.疼痛;痛苦;烦恼;苦恼;"
+      ]
     }
   ]
 }
