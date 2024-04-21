@@ -46,9 +46,33 @@
       </div>
         <el-button type="primary" @click="addExample(index)">添加</el-button>
     </el-form-item>
-    <el-form-item label="further">
+    <!-- <el-form-item label="further">
       <el-input type="textarea" v-model="form.further"  />
+    </el-form-item> -->
+    <el-form-item label="furthers">
+      <el-tag
+        v-for="(tag,index) in form.furthers"
+        :key="tag.item"
+        closable
+        :disable-transitions="false"
+        @close="handleClose(index)"
+      >
+        {{ tag.item }}
+      </el-tag>
+      <el-input
+        v-if="inputVisible"
+        ref="InputRef"
+        v-model="inputValue"
+        class="w-20"
+        size="small"
+        @keyup.enter="handleInputConfirm"
+        @blur="handleInputConfirm"
+      />
+      <el-button v-else class="button-new-tag" size="small" @click="showInput">
+        + New Further
+      </el-button>
     </el-form-item>
+    
   </el-form>
     <template #footer>
       <div class="dialog-footer">
@@ -61,7 +85,7 @@
   </el-dialog>
 
 <script setup>
-import { ref,reactive,onMounted } from 'vue'
+import { ref,reactive,onMounted,nextTick } from 'vue'
 import { ElMessage } from 'element-plus'
 import { words } from '../../zh/english/words.json'
 
@@ -87,7 +111,7 @@ const form = reactive({
       highlight:'',
     }
   ],
-  further:''
+  furthers:[]
 })
 
 const activeType = {
@@ -128,6 +152,7 @@ async function updateWord(row,index){
   data.examples.forEach(item=>{
     item.sentence = item.sentence.replace(/\{([^}]+)\}/g, '$1');
   })
+  data.furthers = data.furthers.map(item=>({item:item}))
   Object.assign(form, data)
   activeIndex.value = index
 }
@@ -156,6 +181,27 @@ function deleteExample(index){
   form.examples.splice(index,1)
 }
 
+const InputRef = ref(null)
+const inputVisible = ref(false)
+const inputValue = ref('')
+
+function showInput(){
+  inputVisible.value = true
+  nextTick(() => {
+    InputRef.value?.input?.focus()
+  })
+}
+function handleInputConfirm(){
+   if (inputValue.value) {
+    form.furthers.push({item:inputValue.value})
+  }
+  inputVisible.value = false
+  inputValue.value = ''
+}
+function handleClose(index){
+  form.furthers.splice(index,1)
+}
+
 async function onConfirm(){
   if(form.word.trim() === '') return ElMessage.error('请填写word')
   const notDefinitions = form.definitions.filter(item=>item.desc.trim() === '')
@@ -176,8 +222,9 @@ async function onConfirm(){
     definitions:form.definitions.map(item=>item.desc),
     compose:form.compose,
     examples:form.examples,
-    further:form.further,
+    furthers:form.furthers.map(item=>item.item),
   }
+  return
 
   if(formType.value === activeType.ADD){
     const wordNames = words.map(item=>item.word)

@@ -49,7 +49,13 @@
           </dl>
         </li>
       </ul>
-      <template #footer v-if="props.further">{{ props.further }}</template>
+      <template #footer v-if="props.furthers?.length">
+        <ul class="furthers">
+          <li v-for="item in furthers">
+            <el-tag type="info" effect="dark">{{ item }}</el-tag>
+          </li>
+        </ul>
+      </template>
     </el-card>
   </div>
 </template>
@@ -84,8 +90,9 @@ const props = defineProps({
     required: true,
   },
   // 补充说明
-  further: {
-    type: String,
+  furthers: {
+    type: Array,
+    default: () => [],
   },
 });
 
@@ -136,6 +143,11 @@ function render(template, callback) {
     .compose--suffix {
       color: purple;
     }
+  }
+  .furthers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 }
 </style>

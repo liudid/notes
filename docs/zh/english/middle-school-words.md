@@ -6,7 +6,7 @@
             :definitions="item.definitions"
             :compose="item.compose" 
             :examples="item.examples"
-            :further="item.further"
+            :furthers="item.furthers"
             >
         </WordItem>
       </el-collapse-item>

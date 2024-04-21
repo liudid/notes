@@ -2,9 +2,7 @@
   "words": [
     {
       "word": "view",
-      "definitions": [
-        "n. 看；看法，观点"
-      ],
+      "definitions": ["n. 看；看法，观点"],
       "compose": {
         "prefix": "",
         "root": "",
@@ -27,14 +25,11 @@
           "highlight": "view"
         }
       ],
-      "further": "sunset n. 日落（将太阳放置下来sun + set）"
+      "furthers": ["sunset n. 日落（将太阳放置下来sun + set）"]
     },
     {
       "word": "review",
-      "definitions": [
-        "n. 审查，检查",
-        "v. 回顾，复习"
-      ],
+      "definitions": ["n. 审查，检查", "v. 回顾，复习"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -52,14 +47,11 @@
           "highlight": "review"
         }
       ],
-      "further": ""
+      "furthers": []
     },
     {
       "word": "remain",
-      "definitions": [
-        "v.保持不变 ",
-        "n.剩余（物），遗迹；遗体，残骸"
-      ],
+      "definitions": ["v.保持不变 ", "n.剩余（物），遗迹；遗体，残骸"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -72,13 +64,17 @@
           "highlight": "remain"
         }
       ],
-      "further": "seat n. 座位\nprobably adv. 大概，或许\njust adv. 只是\nfalse n. 错误的；虚假的\nalarm n. 警报"
+      "furthers": [
+        "seat n. 座位",
+        "probably adv. 大概，或许",
+        "just adv. 只是",
+        "false n. 错误的；虚假的",
+        "alarm n. 警报"
+      ]
     },
     {
       "word": "reflect",
-      "definitions": [
-        "v.反映；反射"
-      ],
+      "definitions": ["v.反映；反射"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -91,13 +87,16 @@
           "highlight": "reflect"
         }
       ],
-      "further": "mirror n. 镜子\nparticular adj. 特定的\nimage n. 画像；图像；形象；印象\nfront n. 前面；前线  adj. 前面的   [读音纠正]"
+      "furthers": [
+        "mirror n. 镜子",
+        "particular adj. 特定的",
+        "image n. 画像；图像；形象；印象",
+        "front n. 前面；前线  adj. 前面的   [读音纠正]"
+      ]
     },
     {
       "word": "relief",
-      "definitions": [
-        "n.宽慰；轻松；缓和；救济"
-      ],
+      "definitions": ["n.宽慰；轻松；缓和；救济"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -110,13 +109,14 @@
           "highlight": "relief"
         }
       ],
-      "further": "really n. 真正地，事实上；确实的，的确   [读音纠正]\nworry v. 担心，发愁；使担忧，使发愁，使焦虑；"
+      "furthers": [
+        "really n. 真正地，事实上；确实的，的确   [读音纠正]",
+        "worry v. 担心，发愁；使担忧，使发愁，使焦虑"
+      ]
     },
     {
       "word": "relax",
-      "definitions": [
-        "n. 放松；休息"
-      ],
+      "definitions": ["n. 放松；休息"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -129,13 +129,11 @@
           "highlight": "relax"
         }
       ],
-      "further": "romantic  adj. 浪漫的，有情调的；\nsome  det. 一些；若干"
+      "furthers": ["romantic  adj. 浪漫的，有情调的；", "some  det. 一些；若干"]
     },
     {
       "word": "regret",
-      "definitions": [
-        "n. 懊悔，惋惜；"
-      ],
+      "definitions": ["n. 懊悔，惋惜；"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -148,13 +146,11 @@
           "highlight": "regret"
         }
       ],
-      "further": "may  aux. 也许可能\nsay  v. 说；讲；告诉"
+      "furthers": ["may  aux. 也许可能", "say  v. 说；讲；告诉"]
     },
     {
       "word": "receive",
-      "definitions": [
-        "n. 得到；收到"
-      ],
+      "definitions": ["n. 得到；收到"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -172,13 +168,15 @@
           "highlight": "received"
         }
       ],
-      "further": "letter  n. 信\ncall v. 给……命名，称呼；认为……是，把……看作  n. 通话；呼叫\nlawyer n. 律师"
+      "furthers": [
+        "letter  n. 信",
+        "call v. 给……命名，称呼；认为……是，把……看作  n. 通话；呼叫",
+        "lawyer n. 律师"
+      ]
     },
     {
       "word": "reply",
-      "definitions": [
-        "n. 得到；收到"
-      ],
+      "definitions": ["n. 得到；收到"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -196,13 +194,16 @@
           "highlight": "replied"
         }
       ],
-      "further": "letter  n. 信\nlater adv. 后来，以后；再见  adj. 后来的；以后的\nflat adj. 平的；枯燥的；平淡的；\nlie v. 躺；平放；位于  n. 谎言；假话"
+      "furthers": [
+        "letter  n. 信",
+        "later adv. 后来，以后；再见  adj. 后来的；以后的",
+        "flat adj. 平的；枯燥的；平淡的；",
+        "lie v. 躺；平放；位于  n. 谎言；假话"
+      ]
     },
     {
       "word": "refuse",
-      "definitions": [
-        "v. 拒绝"
-      ],
+      "definitions": ["v. 拒绝"],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -220,7 +221,7 @@
           "highlight": "refuse"
         }
       ],
-      "further": "accept  v.接受；同意\napology n. 道歉；认错"
+      "furthers": ["apology n. 道歉；认错"]
     }
   ]
 }
