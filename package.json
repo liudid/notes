@@ -19,6 +19,6 @@
     "server": "node server/app.js"
   },
   "dependencies": {
-    "element-plus": "^2.5.2"
+    "element-plus": "^2.7.0"
   }
 }

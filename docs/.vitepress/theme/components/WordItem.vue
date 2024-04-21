@@ -29,15 +29,24 @@
               </div>
             </div>
           </div>
-          <div>
-            <el-tag
-              v-for="item in props.definitions"
-              :key="item"
-              type="info"
-              effect="light"
-            >
-              {{ item }}
-            </el-tag>
+          <div class="card__subject">
+            <div>
+              <el-tag
+                v-for="item in props.definitions"
+                :key="item"
+                type="info"
+                effect="light"
+              >
+                {{ item }}
+              </el-tag>
+            </div>
+            <!-- <div>
+              <el-segmented
+                v-model="props.level"
+                :options="levelOptions"
+                @change="onSegmentedChange"
+              ></el-segmented>
+            </div> -->
           </div>
         </div>
       </template>
@@ -61,6 +70,7 @@
 </template>
 
 <script setup lang="ts">
+const emit = defineEmits(["on-segmented-change"]);
 const props = defineProps({
   // 编号
   number: {
@@ -94,6 +104,11 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
+  // 熟记等级
+  level: {
+    type: [String, Number],
+    default: "",
+  },
 });
 
 const examples = props.examples.map((item) => {
@@ -113,6 +128,25 @@ const examples = props.examples.map((item) => {
 function render(template, callback) {
   return template.replace(/\{(.*?)\}/g, (match, key) => callback(match, key));
 }
+
+const levelOptions = [
+  {
+    label: "忘记",
+    value: "1",
+  },
+  {
+    label: "模糊",
+    value: "2",
+  },
+  {
+    label: "熟记",
+    value: "3",
+  },
+];
+
+function onSegmentedChange(value) {
+  emit("on-segmented-change", value);
+}
 </script>
 
 <style lang="scss">
@@ -123,6 +157,14 @@ function render(template, callback) {
       font-weight: bold;
       display: flex;
       justify-content: space-between;
+    }
+    .card__subject {
+      position: relative;
+      .el-segmented {
+        position: absolute;
+        right: -18px;
+        bottom: -18px;
+      }
     }
   }
   .example__highlight {

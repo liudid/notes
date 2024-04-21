@@ -127,7 +127,7 @@ async function init(){
   const response  = await fetch('http://localhost:9292/api/words')
   const data = await response.json()
   Object.assign(tableData,data.words)
-  Object.assign(tableData,tableData.reverse())
+  // Object.assign(tableData,tableData.reverse())
 }
 init()
 
