@@ -8,6 +8,7 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 
 import WordItem from "./components/WordItem.vue";
+import Segmented from "./components/Segmented.vue";
 
 export default {
   extends: DefaultTheme,
@@ -19,6 +20,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.use(ElementPlus);
     app.component("WordItem", WordItem);
+    app.component("Segmented", Segmented);
     // ...
   },
 } satisfies Theme;

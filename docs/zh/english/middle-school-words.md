@@ -1,6 +1,10 @@
-   
-   <el-collapse>
-      <el-collapse-item v-for="(item,index) in words" :title="`${index+1}-${item.word}`" :name="index" :key="index">
+   <div class="words">
+    <el-collapse>
+      <el-collapse-item v-for="(item,index) in words" :name="index" :key="index">
+        <template #title>
+          <span>{{index+1}}-{{item.word}}</span>
+          <!-- <Segmented :value="item.level" :options="options"></Segmented> -->
+        </template>
         <WordItem
             :number="index+1" 
             :word="item.word"
@@ -9,11 +13,11 @@
             :examples="item.examples"
             :furthers="item.furthers"
             :level="item.level"
-            @on-segmented-change="onSegmentedChange"
             >
         </WordItem>
       </el-collapse-item>
     </el-collapse>
+   </div>
     
     
     
@@ -21,12 +25,32 @@
 import { reactive } from 'vue'
 import { words } from './words.json'
 
-
-function onSegmentedChange(value){
-  console.log(value)
-}
+const options = [
+  {
+    label: '🔴',
+    value: '1',
+  },
+  {
+    label: '🟠',
+    value: '2',
+  },
+  {
+    label: '🟢',
+    value: '3',
+  },
+  {
+    label: '🟣',
+    value: '4',
+  },
+]
 </script>
 
-<style>
-
+<style lang="scss">
+.words{
+ .segmented {
+    position:absolute;
+    right:40px;
+  }
+}
+ 
 </style>

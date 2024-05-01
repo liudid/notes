@@ -4,6 +4,9 @@
   <el-table border :data="tableData" stripe style="width: 100%">
     <el-table-column type="index" label="序号" width="100" />
     <el-table-column prop="word" label="word" width="180" />
+    <el-table-column prop="word" label="熟练度" width="180" #default="{ row }">
+       <Segmented :value="row.level" :options="options"></Segmented>
+    </el-table-column>
     <el-table-column prop="address" label="操作" #default="{row, $index}">
       <el-button @click="updateWord(row,$index)">编辑</el-button>
       <el-button @click="deleteWord(row,$index)">删除</el-button>
@@ -264,6 +267,25 @@ async function onConfirm(){
   }
 }
 
+
+const options = [
+  {
+    label: '🔴',
+    value: '1',
+  },
+  {
+    label: '🟠',
+    value: '2',
+  },
+  {
+    label: '🟢',
+    value: '3',
+  },
+  {
+    label: '🟣',
+    value: '4',
+  },
+]
 
 
 </script>
