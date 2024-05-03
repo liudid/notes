@@ -35,7 +35,8 @@
                 v-for="item in props.definitions"
                 :key="item"
                 type="info"
-                effect="light"
+                effect="dark"
+                style="background: #a3a7b0"
               >
                 {{ item }}
               </el-tag>

@@ -11,7 +11,7 @@
     <el-collapse v-model="activeNames" @change="handleChange">
       <el-collapse-item v-for="(item,index) in words" :name="index" :key="index">
         <template #title>
-          <span>{{index+1}}-{{item.word}}</span>
+          <span>{{index+1}}.&nbsp;&nbsp;{{item.word}}</span>
           <!-- <Segmented :value="item.level" :options="options"></Segmented> -->
         </template>
         <WordItem
@@ -71,6 +71,18 @@ const options = [
 </script>
 
 <style lang="scss">
+.VPDoc.has-sidebar.has-aside{
+  /* background-color:#f5f5d5; */
+  .el-collapse-item__header{
+    /* background-color:#f5f5d5 !important; */
+  }
+  .el-collapse-item__wrap{
+    /* background-color:#f5f5d5 !important; */
+  }
+  .el-card{
+    background-color:rgb(241, 241, 239) !important;
+  }
+}
 .words{
   .switch{
     text-align:right;
