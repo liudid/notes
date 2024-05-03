@@ -1,5 +1,14 @@
    <div class="words">
-    <el-collapse>
+    <div class="switch">
+      <el-switch
+      v-model="value"
+      size="large"
+      active-text="全部展开"
+      inactive-text="全部折叠"
+      @change="onSwitchChange"
+      />
+    </div>
+    <el-collapse v-model="activeNames" @change="handleChange">
       <el-collapse-item v-for="(item,index) in words" :name="index" :key="index">
         <template #title>
           <span>{{index+1}}-{{item.word}}</span>
@@ -22,31 +31,50 @@
     
     
 <script setup>
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import { words } from './words.json'
 
+const activeNames = ref([])
+
+const handleChange = ()=>{}
+
+const value = ref(false)
+
+const onSwitchChange = (value)=>{
+  if(value){
+  const arr = []
+  words.forEach((item,index)=>arr.push(index))
+  activeNames.value = arr
+  }else{
+  activeNames.value = []
+}
+
+}
 const options = [
   {
-    label: '🔴',
-    value: '1',
+  label: '🔴',
+  value: '1',
   },
   {
-    label: '🟠',
-    value: '2',
+  label: '🟠',
+  value: '2',
   },
   {
-    label: '🟢',
-    value: '3',
+  label: '🟢',
+  value: '3',
   },
   {
-    label: '🟣',
-    value: '4',
+  label: '🟣',
+  value: '4',
   },
 ]
 </script>
 
 <style lang="scss">
 .words{
+  .switch{
+    text-align:right;
+  }
  .segmented {
     position:absolute;
     right:40px;
