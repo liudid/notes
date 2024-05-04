@@ -2,7 +2,9 @@
   "words": [
     {
       "word": "view",
-      "definitions": ["n. 看；看法，观点"],
+      "definitions": [
+        "n. 看；看法，观点"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -25,12 +27,17 @@
           "highlight": "view"
         }
       ],
-      "furthers": ["sunset n. 日落（将太阳放置下来sun + set）"],
+      "furthers": [
+        "sunset n. 日落（将太阳放置下来sun + set）"
+      ],
       "level": "2"
     },
     {
       "word": "review",
-      "definitions": ["n. 审查，检查", "v. 回顾，复习"],
+      "definitions": [
+        "n. 审查，检查",
+        "v. 回顾，复习"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -53,7 +60,10 @@
     },
     {
       "word": "remain",
-      "definitions": ["v.保持不变 ", "n.剩余（物），遗迹；遗体，残骸"],
+      "definitions": [
+        "v.保持不变 ",
+        "n.剩余（物），遗迹；遗体，残骸"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -77,7 +87,9 @@
     },
     {
       "word": "reflect",
-      "definitions": ["v.反映；反射"],
+      "definitions": [
+        "v.反映；反射"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -100,7 +112,9 @@
     },
     {
       "word": "relief",
-      "definitions": ["n.宽慰；轻松；缓和；救济"],
+      "definitions": [
+        "n.宽慰；轻松；缓和；救济"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -121,7 +135,9 @@
     },
     {
       "word": "relax",
-      "definitions": ["n. 放松；休息"],
+      "definitions": [
+        "n. 放松；休息"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -142,7 +158,9 @@
     },
     {
       "word": "regret",
-      "definitions": ["n. 懊悔，惋惜；"],
+      "definitions": [
+        "n. 懊悔，惋惜；"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -155,12 +173,17 @@
           "highlight": "regret"
         }
       ],
-      "furthers": ["may  aux. 也许可能", "say  v. 说；讲；告诉"],
+      "furthers": [
+        "may  aux. 也许可能",
+        "say  v. 说；讲；告诉"
+      ],
       "level": "1"
     },
     {
       "word": "receive",
-      "definitions": ["n. 得到；收到"],
+      "definitions": [
+        "n. 得到；收到"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -187,7 +210,9 @@
     },
     {
       "word": "reply",
-      "definitions": ["n. 得到；收到"],
+      "definitions": [
+        "n. 得到；收到"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -215,7 +240,9 @@
     },
     {
       "word": "refuse",
-      "definitions": ["v. 拒绝"],
+      "definitions": [
+        "v. 拒绝"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -233,12 +260,16 @@
           "highlight": "refuse"
         }
       ],
-      "furthers": ["apology n. 道歉；认错"],
+      "furthers": [
+        "apology n. 道歉；认错"
+      ],
       "level": "1"
     },
     {
       "word": "recall",
-      "definitions": ["v.回忆起"],
+      "definitions": [
+        "v.回忆起"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -256,7 +287,9 @@
     },
     {
       "word": "respond",
-      "definitions": [" v. 回复，回答"],
+      "definitions": [
+        " v. 回复，回答"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -284,7 +317,9 @@
     },
     {
       "word": "response",
-      "definitions": ["n. 回答，回复；响应"],
+      "definitions": [
+        "n. 回答，回复；响应"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -312,7 +347,10 @@
     },
     {
       "word": "report",
-      "definitions": ["n. 报道，宣布", "v. 汇报"],
+      "definitions": [
+        "n. 报道，宣布",
+        "v. 汇报"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -340,7 +378,9 @@
     },
     {
       "word": "reporter",
-      "definitions": ["n. 记者"],
+      "definitions": [
+        "n. 记者"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -369,7 +409,10 @@
     },
     {
       "word": "turn",
-      "definitions": ["n. 旋转，翻转", "v. 旋转；转身"],
+      "definitions": [
+        "n. 旋转，翻转",
+        "v. 旋转；转身"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -387,7 +430,9 @@
     },
     {
       "word": "repeat",
-      "definitions": ["v. 重复"],
+      "definitions": [
+        "v. 重复"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -410,7 +455,9 @@
     },
     {
       "word": "request",
-      "definitions": ["n. 请求"],
+      "definitions": [
+        "n. 请求"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -437,7 +484,9 @@
     },
     {
       "word": "require",
-      "definitions": ["v. 需要；要求；规定"],
+      "definitions": [
+        "v. 需要；要求；规定"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -468,7 +517,9 @@
     },
     {
       "word": "reusable",
-      "definitions": [" adj. 可重复使用的"],
+      "definitions": [
+        " adj. 可重复使用的"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -490,7 +541,9 @@
     },
     {
       "word": "cycle",
-      "definitions": ["n. 循环；周期；自行车"],
+      "definitions": [
+        "n. 循环；周期；自行车"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -521,7 +574,9 @@
     },
     {
       "word": "recycle",
-      "definitions": ["v. 回收利用；循环利用"],
+      "definitions": [
+        "v. 回收利用；循环利用"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -534,12 +589,16 @@
           "highlight": "recycle"
         }
       ],
-      "furthers": ["again  adv. 又一次；再一次"],
+      "furthers": [
+        "again  adv. 又一次；再一次"
+      ],
       "level": "1"
     },
     {
       "word": "solve",
-      "definitions": ["v. 解决"],
+      "definitions": [
+        "v. 解决"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -552,12 +611,16 @@
           "highlight": "solve"
         }
       ],
-      "furthers": ["money  n. 钱"],
+      "furthers": [
+        "money  n. 钱"
+      ],
       "level": "1"
     },
     {
       "word": "resolve",
-      "definitions": ["v. 决心；解决；决定"],
+      "definitions": [
+        "v. 决心；解决；决定"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -579,7 +642,9 @@
     },
     {
       "word": "remind",
-      "definitions": ["v. 使想起"],
+      "definitions": [
+        "v. 使想起"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -597,7 +662,9 @@
     },
     {
       "word": "repair",
-      "definitions": ["v. 维修"],
+      "definitions": [
+        "v. 维修"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -610,12 +677,17 @@
           "highlight": "repair"
         }
       ],
-      "furthers": ["roof  n. 屋顶；车顶", "hole  n. 洞；坑；裂口"],
+      "furthers": [
+        "roof  n. 屋顶；车顶",
+        "hole  n. 洞；坑；裂口"
+      ],
       "level": "1"
     },
     {
       "word": "search",
-      "definitions": ["v. 寻找；寻搜"],
+      "definitions": [
+        "v. 寻找；寻搜"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -639,7 +711,9 @@
     },
     {
       "word": "research",
-      "definitions": ["v. 研究；调查"],
+      "definitions": [
+        "v. 研究；调查"
+      ],
       "compose": {
         "prefix": "re",
         "root": "",
@@ -661,7 +735,9 @@
     },
     {
       "word": "cover",
-      "definitions": ["v. 覆盖"],
+      "definitions": [
+        "v. 覆盖"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -679,7 +755,9 @@
     },
     {
       "word": "agree",
-      "definitions": ["v. 同意"],
+      "definitions": [
+        "v. 同意"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -697,7 +775,9 @@
     },
     {
       "word": "disappoint",
-      "definitions": ["v. 使…失望"],
+      "definitions": [
+        "v. 使…失望"
+      ],
       "compose": {
         "prefix": "dis",
         "root": "",
@@ -715,12 +795,16 @@
           "highlight": "disappointed"
         }
       ],
-      "furthers": ["hope  v. 希望"],
+      "furthers": [
+        "hope  v. 希望"
+      ],
       "level": "1"
     },
     {
       "word": "belief",
-      "definitions": ["n. 信任；信念；信仰"],
+      "definitions": [
+        "n. 信任；信念；信仰"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -738,7 +822,9 @@
     },
     {
       "word": "appear",
-      "definitions": ["n. 出现；起源；问世"],
+      "definitions": [
+        "n. 出现；起源；问世"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -756,7 +842,9 @@
     },
     {
       "word": "express",
-      "definitions": [" v. 表达；表现"],
+      "definitions": [
+        " v. 表达；表现"
+      ],
       "compose": {
         "prefix": "ex",
         "root": "",
@@ -774,7 +862,9 @@
     },
     {
       "word": "exchange",
-      "definitions": ["v. 交换"],
+      "definitions": [
+        "v. 交换"
+      ],
       "compose": {
         "prefix": "ex",
         "root": "",
@@ -787,12 +877,17 @@
           "highlight": "exchange"
         }
       ],
-      "furthers": ["few  prep. 很少数；几乎没有", "thing n. 事情"],
+      "furthers": [
+        "few  prep. 很少数；几乎没有",
+        "thing n. 事情"
+      ],
       "level": "1"
     },
     {
       "word": "except",
-      "definitions": ["v. 除…之外"],
+      "definitions": [
+        "v. 除…之外"
+      ],
       "compose": {
         "prefix": "ex",
         "root": "",
@@ -805,12 +900,16 @@
           "highlight": "except"
         }
       ],
-      "furthers": ["invite  v. 邀请"],
+      "furthers": [
+        "invite  v. 邀请"
+      ],
       "level": "1"
     },
     {
       "word": "elbow",
-      "definitions": ["n.肘部"],
+      "definitions": [
+        "n.肘部"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -823,12 +922,16 @@
           "highlight": "patch"
         }
       ],
-      "furthers": ["patch  n. 小块；斑点；补丁"],
+      "furthers": [
+        "patch  n. 小块；斑点；补丁"
+      ],
       "level": "1"
     },
     {
       "word": "bow",
-      "definitions": ["v.鞠躬，点头"],
+      "definitions": [
+        "v.鞠躬，点头"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -846,7 +949,9 @@
     },
     {
       "word": "explain",
-      "definitions": ["v.解释"],
+      "definitions": [
+        "v.解释"
+      ],
       "compose": {
         "prefix": "ex",
         "root": "",
@@ -859,12 +964,16 @@
           "highlight": "explain"
         }
       ],
-      "furthers": ["grammar n.语法；语法书"],
+      "furthers": [
+        "grammar n.语法；语法书"
+      ],
       "level": "1"
     },
     {
       "word": "explanation",
-      "definitions": ["n.解释；理由"],
+      "definitions": [
+        "n.解释；理由"
+      ],
       "compose": {
         "prefix": "ex",
         "root": "",
@@ -882,7 +991,9 @@
     },
     {
       "word": "expensive",
-      "definitions": ["adj. 昂贵的"],
+      "definitions": [
+        "adj. 昂贵的"
+      ],
       "compose": {
         "prefix": "ex",
         "root": "",
@@ -906,7 +1017,9 @@
     },
     {
       "word": "convenient",
-      "definitions": ["adj. 便利"],
+      "definitions": [
+        "adj. 便利"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -919,12 +1032,16 @@
           "highlight": "convenience"
         }
       ],
-      "furthers": ["store  n.商店；店铺；储存，储备；仓库"],
+      "furthers": [
+        "store  n.商店；店铺；储存，储备；仓库"
+      ],
       "level": "1"
     },
     {
       "word": "depend",
-      "definitions": ["v. 依靠；依赖；取决于"],
+      "definitions": [
+        "v. 依靠；依赖；取决于"
+      ],
       "compose": {
         "prefix": "de",
         "root": "",
@@ -937,12 +1054,16 @@
           "highlight": "depend"
         }
       ],
-      "furthers": ["heavily adv.非常；大量；严重"],
+      "furthers": [
+        "heavily adv.非常；大量；严重"
+      ],
       "level": "1"
     },
     {
       "word": "independent",
-      "definitions": ["adj. 独立的；自立的；自主的"],
+      "definitions": [
+        "adj. 独立的；自立的；自主的"
+      ],
       "compose": {
         "prefix": "in",
         "root": "",
@@ -960,7 +1081,9 @@
     },
     {
       "word": "include",
-      "definitions": ["v. 包括"],
+      "definitions": [
+        "v. 包括"
+      ],
       "compose": {
         "prefix": "in",
         "root": "",
@@ -973,12 +1096,16 @@
           "highlight": "includes"
         }
       ],
-      "furthers": ["postage n.邮费"],
+      "furthers": [
+        "postage n.邮费"
+      ],
       "level": "1"
     },
     {
       "word": "introduction",
-      "definitions": ["n. 介绍"],
+      "definitions": [
+        "n. 介绍"
+      ],
       "compose": {
         "prefix": "in",
         "root": "",
@@ -991,12 +1118,16 @@
           "highlight": "introduce"
         }
       ],
-      "furthers": ["(duct = 引导)"],
+      "furthers": [
+        "(duct = 引导)"
+      ],
       "level": "1"
     },
     {
       "word": "embarrass",
-      "definitions": ["v. 尴尬"],
+      "definitions": [
+        "v. 尴尬"
+      ],
       "compose": {
         "prefix": "em",
         "root": "",
@@ -1009,12 +1140,16 @@
           "highlight": "embarrass"
         }
       ],
-      "furthers": ["public adj.大众的；公开的"],
+      "furthers": [
+        "public adj.大众的；公开的"
+      ],
       "level": "1"
     },
     {
       "word": "polite",
-      "definitions": ["adj. 礼貌的"],
+      "definitions": [
+        "adj. 礼貌的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1027,12 +1162,17 @@
           "highlight": "impolite"
         }
       ],
-      "furthers": ["directly adv.直接地", "impolite adj.不礼貌的"],
+      "furthers": [
+        "directly adv.直接地",
+        "impolite adj.不礼貌的"
+      ],
       "level": "1"
     },
     {
       "word": "possible",
-      "definitions": ["adj. 可能的"],
+      "definitions": [
+        "adj. 可能的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1045,12 +1185,16 @@
           "highlight": "impossible"
         }
       ],
-      "furthers": ["nothing pron.没有什么"],
+      "furthers": [
+        "nothing pron.没有什么"
+      ],
       "level": "1"
     },
     {
       "word": "crowd",
-      "definitions": ["n.群"],
+      "definitions": [
+        "n.群"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1068,7 +1212,9 @@
     },
     {
       "word": "comfortable",
-      "definitions": ["adj.舒适的；自在的"],
+      "definitions": [
+        "adj.舒适的；自在的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1081,12 +1227,17 @@
           "highlight": "comfortable"
         }
       ],
-      "furthers": ["weather n.天气", "spring n.春天"],
+      "furthers": [
+        "weather n.天气",
+        "spring n.春天"
+      ],
       "level": "1"
     },
     {
       "word": "easy",
-      "definitions": ["adj.安心的"],
+      "definitions": [
+        "adj.安心的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1104,7 +1255,9 @@
     },
     {
       "word": "expect",
-      "definitions": ["adj.期望中的"],
+      "definitions": [
+        "adj.期望中的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1117,12 +1270,16 @@
           "highlight": "expect"
         }
       ],
-      "furthers": ["goodness int. 天呐(表示惊讶)"],
+      "furthers": [
+        "goodness int. 天呐(表示惊讶)"
+      ],
       "level": "1"
     },
     {
       "word": "usual",
-      "definitions": ["adj.寻常的"],
+      "definitions": [
+        "adj.寻常的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1135,12 +1292,16 @@
           "highlight": "unusual"
         }
       ],
-      "furthers": ["childhood n. 童年"],
+      "furthers": [
+        "childhood n. 童年"
+      ],
       "level": "1"
     },
     {
       "word": "absent",
-      "definitions": ["adj.缺席的"],
+      "definitions": [
+        "adj.缺席的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1158,7 +1319,9 @@
     },
     {
       "word": "surface",
-      "definitions": ["n. 表面"],
+      "definitions": [
+        "n. 表面"
+      ],
       "compose": {
         "prefix": "sur",
         "root": "",
@@ -1171,12 +1334,16 @@
           "highlight": "surface"
         }
       ],
-      "furthers": ["smooth adj. 光滑的；顺利的；平稳的"],
+      "furthers": [
+        "smooth adj. 光滑的；顺利的；平稳的"
+      ],
       "level": "1"
     },
     {
       "word": "compete",
-      "definitions": ["v. 竞争"],
+      "definitions": [
+        "v. 竞争"
+      ],
       "compose": {
         "prefix": "com",
         "root": "",
@@ -1189,12 +1356,17 @@
           "highlight": "compete"
         }
       ],
-      "furthers": ["take v. 拿；带去；做", "competition n.竞争"],
+      "furthers": [
+        "take v. 拿；带去；做",
+        "competition n.竞争"
+      ],
       "level": "1"
     },
     {
       "word": "competitor",
-      "definitions": ["n. 竞争者"],
+      "definitions": [
+        "n. 竞争者"
+      ],
       "compose": {
         "prefix": "com",
         "root": "",
@@ -1212,7 +1384,9 @@
     },
     {
       "word": "complete",
-      "definitions": ["v. 完成"],
+      "definitions": [
+        "v. 完成"
+      ],
       "compose": {
         "prefix": "com",
         "root": "",
@@ -1225,12 +1399,16 @@
           "highlight": "complete"
         }
       ],
-      "furthers": ["build  v.建筑；建造"],
+      "furthers": [
+        "build  v.建筑；建造"
+      ],
       "level": "1"
     },
     {
       "word": "translate",
-      "definitions": ["v. 翻译"],
+      "definitions": [
+        "v. 翻译"
+      ],
       "compose": {
         "prefix": "trans",
         "root": "",
@@ -1243,12 +1421,17 @@
           "highlight": "Translate"
         }
       ],
-      "furthers": ["translator n.翻译官", "translation n.翻译"],
+      "furthers": [
+        "translator n.翻译官",
+        "translation n.翻译"
+      ],
       "level": "1"
     },
     {
       "word": "transport",
-      "definitions": ["v. 运输"],
+      "definitions": [
+        "v. 运输"
+      ],
       "compose": {
         "prefix": "trans",
         "root": "",
@@ -1266,12 +1449,16 @@
           "highlight": "transportation"
         }
       ],
-      "furthers": ["goods n.商品;货品;"],
+      "furthers": [
+        "goods n.商品;货品;"
+      ],
       "level": "1"
     },
     {
       "word": "support",
-      "definitions": ["v./n. 支持"],
+      "definitions": [
+        "v./n. 支持"
+      ],
       "compose": {
         "prefix": "sup",
         "root": "",
@@ -1284,12 +1471,16 @@
           "highlight": "supports"
         }
       ],
-      "furthers": ["nobody  pron.没有人"],
+      "furthers": [
+        "nobody  pron.没有人"
+      ],
       "level": "1"
     },
     {
       "word": "suppose",
-      "definitions": ["v.推断"],
+      "definitions": [
+        "v.推断"
+      ],
       "compose": {
         "prefix": "sup",
         "root": "",
@@ -1302,12 +1493,16 @@
           "highlight": "suppose"
         }
       ],
-      "furthers": ["right  adj.正确的；右边的"],
+      "furthers": [
+        "right  adj.正确的；右边的"
+      ],
       "level": "1"
     },
     {
       "word": "prefer",
-      "definitions": ["v.更喜欢"],
+      "definitions": [
+        "v.更喜欢"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1320,12 +1515,18 @@
           "highlight": "prefer"
         }
       ],
-      "furthers": ["stay v. 停留", "during prep.在期间", "such det.这样的"],
+      "furthers": [
+        "stay v. 停留",
+        "during prep.在期间",
+        "such det.这样的"
+      ],
       "level": "1"
     },
     {
       "word": "president",
-      "definitions": ["n.总统"],
+      "definitions": [
+        "n.总统"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1343,7 +1544,9 @@
     },
     {
       "word": "predict",
-      "definitions": ["v.预测"],
+      "definitions": [
+        "v.预测"
+      ],
       "compose": {
         "prefix": "pre",
         "root": "",
@@ -1356,12 +1559,17 @@
           "highlight": "predicted"
         }
       ],
-      "furthers": ["prediction n.预测", "re-elect v.再次选举"],
+      "furthers": [
+        "prediction n.预测",
+        "re-elect v.再次选举"
+      ],
       "level": "1"
     },
     {
       "word": "prepare",
-      "definitions": ["v.准备"],
+      "definitions": [
+        "v.准备"
+      ],
       "compose": {
         "prefix": "pre",
         "root": "",
@@ -1379,7 +1587,9 @@
     },
     {
       "word": "dialog",
-      "definitions": ["n.对话"],
+      "definitions": [
+        "n.对话"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1401,7 +1611,9 @@
     },
     {
       "word": "dialogue",
-      "definitions": ["n.对话(正式)"],
+      "definitions": [
+        "n.对话(正式)"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1414,12 +1626,17 @@
           "highlight": "dialogue"
         }
       ],
-      "furthers": ["practice n.实践", "partner n.伙伴"],
+      "furthers": [
+        "practice n.实践",
+        "partner n.伙伴"
+      ],
       "level": "1"
     },
     {
       "word": "decide",
-      "definitions": ["v.决定"],
+      "definitions": [
+        "v.决定"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1432,12 +1649,16 @@
           "highlight": "decide"
         }
       ],
-      "furthers": ["decision n.决定"],
+      "furthers": [
+        "decision n.决定"
+      ],
       "level": "1"
     },
     {
       "word": "courage",
-      "definitions": ["n.勇气"],
+      "definitions": [
+        "n.勇气"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1455,7 +1676,9 @@
     },
     {
       "word": "encourage",
-      "definitions": ["v.鼓励"],
+      "definitions": [
+        "v.鼓励"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1468,12 +1691,16 @@
           "highlight": "encourage"
         }
       ],
-      "furthers": ["together adv.共同；一起"],
+      "furthers": [
+        "together adv.共同；一起"
+      ],
       "level": "1"
     },
     {
       "word": "danger",
-      "definitions": ["n.危险"],
+      "definitions": [
+        "n.危险"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1491,7 +1718,9 @@
     },
     {
       "word": "endanger",
-      "definitions": ["v.使…处于危险"],
+      "definitions": [
+        "v.使…处于危险"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1504,12 +1733,17 @@
           "highlight": "endangered"
         }
       ],
-      "furthers": ["cranes n.鹤", "species n.种；种类"],
+      "furthers": [
+        "cranes n.鹤",
+        "species n.种；种类"
+      ],
       "level": "1"
     },
     {
       "word": "oppose",
-      "definitions": ["v.反对"],
+      "definitions": [
+        "v.反对"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1522,12 +1756,17 @@
           "highlight": "opposed"
         }
       ],
-      "furthers": ["medical adj.医疗的", "reform v.改革"],
+      "furthers": [
+        "medical adj.医疗的",
+        "reform v.改革"
+      ],
       "level": "1"
     },
     {
       "word": "opposite",
-      "definitions": ["prep.与…对面"],
+      "definitions": [
+        "prep.与…对面"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1540,12 +1779,16 @@
           "highlight": "opposite"
         }
       ],
-      "furthers": ["bank n.银行"],
+      "furthers": [
+        "bank n.银行"
+      ],
       "level": "1"
     },
     {
       "word": "educate",
-      "definitions": ["v.教育"],
+      "definitions": [
+        "v.教育"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1558,12 +1801,16 @@
           "highlight": "Education"
         }
       ],
-      "furthers": ["education 名词形式 （duct=引导）"],
+      "furthers": [
+        "education 名词形式 （duct=引导）"
+      ],
       "level": "1"
     },
     {
       "word": "graduate",
-      "definitions": ["v.毕业"],
+      "definitions": [
+        "v.毕业"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1585,7 +1832,9 @@
     },
     {
       "word": "instruct",
-      "definitions": ["v.指示"],
+      "definitions": [
+        "v.指示"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1598,12 +1847,18 @@
           "highlight": "instructions"
         }
       ],
-      "furthers": ["（duct=引导）", "follow v.跟随", "screen n.屏幕"],
+      "furthers": [
+        "（duct=引导）",
+        "follow v.跟随",
+        "screen n.屏幕"
+      ],
       "level": "1"
     },
     {
       "word": "suggest",
-      "definitions": ["v.建议"],
+      "definitions": [
+        "v.建议"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1630,7 +1885,9 @@
     },
     {
       "word": "collect",
-      "definitions": ["v.收集"],
+      "definitions": [
+        "v.收集"
+      ],
       "compose": {
         "prefix": "col",
         "root": "",
@@ -1648,12 +1905,17 @@
           "highlight": "collection"
         }
       ],
-      "furthers": ["large adj.巨大的，大量的，大的", "coin n.硬币 v.创造"],
+      "furthers": [
+        "large adj.巨大的，大量的，大的",
+        "coin n.硬币 v.创造"
+      ],
       "level": "1"
     },
     {
       "word": "communicate",
-      "definitions": ["v.交流"],
+      "definitions": [
+        "v.交流"
+      ],
       "compose": {
         "prefix": "com",
         "root": "",
@@ -1666,12 +1928,17 @@
           "highlight": "communicated"
         }
       ],
-      "furthers": ["communication 名词形式", "e-mail n.电子邮件"],
+      "furthers": [
+        "communication 名词形式",
+        "e-mail n.电子邮件"
+      ],
       "level": "1"
     },
     {
       "word": "compare",
-      "definitions": ["v.比较"],
+      "definitions": [
+        "v.比较"
+      ],
       "compose": {
         "prefix": "com",
         "root": "",
@@ -1684,12 +1951,17 @@
           "highlight": "compares"
         }
       ],
-      "furthers": ["comparison 名词形式", "customer n.顾客"],
+      "furthers": [
+        "comparison 名词形式",
+        "customer n.顾客"
+      ],
       "level": "1"
     },
     {
       "word": "congratulate",
-      "definitions": ["v.祝贺"],
+      "definitions": [
+        "v.祝贺"
+      ],
       "compose": {
         "prefix": "con",
         "root": "",
@@ -1702,12 +1974,16 @@
           "highlight": "congratulated"
         }
       ],
-      "furthers": ["congratulation 名词形式"],
+      "furthers": [
+        "congratulation 名词形式"
+      ],
       "level": "1"
     },
     {
       "word": "friendship",
-      "definitions": ["n.友谊"],
+      "definitions": [
+        "n.友谊"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1725,7 +2001,9 @@
     },
     {
       "word": "relationship",
-      "definitions": ["n.关系"],
+      "definitions": [
+        "n.关系"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1738,12 +2016,17 @@
           "highlight": "relationship"
         }
       ],
-      "furthers": ["relation 关系", "quite adv.相当"],
+      "furthers": [
+        "relation 关系",
+        "quite adv.相当"
+      ],
       "level": "1"
     },
     {
       "word": "agreement",
-      "definitions": ["n.协定"],
+      "definitions": [
+        "n.协定"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1765,7 +2048,9 @@
     },
     {
       "word": "shy",
-      "definitions": ["adj.害羞的"],
+      "definitions": [
+        "adj.害羞的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1776,14 +2061,22 @@
           "sentence": "But I’m trying to help you overcome your {shyness}.",
           "explanation": "但我正在努力帮助你克服害羞。",
           "highlight": "shyness"
+        },
+        {
+          "sentence": "She is quite {shy} with strangers.",
+          "explanation": "她和陌生人在一起的时候很羞涩",
+          "highlight": "shy"
         }
       ],
-      "furthers": ["overcome v.克服"],
-      "level": "1"
+      "furthers": [
+        "overcome v.克服"
+      ]
     },
     {
       "word": "shyness",
-      "definitions": ["n.害羞"],
+      "definitions": [
+        "n.害羞"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1801,7 +2094,9 @@
     },
     {
       "word": "kind",
-      "definitions": ["adj.友好的"],
+      "definitions": [
+        "adj.友好的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1819,7 +2114,9 @@
     },
     {
       "word": "kindness",
-      "definitions": ["n.好"],
+      "definitions": [
+        "n.好"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1832,12 +2129,16 @@
           "highlight": "kindness"
         }
       ],
-      "furthers": ["enough det.足够的；充足的"],
+      "furthers": [
+        "enough det.足够的；充足的"
+      ],
       "level": "1"
     },
     {
       "word": "sad",
-      "definitions": ["adj.悲伤的"],
+      "definitions": [
+        "adj.悲伤的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1855,7 +2156,9 @@
     },
     {
       "word": "sadness",
-      "definitions": ["n.悲伤"],
+      "definitions": [
+        "n.悲伤"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1868,12 +2171,18 @@
           "highlight": "Sadness"
         }
       ],
-      "furthers": ["pop n.流行音乐", "song n.歌曲", "poem n.诗"],
+      "furthers": [
+        "pop n.流行音乐",
+        "song n.歌曲",
+        "poem n.诗"
+      ],
       "level": "1"
     },
     {
       "word": "fair",
-      "definitions": ["adj.公平的"],
+      "definitions": [
+        "adj.公平的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1891,7 +2200,9 @@
     },
     {
       "word": "fairness",
-      "definitions": ["n.公平的"],
+      "definitions": [
+        "n.公平的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1904,12 +2215,16 @@
           "highlight": "fair"
         }
       ],
-      "furthers": ["enough det.足够的；充足的 "],
+      "furthers": [
+        "enough det.足够的；充足的 "
+      ],
       "level": "1"
     },
     {
       "word": "ill",
-      "definitions": ["adj.病的"],
+      "definitions": [
+        "adj.病的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1927,7 +2242,9 @@
     },
     {
       "word": "illness",
-      "definitions": ["n.病"],
+      "definitions": [
+        "n.病"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1945,7 +2262,9 @@
     },
     {
       "word": "sick",
-      "definitions": ["adj.病的"],
+      "definitions": [
+        "adj.病的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1963,7 +2282,9 @@
     },
     {
       "word": "sickness",
-      "definitions": ["n.病"],
+      "definitions": [
+        "n.病"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1981,7 +2302,9 @@
     },
     {
       "word": "physics",
-      "definitions": ["n.物理"],
+      "definitions": [
+        "n.物理"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -1999,7 +2322,9 @@
     },
     {
       "word": "physicist",
-      "definitions": ["n.物理学家"],
+      "definitions": [
+        "n.物理学家"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2017,7 +2342,9 @@
     },
     {
       "word": "chemistry",
-      "definitions": ["n.化学"],
+      "definitions": [
+        "n.化学"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2035,7 +2362,9 @@
     },
     {
       "word": "chemist",
-      "definitions": ["n.化学家"],
+      "definitions": [
+        "n.化学家"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2053,7 +2382,9 @@
     },
     {
       "word": "science",
-      "definitions": ["n.科学"],
+      "definitions": [
+        "n.科学"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2071,7 +2402,9 @@
     },
     {
       "word": "scientist",
-      "definitions": ["n.科学家"],
+      "definitions": [
+        "n.科学家"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2089,7 +2422,9 @@
     },
     {
       "word": "dentist",
-      "definitions": ["n.牙医"],
+      "definitions": [
+        "n.牙医"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2102,12 +2437,16 @@
           "highlight": "dentist"
         }
       ],
-      "furthers": ["scare n.恐惧"],
+      "furthers": [
+        "scare n.恐惧"
+      ],
       "level": "1"
     },
     {
       "word": "piano",
-      "definitions": ["n.钢琴"],
+      "definitions": [
+        "n.钢琴"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2125,7 +2464,9 @@
     },
     {
       "word": "pianist",
-      "definitions": ["n.钢琴家"],
+      "definitions": [
+        "n.钢琴家"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2143,7 +2484,9 @@
     },
     {
       "word": "violin",
-      "definitions": ["n.小提琴"],
+      "definitions": [
+        "n.小提琴"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2154,14 +2497,22 @@
           "sentence": "I have been playing the {violin} for 5 hours.",
           "explanation": "我已经弹小提琴5个小时了。",
           "highlight": "violin"
+        },
+        {
+          "sentence": "Few people can play the {violin}.",
+          "explanation": "很少人会弹小提琴。",
+          "highlight": "violin"
         }
       ],
-      "furthers": ["hour n.小时"],
-      "level": "1"
+      "furthers": [
+        "hour n.小时"
+      ]
     },
     {
       "word": "violinist",
-      "definitions": ["n.小提琴家"],
+      "definitions": [
+        "n.小提琴家"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2179,7 +2530,9 @@
     },
     {
       "word": "terrible",
-      "definitions": ["adj.可怕的"],
+      "definitions": [
+        "adj.可怕的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2192,12 +2545,16 @@
           "highlight": "terrible"
         }
       ],
-      "furthers": ["storm n.暴风雨"],
+      "furthers": [
+        "storm n.暴风雨"
+      ],
       "level": "1"
     },
     {
       "word": "terror",
-      "definitions": ["n.恐怖"],
+      "definitions": [
+        "n.恐怖"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2215,7 +2572,9 @@
     },
     {
       "word": "terrorist",
-      "definitions": ["n.恐怖分子"],
+      "definitions": [
+        "n.恐怖分子"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2233,7 +2592,9 @@
     },
     {
       "word": "able",
-      "definitions": ["adj.能够的"],
+      "definitions": [
+        "adj.能够的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2251,7 +2612,9 @@
     },
     {
       "word": "ability",
-      "definitions": ["n.能力"],
+      "definitions": [
+        "n.能力"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2269,7 +2632,9 @@
     },
     {
       "word": "electric",
-      "definitions": ["adj.电子的；电的"],
+      "definitions": [
+        "adj.电子的；电的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2282,12 +2647,16 @@
           "highlight": "electric"
         }
       ],
-      "furthers": ["toothbrush n.牙刷"],
+      "furthers": [
+        "toothbrush n.牙刷"
+      ],
       "level": "1"
     },
     {
       "word": "electricity",
-      "definitions": ["n.电"],
+      "definitions": [
+        "n.电"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2300,12 +2669,16 @@
           "highlight": "electricity"
         }
       ],
-      "furthers": ["farm n.农场"],
+      "furthers": [
+        "farm n.农场"
+      ],
       "level": "1"
     },
     {
       "word": "popular",
-      "definitions": ["adj.流行的"],
+      "definitions": [
+        "adj.流行的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2323,7 +2696,9 @@
     },
     {
       "word": "popularity",
-      "definitions": ["n.受欢迎的"],
+      "definitions": [
+        "n.受欢迎的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2341,7 +2716,9 @@
     },
     {
       "word": "create",
-      "definitions": ["v.创造"],
+      "definitions": [
+        "v.创造"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2352,14 +2729,20 @@
           "sentence": "Some people believe the universe was {created} by a big explosion.",
           "explanation": "有些人认为宇宙是通过一次大爆炸创造出来的。",
           "highlight": "created"
+        },
+        {
+          "sentence": "Most Westerners believe that God {created} the world.",
+          "explanation": "大多数西方人信奉：上帝创造了世界",
+          "highlight": "created"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "creative",
-      "definitions": ["adj.创造性的"],
+      "definitions": [
+        "adj.创造性的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2372,12 +2755,18 @@
           "highlight": "creative"
         }
       ],
-      "furthers": ["bore v.令人厌烦", "explosion n.爆炸", "wish v.希望"],
+      "furthers": [
+        "bore v.令人厌烦",
+        "explosion n.爆炸",
+        "wish v.希望"
+      ],
       "level": "1"
     },
     {
       "word": "creativity",
-      "definitions": ["n.创造性"],
+      "definitions": [
+        "n.创造性"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2395,7 +2784,9 @@
     },
     {
       "word": "actor",
-      "definitions": ["n.男演员"],
+      "definitions": [
+        "n.男演员"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2408,12 +2799,16 @@
           "highlight": "actor"
         }
       ],
-      "furthers": ["famous n.著名的"],
+      "furthers": [
+        "famous n.著名的"
+      ],
       "level": "1"
     },
     {
       "word": "actress",
-      "definitions": ["n.女演员"],
+      "definitions": [
+        "n.女演员"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2431,7 +2826,9 @@
     },
     {
       "word": "waiter",
-      "definitions": ["n.男服务员"],
+      "definitions": [
+        "n.男服务员"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2449,7 +2846,9 @@
     },
     {
       "word": "waitress",
-      "definitions": ["n.女服务员"],
+      "definitions": [
+        "n.女服务员"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2467,7 +2866,9 @@
     },
     {
       "word": "god",
-      "definitions": ["n.神"],
+      "definitions": [
+        "n.神"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2485,7 +2886,9 @@
     },
     {
       "word": "goddess",
-      "definitions": ["n.女神"],
+      "definitions": [
+        "n.女神"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2503,7 +2906,9 @@
     },
     {
       "word": "engineer",
-      "definitions": ["n.工程师"],
+      "definitions": [
+        "n.工程师"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2521,7 +2926,9 @@
     },
     {
       "word": "pioneer",
-      "definitions": ["n.先驱"],
+      "definitions": [
+        "n.先驱"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2539,7 +2946,9 @@
     },
     {
       "word": "accept",
-      "definitions": ["v.接受"],
+      "definitions": [
+        "v.接受"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2557,7 +2966,9 @@
     },
     {
       "word": "acceptance",
-      "definitions": ["n.接受"],
+      "definitions": [
+        "n.接受"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2575,7 +2986,9 @@
     },
     {
       "word": "invite",
-      "definitions": ["v.邀请"],
+      "definitions": [
+        "v.邀请"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2593,7 +3006,9 @@
     },
     {
       "word": "invitation",
-      "definitions": ["n.邀请"],
+      "definitions": [
+        "n.邀请"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2611,7 +3026,9 @@
     },
     {
       "word": "press",
-      "definitions": ["v./n. 压"],
+      "definitions": [
+        "v./n. 压"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2629,7 +3046,9 @@
     },
     {
       "word": "pressure",
-      "definitions": ["n.压力"],
+      "definitions": [
+        "n.压力"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2647,7 +3066,9 @@
     },
     {
       "word": "environment",
-      "definitions": ["n.环境"],
+      "definitions": [
+        "n.环境"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2669,7 +3090,9 @@
     },
     {
       "word": "environmental",
-      "definitions": ["adj.环境的"],
+      "definitions": [
+        "adj.环境的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2687,7 +3110,9 @@
     },
     {
       "word": "accident",
-      "definitions": ["n.事故"],
+      "definitions": [
+        "n.事故"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2705,7 +3130,9 @@
     },
     {
       "word": "accidental",
-      "definitions": ["accidental"],
+      "definitions": [
+        "accidental"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2723,7 +3150,9 @@
     },
     {
       "word": "music",
-      "definitions": ["n.音乐"],
+      "definitions": [
+        "n.音乐"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2741,7 +3170,9 @@
     },
     {
       "word": "musical",
-      "definitions": ["adj.音乐的"],
+      "definitions": [
+        "adj.音乐的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2759,7 +3190,9 @@
     },
     {
       "word": "musician",
-      "definitions": ["n.音乐家"],
+      "definitions": [
+        "n.音乐家"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2772,12 +3205,16 @@
           "highlight": "music"
         }
       ],
-      "furthers": ["without prep.没有"],
+      "furthers": [
+        "without prep.没有"
+      ],
       "level": "1"
     },
     {
       "word": "salt",
-      "definitions": ["n.盐"],
+      "definitions": [
+        "n.盐"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2795,7 +3232,9 @@
     },
     {
       "word": "salty",
-      "definitions": ["adj.咸的"],
+      "definitions": [
+        "adj.咸的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2813,7 +3252,9 @@
     },
     {
       "word": "crisp",
-      "definitions": ["adj.脆的，酥的"],
+      "definitions": [
+        "adj.脆的，酥的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2831,7 +3272,9 @@
     },
     {
       "word": "crispy",
-      "definitions": ["adj.脆的，酥的"],
+      "definitions": [
+        "adj.脆的，酥的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2844,12 +3287,17 @@
           "highlight": "crispy"
         }
       ],
-      "furthers": ["piece n.块；片", "bread n.面包；钱"],
+      "furthers": [
+        "piece n.块；片",
+        "bread n.面包；钱"
+      ],
       "level": "1"
     },
     {
       "word": "noise",
-      "definitions": ["n.噪音"],
+      "definitions": [
+        "n.噪音"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2862,12 +3310,16 @@
           "highlight": "noise"
         }
       ],
-      "furthers": ["outside n.外部的"],
+      "furthers": [
+        "outside n.外部的"
+      ],
       "level": "1"
     },
     {
       "word": "noisy",
-      "definitions": ["adj.吵闹的"],
+      "definitions": [
+        "adj.吵闹的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2885,7 +3337,9 @@
     },
     {
       "word": "sleep",
-      "definitions": ["v.睡觉"],
+      "definitions": [
+        "v.睡觉"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2903,7 +3357,9 @@
     },
     {
       "word": "sleepy",
-      "definitions": ["adj.瞌睡的"],
+      "definitions": [
+        "adj.瞌睡的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2916,12 +3372,16 @@
           "highlight": "sleepy"
         }
       ],
-      "furthers": ["feel v.感觉到"],
+      "furthers": [
+        "feel v.感觉到"
+      ],
       "level": "1"
     },
     {
       "word": "thirst",
-      "definitions": ["n.渴"],
+      "definitions": [
+        "n.渴"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2934,12 +3394,17 @@
           "highlight": "thirsty"
         }
       ],
-      "furthers": ["glass n.玻璃杯", "water n.水"],
+      "furthers": [
+        "glass n.玻璃杯",
+        "water n.水"
+      ],
       "level": "1"
     },
     {
       "word": "thirsty",
-      "definitions": ["adj.渴的"],
+      "definitions": [
+        "adj.渴的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2952,12 +3417,16 @@
           "highlight": "thirsty"
         }
       ],
-      "furthers": ["progress n.进展"],
+      "furthers": [
+        "progress n.进展"
+      ],
       "level": "1"
     },
     {
       "word": "humor",
-      "definitions": ["n.幽默"],
+      "definitions": [
+        "n.幽默"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2975,7 +3444,9 @@
     },
     {
       "word": "humorous",
-      "definitions": ["adj.幽默的"],
+      "definitions": [
+        "adj.幽默的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -2988,12 +3459,17 @@
           "highlight": "humorous"
         }
       ],
-      "furthers": ["such det.那样的", "guy n.男人"],
+      "furthers": [
+        "such det.那样的",
+        "guy n.男人"
+      ],
       "level": "1"
     },
     {
       "word": "fame",
-      "definitions": ["n.名声，名气"],
+      "definitions": [
+        "n.名声，名气"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3011,7 +3487,9 @@
     },
     {
       "word": "famous",
-      "definitions": ["adj.出名的"],
+      "definitions": [
+        "adj.出名的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3029,7 +3507,9 @@
     },
     {
       "word": "dangerous",
-      "definitions": [" n.危险的"],
+      "definitions": [
+        " n.危险的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3042,12 +3522,16 @@
           "highlight": "dangerous"
         }
       ],
-      "furthers": ["river n.河"],
+      "furthers": [
+        "river n.河"
+      ],
       "level": "1"
     },
     {
       "word": "careful",
-      "definitions": ["adj.小心的；谨慎的"],
+      "definitions": [
+        "adj.小心的；谨慎的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3060,12 +3544,17 @@
           "highlight": "careful"
         }
       ],
-      "furthers": ["cross n.交叉；穿过", "street n.街道"],
+      "furthers": [
+        "cross n.交叉；穿过",
+        "street n.街道"
+      ],
       "level": "1"
     },
     {
       "word": "carefully",
-      "definitions": ["adv.小心的；谨慎地"],
+      "definitions": [
+        "adv.小心的；谨慎地"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3083,7 +3572,9 @@
     },
     {
       "word": "helpful",
-      "definitions": ["adj.有帮助的"],
+      "definitions": [
+        "adj.有帮助的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3096,12 +3587,16 @@
           "highlight": "helpful"
         }
       ],
-      "furthers": ["aloud adv.大声地"],
+      "furthers": [
+        "aloud adv.大声地"
+      ],
       "level": "1"
     },
     {
       "word": "truth",
-      "definitions": ["n.真相"],
+      "definitions": [
+        "n.真相"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3114,12 +3609,16 @@
           "highlight": "truth"
         }
       ],
-      "furthers": ["tell v.告诉；说"],
+      "furthers": [
+        "tell v.告诉；说"
+      ],
       "level": "1"
     },
     {
       "word": "truthful",
-      "definitions": ["adj.真实的"],
+      "definitions": [
+        "adj.真实的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3132,12 +3631,16 @@
           "highlight": "truth"
         }
       ],
-      "furthers": ["true - 演变"],
+      "furthers": [
+        "true - 演变"
+      ],
       "level": "1"
     },
     {
       "word": "awe",
-      "definitions": ["n.敬畏"],
+      "definitions": [
+        "n.敬畏"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3155,7 +3658,9 @@
     },
     {
       "word": "awful",
-      "definitions": ["adj.可怕的，令人讨厌的"],
+      "definitions": [
+        "adj.可怕的，令人讨厌的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3179,7 +3684,9 @@
     },
     {
       "word": "pain",
-      "definitions": ["n.疼痛"],
+      "definitions": [
+        "n.疼痛"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3197,7 +3704,9 @@
     },
     {
       "word": "painful",
-      "definitions": ["adj.疼痛的"],
+      "definitions": [
+        "adj.疼痛的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3210,12 +3719,16 @@
           "highlight": "painful"
         }
       ],
-      "furthers": ["arm n.手臂"],
+      "furthers": [
+        "arm n.手臂"
+      ],
       "level": "1"
     },
     {
       "word": "harm",
-      "definitions": ["n.伤害"],
+      "definitions": [
+        "n.伤害"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3228,12 +3741,16 @@
           "highlight": "harmful"
         }
       ],
-      "furthers": ["smoke n.烟，吸烟"],
+      "furthers": [
+        "smoke n.烟，吸烟"
+      ],
       "level": "1"
     },
     {
       "word": "harmful",
-      "definitions": ["adj.有害的"],
+      "definitions": [
+        "adj.有害的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3246,12 +3763,16 @@
           "highlight": "harmful"
         }
       ],
-      "furthers": ["smoke n.烟，吸烟"],
+      "furthers": [
+        "smoke n.烟，吸烟"
+      ],
       "level": "1"
     },
     {
       "word": "thankful",
-      "definitions": ["adj.感激的"],
+      "definitions": [
+        "adj.感激的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3264,12 +3785,16 @@
           "highlight": "thankful"
         }
       ],
-      "furthers": ["taught v.教；教导"],
+      "furthers": [
+        "taught v.教；教导"
+      ],
       "level": "1"
     },
     {
       "word": "wonder",
-      "definitions": ["n.奇迹 v.想知道"],
+      "definitions": [
+        "n.奇迹 v.想知道"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3287,7 +3812,9 @@
     },
     {
       "word": "wonderful",
-      "definitions": ["adj.精彩的"],
+      "definitions": [
+        "adj.精彩的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3305,7 +3832,9 @@
     },
     {
       "word": "peace",
-      "definitions": ["n.和平"],
+      "definitions": [
+        "n.和平"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3323,7 +3852,9 @@
     },
     {
       "word": "peaceful",
-      "definitions": ["adj.和平的"],
+      "definitions": [
+        "adj.和平的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3341,7 +3872,9 @@
     },
     {
       "word": "shame",
-      "definitions": ["n.耻辱"],
+      "definitions": [
+        "n.耻辱"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3354,12 +3887,17 @@
           "highlight": "shame"
         }
       ],
-      "furthers": ["deep adj.深的", "sense n.含义；意义"],
+      "furthers": [
+        "deep adj.深的",
+        "sense n.含义；意义"
+      ],
       "level": "1"
     },
     {
       "word": "shameful",
-      "definitions": ["adj.耻辱的"],
+      "definitions": [
+        "adj.耻辱的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3372,12 +3910,17 @@
           "highlight": "shameful"
         }
       ],
-      "furthers": ["treat v.对待", "treat v.对待"],
+      "furthers": [
+        "treat v.对待",
+        "treat v.对待"
+      ],
       "level": "1"
     },
     {
       "word": "stress",
-      "definitions": ["n.压力"],
+      "definitions": [
+        "n.压力"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3395,7 +3938,9 @@
     },
     {
       "word": "stressful",
-      "definitions": ["adj.充满压力的"],
+      "definitions": [
+        "adj.充满压力的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3413,7 +3958,9 @@
     },
     {
       "word": "careless",
-      "definitions": ["adj.粗心的，不小心的"],
+      "definitions": [
+        "adj.粗心的，不小心的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3426,12 +3973,16 @@
           "highlight": "careless"
         }
       ],
-      "furthers": ["mistake n.错误"],
+      "furthers": [
+        "mistake n.错误"
+      ],
       "level": "1"
     },
     {
       "word": "carelessly",
-      "definitions": ["adv.粗心旳"],
+      "definitions": [
+        "adv.粗心旳"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3449,7 +4000,9 @@
     },
     {
       "word": "mean",
-      "definitions": ["v.意味着"],
+      "definitions": [
+        "v.意味着"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3462,12 +4015,16 @@
           "highlight": "meaningless"
         }
       ],
-      "furthers": ["memorize v.记忆"],
+      "furthers": [
+        "memorize v.记忆"
+      ],
       "level": "1"
     },
     {
       "word": "meaning",
-      "definitions": ["n.意义"],
+      "definitions": [
+        "n.意义"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3485,7 +4042,9 @@
     },
     {
       "word": "meaningless",
-      "definitions": ["adj.无意义的"],
+      "definitions": [
+        "adj.无意义的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3503,7 +4062,9 @@
     },
     {
       "word": "value",
-      "definitions": ["n.价值"],
+      "definitions": [
+        "n.价值"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3516,12 +4077,16 @@
           "highlight": "valuable"
         }
       ],
-      "furthers": ["paint n.油漆；绘画颜料"],
+      "furthers": [
+        "paint n.油漆；绘画颜料"
+      ],
       "level": "1"
     },
     {
       "word": "valuable",
-      "definitions": ["adj.有价值的"],
+      "definitions": [
+        "adj.有价值的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3539,7 +4104,9 @@
     },
     {
       "word": "believe",
-      "definitions": ["v.相信"],
+      "definitions": [
+        "v.相信"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3557,7 +4124,9 @@
     },
     {
       "word": "believable",
-      "definitions": ["adj.可相信的"],
+      "definitions": [
+        "adj.可相信的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3575,7 +4144,9 @@
     },
     {
       "word": "unbelievable",
-      "definitions": ["adj.不可相信的"],
+      "definitions": [
+        "adj.不可相信的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3593,7 +4164,9 @@
     },
     {
       "word": "enjoy",
-      "definitions": ["v.喜欢，享受"],
+      "definitions": [
+        "v.喜欢，享受"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3611,7 +4184,9 @@
     },
     {
       "word": "enjoyable",
-      "definitions": ["adj.令人享受的"],
+      "definitions": [
+        "adj.令人享受的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3629,7 +4204,9 @@
     },
     {
       "word": "lovely",
-      "definitions": ["adj.可爱的"],
+      "definitions": [
+        "adj.可爱的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3647,7 +4224,9 @@
     },
     {
       "word": "lively",
-      "definitions": ["adj.生机勃勃的"],
+      "definitions": [
+        "adj.生机勃勃的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3665,7 +4244,9 @@
     },
     {
       "word": "ugly",
-      "definitions": ["adj.丑陋的"],
+      "definitions": [
+        "adj.丑陋的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3683,7 +4264,9 @@
     },
     {
       "word": "friendly",
-      "definitions": ["adj.友好的"],
+      "definitions": [
+        "adj.友好的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3701,7 +4284,9 @@
     },
     {
       "word": "likely",
-      "definitions": ["adj.可能的"],
+      "definitions": [
+        "adj.可能的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3719,7 +4304,9 @@
     },
     {
       "word": "memory",
-      "definitions": ["n.记忆"],
+      "definitions": [
+        "n.记忆"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3737,7 +4324,9 @@
     },
     {
       "word": "memorize",
-      "definitions": ["v.记忆"],
+      "definitions": [
+        "v.记忆"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3750,12 +4339,16 @@
           "highlight": "memorize"
         }
       ],
-      "furthers": ["per prep.每；每一"],
+      "furthers": [
+        "per prep.每；每一"
+      ],
       "level": "1"
     },
     {
       "word": "forward",
-      "definitions": ["adv./adj.向前地/的"],
+      "definitions": [
+        "adv./adj.向前地/的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3773,7 +4366,9 @@
     },
     {
       "word": "backward",
-      "definitions": ["adv./adj.向后地/的"],
+      "definitions": [
+        "adv./adj.向后地/的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3791,7 +4386,9 @@
     },
     {
       "word": "upward",
-      "definitions": ["adv./adj.向上地/的"],
+      "definitions": [
+        "adv./adj.向上地/的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3809,7 +4406,9 @@
     },
     {
       "word": "downward",
-      "definitions": ["adv./adj.向下地/的"],
+      "definitions": [
+        "adv./adj.向下地/的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3827,7 +4426,9 @@
     },
     {
       "word": "leftward",
-      "definitions": ["adv./adj.向左地/的"],
+      "definitions": [
+        "adv./adj.向左地/的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3845,7 +4446,9 @@
     },
     {
       "word": "rightward",
-      "definitions": ["adv./adj.向右地/的"],
+      "definitions": [
+        "adv./adj.向右地/的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3863,7 +4466,9 @@
     },
     {
       "word": "private",
-      "definitions": ["adj.私人的"],
+      "definitions": [
+        "adj.私人的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3881,7 +4486,9 @@
     },
     {
       "word": "privacy",
-      "definitions": ["n.隐私"],
+      "definitions": [
+        "n.隐私"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3894,12 +4501,17 @@
           "highlight": "privacy"
         }
       ],
-      "furthers": ["respect v.尊敬，尊重", "hospital n.医院"],
+      "furthers": [
+        "respect v.尊敬，尊重",
+        "hospital n.医院"
+      ],
       "level": "1"
     },
     {
       "word": "pole",
-      "definitions": ["n.杆；地极"],
+      "definitions": [
+        "n.杆；地极"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3917,7 +4529,9 @@
     },
     {
       "word": "polish",
-      "definitions": ["v.磨光"],
+      "definitions": [
+        "v.磨光"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3930,12 +4544,17 @@
           "highlight": "polished"
         }
       ],
-      "furthers": ["each adv./adj. 每个", "shoe n.鞋子"],
+      "furthers": [
+        "each adv./adj. 每个",
+        "shoe n.鞋子"
+      ],
       "level": "1"
     },
     {
       "word": "document",
-      "definitions": ["n.文档"],
+      "definitions": [
+        "n.文档"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3953,7 +4572,9 @@
     },
     {
       "word": "documentary",
-      "definitions": ["n.纪录片 adj.记录的"],
+      "definitions": [
+        "n.纪录片 adj.记录的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3976,7 +4597,10 @@
     },
     {
       "word": "direct",
-      "definitions": ["v.指导", "adj.直接的，直率的"],
+      "definitions": [
+        "v.指导",
+        "adj.直接的，直率的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -3998,7 +4622,9 @@
     },
     {
       "word": "director",
-      "definitions": ["n.导演"],
+      "definitions": [
+        "n.导演"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4016,7 +4642,9 @@
     },
     {
       "word": "direction",
-      "definitions": ["n.方向"],
+      "definitions": [
+        "n.方向"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4034,7 +4662,9 @@
     },
     {
       "word": "correct",
-      "definitions": ["v.改正"],
+      "definitions": [
+        "v.改正"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4056,7 +4686,9 @@
     },
     {
       "word": "insect",
-      "definitions": ["n.昆虫"],
+      "definitions": [
+        "n.昆虫"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4069,12 +4701,16 @@
           "highlight": "insects"
         }
       ],
-      "furthers": ["sect - 切割"],
+      "furthers": [
+        "sect - 切割"
+      ],
       "level": "1"
     },
     {
       "word": "influence",
-      "definitions": ["v./n.影响"],
+      "definitions": [
+        "v./n.影响"
+      ],
       "compose": {
         "prefix": "",
         "root": "flu",
@@ -4092,7 +4728,9 @@
     },
     {
       "word": "attend",
-      "definitions": ["v.参加"],
+      "definitions": [
+        "v.参加"
+      ],
       "compose": {
         "prefix": "",
         "root": "tend",
@@ -4105,12 +4743,17 @@
           "highlight": "attended"
         }
       ],
-      "furthers": ["only adv.仅仅；只有", "meeting n.会议"],
+      "furthers": [
+        "only adv.仅仅；只有",
+        "meeting n.会议"
+      ],
       "level": "1"
     },
     {
       "word": "pose",
-      "definitions": ["v./n.（摆）姿势"],
+      "definitions": [
+        "v./n.（摆）姿势"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4128,7 +4771,9 @@
     },
     {
       "word": "position",
-      "definitions": ["n.位置，地方"],
+      "definitions": [
+        "n.位置，地方"
+      ],
       "compose": {
         "prefix": "",
         "root": "pos",
@@ -4141,12 +4786,16 @@
           "highlight": "position"
         }
       ],
-      "furthers": ["lie v.躺"],
+      "furthers": [
+        "lie v.躺"
+      ],
       "level": "1"
     },
     {
       "word": "inspire",
-      "definitions": ["v. 鼓舞；给人以灵感"],
+      "definitions": [
+        "v. 鼓舞；给人以灵感"
+      ],
       "compose": {
         "prefix": "",
         "root": "spir",
@@ -4164,7 +4813,9 @@
     },
     {
       "word": "inspiration",
-      "definitions": ["n.鼓舞；灵感"],
+      "definitions": [
+        "n.鼓舞；灵感"
+      ],
       "compose": {
         "prefix": "",
         "root": "spir",
@@ -4182,7 +4833,9 @@
     },
     {
       "word": "boring",
-      "definitions": ["adj.枯燥的，无聊的"],
+      "definitions": [
+        "adj.枯燥的，无聊的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4200,7 +4853,9 @@
     },
     {
       "word": "bored",
-      "definitions": ["adj.对…感到厌倦"],
+      "definitions": [
+        "adj.对…感到厌倦"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4218,7 +4873,9 @@
     },
     {
       "word": "carrot",
-      "definitions": ["n.胡萝卜"],
+      "definitions": [
+        "n.胡萝卜"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4231,12 +4888,16 @@
           "highlight": "carrots"
         }
       ],
-      "furthers": ["rabbit n.兔子"],
+      "furthers": [
+        "rabbit n.兔子"
+      ],
       "level": "1"
     },
     {
       "word": "cousin",
-      "definitions": ["n.堂表兄弟姐妹"],
+      "definitions": [
+        "n.堂表兄弟姐妹"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4254,7 +4915,9 @@
     },
     {
       "word": "dictionary",
-      "definitions": ["n.字典"],
+      "definitions": [
+        "n.字典"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4272,7 +4935,9 @@
     },
     {
       "word": "erase",
-      "definitions": ["v.抹去，擦去"],
+      "definitions": [
+        "v.抹去，擦去"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4285,12 +4950,16 @@
           "highlight": "erase"
         }
       ],
-      "furthers": ["mind n.大脑；头脑"],
+      "furthers": [
+        "mind n.大脑；头脑"
+      ],
       "level": "1"
     },
     {
       "word": "eraser",
-      "definitions": ["n.橡皮"],
+      "definitions": [
+        "n.橡皮"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4308,7 +4977,9 @@
     },
     {
       "word": "favorite",
-      "definitions": ["adj.特别喜欢的"],
+      "definitions": [
+        "adj.特别喜欢的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4326,7 +4997,9 @@
     },
     {
       "word": "January、February、March、April、May、June",
-      "definitions": ["1-6月"],
+      "definitions": [
+        "1-6月"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4344,7 +5017,9 @@
     },
     {
       "word": "July、August、September、October、November、December",
-      "definitions": ["7-12月"],
+      "definitions": [
+        "7-12月"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4362,7 +5037,9 @@
     },
     {
       "word": "fun",
-      "definitions": ["adj.有趣的 n.乐趣"],
+      "definitions": [
+        "adj.有趣的 n.乐趣"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4380,7 +5057,9 @@
     },
     {
       "word": "funny",
-      "definitions": ["adj.滑稽有趣的"],
+      "definitions": [
+        "adj.滑稽有趣的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4393,12 +5072,16 @@
           "highlight": "funny"
         }
       ],
-      "furthers": ["wear v.穿；戴"],
+      "furthers": [
+        "wear v.穿；戴"
+      ],
       "level": "1"
     },
     {
       "word": "geography",
-      "definitions": ["n.地理"],
+      "definitions": [
+        "n.地理"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4411,12 +5094,17 @@
           "highlight": "geography"
         }
       ],
-      "furthers": ["hate n.憎恨", "grow n.扩大"],
+      "furthers": [
+        "hate n.憎恨",
+        "grow n.扩大"
+      ],
       "level": "1"
     },
     {
       "word": "geographer",
-      "definitions": ["n.地理学家"],
+      "definitions": [
+        "n.地理学家"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4434,7 +5122,9 @@
     },
     {
       "word": "habit",
-      "definitions": ["n.习惯"],
+      "definitions": [
+        "n.习惯"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4452,7 +5142,9 @@
     },
     {
       "word": "library",
-      "definitions": ["n.图书馆"],
+      "definitions": [
+        "n.图书馆"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4470,7 +5162,9 @@
     },
     {
       "word": "quilt",
-      "definitions": ["n.被子"],
+      "definitions": [
+        "n.被子"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4488,7 +5182,9 @@
     },
     {
       "word": "pillow",
-      "definitions": ["n.枕头"],
+      "definitions": [
+        "n.枕头"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4506,7 +5202,9 @@
     },
     {
       "word": "relaxed",
-      "definitions": ["adj.放松的"],
+      "definitions": [
+        "adj.放松的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4524,7 +5222,9 @@
     },
     {
       "word": "relaxing",
-      "definitions": [" adj.令人放松的"],
+      "definitions": [
+        " adj.令人放松的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4537,12 +5237,16 @@
           "highlight": "relaxing"
         }
       ],
-      "furthers": ["beach n.海滩"],
+      "furthers": [
+        "beach n.海滩"
+      ],
       "level": "1"
     },
     {
       "word": "skirt",
-      "definitions": ["n.短裙 （从腰部开始的裙子）"],
+      "definitions": [
+        "n.短裙 （从腰部开始的裙子）"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4560,7 +5264,9 @@
     },
     {
       "word": "dress",
-      "definitions": ["n.连衣裙"],
+      "definitions": [
+        "n.连衣裙"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4578,7 +5284,9 @@
     },
     {
       "word": "shirt",
-      "definitions": ["n.衬衫（男士衬衫）"],
+      "definitions": [
+        "n.衬衫（男士衬衫）"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4596,7 +5304,9 @@
     },
     {
       "word": "sock",
-      "definitions": ["n.短袜"],
+      "definitions": [
+        "n.短袜"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4614,7 +5324,9 @@
     },
     {
       "word": "subject",
-      "definitions": ["n.科目"],
+      "definitions": [
+        "n.科目"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4632,7 +5344,9 @@
     },
     {
       "word": "term",
-      "definitions": ["n.学期"],
+      "definitions": [
+        "n.学期"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4650,7 +5364,9 @@
     },
     {
       "word": "sweat",
-      "definitions": [" v.流汗"],
+      "definitions": [
+        " v.流汗"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4668,7 +5384,9 @@
     },
     {
       "word": "sweater",
-      "definitions": ["n.毛衣"],
+      "definitions": [
+        "n.毛衣"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -4686,7 +5404,9 @@
     },
     {
       "word": "tennis",
-      "definitions": ["n.网球"],
+      "definitions": [
+        "n.网球"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -5352,7 +6072,9 @@
     },
     {
       "word": "snow",
-      "definitions": [],
+      "definitions": [
+        "n.雪"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -5360,17 +6082,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "We both like winter and miss the {snow}.",
+          "explanation": "我们都喜欢冬天，很怀念雪。",
+          "highlight": "snow"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "snowy",
-      "definitions": [],
+      "definitions": [
+        "adj.下雪的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -5378,13 +6101,12 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I'm just saying, Christmas should be white and {snowy}.",
+          "explanation": "我只是觉得，圣诞节应该是白色的，下着雪的。",
+          "highlight": "snowy"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "country",
@@ -6990,7 +7712,9 @@
     },
     {
       "word": "scare",
-      "definitions": [],
+      "definitions": [
+        "v.吓坏"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -6998,17 +7722,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Holy shit. You really {scared} me.",
+          "explanation": "操。你真的吓到我了",
+          "highlight": "scared"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "scared",
-      "definitions": [],
+      "definitions": [
+        "adj.吓坏人的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7016,13 +7741,12 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The movie is so {scary}.",
+          "explanation": "电影真的很吓人",
+          "highlight": "scary"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "scary",
@@ -7044,7 +7768,9 @@
     },
     {
       "word": "shout",
-      "definitions": [],
+      "definitions": [
+        "v.喊叫"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7052,17 +7778,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "My father never {shouts} my mum.",
+          "explanation": "我爸从来不对我妈吼。",
+          "highlight": "shouts"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "shower",
-      "definitions": [],
+      "definitions": [
+        "n./v.淋浴"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7070,17 +7797,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Taking a {shower} before going to bed is quite relaxing.",
+          "explanation": "睡前冲个澡十分惬意",
+          "highlight": "shower"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "sing",
-      "definitions": [],
+      "definitions": [
+        "v.唱"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7088,17 +7816,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The singer is {singing} the famous song \"take me to your heart",
+          "explanation": "那个歌手在唱那首名曲《take me to your heart》",
+          "highlight": "singing"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "singer",
-      "definitions": [],
+      "definitions": [
+        "n.歌手"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7106,17 +7835,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "He is a punk rock {singer}.",
+          "explanation": "他是一个朋克摇滚歌手。",
+          "highlight": "singer"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "size",
-      "definitions": [],
+      "definitions": [
+        "n.大小"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7124,17 +7854,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "What's the {size} of your shoes?",
+          "explanation": "你的鞋的大小是多少？",
+          "highlight": "size"
+        },
+        {
+          "sentence": "A dog's brain is one-tenth the {size} of ours.",
+          "explanation": "狗的大脑是我们人脑大小的十分之一。",
+          "highlight": "size"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "skate",
-      "definitions": [],
+      "definitions": [
+        "v.滑冰"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7142,17 +7878,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Young people tend to {skate} is the park on weekends.",
+          "explanation": "年轻人倾向于周末在公园滑冰。",
+          "highlight": "skate"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "smart",
-      "definitions": [],
+      "definitions": [
+        "adj.聪明的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7160,17 +7897,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "You are a {smart} girl.",
+          "explanation": "你是一个聪明的女孩。",
+          "highlight": "smart"
+        },
+        {
+          "sentence": "No, even {smart} people can do stupid things.",
+          "explanation": "不，聪明人也会做蠢事。",
+          "highlight": "smart"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "clever",
-      "definitions": [],
+      "definitions": [
+        "adj.聪明的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7178,17 +7921,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "My friends were not {clever} enough to see what I was doing.",
+          "explanation": "我的朋友们不够聪明，看不出我搞的把戏。",
+          "highlight": "clever"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "snowman",
-      "definitions": [],
+      "definitions": [
+        "n.雪人"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7196,17 +7940,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Children are making {snowman} outside.",
+          "explanation": "孩子们在外面堆雪人",
+          "highlight": "snowman"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "soon",
-      "definitions": [],
+      "definitions": [
+        "adv.不久，很快"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7214,17 +7959,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I'll be there {soon}.",
+          "explanation": "我很快到那里",
+          "highlight": "soon"
+        },
+        {
+          "sentence": "I will call as {soon} as I know anything.",
+          "explanation": "我知道任何消息就会马上联系你。",
+          "highlight": "soon"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "soup",
-      "definitions": [],
+      "definitions": [
+        "n.汤"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7232,17 +7983,24 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Cantonese are good at making {soup}.",
+          "explanation": "广东人擅长做汤。",
+          "highlight": "soup"
+        },
+        {
+          "sentence": "Daddy Pig is making {soup} for lunch.",
+          "explanation": "猪爸爸正在做午餐喝的汤。",
+          "highlight": "soup"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "spend",
-      "definitions": [],
+      "definitions": [
+        "v.花费",
+        "【主语是人】"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7250,17 +8008,24 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I {spend} a lot of money buying make-ups every year.",
+          "explanation": "我每天花费很多钱买化妆品",
+          "highlight": "spend"
+        },
+        {
+          "sentence": "People who {spend} half a million dollars on cars tend to be rich.",
+          "explanation": "那些愿意花五十万美元买车的人一般都很有钱。",
+          "highlight": "spend"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "cost",
-      "definitions": [],
+      "definitions": [
+        "v.花费",
+        "【主语是物】"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7268,17 +8033,24 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "My car {costs} me 200,000 yuan.",
+          "explanation": "这辆车花了我20万。",
+          "highlight": "costs"
+        },
+        {
+          "sentence": "The {costs} of map-making were huge. The survey involved teams of people for years.",
+          "explanation": "地图制作的成本很大，调查需要多个团队耗时数年时间完成。",
+          "highlight": "costs"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "state",
-      "definitions": [],
+      "definitions": [
+        "n.州；国家",
+        "n.状况"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7286,17 +8058,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "There are 50 {states} in America.",
+          "explanation": "美国有50个州",
+          "highlight": "states"
+        },
+        {
+          "sentence": "But due to the {state} of the economy, we will not be hiring anyone.",
+          "explanation": "但由于目前的经济状况，我们不会雇佣任何人。",
+          "highlight": "state"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "stay",
-      "definitions": [],
+      "definitions": [
+        "v.停留"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7304,17 +8082,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "How long will you {stay} here?",
+          "explanation": "你会在这待多久？",
+          "highlight": "stay"
+        },
+        {
+          "sentence": "Don't {stay} up late. It's bad to your health.",
+          "explanation": "别熬夜，对你的身体不好",
+          "highlight": "stay"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "still",
-      "definitions": [],
+      "definitions": [
+        "adv.仍然"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7322,17 +8106,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "It's midnight and he is {still} woking.",
+          "explanation": "午夜了，他还在工作",
+          "highlight": "still"
+        },
+        {
+          "sentence": "Didn't you eat your lunch today? - Yeah, but I'm {still} hungry.",
+          "explanation": "你中午没吃饭么？- 吃了，但我还是饿。",
+          "highlight": "still"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "straight",
-      "definitions": [],
+      "definitions": [
+        "adj.直的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7340,17 +8130,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I prefer {straight} hair to curly hair.",
+          "explanation": "相比卷发，我更喜欢直发。",
+          "highlight": "straight"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "strict",
-      "definitions": [],
+      "definitions": [
+        "adj.严格的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7358,17 +8149,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Our English teacher is very {strict} with us.",
+          "explanation": "我们英语老师对我们非常严格。",
+          "highlight": "strict"
+        },
+        {
+          "sentence": "She's so {strict} about bedtimes.",
+          "explanation": "她对睡觉时间要求特别严格。",
+          "highlight": "strict"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "symbol",
-      "definitions": [],
+      "definitions": [
+        "n.象征"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7376,17 +8173,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Dove is the {symbol} of peace.",
+          "explanation": "鸽子是和平的象征。",
+          "highlight": "symbol"
+        },
+        {
+          "sentence": "So panda is not only a {symbol} of China but also a {symbol} of the world.",
+          "explanation": "熊猫不仅仅是中国的象征，也是世界的象征。",
+          "highlight": "symbol"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "tent",
-      "definitions": [],
+      "definitions": [
+        "n.帐篷"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7394,17 +8197,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The {tent} can hold 4 people.",
+          "explanation": "这个帐篷能够容纳4人。",
+          "highlight": "tent"
+        },
+        {
+          "sentence": "Now, let's put up our {tents}.",
+          "explanation": "现在我们来搭帐篷吧。",
+          "highlight": "tents"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "tired",
-      "definitions": [],
+      "definitions": [
+        "adj.疲劳的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7412,17 +8221,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I am very {tired} after a day of work.",
+          "explanation": "一天的工作之后我感觉很累。",
+          "highlight": "tired"
+        },
+        {
+          "sentence": "If you are {tired}, then you should go to bed.",
+          "explanation": "如果你累了，你应该去睡觉。",
+          "highlight": "tired"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "tiring",
-      "definitions": [],
+      "definitions": [
+        "adj.让人疲劳的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7430,17 +8245,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Studying for 4 hours is very {tiring}.",
+          "explanation": "连续学习4个小时是很累的",
+          "highlight": "tiring"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "tooth",
-      "definitions": [],
+      "definitions": [
+        "n.牙齿"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7448,17 +8264,19 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Many people ask me why my {teeth} are so white.",
+          "explanation": "很多人问我为什么我的牙齿这么白。",
+          "highlight": "teeth"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "teeth",
-      "definitions": [],
+      "definitions": [
+        "n.牙齿",
+        "【tooth的复数】"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7466,17 +8284,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Many people ask me why my {teeth} are so white.",
+          "explanation": "很多人问我我的牙齿为什么这么白",
+          "highlight": "teeth"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "true",
-      "definitions": [],
+      "definitions": [
+        "adj.真的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7484,17 +8303,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "My answer is {true} and yours is false.",
+          "explanation": "我的答案是正确的，你的是错误的",
+          "highlight": "true"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "false",
-      "definitions": [],
+      "definitions": [
+        "adj.假的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7502,17 +8322,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "\nIt didn't matter whether it was true or {false}.",
+          "explanation": "是对是错不重要。",
+          "highlight": "false"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "uniform",
-      "definitions": [],
+      "definitions": [
+        "n.制服；校服"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7520,17 +8341,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Most primary school students go to school in {uniform}.",
+          "explanation": "大多数小学生穿着校服上学。",
+          "highlight": "uniform"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "village",
-      "definitions": [],
+      "definitions": [
+        "n.村庄"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7538,17 +8360,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "There are 800 villagers in the {village}.",
+          "explanation": "这个村庄有800名村民",
+          "highlight": "village"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "villager",
-      "definitions": [],
+      "definitions": [
+        "n.村民"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7556,17 +8379,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Most of his fellow {villagers} have worked away from home.",
+          "explanation": "大多数村民都外出打工了。",
+          "highlight": "villagers"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "warm",
-      "definitions": [],
+      "definitions": [
+        "adj.温暖的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7574,17 +8398,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I like the {warm} weather in spring most.",
+          "explanation": "我最喜欢春天温暖的天气。",
+          "highlight": "warm"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "weather",
-      "definitions": [],
+      "definitions": [
+        "n.天气"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7592,17 +8417,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "With the good {weather} comes carefree days.",
+          "explanation": "天气好，日子就过得无忧无虑些。",
+          "highlight": "weather"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "wear",
-      "definitions": [],
+      "definitions": [
+        "v.穿"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7610,17 +8436,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "What should I {wear} tomorrow?",
+          "explanation": "我明天应该穿什么？",
+          "highlight": "wear"
+        },
+        {
+          "sentence": "He needs to {wear} glasses to see clearly.",
+          "explanation": "他需要戴眼镜才能看得清东西。",
+          "highlight": "wear"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "wind",
-      "definitions": [],
+      "definitions": [
+        "n.风"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7628,17 +8460,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The flag waved in the {wind}.",
+          "explanation": "旗子在风中飘展着。",
+          "highlight": "wind"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "windy",
-      "definitions": [],
+      "definitions": [
+        "adj.刮风的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7646,17 +8479,20 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "It's too {windy} today.",
+          "explanation": "今天风好大",
+          "highlight": "windy"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "wish",
-      "definitions": [],
+      "definitions": [
+        "v.希望",
+        "n.希望",
+        "【不可能实现的】"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7664,17 +8500,19 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I {wish} I could go to Tsinghua University.",
+          "explanation": "我希望我可以去清华大学。",
+          "highlight": "wish"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "hope",
-      "definitions": [],
+      "definitions": [
+        "v.希望",
+        "n.希望"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7682,17 +8520,23 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I {hope} so.",
+          "explanation": "我希望如此",
+          "highlight": "hope"
+        },
+        {
+          "sentence": "I {hope} you have fun.",
+          "explanation": "我希望你们玩得开心。",
+          "highlight": "hope"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "yet",
-      "definitions": [],
+      "definitions": [
+        "adv.还"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7700,17 +8544,24 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I haven't had dinner {yet}.",
+          "explanation": "我还没有吃完饭呢。",
+          "highlight": "yet"
+        },
+        {
+          "sentence": "Go change. - I haven't showered {yet}.",
+          "explanation": "去换衣服。-我还没洗澡呢。",
+          "highlight": "yet"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "increase",
-      "definitions": [],
+      "definitions": [
+        "n.增加；增长",
+        "v.增加；增长"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7718,17 +8569,19 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The population continues to {increase}.",
+          "explanation": "人口持续增长。",
+          "highlight": "increase"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "decrease",
-      "definitions": [],
+      "definitions": [
+        "n.降低；减少",
+        "v.降低；减少"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7736,17 +8589,19 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "he workmen want to {decrease} the number of working hours and to increase pay.",
+          "explanation": "工人们要求减少工作时间，增加工资。",
+          "highlight": "decrease"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "stuff",
-      "definitions": [],
+      "definitions": [
+        "n.东西",
+        "【全部东西】"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7754,17 +8609,19 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I like my {stuff}.",
+          "explanation": "我喜欢我的东西。",
+          "highlight": "stuff"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "staff",
-      "definitions": [],
+      "definitions": [
+        "n.员工",
+        "【全体员工】"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7772,17 +8629,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "This entire {staff} has done an outstanding hob this year.",
+          "explanation": "今年全体员工工作都非常出色。",
+          "highlight": "staff"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "hunt",
-      "definitions": [],
+      "definitions": [
+        "v.捕猎"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7790,17 +8648,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "In ancient times, people {hunted} for a living.",
+          "explanation": "在古时候，人们以捕猎为生。",
+          "highlight": "hunted"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "haunt",
-      "definitions": [],
+      "definitions": [
+        "v.萦绕（负面）"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7808,35 +8667,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "She is {haunted} by the fear that her husband has an affair.",
+          "explanation": "她总是担心丈夫有外遇。",
+          "highlight": "haunted"
         }
       ],
-      "furthers": [],
-      "level": "1"
-    },
-    {
-      "word": "haunted",
-      "definitions": [],
-      "compose": {
-        "prefix": "",
-        "root": "",
-        "suffix": ""
-      },
-      "examples": [
-        {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
-        }
-      ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "silent",
-      "definitions": [],
+      "definitions": [
+        "adj.沉默的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7844,17 +8686,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The crowd kept {silent} when the President appeared.",
+          "explanation": "总统出现时，人群安静了下来。",
+          "highlight": "silent"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "silence",
-      "definitions": [],
+      "definitions": [
+        "n.沉默"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7862,17 +8705,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "There was a brief {silence} before anyone answered.",
+          "explanation": "沉默了片刻才有人回答。",
+          "highlight": "silence"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "choose",
-      "definitions": [],
+      "definitions": [
+        "v.选择"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7880,17 +8724,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "{Choose} your favorite way to lean English.",
+          "explanation": "选择你最喜欢的方式去学英语",
+          "highlight": "Choose"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "choice",
-      "definitions": [],
+      "definitions": [
+        "n.选择"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7898,17 +8743,19 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "He has to make some important {choices}.",
+          "explanation": "他不得不做出一些重要的选择。",
+          "highlight": "choices"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "chance",
-      "definitions": [],
+      "definitions": [
+        "n.机会",
+        "【机会就是有一种选择】"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7916,17 +8763,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "He caught the last {chance}.",
+          "explanation": "他抓了最后的机会",
+          "highlight": "chance"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "cartoon",
-      "definitions": [],
+      "definitions": [
+        "n.卡通片"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7934,17 +8782,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I like watching {cartoon} movies very much.",
+          "explanation": "我非常喜欢看动画片",
+          "highlight": "cartoon"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "vacation",
-      "definitions": [],
+      "definitions": [
+        "n.假期"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7952,17 +8801,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I hope to go to the seaside in summer {vacation}.",
+          "explanation": "我希望暑假去海边。",
+          "highlight": "vacation"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "notebook",
-      "definitions": [],
+      "definitions": [
+        "n.笔记本"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7970,17 +8820,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "You can make notes in a {notebook}.",
+          "explanation": "你可以在笔记本上记笔记",
+          "highlight": "notebook"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "note",
-      "definitions": [],
+      "definitions": [
+        "n.笔记"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -7988,17 +8839,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "How are you going to take {notes} without a notebook?",
+          "explanation": "没有笔记本你怎么做笔记？",
+          "highlight": "notes"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "strawberry",
-      "definitions": [],
+      "definitions": [
+        "n.草莓"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8006,17 +8858,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Most girls like eating {strawberries}.",
+          "explanation": "大多数女孩喜欢吃草莓。",
+          "highlight": "strawberries"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "straw",
-      "definitions": [],
+      "definitions": [
+        "n.干草"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8024,17 +8877,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The first little pig built a house of {straw}.\"",
+          "explanation": "第一只小猪用稻草盖了间草屋。”",
+          "highlight": "straw"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "berry",
-      "definitions": [],
+      "definitions": [
+        "n.浆果"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8042,17 +8896,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Do you like {berries}? Blueberries? Blackberries? - No, no.",
+          "explanation": "你喜欢吃浆果吗？蓝莓？黑莓？- 不，不喜欢。",
+          "highlight": "berries"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "pancake",
-      "definitions": [],
+      "definitions": [
+        "n.烙饼"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8060,17 +8915,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Pans are used to make {pancakes}.",
+          "explanation": "平底锅是用来做烙饼的。",
+          "highlight": "pancakes"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "pan",
-      "definitions": [],
+      "definitions": [
+        "n.平底锅"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8078,17 +8934,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Yes, she has a {pan} with some eggs in it.",
+          "explanation": "是的，她拿着一个装有鸡蛋的平底锅。",
+          "highlight": "pan"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "subway",
-      "definitions": [],
+      "definitions": [
+        "n.地铁"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8096,17 +8953,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The {subway} is very crowded in Guangzhou.",
+          "explanation": "广州的地铁非常拥挤。",
+          "highlight": "subway"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "supermarket",
-      "definitions": [],
+      "definitions": [
+        "n.超市"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8114,17 +8972,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "She went to the {supermarket} with her mother.",
+          "explanation": "她和她的妈妈一起走进了那家超市",
+          "highlight": "supermarket"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "market",
-      "definitions": [],
+      "definitions": [
+        "n.市场"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8132,17 +8991,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Well, I went to buy some fruit from the {market}.",
+          "explanation": "哦，我去市场买水果了。",
+          "highlight": "market"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "bookcase",
-      "definitions": [],
+      "definitions": [
+        "n.书架"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -8150,13 +9010,12 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "He took a book from the {bookcase}.",
+          "explanation": "他从书架上拿了一本书。",
+          "highlight": "bookcase"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "disable",
@@ -26247,6 +27106,45 @@
       ],
       "furthers": [],
       "level": "1"
+    },
+    {
+      "word": "taste",
+      "definitions": [
+        "v.尝",
+        "n.味道"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "The strawberries {taste} good.",
+          "explanation": "草莓尝起来很不错。",
+          "highlight": "taste"
+        }
+      ],
+      "furthers": []
+    },
+    {
+      "word": "zoo",
+      "definitions": [
+        "n.动物园"
+      ],
+      "compose": {
+        "prefix": "",
+        "root": "",
+        "suffix": ""
+      },
+      "examples": [
+        {
+          "sentence": "There are 50 kinds of animals in the {zoo}.",
+          "explanation": "动物园里有50种动物。",
+          "highlight": "zoo"
+        }
+      ],
+      "furthers": []
     }
   ]
 }
