@@ -18800,7 +18800,9 @@
     },
     {
       "word": "catch",
-      "definitions": [],
+      "definitions": [
+        "v.抓住；赶上"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18808,17 +18810,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I didn't {catch} the early bus.",
+          "explanation": "我没赶上早班车。",
+          "highlight": "catch"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "talent",
-      "definitions": [],
+      "definitions": [
+        "n.才能"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18826,17 +18829,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Your brother is a man of many {talents}.",
+          "explanation": "你的弟弟是个多才多艺的人。",
+          "highlight": "talents"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "talented",
-      "definitions": [],
+      "definitions": [
+        "adj.有才能的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18844,17 +18848,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "This is a history of a very {talented} person.",
+          "explanation": "这是关于多才多艺的人的历史。",
+          "highlight": "talented"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "bamboo",
-      "definitions": [],
+      "definitions": [
+        "n.竹子"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18862,17 +18867,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Everything there is made of {bamboo}.",
+          "explanation": "那里什么都是竹子做的。",
+          "highlight": "bamboo"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "treasure",
-      "definitions": [],
+      "definitions": [
+        "n.财富；珠宝"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18880,17 +18886,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Blood and {treasure} are the costs of war.",
+          "explanation": "战争的代价就是鲜血和财富。",
+          "highlight": "treasure"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "daytime",
-      "definitions": [],
+      "definitions": [
+        "n.白天"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18898,17 +18905,19 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I can't sleep in the {daytime}.",
+          "explanation": "我白天睡不着觉。",
+          "highlight": "daytime"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "halfway",
-      "definitions": [],
+      "definitions": [
+        "adv.中途地",
+        "adj.中途的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18916,17 +18925,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I give up {halfway} through the marathon.",
+          "explanation": "在跑马拉松的中途我就放弃了",
+          "highlight": "halfway"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "hardworking",
-      "definitions": [],
+      "definitions": [
+        "adj.辛勤的"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18934,17 +18944,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "If my boss is watching, I'm very {hardworking}.",
+          "explanation": "如果老板在监视的话，我会非常努力工作的。",
+          "highlight": "hardworking"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "headmaster",
-      "definitions": [],
+      "definitions": [
+        "n.校长"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18952,17 +18963,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "We will send a present to our {headmaster}.",
+          "explanation": "我们将送一份礼物给我们的校长。",
+          "highlight": "headmaster"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "housewarming",
-      "definitions": [],
+      "definitions": [
+        "n.乔迁聚会"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18970,17 +18982,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Would you like to join the {housewarming} party this Friday night?",
+          "explanation": "这个星期五晚上你想不想参新居入住派对？",
+          "highlight": "housewarming"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "housework",
-      "definitions": [],
+      "definitions": [
+        "n.家务事"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -18988,17 +19001,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I didn't do anything, even {housework}.",
+          "explanation": "我什么都没做，甚至家务活都没做。",
+          "highlight": "housework"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "homework",
-      "definitions": [],
+      "definitions": [
+        "n.家庭作业"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -19006,17 +19020,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Go on with your {homework}!",
+          "explanation": "继续做你的家庭作业",
+          "highlight": "homework"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "schoolwork",
-      "definitions": [],
+      "definitions": [
+        "n.作业"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -19024,17 +19039,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "My aunt would help me with my {schoolwork}.",
+          "explanation": "我的阿姨会帮我做功课。",
+          "highlight": "schoolwork"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "popcorn",
-      "definitions": [],
+      "definitions": [
+        "n.爆米花"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -19042,17 +19058,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "People love eating {popcorn} when watching movied.",
+          "explanation": "一旦你相信，它就会像爆米花一样“砰”地弹出来。",
+          "highlight": "popcorn"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "pop",
-      "definitions": [],
+      "definitions": [
+        "v.砰（拟声词）"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -19060,17 +19077,18 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "A balloon {popped}.",
+          "explanation": "一个气球啪的一声爆了。",
+          "highlight": "popped"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "sitcom",
-      "definitions": [],
+      "definitions": [
+        "n.情景喜剧（situation comedy）"
+      ],
       "compose": {
         "prefix": "",
         "root": "",
@@ -19078,13 +19096,12 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "Half of Americans love watching {sitcoms}.",
+          "explanation": "一半的美国人喜欢看情景喜剧。",
+          "highlight": "sitcoms"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "upset",
