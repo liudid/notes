@@ -99,7 +99,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "语法（Grammar）",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "词法",
@@ -107,7 +107,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
           items: [
             {
               text: "词的属性",
-              collapsed: false,
+              collapsed: true,
               items: [
                 { text: "名词" },
                 { text: "代词" },
@@ -123,25 +123,25 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
             },
             {
               text: "词的变化",
-              collapsed: false,
+              collapsed: true,
             },
             {
               text: "构词法",
-              collapsed: false,
+              collapsed: true,
             },
           ],
         },
         {
           text: "句法",
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: "句子成分",
-              collapsed: false,
+              collapsed: true,
               items: [
                 {
                   text: "基本成分",
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     {
                       text: "主语 + 谓语",
@@ -150,14 +150,14 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
                 },
                 {
                   text: "所有成分",
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     {
                       text: "主语",
                     },
                     {
                       text: "谓语动词",
-                      collapsed: false,
+                      collapsed: true,
                       items: [
                         {
                           text: "动作的时间和状态",
@@ -201,11 +201,11 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "词汇",
-      collapsed: false,
+      collapsed: true,
     },
     {
       text: "语音",
-      collapsed: false,
+      collapsed: true,
     },
   ];
 }
