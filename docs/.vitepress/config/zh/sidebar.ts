@@ -141,12 +141,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
               items: [
                 {
                   text: "基本成分",
-                  collapsed: true,
-                  items: [
-                    {
-                      text: "主语 + 谓语",
-                    },
-                  ],
+                  link: "/zh/english/syntax/basic",
                 },
                 {
                   text: "所有成分",
@@ -154,27 +149,38 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
                   items: [
                     {
                       text: "主语",
+                      link: "/zh/english/syntax/all/subject",
                     },
                     {
                       text: "谓语动词",
                       collapsed: true,
                       items: [
                         {
-                          text: "动作的时间和状态",
+                          text: "基础",
+                          link: "/zh/english/syntax/all/verb",
                         },
                         {
-                          text: "动词语气",
+                          text: "动作的时间",
+                        },
+                        {
+                          text: "动作的状态",
+                        },
+                        {
+                          text: "动作的语气",
                         },
                       ],
                     },
                     {
                       text: "宾语",
+                      link: "/zh/english/syntax/all/object",
                     },
                     {
                       text: "宾语补语",
+                      link: "/zh/english/syntax/all/object-complement",
                     },
                     {
-                      text: "主语补语",
+                      text: "主语补语（表语）",
+                      link: "/zh/english/syntax/all/subject-complement",
                     },
                     {
                       text: "定语",
