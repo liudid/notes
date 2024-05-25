@@ -98,108 +98,230 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
       link: "/zh/english/words-manager",
     },
     {
-      text: "语法（Grammar）",
+      text: "语法-词法",
       collapsed: true,
       items: [
         {
-          text: "词法",
+          text: "词的属性",
+          collapsed: true,
+          items: [
+            { text: "名词" },
+            { text: "代词" },
+            { text: "动词" },
+            { text: "形容词" },
+            { text: "副词" },
+            { text: "数词" },
+            { text: "介词" },
+            { text: "连词" },
+            { text: "冠词" },
+            { text: "叹词" },
+          ],
+        },
+        {
+          text: "词的变化",
           collapsed: true,
           items: [
             {
-              text: "词的属性",
-              collapsed: true,
-              items: [
-                { text: "名词" },
-                { text: "代词" },
-                { text: "动词" },
-                { text: "形容词" },
-                { text: "副词" },
-                { text: "数词" },
-                { text: "介词" },
-                { text: "连词" },
-                { text: "冠词" },
-                { text: "叹词" },
-              ],
+              text: "复数",
+              link: "/zh/english/morphology/plural",
             },
             {
-              text: "词的变化",
-              collapsed: true,
-            },
-            {
-              text: "构词法",
-              collapsed: true,
+              text: "时态",
+              link: "/zh/english/morphology/tense",
             },
           ],
         },
         {
-          text: "句法",
+          text: "构词法",
           collapsed: true,
           items: [
             {
-              text: "句子成分",
-              collapsed: true,
+              text: "派生",
               items: [
                 {
-                  text: "基本成分",
-                  link: "/zh/english/syntax/basic",
+                  text: "词根",
                 },
                 {
-                  text: "所有成分",
-                  collapsed: true,
-                  items: [
-                    {
-                      text: "主语",
-                      link: "/zh/english/syntax/all/subject",
-                    },
-                    {
-                      text: "谓语动词",
-                      collapsed: true,
-                      items: [
-                        {
-                          text: "基础",
-                          link: "/zh/english/syntax/all/verb",
-                        },
-                        {
-                          text: "动作的时间",
-                        },
-                        {
-                          text: "动作的状态",
-                        },
-                        {
-                          text: "动作的语气",
-                        },
-                      ],
-                    },
-                    {
-                      text: "宾语",
-                      link: "/zh/english/syntax/all/object",
-                    },
-                    {
-                      text: "宾语补语",
-                      link: "/zh/english/syntax/all/object-complement",
-                    },
-                    {
-                      text: "主语补语（表语）",
-                      link: "/zh/english/syntax/all/subject-complement",
-                    },
-                    {
-                      text: "定语",
-                    },
-                    {
-                      text: "状语",
-                    },
-                    {
-                      text: "同位语",
-                    },
-                  ],
+                  text: "词缀",
                 },
               ],
             },
             {
-              text: "五大基本句型",
+              text: "合成",
             },
             {
-              text: "简单句",
+              text: "混合",
+            },
+            {
+              text: "截短",
+            },
+            {
+              text: "缩写",
+            },
+            {
+              text: "转化",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      text: "语法-句法",
+      collapsed: true,
+      items: [
+        {
+          text: "句子成分",
+          collapsed: true,
+          items: [
+            {
+              text: "基本成分",
+              link: "/zh/english/syntax/basic",
+            },
+            {
+              text: "所有成分",
+              collapsed: true,
+              items: [
+                {
+                  text: "主语",
+                  link: "/zh/english/syntax/all/subject",
+                },
+                {
+                  text: "谓语动词",
+                  collapsed: true,
+                  items: [
+                    {
+                      text: "基础",
+                      link: "/zh/english/syntax/all/verb",
+                    },
+                    {
+                      text: "动作的时间&状态",
+                      items: [
+                        {
+                          text: "基本",
+                          link: "/zh/english/syntax/all/tense/basic",
+                        },
+                        {
+                          text: "现在（客观）",
+                          link: "/zh/english/syntax/all/tense/1",
+                        },
+                        {
+                          text: "现在-进行",
+                          link: "/zh/english/syntax/all/tense/2",
+                        },
+                        {
+                          text: "现在-完成",
+                          link: "/zh/english/syntax/all/tense/3",
+                        },
+                        {
+                          text: "现在-完成&进行",
+                          link: "/zh/english/syntax/all/tense/4",
+                        },
+                        {
+                          text: "过去（发生了）",
+                          link: "/zh/english/syntax/all/tense/5",
+                        },
+                        {
+                          text: "过去-进行",
+                          link: "/zh/english/syntax/all/tense/6",
+                        },
+                        {
+                          text: "过去-完成",
+                          link: "/zh/english/syntax/all/tense/7",
+                        },
+                        {
+                          text: "过去-完成&进行",
+                          link: "/zh/english/syntax/all/tense/8",
+                        },
+                        {
+                          text: "将来（发生了）",
+                          link: "/zh/english/syntax/all/tense/9",
+                        },
+                        {
+                          text: "将来-进行",
+                          link: "/zh/english/syntax/all/tense/10",
+                        },
+                        {
+                          text: "将来-完成",
+                          link: "/zh/english/syntax/all/tense/11",
+                        },
+                        {
+                          text: "将来-完成&进行",
+                          link: "/zh/english/syntax/all/tense/12",
+                        },
+                      ],
+                    },
+                    {
+                      text: "动作的语气",
+                    },
+                  ],
+                },
+                {
+                  text: "宾语",
+                  link: "/zh/english/syntax/all/object",
+                },
+                {
+                  text: "宾语补语",
+                  link: "/zh/english/syntax/all/object-complement",
+                },
+                {
+                  text: "主语补语（表语）",
+                  link: "/zh/english/syntax/all/subject-complement",
+                },
+                {
+                  text: "定语",
+                  link: "/zh/english/syntax/all/attribute",
+                },
+                {
+                  text: "状语",
+                  link: "/zh/english/syntax/all/adverbial",
+                },
+                {
+                  text: "同位语",
+                  link: "/zh/english/syntax/all/appositive",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: "句子分类",
+          collapsed: true,
+          items: [
+            {
+              text: "结构复杂度分类",
+              collapsed: true,
+              items: [
+                {
+                  text: "简单句",
+                  link: "/zh/english/syntax/type/complexity/simple",
+                },
+                {
+                  text: "复合句/并列句",
+                  link: "/zh/english/syntax/type/complexity/compound",
+                },
+                {
+                  text: "复杂句",
+                  link: "/zh/english/syntax/type/complexity/complex",
+                },
+              ],
+            },
+            {
+              text: "用途分类",
+              collapsed: true,
+              items: [
+                {
+                  text: "陈述句",
+                },
+                {
+                  text: "疑问句",
+                },
+                {
+                  text: "祈使句",
+                },
+                {
+                  text: "感叹句",
+                },
+              ],
             },
           ],
         },
