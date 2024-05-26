@@ -34,7 +34,7 @@
 2. [i]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【i】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -42,7 +42,7 @@
 3. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -50,7 +50,7 @@
 4. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -58,7 +58,7 @@
 5. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -66,7 +66,7 @@
 6. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -74,7 +74,7 @@
 7. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -82,7 +82,7 @@
 8. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -90,7 +90,7 @@
 9. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -98,7 +98,7 @@
 10. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -106,7 +106,7 @@
 11. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -114,7 +114,7 @@
 12. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -122,7 +122,7 @@
 13. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -130,7 +130,7 @@
 14. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -138,7 +138,7 @@
 15. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -146,7 +146,7 @@
 16. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -154,7 +154,7 @@
 17. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -162,7 +162,7 @@
 18. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -170,7 +170,7 @@
 19. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -178,7 +178,7 @@
 20. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 
@@ -200,7 +200,7 @@
 2. [i]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【i】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -208,7 +208,7 @@
 3. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -216,7 +216,7 @@
 4. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -224,7 +224,7 @@
 5. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -232,7 +232,7 @@
 6. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -240,7 +240,7 @@
 7. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -248,7 +248,7 @@
 8. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -256,7 +256,7 @@
 9. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -264,7 +264,7 @@
 10. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -272,7 +272,7 @@
 11. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -280,7 +280,7 @@
 12. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -288,7 +288,7 @@
 13. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -296,7 +296,7 @@
 14. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -304,7 +304,7 @@
 15. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -312,7 +312,7 @@
 16. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -320,7 +320,7 @@
 17. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -328,7 +328,7 @@
 18. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -336,7 +336,7 @@
 19. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -344,7 +344,7 @@
 20. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -352,7 +352,7 @@
 21. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -360,7 +360,7 @@
 22. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -368,7 +368,7 @@
 23. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -376,7 +376,7 @@
 24. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -384,7 +384,7 @@
 25. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -392,7 +392,7 @@
 26. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -400,7 +400,7 @@
 27. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 ---
@@ -408,7 +408,7 @@
 28. [i:]
 
 <audio id="audio" controls="" preload="">
- <source id="mp3" src="./mp3/发音【aɪ】.mp3">
+ <source id="mp3" src="./mp3/发音【iː】.mp3">
 </audio>
 
 
