@@ -90,12 +90,12 @@ function sidebarTools(): DefaultTheme.SidebarItem[] {
 function sidebarEnglish(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: "WORDS & 1500",
-      link: "/zh/english/middle-school-words",
-    },
-    {
       text: "Words-Manager",
       link: "/zh/english/words-manager",
+    },
+    {
+      text: "宇宙奥义之究极理解",
+      link: "/zh/english/universe",
     },
     {
       text: "语法-词法",
@@ -201,7 +201,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
                           link: "/zh/english/syntax/all/tense/basic",
                         },
                         {
-                          text: "现在（客观）",
+                          text: "现在（一般）",
                           link: "/zh/english/syntax/all/tense/1",
                         },
                         {
@@ -217,7 +217,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
                           link: "/zh/english/syntax/all/tense/4",
                         },
                         {
-                          text: "过去（发生了）",
+                          text: "过去（一般）",
                           link: "/zh/english/syntax/all/tense/5",
                         },
                         {
@@ -233,7 +233,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
                           link: "/zh/english/syntax/all/tense/8",
                         },
                         {
-                          text: "将来（发生了）",
+                          text: "将来（一般）",
                           link: "/zh/english/syntax/all/tense/9",
                         },
                         {
@@ -247,6 +247,22 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
                         {
                           text: "将来-完成&进行",
                           link: "/zh/english/syntax/all/tense/12",
+                        },
+                        {
+                          text: "过去将来（一般）",
+                          link: "/zh/english/syntax/all/tense/13",
+                        },
+                        {
+                          text: "过去将来-进行",
+                          link: "/zh/english/syntax/all/tense/14",
+                        },
+                        {
+                          text: "过去将来-完成",
+                          link: "/zh/english/syntax/all/tense/15",
+                        },
+                        {
+                          text: "过去将来-完成进行",
+                          link: "/zh/english/syntax/all/tense/16",
                         },
                       ],
                     },
@@ -328,12 +344,47 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
       ],
     },
     {
-      text: "词汇",
-      collapsed: true,
-    },
-    {
       text: "语音",
       collapsed: true,
+      items: [
+        {
+          text: "音标",
+          link: "/zh/english/voice/phonetic-symbol",
+        },
+        {
+          text: "连读/弱读/缩读",
+          link: "/zh/english/voice/du",
+        },
+      ],
+    },
+    {
+      text: "词汇",
+      collapsed: true,
+      items: [
+        {
+          text: "基础",
+          link: "/zh/english/middle-school-words",
+        },
+      ],
+    },
+    {
+      text: "字母",
+      collapsed: true,
+      items: [
+        {
+          text: "基础",
+          link: "/zh/english/letter/basic",
+        },
+      ],
+    },
+    {
+      text: "文化",
+      collapsed: true,
+      items: [
+        {
+          text: "姓名",
+        },
+      ],
     },
   ];
 }
