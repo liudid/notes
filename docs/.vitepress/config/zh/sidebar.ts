@@ -56,6 +56,10 @@ function sidebarDev(): DefaultTheme.SidebarItem[] {
             { text: "其它", link: "" },
           ],
         },
+        {
+          text: "JavaScript Clean Code",
+          link: "/zh/dev/clean-code",
+        },
       ],
     },
   ];
