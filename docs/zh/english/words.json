@@ -24963,13 +24963,17 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The grapes cost 2 dollars a {pound}. ",
+          "explanation": "葡萄的价格是2美元一磅。",
+          "highlight": "pound"
+        },
+        {
+          "sentence": "Each repair can cost half a million {pounds}.   ",
+          "explanation": "每次维修要花费50英镑。",
+          "highlight": "pounds"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "admire",
@@ -24981,13 +24985,12 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "I really {admire} her beauty.",
+          "explanation": "我非常羡慕她的美貌。",
+          "highlight": "admire"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "fascinate",
@@ -24999,13 +25002,12 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "The city {fascinates} him.",
+          "explanation": "这座城市深深的吸引了我",
+          "highlight": "fascinates"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "fascinating",
@@ -25053,13 +25055,12 @@
       },
       "examples": [
         {
-          "sentence": "",
-          "explanation": "",
-          "highlight": ""
+          "sentence": "You {dared} say that to him about me?",
+          "explanation": "你竟敢在他面前这样说我吗？",
+          "highlight": "dared"
         }
       ],
-      "furthers": [],
-      "level": "1"
+      "furthers": []
     },
     {
       "word": "fail",

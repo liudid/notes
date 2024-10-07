@@ -103,7 +103,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "语法-词法",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "词的属性",
@@ -111,7 +111,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
           items: [
             { text: "名词" },
             { text: "代词" },
-            { text: "动词", link: "/zh/english/words-rule/verb" },
+            { text: "动词" },
             { text: "形容词" },
             { text: "副词" },
             { text: "数词" },
@@ -171,7 +171,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "语法-句法",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "句子成分",
@@ -349,7 +349,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "语音",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "音标",
@@ -363,7 +363,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "词汇",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "基础",
@@ -371,13 +371,13 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
         },
         {
           text: "元音字母",
-          link: "/zh/english/vowel-rule",
+          link: "/zh/english/vowel",
         },
       ],
     },
     {
       text: "字母",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "基础",
@@ -387,7 +387,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "文化",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "姓名",

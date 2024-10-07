@@ -111,7 +111,7 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
           items: [
             { text: "名词" },
             { text: "代词" },
-            { text: "动词", link: "/zh/english/words-rule/verb" },
+            { text: "动词", link: "/zh/english/" },
             { text: "形容词" },
             { text: "副词" },
             { text: "数词" },
