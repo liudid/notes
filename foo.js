@@ -1,4 +1,4 @@
 function foo() {
-  // 第一次提交
-  console.log(1);
+  // 第二次提交
+  console.log(2);
 }
