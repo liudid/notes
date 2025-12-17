@@ -12,6 +12,7 @@ import Segmented from "./components/Segmented.vue";
 import WuXing from "./components/WuXing.vue";
 import LiuShiJiaZi from "./components/LiuShiJiaZi.vue";
 import GanZhiSlider from "./components/GanZhiSlider.vue";
+import GanZhi from "./components/GanZhi.vue";
 
 export default {
   extends: DefaultTheme,
@@ -27,6 +28,7 @@ export default {
     app.component("WuXing", WuXing);
     app.component("LiuShiJiaZi", LiuShiJiaZi);
     app.component("GanZhiSlider", GanZhiSlider);
+    app.component("GanZhi", GanZhi);
     // ...
   },
 } satisfies Theme;

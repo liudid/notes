@@ -402,6 +402,10 @@ function sidebarYao(): DefaultTheme.SidebarItem[] {
   return [
     { text: "五行", link: "/zh/yao/wuxing" },
     {
+      text: "天干地支",
+      link: "/zh/yao/ganzhi",
+    },
+    {
       text: "六十甲子",
       link: "/zh/yao/liushijiazi",
     },

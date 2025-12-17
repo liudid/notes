@@ -2,9 +2,8 @@
   <div class="gan-zhi-slider">
     <!-- 天干 -->
     <div class="block">
-      <!-- <div class="title">天干</div> -->
       <div class="row">
-        <div class="btn" @click="moveGan(-1)">←</div>
+        <div class="btn" @click="move(-1, 'gan')">←</div>
         <div class="bar-wrapper">
           <div class="bar">
             <div
@@ -17,15 +16,14 @@
             </div>
           </div>
         </div>
-        <div class="btn" @click="moveGan(1)">→</div>
+        <div class="btn" @click="move(1, 'gan')">→</div>
       </div>
     </div>
 
     <!-- 地支 -->
     <div class="block">
-      <!-- <div class="title">地支</div> -->
       <div class="row">
-        <div class="btn" @click="moveZhi(-1)">←</div>
+        <div class="btn" @click="move(-1, 'zhi')">←</div>
         <div class="bar-wrapper">
           <div class="bar">
             <div
@@ -38,7 +36,7 @@
             </div>
           </div>
         </div>
-        <div class="btn" @click="moveZhi(1)">→</div>
+        <div class="btn" @click="move(1, 'zhi')">→</div>
       </div>
     </div>
   </div>
@@ -51,40 +49,59 @@ import { TIAN_GAN, DI_ZHI } from "../config/ganZhi"; // 公共配置
 const emit = defineEmits(["change"]);
 
 const state = reactive({
-  ganIndex: 0,
-  zhiIndex: 0,
+  currentIndex: 0, // 当前60甲子的索引 (0-59)
 });
 
-const currentGan = computed(() => TIAN_GAN[state.ganIndex]);
-const currentZhi = computed(() => DI_ZHI[state.zhiIndex]);
+// 计算当前天干和地支
+const currentGan = computed(
+  () => TIAN_GAN[state.currentIndex % TIAN_GAN.length]
+);
+const currentZhi = computed(() => DI_ZHI[state.currentIndex % DI_ZHI.length]);
 
-// 滑动显示数组
+// 滑动显示数组（显示完整的循环）
 const ganDisplay = computed(() =>
   Array.from(
     { length: TIAN_GAN.length },
-    (_, i) => TIAN_GAN[(state.ganIndex + i) % TIAN_GAN.length]
+    (_, i) => TIAN_GAN[(state.currentIndex + i) % TIAN_GAN.length]
   )
 );
 const zhiDisplay = computed(() =>
   Array.from(
     { length: DI_ZHI.length },
-    (_, i) => DI_ZHI[(state.zhiIndex + i) % DI_ZHI.length]
+    (_, i) => DI_ZHI[(state.currentIndex + i) % DI_ZHI.length]
   )
 );
 
-function moveGan(n) {
-  state.ganIndex = (state.ganIndex + n + TIAN_GAN.length) % TIAN_GAN.length;
-  emitChange();
-}
-
-function moveZhi(n) {
-  state.zhiIndex = (state.zhiIndex + n + DI_ZHI.length) % DI_ZHI.length;
+// 统一的移动函数
+function move(n, type) {
+  if (type === "gan") {
+    // 移动天干时，步长为1，因为60甲子中天干是连续的
+    state.currentIndex = (state.currentIndex + n + 60) % 60;
+  } else {
+    // 移动地支时，需要保持与天干的配对关系
+    // 60甲子中，地支是每12个循环一次，但配对是固定的
+    // 所以移动地支时，需要移动12步（因为10和12的最小公倍数是60）
+    state.currentIndex = (state.currentIndex + n * 12 + 60) % 60;
+  }
   emitChange();
 }
 
 function emitChange() {
-  const index = (state.ganIndex * 12 + state.zhiIndex) % 60;
-  emit("change", { ganIndex: state.ganIndex, zhiIndex: state.zhiIndex, index });
+  const index = state.currentIndex % 60;
+  const ganIndex = index % TIAN_GAN.length;
+  const zhiIndex = index % DI_ZHI.length;
+
+  console.log(
+    `60甲子索引: ${index}, 天干: ${TIAN_GAN[ganIndex].name}, 地支: ${DI_ZHI[zhiIndex].name}`
+  );
+
+  emit("change", {
+    index,
+    ganIndex,
+    zhiIndex,
+    gan: TIAN_GAN[ganIndex],
+    zhi: DI_ZHI[zhiIndex],
+  });
 }
 
 // 初始化触发一次
@@ -98,11 +115,6 @@ emitChange();
 
 .block {
   margin-bottom: 20px;
-}
-
-.title {
-  font-size: 16px;
-  margin-bottom: 6px;
 }
 
 .row {
@@ -150,13 +162,12 @@ emitChange();
   transition: all 0.2s ease;
 }
 
-/* 当前第一个格子高亮 + 独立浮起 */
 .item.current {
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35), 0 12px 24px rgba(0, 0, 0, 0.2),
     0 16px 32px rgba(0, 0, 0, 0.15);
   z-index: 20;
-  margin-right: 12px; /* 给右侧留空 */
+  margin-right: 12px;
   transition: all 0.3s ease;
 }
 
@@ -170,7 +181,6 @@ emitChange();
   color: #333;
 }
 
-/* 五行背景色 */
 .wood {
   background: #4caf50;
 }
@@ -186,11 +196,5 @@ emitChange();
 }
 .water {
   background: #1e88e5;
-}
-
-.output {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
 }
 </style>

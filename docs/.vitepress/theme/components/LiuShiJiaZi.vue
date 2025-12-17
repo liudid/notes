@@ -37,8 +37,6 @@ defineProps({
   },
 });
 
-const hoveredIndex = ref(null);
-
 // 六十甲子
 const liuShiJiaZi = Array.from({ length: 60 }, (_, i) => {
   const gan = TIAN_GAN[i % 10];
