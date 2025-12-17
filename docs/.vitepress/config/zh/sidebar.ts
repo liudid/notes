@@ -6,6 +6,7 @@ export function getSidebar(): DefaultTheme.Sidebar {
     "/zh/diary/": sidebarDiary(),
     "/zh/tools/": sidebarTools(),
     "/zh/english/": sidebarEnglish(),
+    "/zh/yao/": sidebarYao(),
   };
 }
 
@@ -393,6 +394,16 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
           text: "姓名",
         },
       ],
+    },
+  ];
+}
+
+function sidebarYao(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: "五行", link: "/zh/yao/wuxing" },
+    {
+      text: "六十甲子",
+      link: "/zh/yao/liushijiazi",
     },
   ];
 }

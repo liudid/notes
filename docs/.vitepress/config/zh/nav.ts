@@ -7,6 +7,15 @@ export function getNav(): DefaultTheme.NavItem[] {
     { text: "日记", link: "/zh/diary/2024-01-18", activeMatch: "/zh/diary/" },
     { text: "好用工具", link: "/zh/tools/life", activeMatch: "/zh/tools/" },
     { text: "Emoji", link: "/zh/emoji/index", activeMatch: "/zh/emoji/" },
-    { text: "Learning English", link: "/zh/english/middle-school-words", activeMatch: "/zh/english/" },
+    {
+      text: "Learning English",
+      link: "/zh/english/middle-school-words",
+      activeMatch: "/zh/english/",
+    },
+    {
+      text: "钥匙",
+      link: "/zh/yao/liushijiazi",
+      activeMatch: "/zh/yao/",
+    },
   ];
 }

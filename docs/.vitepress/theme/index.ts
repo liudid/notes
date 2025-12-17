@@ -9,6 +9,9 @@ import "element-plus/dist/index.css";
 
 import WordItem from "./components/WordItem.vue";
 import Segmented from "./components/Segmented.vue";
+import WuXing from "./components/WuXing.vue";
+import LiuShiJiaZi from "./components/LiuShiJiaZi.vue";
+import GanZhiSlider from "./components/GanZhiSlider.vue";
 
 export default {
   extends: DefaultTheme,
@@ -21,6 +24,9 @@ export default {
     app.use(ElementPlus);
     app.component("WordItem", WordItem);
     app.component("Segmented", Segmented);
+    app.component("WuXing", WuXing);
+    app.component("LiuShiJiaZi", LiuShiJiaZi);
+    app.component("GanZhiSlider", GanZhiSlider);
     // ...
   },
 } satisfies Theme;
