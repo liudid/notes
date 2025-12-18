@@ -8,4 +8,4 @@ import "./chunk-5WRI5ZAA.js";
 export {
   EffectComposer
 };
-//# sourceMappingURL=three_examples_jsm_postprocessing_EffectComposer.js.map
+//# sourceMappingURL=three_examples_jsm_postprocessing_EffectComposer__js.js.map

@@ -8,4 +8,4 @@ import "./chunk-5WRI5ZAA.js";
 export {
   UnrealBloomPass
 };
-//# sourceMappingURL=three_examples_jsm_postprocessing_UnrealBloomPass.js.map
+//# sourceMappingURL=three_examples_jsm_postprocessing_UnrealBloomPass__js.js.map

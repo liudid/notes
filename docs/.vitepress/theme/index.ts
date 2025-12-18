@@ -10,9 +10,11 @@ import "element-plus/dist/index.css";
 import WordItem from "./components/WordItem.vue";
 import Segmented from "./components/Segmented.vue";
 import WuXing from "./components/WuXing.vue";
+import TianGan from "./components/TianGan.vue";
 import LiuShiJiaZi from "./components/LiuShiJiaZi.vue";
 import GanZhiSlider from "./components/GanZhiSlider.vue";
 import GanZhi from "./components/GanZhi.vue";
+import DiZhi from "./components/DiZhi.vue";
 
 export default {
   extends: DefaultTheme,
@@ -26,9 +28,11 @@ export default {
     app.component("WordItem", WordItem);
     app.component("Segmented", Segmented);
     app.component("WuXing", WuXing);
+    app.component("TianGan", TianGan);
     app.component("LiuShiJiaZi", LiuShiJiaZi);
     app.component("GanZhiSlider", GanZhiSlider);
     app.component("GanZhi", GanZhi);
+    app.component("DiZhi", DiZhi);
     // ...
   },
 } satisfies Theme;

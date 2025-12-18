@@ -7,4 +7,4 @@ import "./chunk-5WRI5ZAA.js";
 export {
   RenderPass
 };
-//# sourceMappingURL=three_examples_jsm_postprocessing_RenderPass.js.map
+//# sourceMappingURL=three_examples_jsm_postprocessing_RenderPass__js.js.map

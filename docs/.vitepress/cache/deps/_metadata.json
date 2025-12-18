@@ -2,72 +2,96 @@
   "hash": "3b6a782c",
   "configHash": "35002c83",
   "lockfileHash": "55ac4129",
-  "browserHash": "9f62edb6",
+  "browserHash": "ae8ac2ca",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "43e6ff66",
+      "fileHash": "2afa0b62",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@6.6.4/node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "1697b512",
+      "fileHash": "8d95a0d7",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@10.11.1_vue@3.5.25_typescript@5.9.3_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "cd6729cc",
+      "fileHash": "95ca0a90",
       "needsInterop": false
     },
     "element-plus": {
       "src": "../../../../node_modules/.pnpm/element-plus@2.12.0_vue@3.5.25_typescript@5.9.3_/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "720e0bdd",
+      "fileHash": "7e0681c4",
       "needsInterop": false
     },
     "three": {
       "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "58487a24",
+      "fileHash": "95953d48",
       "needsInterop": false
     },
     "three/examples/jsm/controls/OrbitControls": {
       "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/controls/OrbitControls.js",
       "file": "three_examples_jsm_controls_OrbitControls.js",
-      "fileHash": "c5960a57",
+      "fileHash": "65aa3b6b",
       "needsInterop": false
     },
     "three/examples/jsm/postprocessing/EffectComposer": {
       "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/postprocessing/EffectComposer.js",
       "file": "three_examples_jsm_postprocessing_EffectComposer.js",
-      "fileHash": "6b45ee58",
+      "fileHash": "e9b02c70",
       "needsInterop": false
     },
     "three/examples/jsm/postprocessing/RenderPass": {
       "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/postprocessing/RenderPass.js",
       "file": "three_examples_jsm_postprocessing_RenderPass.js",
-      "fileHash": "30d1178b",
+      "fileHash": "33309c86",
       "needsInterop": false
     },
     "three/examples/jsm/postprocessing/UnrealBloomPass": {
       "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js",
       "file": "three_examples_jsm_postprocessing_UnrealBloomPass.js",
-      "fileHash": "94f17880",
+      "fileHash": "f5419cab",
       "needsInterop": false
     },
     "three/examples/jsm/loaders/FontLoader": {
       "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/loaders/FontLoader.js",
       "file": "three_examples_jsm_loaders_FontLoader.js",
-      "fileHash": "a122aff8",
+      "fileHash": "1d20f00a",
       "needsInterop": false
     },
     "three/examples/jsm/geometries/TextGeometry": {
       "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/geometries/TextGeometry.js",
       "file": "three_examples_jsm_geometries_TextGeometry.js",
-      "fileHash": "2d404147",
+      "fileHash": "75a5a952",
+      "needsInterop": false
+    },
+    "three/examples/jsm/controls/OrbitControls.js": {
+      "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/controls/OrbitControls.js",
+      "file": "three_examples_jsm_controls_OrbitControls__js.js",
+      "fileHash": "5914653f",
+      "needsInterop": false
+    },
+    "three/examples/jsm/postprocessing/EffectComposer.js": {
+      "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/postprocessing/EffectComposer.js",
+      "file": "three_examples_jsm_postprocessing_EffectComposer__js.js",
+      "fileHash": "06766813",
+      "needsInterop": false
+    },
+    "three/examples/jsm/postprocessing/RenderPass.js": {
+      "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/postprocessing/RenderPass.js",
+      "file": "three_examples_jsm_postprocessing_RenderPass__js.js",
+      "fileHash": "0c8d4f90",
+      "needsInterop": false
+    },
+    "three/examples/jsm/postprocessing/UnrealBloomPass.js": {
+      "src": "../../../../node_modules/.pnpm/three@0.182.0/node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "file": "three_examples_jsm_postprocessing_UnrealBloomPass__js.js",
+      "fileHash": "4d1f94c0",
       "needsInterop": false
     }
   },
@@ -75,14 +99,26 @@
     "chunk-SUULUWSW": {
       "file": "chunk-SUULUWSW.js"
     },
+    "chunk-O4XWQMLZ": {
+      "file": "chunk-O4XWQMLZ.js"
+    },
+    "chunk-LIGQ35OV": {
+      "file": "chunk-LIGQ35OV.js"
+    },
+    "chunk-KC2UNMNP": {
+      "file": "chunk-KC2UNMNP.js"
+    },
+    "chunk-IH5DTW4F": {
+      "file": "chunk-IH5DTW4F.js"
+    },
     "chunk-DEMJEFPW": {
       "file": "chunk-DEMJEFPW.js"
     },
     "chunk-QNPG6LFH": {
       "file": "chunk-QNPG6LFH.js"
     },
-    "chunk-O4XWQMLZ": {
-      "file": "chunk-O4XWQMLZ.js"
+    "chunk-QV4AWXLG": {
+      "file": "chunk-QV4AWXLG.js"
     },
     "chunk-4KZIUUJD": {
       "file": "chunk-4KZIUUJD.js"
