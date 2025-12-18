@@ -1,26 +1,28 @@
 <template>
   <div class="five-elements-container">
-    <div class="intro">
-      <div>天干 = 五行之气的呼吸口</div>
-      <div>
-        五行：是“气的性质” 天干：是“气的动作方式”,所以天干不是元素，而是动词
-      </div>
-      <div>
-        五行之气，一行必有“出”与“入” 出 → 阳 入 → 阴 5 × 2 = 10 于是出现
-        十个“干”作为气的节律节点。
-      </div>
-      <div>
-        <p>
-          「干」在上古并不是现在理解的“木头那根干”。在《说文》体系中，它的核心义有三层：
-        </p>
-        <p>干 = 主也、当也 → 承当、主持、担当</p>
-        <p>干 = 竖直、贯通之物 → 上下相接，能把不同层级连在一起</p>
-        <p>
-          干 = 骨架、纲纪 → 没有干，枝叶无所附
-          所以「干」不是“一个东西”，而是让万象能展开的中轴。
-        </p>
+    <!-- 十天干面板 -->
+    <div class="stems-panel">
+      <div class="stems-list">
+        <button
+          v-for="stem in allStems"
+          :key="stem.id"
+          class="stem-btn"
+          :class="{ active: activeStem === stem.id }"
+          @click="setActiveStem(stem.id)"
+          :style="{
+            'background-color': stem.color,
+            color: stem.textColor,
+          }"
+        >
+          <div class="stem-char">{{ stem.character }}</div>
+          <div class="stem-info">
+            <div class="stem-yinyang">{{ stem.yinyang }}</div>
+            <div class="stem-element">{{ stem.element }}</div>
+          </div>
+        </button>
       </div>
     </div>
+
     <div class="gear-wrapper">
       <!-- 五行交叉齿轮 -->
       <div
@@ -33,12 +35,7 @@
           v-for="(element, index) in elements"
           :key="element.id"
           class="cross-line"
-          :style="{
-            '--color': element.color,
-            '--light-color': element.lightColor,
-            '--rotation': element.rotation,
-            '--index': index,
-          }"
+          :style="getLineStyle(element, index)"
         >
           <!-- 线本体 -->
           <div class="line-body">
@@ -50,15 +47,20 @@
           <div class="stem stem-start">
             <div
               class="stem-character"
-              :style="{
-                'background-color': element.color,
-                color: element.textColor,
-              }"
+              :style="getStemCharacterStyle(element, element.yangStem)"
             >
               {{ element.yangStem }}
             </div>
-            <div class="stem-label yang-label">阳</div>
-            <div class="stem-nature" :style="{ color: element.color }">
+            <div
+              class="stem-label yang-label"
+              :style="getStemLabelStyle(element.yangStem)"
+            >
+              阳
+            </div>
+            <div
+              class="stem-nature"
+              :style="getStemNatureStyle(element, element.yangStem)"
+            >
               {{ element.yangNature }}
             </div>
           </div>
@@ -67,15 +69,20 @@
           <div class="stem stem-end">
             <div
               class="stem-character"
-              :style="{
-                'background-color': element.color,
-                color: element.textColor,
-              }"
+              :style="getStemCharacterStyle(element, element.yinStem)"
             >
               {{ element.yinStem }}
             </div>
-            <div class="stem-label yin-label">阴</div>
-            <div class="stem-nature" :style="{ color: element.color }">
+            <div
+              class="stem-label yin-label"
+              :style="getStemLabelStyle(element.yinStem)"
+            >
+              阴
+            </div>
+            <div
+              class="stem-nature"
+              :style="getStemNatureStyle(element, element.yinStem)"
+            >
               {{ element.yinNature }}
             </div>
           </div>
@@ -127,6 +134,56 @@
         </div>
       </div>
 
+      <!-- 天干详细信息 -->
+      <div class="stem-detail" v-if="activeStem">
+        <div class="detail-title">
+          <span
+            class="detail-char"
+            :style="{
+              'background-color': getStemByChar(activeStem)?.color,
+              color: getStemByChar(activeStem)?.textColor,
+            }"
+          >
+            {{ getStemByChar(activeStem)?.character }}
+          </span>
+          <span class="detail-name">{{
+            getStemByChar(activeStem)?.fullName
+          }}</span>
+        </div>
+        <div class="detail-content">
+          <div class="detail-item">
+            <span class="detail-label">五行:</span>
+            <span class="detail-value">{{
+              getStemByChar(activeStem)?.element
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">阴阳:</span>
+            <span class="detail-value">{{
+              getStemByChar(activeStem)?.yinyang
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">方位:</span>
+            <span class="detail-value">{{
+              getStemByChar(activeStem)?.direction
+            }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">季节:</span>
+            <span class="detail-value">{{
+              getStemByChar(activeStem)?.season
+            }}</span>
+          </div>
+          <div class="detail-item full-width">
+            <span class="detail-label">特性:</span>
+            <span class="detail-value">{{
+              getStemByChar(activeStem)?.description
+            }}</span>
+          </div>
+        </div>
+      </div>
+
       <div class="legend">
         <div class="legend-title">天干对应五行</div>
         <div class="legend-items">
@@ -134,6 +191,7 @@
             v-for="element in elements"
             :key="element.id"
             class="legend-item"
+            :style="getLegendItemStyle(element)"
           >
             <div
               class="legend-color"
@@ -149,6 +207,27 @@
         </div>
       </div>
     </div>
+    <div class="intro">
+      <div>天干 = 五行之气的呼吸口</div>
+      <div>
+        五行：是"气的性质" 天干：是"气的动作方式",所以天干不是元素，而是动词
+      </div>
+      <div>
+        五行之气，一行必有"出"与"入" 出 → 阳 入 → 阴 5 × 2 = 10 于是出现
+        十个"干"作为气的节律节点。
+      </div>
+      <div>
+        <p>
+          「干」在上古并不是现在理解的"木头那根干"。在《说文》体系中，它的核心义有三层：
+        </p>
+        <p>干 = 主也、当也 → 承当、主持、担当</p>
+        <p>干 = 竖直、贯通之物 → 上下相接，能把不同层级连在一起</p>
+        <p>
+          干 = 骨架、纲纪 → 没有干，枝叶无所附
+          所以「干」不是"一个东西"，而是让万象能展开的中轴。
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -159,6 +238,131 @@ import { ref, reactive, onMounted, computed } from "vue";
 const isRotating = ref(true);
 const rotationDirection = ref(1); // 1表示顺时针，-1表示逆时针
 const rotationSpeed = ref(3);
+const activeStem = ref(); // 默认选中甲
+
+// 十天干数据
+const allStems = reactive([
+  {
+    id: "甲",
+    character: "甲",
+    fullName: "甲木",
+    element: "木",
+    yinyang: "阳",
+    color: "#4CAF50",
+    textColor: "#FFFFFF",
+    direction: "东",
+    season: "春",
+    description: "阳木，象征树木生长，有生发、向上之力",
+  },
+  {
+    id: "乙",
+    character: "乙",
+    fullName: "乙木",
+    element: "木",
+    yinyang: "阴",
+    color: "#4CAF50",
+    textColor: "#FFFFFF",
+    direction: "东",
+    season: "春",
+    description: "阴木，象征花草藤蔓，有柔韧、屈曲之性",
+  },
+  {
+    id: "丙",
+    character: "丙",
+    fullName: "丙火",
+    element: "火",
+    yinyang: "阳",
+    color: "#FF5722",
+    textColor: "#FFFFFF",
+    direction: "南",
+    season: "夏",
+    description: "阳火，象征太阳烈火，有光明、热烈之性",
+  },
+  {
+    id: "丁",
+    character: "丁",
+    fullName: "丁火",
+    element: "火",
+    yinyang: "阴",
+    color: "#FF5722",
+    textColor: "#FFFFFF",
+    direction: "南",
+    season: "夏",
+    description: "阴火，象征灯烛炉火，有温暖、文明之性",
+  },
+  {
+    id: "戊",
+    character: "戊",
+    fullName: "戊土",
+    element: "土",
+    yinyang: "阳",
+    color: "#FFC107",
+    textColor: "#333333",
+    direction: "中",
+    season: "长夏",
+    description: "阳土，象征山岳高原，有厚重、承载之性",
+  },
+  {
+    id: "己",
+    character: "己",
+    fullName: "己土",
+    element: "土",
+    yinyang: "阴",
+    color: "#FFC107",
+    textColor: "#333333",
+    direction: "中",
+    season: "长夏",
+    description: "阴土，象征田园耕地，有滋养、化育之性",
+  },
+  {
+    id: "庚",
+    character: "庚",
+    fullName: "庚金",
+    element: "金",
+    yinyang: "阳",
+    color: "#607D8B",
+    textColor: "#FFFFFF",
+    direction: "西",
+    season: "秋",
+    description: "阳金，象征刀剑矿石，有刚健、肃杀之性",
+  },
+  {
+    id: "辛",
+    character: "辛",
+    fullName: "辛金",
+    element: "金",
+    yinyang: "阴",
+    color: "#607D8B",
+    textColor: "#FFFFFF",
+    direction: "西",
+    season: "秋",
+    description: "阴金，象征珠玉金银，有精致、贵重之性",
+  },
+  {
+    id: "壬",
+    character: "壬",
+    fullName: "壬水",
+    element: "水",
+    yinyang: "阳",
+    color: "#2196F3",
+    textColor: "#FFFFFF",
+    direction: "北",
+    season: "冬",
+    description: "阳水，象征江河湖海，有奔腾、浩荡之性",
+  },
+  {
+    id: "癸",
+    character: "癸",
+    fullName: "癸水",
+    element: "水",
+    yinyang: "阴",
+    color: "#2196F3",
+    textColor: "#FFFFFF",
+    direction: "北",
+    season: "冬",
+    description: "阴水，象征雨露云雾，有润泽、渗透之性",
+  },
+]);
 
 // 五行数据 - 简化版
 const elements = reactive([
@@ -234,6 +438,107 @@ const rotationDuration = computed(() => {
   return 40 / rotationSpeed.value;
 });
 
+// 根据天干字符获取天干数据
+const getStemByChar = (char) => {
+  return allStems.find((stem) => stem.character === char);
+};
+
+// 检查元素是否与当前选中的天干相关
+const isElementActive = (element) => {
+  if (!activeStem.value) return true;
+  return (
+    element.yangStem === activeStem.value ||
+    element.yinStem === activeStem.value
+  );
+};
+
+// 检查天干字符是否与当前选中的天干相同
+const isStemActive = (stemChar) => {
+  if (!activeStem.value) return true;
+  return stemChar === activeStem.value;
+};
+
+// 获取线条样式
+const getLineStyle = (element, index) => {
+  const opacity = activeStem.value
+    ? isElementActive(element)
+      ? "1"
+      : "0.3"
+    : "1";
+
+  return {
+    "--color": element.color,
+    "--light-color": element.lightColor,
+    "--rotation": element.rotation,
+    "--index": index,
+    opacity: opacity,
+  };
+};
+
+// 获取天干字符样式
+const getStemCharacterStyle = (element, stemChar) => {
+  const opacity = activeStem.value
+    ? isStemActive(stemChar)
+      ? "1"
+      : "0.7"
+    : "1";
+
+  return {
+    "background-color": element.color,
+    color: element.textColor,
+    opacity: opacity,
+  };
+};
+
+// 获取天干标签样式
+const getStemLabelStyle = (stemChar) => {
+  const opacity = activeStem.value
+    ? isStemActive(stemChar)
+      ? "1"
+      : "0.5"
+    : "1";
+
+  return {
+    opacity: opacity,
+  };
+};
+
+// 获取天干性质样式
+const getStemNatureStyle = (element, stemChar) => {
+  const opacity = activeStem.value
+    ? isStemActive(stemChar)
+      ? "1"
+      : "0.5"
+    : "1";
+
+  return {
+    color: element.color,
+    opacity: opacity,
+  };
+};
+
+// 获取图例项样式
+const getLegendItemStyle = (element) => {
+  const opacity = activeStem.value
+    ? isElementActive(element)
+      ? "1"
+      : "0.4"
+    : "1";
+
+  return {
+    opacity: opacity,
+  };
+};
+
+// 设置活动天干
+const setActiveStem = (stemId) => {
+  if (stemId === activeStem.value) {
+    activeStem.value = "";
+    return;
+  }
+  activeStem.value = stemId;
+};
+
 // 切换转动状态
 const toggleRotation = () => {
   isRotating.value = !isRotating.value;
@@ -252,7 +557,7 @@ onMounted(() => {
 
 <style scoped>
 .five-elements-container {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 1.5rem;
   color: #333;
@@ -261,26 +566,113 @@ onMounted(() => {
   align-items: center;
 }
 
+/* 十天干面板样式 */
+.stems-panel {
+  /* width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); */
+}
+
+.panel-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.stems-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.8rem;
+}
+
+.stem-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stem-btn:hover {
+  transform: translateY(-11px);
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.stem-btn.active {
+  transform: translateY(-11px);
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.stem-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stem-btn:hover::after {
+  opacity: 1;
+}
+
+.stem-char {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.stem-info {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.stem-yinyang {
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.stem-element {
+  opacity: 0.9;
+}
+
 .intro {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   padding: 1rem;
   background: #f0f7ff;
   border-radius: 8px;
   border-left: 4px solid #2196f3;
   width: 100%;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
-.title {
-  font-size: 1.8rem;
-  color: #2c3e50;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: #666;
-  font-style: italic;
+.intro div {
+  margin-bottom: 0.5rem;
 }
 
 /* 齿轮容器 */
@@ -288,7 +680,8 @@ onMounted(() => {
   position: relative;
   width: 400px;
   height: 400px;
-  margin: 0 auto 1.5rem;
+  margin: 60px;
+  /* margin: 0 auto 1.5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -325,6 +718,7 @@ onMounted(() => {
   height: 10px;
   transform-origin: center center;
   transform: translate(-50%, -50%) rotate(calc(var(--rotation) * 1deg));
+  transition: opacity 0.3s ease;
 }
 
 .line-body {
@@ -355,7 +749,7 @@ onMounted(() => {
 }
 
 .line-flow {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
@@ -368,7 +762,7 @@ onMounted(() => {
     transparent 100%
   );
   animation: flow 2.5s linear infinite;
-  animation-delay: calc(var(--index) * 2s);
+  animation-delay: calc(var(--index) * 2s); */
 }
 
 @keyframes flow {
@@ -412,6 +806,7 @@ onMounted(() => {
   margin-bottom: 5px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   border: 2px solid white;
+  transition: opacity 0.3s ease;
 }
 
 .stem-label {
@@ -421,6 +816,7 @@ onMounted(() => {
   color: white;
   font-weight: bold;
   margin-bottom: 3px;
+  transition: opacity 0.3s ease;
 }
 
 .yang-label {
@@ -435,6 +831,7 @@ onMounted(() => {
   font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
+  transition: opacity 0.3s ease;
 }
 
 /* 中心点 */
@@ -605,6 +1002,73 @@ onMounted(() => {
   min-width: 30px;
 }
 
+/* 天干详细信息 */
+.stem-detail {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #2196f3;
+  transition: all 0.3s ease;
+}
+
+.detail-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.detail-char {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.detail-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-item.full-width {
+  grid-column: span 2;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #666;
+  min-width: 40px;
+}
+
+.detail-value {
+  color: #333;
+  flex: 1;
+}
+
+.detail-item.full-width .detail-value {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 /* 图例 */
 .legend {
   border-top: 1px solid #eee;
@@ -628,6 +1092,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: opacity 0.3s ease;
 }
 
 .legend-color {
@@ -649,28 +1114,28 @@ onMounted(() => {
   color: #888;
 }
 
-/* 简要说明 */
-.brief-explanation {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background: #f0f7ff;
-  border-radius: 8px;
-  border-left: 4px solid #2196f3;
-  width: 100%;
-}
-
-.brief-explanation p {
-  margin: 0.3rem 0;
-  font-size: 0.9rem;
-  color: #444;
-  line-height: 1.5;
-}
-
 /* 响应式设计 */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .five-elements-container {
     padding: 1rem;
     max-width: 95%;
+  }
+
+  .stems-list {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+
+  .stem-btn {
+    padding: 0.6rem 0.3rem;
+  }
+
+  .stem-char {
+    font-size: 1.5rem;
+  }
+
+  .stem-info {
+    font-size: 0.7rem;
   }
 
   .gear-wrapper {
@@ -698,12 +1163,24 @@ onMounted(() => {
     justify-content: space-between;
   }
 
+  .detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-item.full-width {
+    grid-column: span 1;
+  }
+
   .legend-items {
     justify-content: center;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
+  .stems-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .gear-wrapper {
     width: 280px;
     height: 280px;
