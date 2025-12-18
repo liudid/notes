@@ -140,7 +140,7 @@ li + li {
 
   // 鼠标悬停高亮
   &.highlight {
-    transform: translateY(-4px); /* 悬浮更明显 */
+    // transform: translateY(-4px); /* 悬浮更明显 */
     z-index: 20;
     /* 多层阴影，增强立体感 */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.25),
