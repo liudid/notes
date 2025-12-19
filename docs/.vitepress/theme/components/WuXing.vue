@@ -1,4 +1,7 @@
 <template>
+  <IntroTitle
+    text="何为行：炁之所行，既炁的一开一合（一呼一吸、一阳一阴）。五行为五种炁的运行方式，既五种炁运行的五个节律。"
+  ></IntroTitle>
   <div class="wu-xing-wrapper">
     <!-- 左侧 -->
     <div class="sidebar">
@@ -79,6 +82,13 @@
       </div>
     </div>
   </div>
+  <IntroFrom
+    text="“天地之气，合而为一，分而为阴阳，判而为五行。” ——《淮南子》"
+  ></IntroFrom>
+  <IntroFrom text="“五行者，五气之所生也。”——《黄帝内经》"></IntroFrom>
+  <IntroFrom
+    text="“五行之气，各有胜相，而相生相成。”——《管子·四时》《管子·枢言》"
+  ></IntroFrom>
 </template>
 
 <script setup>

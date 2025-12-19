@@ -1,4 +1,7 @@
 <template>
+  <IntroTitle
+    text="天干，是对五行（五种炁）在天位运转（一开一合）的命名。"
+  ></IntroTitle>
   <div class="five-elements-container">
     <!-- 十天干面板 -->
     <div class="stems-panel">
@@ -16,7 +19,9 @@
         >
           <div class="stem-char">{{ stem.character }}</div>
           <div class="stem-info">
-            <div class="stem-yinyang">{{ stem.yinyang }}</div>
+            <div class="stem-yinyang">
+              {{ stem.yinyang }}（{{ stem.yinyang === "阳" ? "开" : "合" }}）
+            </div>
             <div class="stem-element">{{ stem.element }}</div>
           </div>
         </button>

@@ -9,6 +9,9 @@ import "element-plus/dist/index.css";
 
 import WordItem from "./components/WordItem.vue";
 import Segmented from "./components/Segmented.vue";
+
+import IntroTitle from "./components/ui/IntroTitle.vue";
+import IntroFrom from "./components/ui/IntroFrom.vue";
 import WuXing from "./components/WuXing.vue";
 import TianGan from "./components/TianGan.vue";
 import LiuShiJiaZi from "./components/LiuShiJiaZi.vue";
@@ -27,6 +30,9 @@ export default {
     app.use(ElementPlus);
     app.component("WordItem", WordItem);
     app.component("Segmented", Segmented);
+
+    app.component("IntroFrom", IntroFrom);
+    app.component("IntroTitle", IntroTitle);
     app.component("WuXing", WuXing);
     app.component("TianGan", TianGan);
     app.component("LiuShiJiaZi", LiuShiJiaZi);
