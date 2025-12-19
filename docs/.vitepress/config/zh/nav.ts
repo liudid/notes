@@ -12,10 +12,10 @@ export function getNav(): DefaultTheme.NavItem[] {
       link: "/zh/english/middle-school-words",
       activeMatch: "/zh/english/",
     },
-    {
-      text: "钥匙",
-      link: "/zh/yao/liushijiazi",
-      activeMatch: "/zh/yao/",
-    },
+    // {
+    //   text: "钥匙",
+    //   link: "/zh/yao/liushijiazi",
+    //   activeMatch: "/zh/yao/",
+    // },
   ];
 }
