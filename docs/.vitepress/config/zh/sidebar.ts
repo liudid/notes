@@ -403,16 +403,16 @@ function sidebarYao(): DefaultTheme.SidebarItem[] {
     { text: "五行", link: "/zh/yao/wuxing" },
     { text: "天干", link: "/zh/yao/tiangan" },
     {
+      text: "地支",
+      link: "/zh/yao/dizhi",
+    },
+    {
       text: "天干地支",
       link: "/zh/yao/ganzhi",
     },
     {
       text: "六十甲子（年干支）",
       link: "/zh/yao/liushijiazi",
-    },
-    {
-      text: "地支",
-      link: "/zh/yao/dizhi",
     },
   ];
 }

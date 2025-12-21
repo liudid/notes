@@ -1,6 +1,6 @@
 <template>
   <IntroTitle
-    text="天干，是对五行（五种炁）在天位运转（一开一合）的命名。"
+    text="天：主统摄。天干，是对五行（五种炁）在天位运转（一开一合）的命名。"
   ></IntroTitle>
   <div class="five-elements-container">
     <!-- 十天干面板 -->

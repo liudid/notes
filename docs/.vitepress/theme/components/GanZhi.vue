@@ -1,4 +1,7 @@
 <template>
+  <IntroTitle
+    text="天干与地支结合，可以让炁机可以被承载、被运用、被起盘、被推演、让变化可被操作”。而非测量与非记录变化。"
+  ></IntroTitle>
   <div class="heaven-earth-system">
     <!-- 3D场景 -->
     <div ref="container" class="three-container"></div>

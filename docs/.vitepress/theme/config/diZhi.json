@@ -1,0 +1,419 @@
+[
+  {
+    "id": "zi",
+    "label": "子",
+    "common": {
+      "earthlyBranch": "子",
+      "wuxing": "水",
+      "yinYang": "阳",
+      "yinYangDetail": "阳中阴",
+      "qiPhase": "一阳初生",
+      "coreImage": "萌",
+      "qiDirection": "生",
+      "description": "阴极而阳动，阳气始萌于内，尚未显形",
+      "direction": "正北",
+      "hiddenStems": [{ "stem": "癸", "role": "主" }]
+    },
+    "yearUnit": {
+      "zodiac": "鼠",
+      "yearQiKeyword": "阳气初生"
+    },
+    "monthUnit": {
+      "monthBranch": "子",
+      "lunarMonths": ["冬月", "十一月"],
+      "season": "冬",
+      "solarTerms": { "jie": "大雪", "zhongQi": "冬至" },
+      "solarLongitude": { "jie": 255, "zhongQi": 270 },
+      "monthQiAuthority": "阳气潜生"
+    },
+    "dayUnit": {
+      "timeName": "子时",
+      "timeRange": "23:00-00:59",
+      "dayNight": "夜",
+      "dayQiPhase": "一阳初生"
+    }
+  },
+
+  {
+    "id": "chou",
+    "label": "丑",
+    "common": {
+      "earthlyBranch": "丑",
+      "wuxing": "土",
+      "yinYang": "阴",
+      "yinYangDetail": "阴中阳",
+      "qiPhase": "阳气结胎",
+      "coreImage": "蓄",
+      "qiDirection": "生",
+      "description": "阳气在内凝结，万物孕而未出",
+      "direction": "东北",
+      "hiddenStems": [
+        { "stem": "己", "role": "主" },
+        { "stem": "癸", "role": "余" },
+        { "stem": "辛", "role": "余" }
+      ]
+    },
+    "yearUnit": { "zodiac": "牛", "yearQiKeyword": "蓄势待发" },
+    "monthUnit": {
+      "monthBranch": "丑",
+      "lunarMonths": ["腊月", "十二月"],
+      "season": "冬",
+      "solarTerms": { "jie": "小寒", "zhongQi": "大寒" },
+      "solarLongitude": { "jie": 285, "zhongQi": 300 },
+      "monthQiAuthority": "阳气内蓄"
+    },
+    "dayUnit": {
+      "timeName": "丑时",
+      "timeRange": "01:00-02:59",
+      "dayNight": "夜",
+      "dayQiPhase": "阳气内结"
+    }
+  },
+
+  {
+    "id": "yin",
+    "label": "寅",
+    "common": {
+      "earthlyBranch": "寅",
+      "wuxing": "木",
+      "yinYang": "阳",
+      "yinYangDetail": "阳中阳",
+      "qiPhase": "阳气出地",
+      "coreImage": "发",
+      "qiDirection": "生",
+      "description": "阳气破土而出，生机初显",
+      "direction": "东北偏东",
+      "hiddenStems": [
+        { "stem": "甲", "role": "主" },
+        { "stem": "丙", "role": "余" },
+        { "stem": "戊", "role": "余" }
+      ]
+    },
+    "yearUnit": { "zodiac": "虎", "yearQiKeyword": "生发之始" },
+    "monthUnit": {
+      "monthBranch": "寅",
+      "lunarMonths": ["正月"],
+      "season": "春",
+      "solarTerms": { "jie": "立春", "zhongQi": "雨水" },
+      "solarLongitude": { "jie": 315, "zhongQi": 330 },
+      "monthQiAuthority": "阳气外发"
+    },
+    "dayUnit": {
+      "timeName": "寅时",
+      "timeRange": "03:00-04:59",
+      "dayNight": "夜转昼",
+      "dayQiPhase": "生机发动"
+    }
+  },
+
+  {
+    "id": "mao",
+    "label": "卯",
+    "common": {
+      "earthlyBranch": "卯",
+      "wuxing": "木",
+      "yinYang": "阴",
+      "yinYangDetail": "阴中阳",
+      "qiPhase": "阳气舒展",
+      "coreImage": "展",
+      "qiDirection": "生",
+      "description": "生机条达，万物冒地而出",
+      "direction": "正东",
+      "hiddenStems": [{ "stem": "乙", "role": "主" }]
+    },
+    "yearUnit": { "zodiac": "兔", "yearQiKeyword": "条达舒展" },
+    "monthUnit": {
+      "monthBranch": "卯",
+      "lunarMonths": ["二月"],
+      "season": "春",
+      "solarTerms": { "jie": "惊蛰", "zhongQi": "春分" },
+      "solarLongitude": { "jie": 345, "zhongQi": 0 },
+      "monthQiAuthority": "生机舒展"
+    },
+    "dayUnit": {
+      "timeName": "卯时",
+      "timeRange": "05:00-06:59",
+      "dayNight": "昼",
+      "dayQiPhase": "阳气展开"
+    }
+  },
+
+  {
+    "id": "chen",
+    "label": "辰",
+    "common": {
+      "earthlyBranch": "辰",
+      "wuxing": "土",
+      "yinYang": "阳",
+      "yinYangDetail": "阳中阴",
+      "qiPhase": "气机转化",
+      "coreImage": "化",
+      "qiDirection": "转",
+      "description": "生机转化，万物由生入长",
+      "direction": "东南",
+      "hiddenStems": [
+        { "stem": "戊", "role": "主" },
+        { "stem": "乙", "role": "余" },
+        { "stem": "癸", "role": "余" }
+      ]
+    },
+    "yearUnit": { "zodiac": "龙", "yearQiKeyword": "转化之枢" },
+    "monthUnit": {
+      "monthBranch": "辰",
+      "lunarMonths": ["三月"],
+      "season": "春末",
+      "solarTerms": { "jie": "清明", "zhongQi": "谷雨" },
+      "solarLongitude": { "jie": 15, "zhongQi": 30 },
+      "monthQiAuthority": "气机转化"
+    },
+    "dayUnit": {
+      "timeName": "辰时",
+      "timeRange": "07:00-08:59",
+      "dayNight": "昼",
+      "dayQiPhase": "转化"
+    }
+  },
+
+  {
+    "id": "si",
+    "label": "巳",
+    "common": {
+      "earthlyBranch": "巳",
+      "wuxing": "火",
+      "yinYang": "阴",
+      "yinYangDetail": "阴中阳",
+      "qiPhase": "阳气渐盛",
+      "coreImage": "盛",
+      "qiDirection": "长",
+      "description": "阳气明显增长，形气俱成",
+      "direction": "东南偏南",
+      "hiddenStems": [
+        { "stem": "丙", "role": "主" },
+        { "stem": "戊", "role": "余" },
+        { "stem": "庚", "role": "余" }
+      ]
+    },
+    "yearUnit": { "zodiac": "蛇", "yearQiKeyword": "渐盛" },
+    "monthUnit": {
+      "monthBranch": "巳",
+      "lunarMonths": ["四月"],
+      "season": "夏初",
+      "solarTerms": { "jie": "立夏", "zhongQi": "小满" },
+      "solarLongitude": { "jie": 45, "zhongQi": 60 },
+      "monthQiAuthority": "阳气渐盛"
+    },
+    "dayUnit": {
+      "timeName": "巳时",
+      "timeRange": "09:00-10:59",
+      "dayNight": "昼",
+      "dayQiPhase": "阳盛初显"
+    }
+  },
+
+  {
+    "id": "wu",
+    "label": "午",
+    "common": {
+      "earthlyBranch": "午",
+      "wuxing": "火",
+      "yinYang": "阳",
+      "yinYangDetail": "阳中阳",
+      "qiPhase": "阳极",
+      "coreImage": "极",
+      "qiDirection": "极",
+      "description": "阳气达到顶点，阴已伏生",
+      "direction": "正南",
+      "hiddenStems": [{ "stem": "丁", "role": "主" }]
+    },
+    "yearUnit": { "zodiac": "马", "yearQiKeyword": "阳极转阴" },
+    "monthUnit": {
+      "monthBranch": "午",
+      "lunarMonths": ["五月"],
+      "season": "夏",
+      "solarTerms": { "jie": "芒种", "zhongQi": "夏至" },
+      "solarLongitude": { "jie": 75, "zhongQi": 90 },
+      "monthQiAuthority": "阳极"
+    },
+    "dayUnit": {
+      "timeName": "午时",
+      "timeRange": "11:00-12:59",
+      "dayNight": "昼",
+      "dayQiPhase": "阳极"
+    }
+  },
+
+  {
+    "id": "wei",
+    "label": "未",
+    "common": {
+      "earthlyBranch": "未",
+      "wuxing": "土",
+      "yinYang": "阴",
+      "yinYangDetail": "阴中阳",
+      "qiPhase": "阳退阴生",
+      "coreImage": "转",
+      "qiDirection": "转",
+      "description": "阳气开始退藏，阴气渐起",
+      "direction": "西南",
+      "hiddenStems": [
+        { "stem": "己", "role": "主" },
+        { "stem": "丁", "role": "余" },
+        { "stem": "乙", "role": "余" }
+      ]
+    },
+    "yearUnit": { "zodiac": "羊", "yearQiKeyword": "转折" },
+    "monthUnit": {
+      "monthBranch": "未",
+      "lunarMonths": ["六月"],
+      "season": "夏末",
+      "solarTerms": { "jie": "小暑", "zhongQi": "大暑" },
+      "solarLongitude": { "jie": 105, "zhongQi": 120 },
+      "monthQiAuthority": "阴气初生"
+    },
+    "dayUnit": {
+      "timeName": "未时",
+      "timeRange": "13:00-14:59",
+      "dayNight": "昼",
+      "dayQiPhase": "阳退阴生"
+    }
+  },
+
+  {
+    "id": "shen",
+    "label": "申",
+    "common": {
+      "earthlyBranch": "申",
+      "wuxing": "金",
+      "yinYang": "阳",
+      "yinYangDetail": "阳中阴",
+      "qiPhase": "阴气成形",
+      "coreImage": "收",
+      "qiDirection": "收",
+      "description": "阴气显现，肃杀之气开始建立",
+      "direction": "西南偏西",
+      "hiddenStems": [
+        { "stem": "庚", "role": "主" },
+        { "stem": "壬", "role": "余" },
+        { "stem": "戊", "role": "余" }
+      ]
+    },
+    "yearUnit": { "zodiac": "猴", "yearQiKeyword": "肃杀初立" },
+    "monthUnit": {
+      "monthBranch": "申",
+      "lunarMonths": ["七月"],
+      "season": "秋初",
+      "solarTerms": { "jie": "立秋", "zhongQi": "处暑" },
+      "solarLongitude": { "jie": 135, "zhongQi": 150 },
+      "monthQiAuthority": "阴气成形"
+    },
+    "dayUnit": {
+      "timeName": "申时",
+      "timeRange": "15:00-16:59",
+      "dayNight": "昼",
+      "dayQiPhase": "收敛开始"
+    }
+  },
+
+  {
+    "id": "you",
+    "label": "酉",
+    "common": {
+      "earthlyBranch": "酉",
+      "wuxing": "金",
+      "yinYang": "阴",
+      "yinYangDetail": "阴中阴",
+      "qiPhase": "阴气纯熟",
+      "coreImage": "凝",
+      "qiDirection": "收",
+      "description": "阴气稳定成熟，万物收敛定型",
+      "direction": "正西",
+      "hiddenStems": [{ "stem": "辛", "role": "主" }]
+    },
+    "yearUnit": { "zodiac": "鸡", "yearQiKeyword": "收成定型" },
+    "monthUnit": {
+      "monthBranch": "酉",
+      "lunarMonths": ["八月"],
+      "season": "秋",
+      "solarTerms": { "jie": "白露", "zhongQi": "秋分" },
+      "solarLongitude": { "jie": 165, "zhongQi": 180 },
+      "monthQiAuthority": "阴气纯熟"
+    },
+    "dayUnit": {
+      "timeName": "酉时",
+      "timeRange": "17:00-18:59",
+      "dayNight": "昼转夜",
+      "dayQiPhase": "收敛完成"
+    }
+  },
+
+  {
+    "id": "xu",
+    "label": "戌",
+    "common": {
+      "earthlyBranch": "戌",
+      "wuxing": "土",
+      "yinYang": "阳",
+      "yinYangDetail": "阳中阴",
+      "qiPhase": "阴阳交替",
+      "coreImage": "归",
+      "qiDirection": "藏",
+      "description": "阳气归库，阴阳重新分配",
+      "direction": "西北",
+      "hiddenStems": [
+        { "stem": "戊", "role": "主" },
+        { "stem": "辛", "role": "余" },
+        { "stem": "丁", "role": "余" }
+      ]
+    },
+    "yearUnit": { "zodiac": "狗", "yearQiKeyword": "归藏" },
+    "monthUnit": {
+      "monthBranch": "戌",
+      "lunarMonths": ["九月"],
+      "season": "秋末",
+      "solarTerms": { "jie": "寒露", "zhongQi": "霜降" },
+      "solarLongitude": { "jie": 195, "zhongQi": 210 },
+      "monthQiAuthority": "气机归库"
+    },
+    "dayUnit": {
+      "timeName": "戌时",
+      "timeRange": "19:00-20:59",
+      "dayNight": "夜",
+      "dayQiPhase": "归藏"
+    }
+  },
+
+  {
+    "id": "hai",
+    "label": "亥",
+    "common": {
+      "earthlyBranch": "亥",
+      "wuxing": "水",
+      "yinYang": "阴",
+      "yinYangDetail": "阴中阴",
+      "qiPhase": "阴极",
+      "coreImage": "藏极",
+      "qiDirection": "藏",
+      "description": "阴气至极，万物闭藏，静极将动",
+      "direction": "西北偏北",
+      "hiddenStems": [
+        { "stem": "壬", "role": "主" },
+        { "stem": "甲", "role": "余" }
+      ]
+    },
+    "yearUnit": { "zodiac": "猪", "yearQiKeyword": "极藏" },
+    "monthUnit": {
+      "monthBranch": "亥",
+      "lunarMonths": ["十月"],
+      "season": "冬初",
+      "solarTerms": { "jie": "立冬", "zhongQi": "小雪" },
+      "solarLongitude": { "jie": 225, "zhongQi": 240 },
+      "monthQiAuthority": "阴气极盛"
+    },
+    "dayUnit": {
+      "timeName": "亥时",
+      "timeRange": "21:00-22:59",
+      "dayNight": "夜",
+      "dayQiPhase": "闭藏"
+    }
+  }
+]
