@@ -1,0 +1,321 @@
+[
+  {
+    "label": "子",
+    "common": {
+      "wuXing": "水",
+      "yinYang": "阳",
+      "qiJiJieDuan": "一阳初生",
+      "heXinXiang": "萌",
+      "miaoShu": "阴极而阳动，阳气始生于内",
+      "qiJiFangWei": "正北",
+      "kongJianFangXiang": "正北",
+      "siXiangGuiShu": "玄武",
+      "cangGan": [{ "stem": "癸", "role": "本气" }]
+    },
+    "year": { "shengXiao": "鼠" },
+    "month": {
+      "jie": "大雪",
+      "zhongQi": "冬至",
+      "nongLiYue": "冬月",
+      "jiJie": "冬季",
+      "taiYangHuangJing": ["255°", "285°"]
+    },
+    "day": { "timeRange": ["23:00", "00:59"] },
+    "spacePosition": "四正"
+  },
+  {
+    "label": "丑",
+    "common": {
+      "wuXing": "土",
+      "yinYang": "阴",
+      "qiJiJieDuan": "初藏之土",
+      "heXinXiang": "潜",
+      "miaoShu": "阳气未发而潜藏，气机蓄势于内",
+      "qiJiFangWei": "东北",
+      "kongJianFangXiang": "东北",
+      "siXiangGuiShu": "玄武",
+      "cangGan": [
+        { "stem": "己", "role": "本气" },
+        { "stem": "癸", "role": "余气" },
+        { "stem": "辛", "role": "余气" }
+      ]
+    },
+    "year": { "shengXiao": "牛" },
+    "month": {
+      "jie": "小寒",
+      "zhongQi": "大寒",
+      "nongLiYue": "腊月",
+      "jiJie": "冬季",
+      "taiYangHuangJing": ["285°", "315°"]
+    },
+    "day": { "timeRange": ["01:00", "02:59"] },
+    "spacePosition": "四隅/中"
+  },
+  {
+    "label": "寅",
+    "common": {
+      "wuXing": "木",
+      "yinYang": "阳",
+      "qiJiJieDuan": "初生之木",
+      "heXinXiang": "动",
+      "miaoShu": "阳气生发，木气初动",
+      "qiJiFangWei": "正东",
+      "kongJianFangXiang": "正东",
+      "siXiangGuiShu": "青龙",
+      "cangGan": [
+        { "stem": "甲", "role": "本气" },
+        { "stem": "丙", "role": "余气" },
+        { "stem": "戊", "role": "余气" }
+      ]
+    },
+    "year": { "shengXiao": "虎" },
+    "month": {
+      "jie": "立春",
+      "zhongQi": "惊蛰",
+      "nongLiYue": "正月",
+      "jiJie": "春季",
+      "taiYangHuangJing": ["315°", "345°"]
+    },
+    "day": { "timeRange": ["03:00", "04:59"] },
+    "spacePosition": "四正"
+  },
+  {
+    "label": "卯",
+    "common": {
+      "wuXing": "木",
+      "yinYang": "阴",
+      "qiJiJieDuan": "木盛之时",
+      "heXinXiang": "舒",
+      "miaoShu": "阳气渐强，木气舒展于外",
+      "qiJiFangWei": "东南",
+      "kongJianFangXiang": "东南",
+      "siXiangGuiShu": "青龙",
+      "cangGan": [{ "stem": "乙", "role": "本气" }]
+    },
+    "year": { "shengXiao": "兔" },
+    "month": {
+      "jie": "惊蛰",
+      "zhongQi": "春分",
+      "nongLiYue": "二月",
+      "jiJie": "春季",
+      "taiYangHuangJing": ["345°", "15°"]
+    },
+    "day": { "timeRange": ["05:00", "06:59"] },
+    "spacePosition": "四隅/中"
+  },
+  {
+    "label": "辰",
+    "common": {
+      "wuXing": "土",
+      "yinYang": "阳",
+      "qiJiJieDuan": "木收土旺",
+      "heXinXiang": "纳",
+      "miaoShu": "木气渐收，土气初旺",
+      "qiJiFangWei": "中央",
+      "kongJianFangXiang": "中央",
+      "siXiangGuiShu": "青龙",
+      "cangGan": [
+        { "stem": "戊", "role": "本气" },
+        { "stem": "乙", "role": "余气" },
+        { "stem": "癸", "role": "余气" }
+      ]
+    },
+    "year": { "shengXiao": "龙" },
+    "month": {
+      "jie": "谷雨",
+      "zhongQi": "立夏",
+      "nongLiYue": "三月",
+      "jiJie": "春季",
+      "taiYangHuangJing": ["15°", "45°"]
+    },
+    "day": { "timeRange": ["07:00", "08:59"] },
+    "spacePosition": "中央"
+  },
+  {
+    "label": "巳",
+    "common": {
+      "wuXing": "火",
+      "yinYang": "阴",
+      "qiJiJieDuan": "初火之盛",
+      "heXinXiang": "炎",
+      "miaoShu": "阳气旺盛，火气渐显",
+      "qiJiFangWei": "正南",
+      "kongJianFangXiang": "正南",
+      "siXiangGuiShu": "朱雀",
+      "cangGan": [
+        { "stem": "丙", "role": "本气" },
+        { "stem": "戊", "role": "余气" },
+        { "stem": "庚", "role": "余气" }
+      ]
+    },
+    "year": { "shengXiao": "蛇" },
+    "month": {
+      "jie": "小满",
+      "zhongQi": "芒种",
+      "nongLiYue": "四月",
+      "jiJie": "夏季",
+      "taiYangHuangJing": ["45°", "75°"]
+    },
+    "day": { "timeRange": ["09:00", "10:59"] },
+    "spacePosition": "四正"
+  },
+  {
+    "label": "午",
+    "common": {
+      "wuXing": "火",
+      "yinYang": "阳",
+      "qiJiJieDuan": "火极之旺",
+      "heXinXiang": "炽",
+      "miaoShu": "阳气最盛，火气极旺",
+      "qiJiFangWei": "正南",
+      "kongJianFangXiang": "正南",
+      "siXiangGuiShu": "朱雀",
+      "cangGan": [{ "stem": "丁", "role": "本气" }]
+    },
+    "year": { "shengXiao": "马" },
+    "month": {
+      "jie": "夏至",
+      "zhongQi": "小暑",
+      "nongLiYue": "五月",
+      "jiJie": "夏季",
+      "taiYangHuangJing": ["75°", "105°"]
+    },
+    "day": { "timeRange": ["11:00", "12:59"] },
+    "spacePosition": "四正"
+  },
+  {
+    "label": "未",
+    "common": {
+      "wuXing": "土",
+      "yinYang": "阴",
+      "qiJiJieDuan": "火收土藏",
+      "heXinXiang": "伏",
+      "miaoShu": "火气渐收，土气渐藏",
+      "qiJiFangWei": "西南",
+      "kongJianFangXiang": "西南",
+      "siXiangGuiShu": "朱雀",
+      "cangGan": [
+        { "stem": "己", "role": "本气" },
+        { "stem": "丁", "role": "余气" },
+        { "stem": "乙", "role": "余气" }
+      ]
+    },
+    "year": { "shengXiao": "羊" },
+    "month": {
+      "jie": "芒种",
+      "zhongQi": "立夏",
+      "nongLiYue": "六月",
+      "jiJie": "夏季",
+      "taiYangHuangJing": ["105°", "135°"]
+    },
+    "day": { "timeRange": ["13:00", "14:59"] },
+    "spacePosition": "四隅/中"
+  },
+  {
+    "label": "申",
+    "common": {
+      "wuXing": "金",
+      "yinYang": "阳",
+      "qiJiJieDuan": "初金之收",
+      "heXinXiang": "锐",
+      "miaoShu": "金气初生收敛，阳气渐动",
+      "qiJiFangWei": "正西",
+      "kongJianFangXiang": "正西",
+      "siXiangGuiShu": "白虎",
+      "cangGan": [
+        { "stem": "庚", "role": "本气" },
+        { "stem": "丙", "role": "余气" },
+        { "stem": "戊", "role": "余气" }
+      ]
+    },
+    "year": { "shengXiao": "猴" },
+    "month": {
+      "jie": "立秋",
+      "zhongQi": "处暑",
+      "nongLiYue": "七月",
+      "jiJie": "秋季",
+      "taiYangHuangJing": ["135°", "165°"]
+    },
+    "day": { "timeRange": ["15:00", "16:59"] },
+    "spacePosition": "四正"
+  },
+  {
+    "label": "酉",
+    "common": {
+      "wuXing": "金",
+      "yinYang": "阴",
+      "qiJiJieDuan": "金极之收",
+      "heXinXiang": "收",
+      "miaoShu": "阳气渐收，金气极盛",
+      "qiJiFangWei": "正西",
+      "kongJianFangXiang": "正西",
+      "siXiangGuiShu": "白虎",
+      "cangGan": [{ "stem": "辛", "role": "本气" }]
+    },
+    "year": { "shengXiao": "鸡" },
+    "month": {
+      "jie": "处暑",
+      "zhongQi": "白露",
+      "nongLiYue": "八月",
+      "jiJie": "秋季",
+      "taiYangHuangJing": ["165°", "195°"]
+    },
+    "day": { "timeRange": ["17:00", "18:59"] },
+    "spacePosition": "四正"
+  },
+  {
+    "label": "戌",
+    "common": {
+      "wuXing": "土",
+      "yinYang": "阳",
+      "qiJiJieDuan": "金收土藏",
+      "heXinXiang": "伏",
+      "miaoShu": "金气渐收，土气潜藏",
+      "qiJiFangWei": "西北",
+      "kongJianFangXiang": "西北",
+      "siXiangGuiShu": "白虎",
+      "cangGan": [
+        { "stem": "戊", "role": "本气" },
+        { "stem": "辛", "role": "余气" },
+        { "stem": "丁", "role": "余气" }
+      ]
+    },
+    "year": { "shengXiao": "狗" },
+    "month": {
+      "jie": "白露",
+      "zhongQi": "霜降",
+      "nongLiYue": "九月",
+      "jiJie": "秋季",
+      "taiYangHuangJing": ["195°", "225°"]
+    },
+    "day": { "timeRange": ["19:00", "20:59"] },
+    "spacePosition": "四隅/中"
+  },
+  {
+    "label": "亥",
+    "common": {
+      "wuXing": "水",
+      "yinYang": "阴",
+      "qiJiJieDuan": "土藏水生",
+      "heXinXiang": "润",
+      "miaoShu": "土气潜藏，水气萌生",
+      "qiJiFangWei": "西北",
+      "kongJianFangXiang": "西北",
+      "siXiangGuiShu": "玄武",
+      "cangGan": [
+        { "stem": "壬", "role": "本气" },
+        { "stem": "甲", "role": "余气" }
+      ]
+    },
+    "year": { "shengXiao": "猪" },
+    "month": {
+      "jie": "霜降",
+      "zhongQi": "立冬",
+      "nongLiYue": "十月",
+      "jiJie": "冬季",
+      "taiYangHuangJing": ["225°", "255°"]
+    },
+    "day": { "timeRange": ["21:00", "22:59"] },
+    "spacePosition": "四正"
+  }
+]

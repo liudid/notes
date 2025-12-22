@@ -9,11 +9,12 @@
         <tr>
           <th class="table-header">地支</th>
           <td
-            v-for="(item, index) in data.earthlyBranches"
+            v-for="(item, index) in view"
             :key="index"
             class="eb-cell"
+            :class="['five-element-cell', getElementClass(item.common.wuXing)]"
           >
-            {{ item }}
+            {{ item.label }}
           </td>
         </tr>
 
@@ -21,11 +22,11 @@
         <tr>
           <th class="table-header">五行</th>
           <td
-            v-for="(item, index) in data.fiveElements"
+            v-for="(item, index) in view"
             :key="index"
-            :class="['five-element-cell', getElementClass(item)]"
+            :class="['five-element-cell', getElementClass(item.common.wuXing)]"
           >
-            {{ item }}
+            {{ item.common.wuXing }}
           </td>
         </tr>
 
@@ -33,23 +34,19 @@
         <tr>
           <th class="table-header">属性</th>
           <td
-            v-for="(item, index) in data.attributes"
+            v-for="(item, index) in view"
             :key="index"
-            :class="['attribute-cell', getAttributeClass(item)]"
+            :class="['attribute-cell', getAttributeClass(item.common.yinYang)]"
           >
-            {{ item }}
+            {{ item.common.yinYang }}
           </td>
         </tr>
 
         <!-- 第四行：气机阶段 -->
         <tr>
           <th class="table-header">气机阶段</th>
-          <td
-            v-for="(item, index) in data.qiStages"
-            :key="index"
-            class="qi-stage-cell"
-          >
-            {{ item }}
+          <td v-for="(item, index) in view" :key="index" class="qi-stage-cell">
+            {{ item.common.qiJiJieDuan }}
           </td>
         </tr>
 
@@ -57,11 +54,11 @@
         <tr>
           <th class="table-header">核心象</th>
           <td
-            v-for="(item, index) in data.coreSymbols"
+            v-for="(item, index) in view"
             :key="index"
             class="core-symbol-cell"
           >
-            {{ item }}
+            {{ item.common.heXinXiang }}
           </td>
         </tr>
 
@@ -69,23 +66,55 @@
         <tr>
           <th class="table-header">描述</th>
           <td
-            v-for="(item, index) in data.descriptions"
+            v-for="(item, index) in view"
             :key="index"
             class="description-cell"
           >
-            {{ item }}
+            {{ item.common.miaoShu }}
           </td>
         </tr>
 
-        <!-- 第七行：方向 -->
+        <!-- 第七行：气机方位 -->
         <tr>
-          <th class="table-header">方向</th>
-          <td
-            v-for="(item, index) in data.directions"
-            :key="index"
-            :class="['direction-cell', getDirectionClass(item)]"
-          >
-            {{ item }}
+          <th class="table-header">气机方位</th>
+          <td v-for="(item, index) in view" :key="index">
+            {{ item.common.qiJiFangWei }}
+          </td>
+        </tr>
+
+        <!-- 第七行：空间方向 -->
+        <tr>
+          <th class="table-header">空间方向</th>
+          <td v-for="(item, index) in view" :key="index">
+            {{ item.common.kongJianFangXiang }}
+          </td>
+        </tr>
+        <tr>
+          <th class="table-header">方向类型</th>
+          <td v-for="(item, index) in view" :key="index">
+            {{ item.spacePosition }}
+          </td>
+        </tr>
+
+        <!-- 第七行：四象归属 -->
+        <tr>
+          <th class="table-header">四象归属</th>
+          <td v-for="(item, index) in view" :key="index">
+            {{ item.common.siXiangGuiShu }}
+          </td>
+        </tr>
+
+        <!-- 第七行：藏干-->
+        <tr>
+          <th class="table-header">藏干</th>
+          <td v-for="(item, index) in view" :key="index">
+            <ul>
+              <li v-for="(cg, cIndex) in item.common.cangGan" :key="cIndex">
+                <el-tag :type="cg.role === '本气' ? 'primary' : 'info'"
+                  >{{ cg.stem }}·{{ cg.role }}</el-tag
+                >
+              </li>
+            </ul>
           </td>
         </tr>
 
@@ -98,15 +127,15 @@
 
         <!-- 第九行：生肖 -->
         <tr>
-          <th class="table-header">生肖</th>
+          <th class="table-header">属相</th>
           <td
-            v-for="(item, index) in data.zodiacSigns"
+            v-for="(item, index) in view"
             :key="index"
             :class="['zodiac-cell', getZodiacClass(index)]"
           >
             <div class="zodiac-content">
               <span class="zodiac-icon">{{ getZodiacEmoji(index) }}</span>
-              <span class="zodiac-text">{{ item }}</span>
+              <span class="zodiac-text">{{ item.year.shengXiao }}</span>
             </div>
           </td>
         </tr>
@@ -122,35 +151,19 @@
         <tr>
           <th class="table-header">节</th>
           <td
-            v-for="(item, index) in data.solarTerms"
+            v-for="(item, index) in view"
             :key="index"
             class="solar-term-cell"
           >
-            {{ item }}
+            {{ item.month.jie }}
           </td>
         </tr>
 
         <!-- 第十二行：中气 -->
         <tr>
           <th class="table-header">中气</th>
-          <td
-            v-for="(item, index) in data.midQi"
-            :key="index"
-            class="mid-qi-cell"
-          >
-            {{ item }}
-          </td>
-        </tr>
-
-        <!-- 第十三行：季节 -->
-        <tr>
-          <th class="table-header">季节</th>
-          <td
-            v-for="(item, index) in data.seasons"
-            :key="index"
-            :class="['season-cell', getSeasonClass(item)]"
-          >
-            {{ item }}
+          <td v-for="(item, index) in view" :key="index" class="mid-qi-cell">
+            {{ item.month.zhongQi }}
           </td>
         </tr>
 
@@ -158,26 +171,23 @@
         <tr>
           <th class="table-header">农历月</th>
           <td
-            v-for="(item, index) in data.lunarMonths"
+            v-for="(item, index) in view"
             :key="index"
             class="lunar-month-cell"
           >
-            {{ item }}
+            {{ item.month.nongLiYue }}
           </td>
         </tr>
 
-        <!-- 第十五行：节令位 -->
+        <!-- 第十三行：季节 -->
         <tr>
-          <th class="table-header">节令位</th>
+          <th class="table-header">季节</th>
           <td
-            v-for="(item, index) in data.termPositions"
+            v-for="(item, index) in view"
             :key="index"
-            :class="[
-              'term-position-cell',
-              { 'anchor-point': item.includes('锚点') },
-            ]"
+            :class="['season-cell', getSeasonClass(item.month.jiJie)]"
           >
-            {{ item }}
+            {{ item.month.jiJie }}
           </td>
         </tr>
 
@@ -185,11 +195,12 @@
         <tr>
           <th class="table-header">太阳黄经</th>
           <td
-            v-for="(item, index) in data.solarLongitude"
+            v-for="(item, index) in view"
             :key="index"
-            class="solar-longitude-cell"
+            class="solar-longitude-cell term-position-cell anchor-point"
           >
-            {{ item }}
+            {{ item.month.taiYangHuangJing[0] }} -
+            {{ item.month.taiYangHuangJing[1] }}
           </td>
         </tr>
 
@@ -204,11 +215,11 @@
         <tr>
           <th class="table-header">时辰</th>
           <td
-            v-for="(item, index) in data.timePeriods"
+            v-for="(item, index) in view"
             :key="index"
             class="time-period-cell"
           >
-            {{ item }}
+            {{ item.day.timeRange[0] }} - {{ item.day.timeRange[1] }}
           </td>
         </tr>
       </tbody>
@@ -217,223 +228,10 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import diZhiData from "../config/diZhi.json";
-console.log(diZhiData);
+import { ref, reactive } from "vue";
+import diZhiData from "../config/diZhiData.json";
 
-// 定义数据
-const data = ref({
-  earthlyBranches: [
-    "子",
-    "丑",
-    "寅",
-    "卯",
-    "辰",
-    "巳",
-    "午",
-    "未",
-    "申",
-    "酉",
-    "戌",
-    "亥",
-  ],
-  fiveElements: [
-    "水",
-    "土",
-    "木",
-    "木",
-    "土",
-    "火",
-    "火",
-    "土",
-    "金",
-    "金",
-    "土",
-    "水",
-  ],
-  attributes: [
-    "阳",
-    "阴",
-    "阳",
-    "阴",
-    "阳",
-    "阴",
-    "阳",
-    "阴",
-    "阳",
-    "阴",
-    "阳",
-    "阴",
-  ],
-  qiStages: [
-    "一阳初生",
-    "二阳进气",
-    "三阳开泰",
-    "四阳壮盛",
-    "五阳极盛",
-    "一阴初生",
-    "二阴进气",
-    "三阴肃杀",
-    "四阴凝寒",
-    "五阴极盛",
-    "阴阳转化",
-    "气机收藏",
-  ],
-  coreSymbols: [
-    "萌",
-    "孕",
-    "生",
-    "长",
-    "化",
-    "盛",
-    "收",
-    "藏",
-    "杀",
-    "敛",
-    "归",
-    "闭",
-  ],
-  descriptions: [
-    "阴极而阳动，气在内，不可见",
-    "阳气渐长，阴中蕴阳",
-    "阳气生发，万物始动",
-    "阳气展放，草木向荣",
-    "阳气温煦，化育万物",
-    "阳气旺盛，物极必反",
-    "阳极生阴，阴阳交替",
-    "阴气渐盛，万物收敛",
-    "阴气肃杀，天地收杀",
-    "阴气凝敛，万物归藏",
-    "阴阳转化，新旧交替",
-    "气机闭藏，以待来年",
-  ],
-  directions: [
-    "正北",
-    "东北偏北",
-    "东北偏东",
-    "正东",
-    "东南偏东",
-    "东南偏南",
-    "正南",
-    "西南偏南",
-    "西南偏西",
-    "正西",
-    "西北偏西",
-    "西北偏北",
-  ],
-  zodiacSigns: [
-    "鼠",
-    "牛",
-    "虎",
-    "兔",
-    "龙",
-    "蛇",
-    "马",
-    "羊",
-    "猴",
-    "鸡",
-    "狗",
-    "猪",
-  ],
-  solarTerms: [
-    "大雪",
-    "小寒",
-    "立春",
-    "惊蛰",
-    "清明",
-    "立夏",
-    "芒种",
-    "小暑",
-    "立秋",
-    "白露",
-    "寒露",
-    "立冬",
-  ],
-  midQi: [
-    "冬至",
-    "大寒",
-    "雨水",
-    "春分",
-    "谷雨",
-    "小满",
-    "夏至",
-    "大暑",
-    "处暑",
-    "秋分",
-    "霜降",
-    "小雪",
-  ],
-  seasons: [
-    "冬季",
-    "冬季",
-    "春季",
-    "春季",
-    "春季",
-    "夏季",
-    "夏季",
-    "夏季",
-    "秋季",
-    "秋季",
-    "秋季",
-    "冬季",
-  ],
-  lunarMonths: [
-    "冬月",
-    "腊月",
-    "正月",
-    "二月",
-    "三月",
-    "四月",
-    "五月",
-    "六月",
-    "七月",
-    "八月",
-    "九月",
-    "十月",
-  ],
-  termPositions: [
-    "-",
-    "子月锚点",
-    "-",
-    "寅月锚点",
-    "-",
-    "巳月锚点",
-    "-",
-    "未月锚点",
-    "-",
-    "酉月锚点",
-    "-",
-    "亥月锚点",
-  ],
-  solarLongitude: [
-    "255°",
-    "270°",
-    "285°",
-    "300°",
-    "315°",
-    "330°",
-    "345°",
-    "0°",
-    "15°",
-    "30°",
-    "45°",
-    "60°",
-  ],
-  timePeriods: [
-    "23:00-0:59",
-    "1:00-2:59",
-    "3:00-4:59",
-    "5:00-6:59",
-    "7:00-8:59",
-    "9:00-10:59",
-    "11:00-12:59",
-    "13:00-14:59",
-    "15:00-16:59",
-    "17:00-18:59",
-    "19:00-20:59",
-    "21:00-22:59",
-  ],
-});
+const view = ref(diZhiData);
 
 // 获取五行对应的样式类
 const getElementClass = (element) => {
@@ -512,7 +310,11 @@ const getZodiacEmoji = (index) => {
 </script>
 
 <style lang="scss" scoped>
+.eb-cell {
+  font-weight: bold;
+}
 .earthly-branches-table-container {
+  margin-top: 26px;
   border: 2px solid #409eff;
   // border-radius: 8px;
   overflow: hidden;
@@ -520,6 +322,15 @@ const getZodiacEmoji = (index) => {
   background-color: white;
   table {
     margin: 0;
+  }
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li + li {
+    margin-top: 4px;
   }
 }
 
@@ -588,16 +399,22 @@ const getZodiacEmoji = (index) => {
 
 /* 阴阳样式 */
 .attribute-cell.yang {
-  background-color: #f0f9ff;
-  color: #1890ff;
+  // background-color: #f0f9ff;
+  // color: #1890ff;
+  // font-weight: bold;
+  // border: 1px solid #d6e4ff;
+  background: linear-gradient(to right, #ffebee, #ffcdd2);
+  color: #d32f2f;
   font-weight: bold;
-  border: 1px solid #d6e4ff;
 }
 .attribute-cell.yin {
-  background-color: #f9f0ff;
-  color: #722ed1;
+  // background-color: #f9f0ff;
+  // color: #722ed1;
+  // font-weight: bold;
+  // border: 1px solid #efdbff;
+  background: linear-gradient(to right, #e8eaf6, #c5cae9);
+  color: #303f9f;
   font-weight: bold;
-  border: 1px solid #efdbff;
 }
 
 /* 方向样式 - 修复颜色问题 */
