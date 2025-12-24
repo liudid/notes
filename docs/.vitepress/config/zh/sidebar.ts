@@ -411,6 +411,32 @@ function sidebarYao(): DefaultTheme.SidebarItem[] {
       link: "/zh/yao/ganzhi",
     },
     {
+      text: "炁机互动",
+      link: "/zh/yao/qi-ji-hu-dong/he",
+      items: [
+        {
+          text: "合",
+          link: "/zh/yao/qi-ji-hu-dong/he",
+        },
+        {
+          text: "冲",
+          link: "/zh/yao/qi-ji-hu-dong/he",
+        },
+        {
+          text: "刑",
+          link: "/zh/yao/qi-ji-hu-dong/he",
+        },
+        {
+          text: "害",
+          link: "/zh/yao/qi-ji-hu-dong/he",
+        },
+        {
+          text: "会",
+          link: "/zh/yao/qi-ji-hu-dong/he",
+        },
+      ],
+    },
+    {
       text: "年干支",
       link: "/zh/yao/liushijiazi",
     },

@@ -105,16 +105,85 @@
         </tr>
 
         <!-- 第七行：藏干-->
-        <tr>
+        <!-- <tr>
           <th class="table-header">藏干</th>
           <td v-for="(item, index) in view" :key="index">
-            <ul>
-              <li v-for="(cg, cIndex) in item.common.cangGan" :key="cIndex">
-                <el-tag :type="cg.role === '本气' ? 'primary' : 'info'"
-                  >{{ cg.stem }}·{{ cg.role }}</el-tag
-                >
-              </li>
-            </ul>
+            <div class="canggan-container">
+              <div
+                v-for="(cg, cIndex) in item.common.cangGan"
+                :key="cIndex"
+                :class="[
+                  'canggan-item',
+                  getElementClass(cg.wuXing),
+                  `role-${getRoleClass(cg.role)}`,
+                ]"
+                :title="`${cg.stem}·${cg.role}（${cg.yinYang}${cg.wuXing}）`"
+              >
+                <div class="canggan-content">
+                  <div class="canggan-main">
+                    <span class="canggan-stem">{{ cg.stem }}</span>
+                    <span class="canggan-divider">·</span>
+                    <span class="canggan-role">{{ cg.role }}</span>
+                  </div>
+                  <div class="canggan-details">
+                    <span
+                      class="canggan-yinyang"
+                      :class="cg.yinYang === '阳' ? 'yang' : 'yin'"
+                    >
+                      {{ cg.yinYang }}
+                    </span>
+                    <span class="canggan-wuxing">{{ cg.wuXing }}</span>
+                  </div>
+                </div>
+                <div
+                  class="canggan-indicator"
+                  :class="`indicator-${getRoleClass(cg.role)}`"
+                ></div>
+              </div>
+            </div>
+          </td>
+        </tr> -->
+        <tr>
+          <th class="table-header">藏干</th>
+          <td
+            v-for="(item, index) in view"
+            :key="index"
+            style="vertical-align: top"
+          >
+            <div class="canggan-container">
+              <div
+                v-for="(cg, cIndex) in item.common.cangGan"
+                :key="cIndex"
+                class="canggan-item"
+                :class="`role-${getRoleClass(cg.role)}`"
+              >
+                <div class="canggan-header">
+                  <div style="display: flex">
+                    <span
+                      class="canggan-stem"
+                      :class="getElementClass(cg.wuXing)"
+                    >
+                      {{ cg.stem }}
+                    </span>
+                    <div class="canggan-info">
+                      <span
+                        class="canggan-yinyang"
+                        :class="cg.yinYang === '阳' ? 'yang' : 'yin'"
+                      >
+                        {{ cg.yinYang }}
+                      </span>
+                      <span
+                        class="canggan-wuxing"
+                        :class="getElementClass(cg.wuXing)"
+                      >
+                        {{ cg.wuXing }}
+                      </span>
+                    </div>
+                  </div>
+                  <span class="canggan-role">{{ cg.role }}</span>
+                </div>
+              </div>
+            </div>
           </td>
         </tr>
 
@@ -306,6 +375,16 @@ const getZodiacEmoji = (index) => {
     "🐷",
   ];
   return zodiacEmojis[index] || "";
+};
+
+// 获取藏干角色对应的样式类
+const getRoleClass = (role) => {
+  const roleMap = {
+    本气: "main",
+    中气: "middle",
+    余气: "remaining",
+  };
+  return roleMap[role] || "other";
 };
 </script>
 
@@ -628,5 +707,454 @@ const getZodiacEmoji = (index) => {
 
 .earthly-branches-table tbody tr:hover td {
   background-color: inherit;
+}
+
+// /* 藏干容器样式 */
+// .canggan-container {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 6px;
+// }
+
+// /* 藏干项基础样式 */
+// .canggan-item {
+//   position: relative;
+//   border-radius: 6px;
+//   padding: 8px 6px;
+//   min-height: 40px;
+//   display: flex;
+//   align-items: center;
+//   transition: all 0.3s ease;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   overflow: hidden;
+
+//   &:hover {
+//     transform: translateY(-2px);
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+//   }
+
+//   // 角色指示条
+//   .canggan-indicator {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     bottom: 0;
+//     width: 4px;
+//   }
+
+//   &.role-main .canggan-indicator {
+//     background: linear-gradient(to bottom, #ff6b6b, #ee5a52);
+//   }
+
+//   &.role-middle .canggan-indicator {
+//     background: linear-gradient(to bottom, #4ecdc4, #44a08d);
+//   }
+
+//   &.role-remaining .canggan-indicator {
+//     background: linear-gradient(to bottom, #ffeaa7, #fab1a0);
+//   }
+// }
+
+// /* 藏干内容布局 */
+// .canggan-content {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 4px;
+//   margin-left: 4px;
+// }
+
+// .canggan-main {
+//   display: flex;
+//   align-items: center;
+//   gap: 2px;
+//   font-weight: bold;
+//   font-size: 12px;
+
+//   .canggan-stem {
+//     font-size: 14px;
+//     font-weight: bold;
+//   }
+
+//   .canggan-divider {
+//     color: rgba(255, 255, 255, 0.6);
+//     margin: 0 2px;
+//   }
+
+//   .canggan-role {
+//     font-size: 10px;
+//     opacity: 0.9;
+//   }
+// }
+
+// .canggan-details {
+//   display: flex;
+//   align-items: center;
+//   gap: 4px;
+//   font-size: 10px;
+//   opacity: 0.9;
+
+//   .canggan-yinyang {
+//     padding: 1px 4px;
+//     border-radius: 3px;
+//     font-weight: bold;
+
+//     &.yang {
+//       background: rgba(255, 255, 255, 0.2);
+//       color: #ffeb3b;
+//     }
+
+//     &.yin {
+//       background: rgba(0, 0, 0, 0.2);
+//       color: #e1bee7;
+//     }
+//   }
+// }
+
+// /* 五行颜色样式 */
+// .canggan-item.metal {
+//   background: linear-gradient(
+//     135deg,
+//     rgba(96, 125, 139, 0.15) 0%,
+//     rgba(69, 90, 100, 0.25) 100%
+//   );
+//   border: 1px solid rgba(96, 125, 139, 0.3);
+//   color: #37474f;
+
+//   .canggan-stem {
+//     color: #455a64;
+//   }
+
+//   &.role-main {
+//     background: linear-gradient(
+//       135deg,
+//       rgba(96, 125, 139, 0.25) 0%,
+//       rgba(69, 90, 100, 0.35) 100%
+//     );
+//     border: 1px solid rgba(96, 125, 139, 0.4);
+//   }
+// }
+
+// .canggan-item.wood {
+//   background: linear-gradient(
+//     135deg,
+//     rgba(102, 187, 106, 0.15) 0%,
+//     rgba(56, 142, 60, 0.25) 100%
+//   );
+//   border: 1px solid rgba(102, 187, 106, 0.3);
+//   color: #1b5e20;
+
+//   .canggan-stem {
+//     color: #2e7d32;
+//   }
+
+//   &.role-main {
+//     background: linear-gradient(
+//       135deg,
+//       rgba(102, 187, 106, 0.25) 0%,
+//       rgba(56, 142, 60, 0.35) 100%
+//     );
+//     border: 1px solid rgba(102, 187, 106, 0.4);
+//   }
+// }
+
+// .canggan-item.water {
+//   background: linear-gradient(
+//     135deg,
+//     rgba(66, 165, 245, 0.15) 0%,
+//     rgba(21, 101, 192, 0.25) 100%
+//   );
+//   border: 1px solid rgba(66, 165, 245, 0.3);
+//   color: #0d47a1;
+
+//   .canggan-stem {
+//     color: #1565c0;
+//   }
+
+//   &.role-main {
+//     background: linear-gradient(
+//       135deg,
+//       rgba(66, 165, 245, 0.25) 0%,
+//       rgba(21, 101, 192, 0.35) 100%
+//     );
+//     border: 1px solid rgba(66, 165, 245, 0.4);
+//   }
+// }
+
+// .canggan-item.fire {
+//   background: linear-gradient(
+//     135deg,
+//     rgba(239, 83, 80, 0.15) 0%,
+//     rgba(198, 40, 40, 0.25) 100%
+//   );
+//   border: 1px solid rgba(239, 83, 80, 0.3);
+//   color: #b71c1c;
+
+//   .canggan-stem {
+//     color: #c62828;
+//   }
+
+//   &.role-main {
+//     background: linear-gradient(
+//       135deg,
+//       rgba(239, 83, 80, 0.25) 0%,
+//       rgba(198, 40, 40, 0.35) 100%
+//     );
+//     border: 1px solid rgba(239, 83, 80, 0.4);
+//   }
+// }
+
+// .canggan-item.earth {
+//   background: linear-gradient(
+//     135deg,
+//     rgba(255, 167, 38, 0.15) 0%,
+//     rgba(245, 124, 0, 0.25) 100%
+//   );
+//   border: 1px solid rgba(255, 167, 38, 0.3);
+//   color: #e65100;
+
+//   .canggan-stem {
+//     color: #ef6c00;
+//   }
+
+//   &.role-main {
+//     background: linear-gradient(
+//       135deg,
+//       rgba(255, 167, 38, 0.25) 0%,
+//       rgba(245, 124, 0, 0.35) 100%
+//     );
+//     border: 1px solid rgba(255, 167, 38, 0.4);
+//   }
+// }
+
+// /* 角色强化样式 */
+// .role-main {
+//   font-weight: bold;
+
+//   .canggan-stem {
+//     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+//   }
+
+//   .canggan-role {
+//     background: rgba(255, 255, 255, 0.3);
+//     padding: 1px 4px;
+//     border-radius: 3px;
+//   }
+// }
+
+// .role-middle {
+//   .canggan-role {
+//     color: #00acc1;
+//   }
+// }
+
+// .role-remaining {
+//   .canggan-role {
+//     color: #78909c;
+//   }
+// }
+
+// /* 响应式调整 */
+// @media (max-width: 768px) {
+//   .canggan-item {
+//     padding: 6px 4px;
+//     min-height: 36px;
+//   }
+
+//   .canggan-main {
+//     font-size: 11px;
+
+//     .canggan-stem {
+//       font-size: 12px;
+//     }
+//   }
+
+//   .canggan-details {
+//     font-size: 9px;
+//   }
+// }
+/* 藏干容器样式 */
+.canggan-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 藏干项基础样式 */
+.canggan-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  min-width: 65px;
+  text-align: center;
+
+  /* 默认角色样式 - 余气最浅 */
+  &.role-remaining {
+    background-color: rgba(245, 245, 245, 0.7);
+    border-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* 中气中等深浅 */
+  &.role-middle {
+    background-color: rgba(225, 225, 225, 0.7);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  /* 本气最深 */
+  &.role-main {
+    background-color: rgba(200, 200, 200, 0.7);
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 藏干头部 */
+.canggan-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.canggan-stem {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+
+  /* 五行字体颜色 */
+  &.metal {
+    color: #455a64;
+  }
+
+  &.wood {
+    color: #2e7d32;
+  }
+
+  &.water {
+    color: #1565c0;
+  }
+
+  &.fire {
+    color: #c62828;
+  }
+
+  &.earth {
+    color: #ef6c00;
+  }
+}
+
+.canggan-role {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+
+  /* 根据角色调整标签颜色 */
+  .role-main & {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+  }
+
+  .role-middle & {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+  }
+
+  .role-remaining & {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #666;
+  }
+}
+
+/* 藏干信息 */
+.canggan-info {
+  font-size: 11px;
+  font-weight: 500;
+  writing-mode: vertical-rl;
+
+  .canggan-yinyang {
+    &.yang {
+      color: #d84315;
+      position: relative;
+    }
+
+    &.yin {
+      color: #5e35b1;
+      position: relative;
+    }
+  }
+
+  .canggan-wuxing {
+    /* 保持五行字体颜色一致 */
+    &.metal {
+      color: #455a64;
+    }
+
+    &.wood {
+      color: #2e7d32;
+    }
+
+    &.water {
+      color: #1565c0;
+    }
+
+    &.fire {
+      color: #c62828;
+    }
+
+    &.earth {
+      color: #ef6c00;
+    }
+  }
+}
+
+/* 角色强化效果 */
+.role-main {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255, 107, 107, 0.8);
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .canggan-item {
+    min-width: 55px;
+    padding: 6px 4px;
+  }
+
+  .canggan-stem {
+    font-size: 16px;
+  }
+
+  .canggan-role {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .canggan-info {
+    font-size: 10px;
+    gap: 6px;
+  }
 }
 </style>

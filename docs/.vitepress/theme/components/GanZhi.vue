@@ -26,11 +26,6 @@
                 getYinYangText(currentYearGanzhi)
               }}</span>
             </span>
-            <span class="rule-display">
-              <strong>受年干影响 →</strong> 月起{{
-                monthCycle[currentMonthIndex]?.stem
-              }}
-            </span>
           </div>
           <div class="row-controls">
             <button @click="scrollYear(-5)" class="mini-btn" title="前5位">
@@ -165,11 +160,6 @@
               <span class="yinyang-tag">{{
                 getYinYangText(currentDayGanzhi)
               }}</span>
-            </span>
-            <span class="rule-display">
-              <strong>受日干影响 →</strong> 时起{{
-                hourCycle[currentHourIndex]?.stem
-              }}
             </span>
           </div>
           <div class="row-controls">

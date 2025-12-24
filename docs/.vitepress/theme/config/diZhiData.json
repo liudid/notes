@@ -10,7 +10,9 @@
       "qiJiFangWei": "正北",
       "kongJianFangXiang": "北",
       "siXiangGuiShu": "玄武",
-      "cangGan": [{ "stem": "癸", "role": "本气" }]
+      "cangGan": [
+        { "stem": "癸", "role": "本气", "wuXing": "水", "yinYang": "阴" }
+      ]
     },
     "year": { "shengXiao": "鼠" },
     "month": {
@@ -35,9 +37,9 @@
       "kongJianFangXiang": "东北",
       "siXiangGuiShu": "玄武",
       "cangGan": [
-        { "stem": "己", "role": "本气" },
-        { "stem": "癸", "role": "余气" },
-        { "stem": "辛", "role": "余气" }
+        { "stem": "己", "role": "本气", "wuXing": "土", "yinYang": "阴" },
+        { "stem": "癸", "role": "中气", "wuXing": "水", "yinYang": "阴" },
+        { "stem": "辛", "role": "余气", "wuXing": "金", "yinYang": "阴" }
       ]
     },
     "year": { "shengXiao": "牛" },
@@ -63,9 +65,9 @@
       "kongJianFangXiang": "正东",
       "siXiangGuiShu": "青龙",
       "cangGan": [
-        { "stem": "甲", "role": "本气" },
-        { "stem": "丙", "role": "余气" },
-        { "stem": "戊", "role": "余气" }
+        { "stem": "甲", "role": "本气", "wuXing": "木", "yinYang": "阳" },
+        { "stem": "丙", "role": "中气", "wuXing": "火", "yinYang": "阳" },
+        { "stem": "戊", "role": "余气", "wuXing": "土", "yinYang": "阳" }
       ]
     },
     "year": { "shengXiao": "虎" },
@@ -90,7 +92,9 @@
       "qiJiFangWei": "东南",
       "kongJianFangXiang": "东南",
       "siXiangGuiShu": "青龙",
-      "cangGan": [{ "stem": "乙", "role": "本气" }]
+      "cangGan": [
+        { "stem": "乙", "role": "本气", "wuXing": "木", "yinYang": "阴" }
+      ]
     },
     "year": { "shengXiao": "兔" },
     "month": {
@@ -115,9 +119,9 @@
       "kongJianFangXiang": "中央",
       "siXiangGuiShu": "青龙",
       "cangGan": [
-        { "stem": "戊", "role": "本气" },
-        { "stem": "乙", "role": "余气" },
-        { "stem": "癸", "role": "余气" }
+        { "stem": "戊", "role": "本气", "wuXing": "土", "yinYang": "阳" },
+        { "stem": "乙", "role": "中气", "wuXing": "木", "yinYang": "阴" },
+        { "stem": "癸", "role": "余气", "wuXing": "水", "yinYang": "阴" }
       ]
     },
     "year": { "shengXiao": "龙" },
@@ -143,9 +147,9 @@
       "kongJianFangXiang": "正南",
       "siXiangGuiShu": "朱雀",
       "cangGan": [
-        { "stem": "丙", "role": "本气" },
-        { "stem": "戊", "role": "余气" },
-        { "stem": "庚", "role": "余气" }
+        { "stem": "丙", "role": "本气", "wuXing": "火", "yinYang": "阳" },
+        { "stem": "庚", "role": "中气", "wuXing": "金", "yinYang": "阳" },
+        { "stem": "戊", "role": "余气", "wuXing": "土", "yinYang": "阳" }
       ]
     },
     "year": { "shengXiao": "蛇" },
@@ -170,7 +174,9 @@
       "qiJiFangWei": "正南",
       "kongJianFangXiang": "正南",
       "siXiangGuiShu": "朱雀",
-      "cangGan": [{ "stem": "丁", "role": "本气" }]
+      "cangGan": [
+        { "stem": "丁", "role": "本气", "wuXing": "火", "yinYang": "阴" }
+      ]
     },
     "year": { "shengXiao": "马" },
     "month": {
@@ -195,9 +201,9 @@
       "kongJianFangXiang": "西南",
       "siXiangGuiShu": "朱雀",
       "cangGan": [
-        { "stem": "己", "role": "本气" },
-        { "stem": "丁", "role": "余气" },
-        { "stem": "乙", "role": "余气" }
+        { "stem": "己", "role": "本气", "wuXing": "土", "yinYang": "阴" },
+        { "stem": "丁", "role": "中气", "wuXing": "火", "yinYang": "阴" },
+        { "stem": "乙", "role": "余气", "wuXing": "木", "yinYang": "阴" }
       ]
     },
     "year": { "shengXiao": "羊" },
@@ -223,9 +229,9 @@
       "kongJianFangXiang": "正西",
       "siXiangGuiShu": "白虎",
       "cangGan": [
-        { "stem": "庚", "role": "本气" },
-        { "stem": "丙", "role": "余气" },
-        { "stem": "戊", "role": "余气" }
+        { "stem": "庚", "role": "本气", "wuXing": "金", "yinYang": "阳" },
+        { "stem": "壬", "role": "中气", "wuXing": "水", "yinYang": "阳" },
+        { "stem": "戊", "role": "余气", "wuXing": "土", "yinYang": "阳" }
       ]
     },
     "year": { "shengXiao": "猴" },
@@ -250,7 +256,9 @@
       "qiJiFangWei": "正西",
       "kongJianFangXiang": "正西",
       "siXiangGuiShu": "白虎",
-      "cangGan": [{ "stem": "辛", "role": "本气" }]
+      "cangGan": [
+        { "stem": "辛", "role": "本气", "wuXing": "金", "yinYang": "阴" }
+      ]
     },
     "year": { "shengXiao": "鸡" },
     "month": {
@@ -275,9 +283,9 @@
       "kongJianFangXiang": "西北",
       "siXiangGuiShu": "白虎",
       "cangGan": [
-        { "stem": "戊", "role": "本气" },
-        { "stem": "辛", "role": "余气" },
-        { "stem": "丁", "role": "余气" }
+        { "stem": "戊", "role": "本气", "wuXing": "土", "yinYang": "阳" },
+        { "stem": "辛", "role": "中气", "wuXing": "金", "yinYang": "阴" },
+        { "stem": "丁", "role": "余气", "wuXing": "火", "yinYang": "阴" }
       ]
     },
     "year": { "shengXiao": "狗" },
@@ -303,8 +311,8 @@
       "kongJianFangXiang": "西北",
       "siXiangGuiShu": "玄武",
       "cangGan": [
-        { "stem": "壬", "role": "本气" },
-        { "stem": "甲", "role": "余气" }
+        { "stem": "壬", "role": "本气", "wuXing": "水", "yinYang": "阳" },
+        { "stem": "甲", "role": "余气", "wuXing": "木", "yinYang": "阳" }
       ]
     },
     "year": { "shengXiao": "猪" },
