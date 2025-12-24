@@ -1,4 +1,7 @@
 <div class="container">
+  <IntroTitle
+    text="参照：“天（五运）× 地（六气）”构成的整体气机相位循环。既炁在天地之间完成一次完整展开—回收的呼吸周期。"
+  ></IntroTitle>
   <GanZhiSlider @change="handleGanZhiChange" />
   <LiuShiJiaZi :highlightIndex="highlightIndex" />
 </div>

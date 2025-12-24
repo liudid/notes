@@ -36,10 +36,6 @@
         </el-popover> -->
       </li>
     </ul>
-    <p style="text-align: center">
-      参照：“天（五运）× 地（六气）”构成的整体气机相位循环。
-      既炁在天地之间完成一次完整展开—回收的呼吸周期。
-    </p>
   </div>
   <div class="desc">
     <p>“天以六十为一周。” ————《汉书·律历志》</p>
@@ -142,7 +138,7 @@ function getYearsByGanZhi(index, baseYear = 1984) {
 // console.log(getYearsByGanZhi("甲", "子").slice(0, 5)); // 前5个年份
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .liu-shi-jia-zi {
   display: inline-block;
   border-collapse: collapse;
