@@ -407,11 +407,11 @@ function sidebarYao(): DefaultTheme.SidebarItem[] {
       link: "/zh/yao/dizhi",
     },
     {
-      text: "天干地支",
+      text: "天干地支（四序干支）",
       link: "/zh/yao/ganzhi",
     },
     {
-      text: "年干支（六十甲子）",
+      text: "年干支",
       link: "/zh/yao/liushijiazi",
     },
     {
