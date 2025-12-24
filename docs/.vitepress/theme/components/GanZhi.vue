@@ -2,6 +2,18 @@
   <IntroTitle
     text="天干与地支结合，可以让炁机可以被承载、被运用、被起盘、被推演、让变化可被操作”。而非测量与非记录变化。"
   ></IntroTitle>
+  <IntroTitle
+    text="年干支：年干支以“岁气主权”切换为标志，立春是这个切换在天地间显现的时间点（不是“因为立春所以换年，而是 “年气已换，立春显现”）"
+  ></IntroTitle>
+  <IntroTitle
+    text="月干支：月干支以“岁气在一年中的展开的十二节气”为炁机切换点（十二节气为切换点），每一次切换，标志着主令之炁完成一次阶段性交棒"
+  ></IntroTitle>
+  <IntroTitle
+    text="日干支：日干支以“一次完整阴阳昼夜的交替”为单位，子时是阴极阳生、日炁完成切换的界点。（日干在时位上的展开）"
+  ></IntroTitle>
+  <IntroTitle
+    text="时干支：时干支以“一日之内炁的流注次序”为切换依据，每两个小时，主导炁完成一次位置与性质的转移。"
+  ></IntroTitle>
   <div class="heaven-earth-system">
     <!-- 3D场景 -->
     <div ref="container" class="three-container"></div>

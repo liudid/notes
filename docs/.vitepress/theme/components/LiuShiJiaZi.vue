@@ -21,12 +21,24 @@
         <div class="zhi" :class="item.zhi.element">
           {{ item.zhi.name }}
         </div>
+        <!-- 属相显示 -->
+        <!-- <div class="month-label">
+          {{ getShuXiangNames(colIndex) }}
+        </div> -->
+        <!-- <el-popover
+          width="700px"
+          :content="getYearsByGanZhi(item.index).slice(0, 110).join('、')"
+          placement="top-start"
+        >
+          <template #reference>
+            <el-button>top-start</el-button>
+          </template>
+        </el-popover> -->
       </li>
     </ul>
     <p style="text-align: center">
-      参照：“天（五运）×
-      地（六气）”构成的整体气机相位循环。
-      <br></br>既炁在天地之间完成一次完整展开—回收的呼吸周期。
+      参照：“天（五运）× 地（六气）”构成的整体气机相位循环。
+      既炁在天地之间完成一次完整展开—回收的呼吸周期。
     </p>
   </div>
   <div class="desc">
@@ -75,13 +87,62 @@ const liuShiJiaZi = Array.from({ length: 60 }, (_, i) => {
   return { index: i, gan, zhi, yinYang: gan.yinYang };
 });
 
+console.log(liuShiJiaZi);
+
 // 6 × 10
 const rows = Array.from({ length: 6 }, (_, i) =>
   liuShiJiaZi.slice(i * 10, i * 10 + 10)
 );
+console.log(rows);
+
+const getShuXiangNames = (index) => {
+  const shuXiangNames = [
+    "🐭",
+    "🐮",
+    "🐯",
+    "🐰",
+    "🐲",
+    "🐍",
+    "🐎",
+    "🐑",
+    "🐒",
+    "🐔",
+    "🐶",
+    "🐷",
+  ];
+  return shuXiangNames[index % 12];
+};
+
+/**
+ * 根据年天干地支，计算对应的年份（可追溯到几千年前）
+ * @param {string} tg - 年天干，例如 "甲"
+ * @param {string} dz - 年地支，例如 "子"
+ * @param {number} baseYear - 可选基准年份，默认 1984 (甲子年)
+ * @returns {string[]} - 对应的年份数组，格式 "公元前XXX年" 或 "公元XXX年"
+ */
+function getYearsByGanZhi(index, baseYear = 1984) {
+  // const index = jiaZi.indexOf(tg + dz);
+  // if (index === -1) return [];
+
+  const years = [];
+  // 我们从基准年份向前/向后推多个甲子循环
+  const range = 100; // 这里假设返回 ±100 甲子（6000年）左右
+  for (let k = -range; k <= range; k++) {
+    const year = baseYear + k * 60 + (index - 0);
+    if (year > 0) {
+      years.push(`${year}`);
+    } else {
+      years.push(`公元前${1 - year}`); // 公元前1年 -> year = 0
+    }
+  }
+  return years;
+}
+
+// 示例：
+// console.log(getYearsByGanZhi("甲", "子").slice(0, 5)); // 前5个年份
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .liu-shi-jia-zi {
   display: inline-block;
   border-collapse: collapse;

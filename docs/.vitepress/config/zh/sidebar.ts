@@ -411,8 +411,20 @@ function sidebarYao(): DefaultTheme.SidebarItem[] {
       link: "/zh/yao/ganzhi",
     },
     {
-      text: "六十甲子（年干支）",
+      text: "年干支（六十甲子）",
       link: "/zh/yao/liushijiazi",
+    },
+    {
+      text: "月干支",
+      link: "/zh/yao/yueganzhi",
+    },
+    {
+      text: "日干支",
+      link: "/zh/yao/riganzhi",
+    },
+    {
+      text: "时干支",
+      link: "/zh/yao/shiganzhi",
     },
   ];
 }

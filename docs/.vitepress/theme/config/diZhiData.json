@@ -8,7 +8,7 @@
       "heXinXiang": "萌",
       "miaoShu": "阴极而阳动，阳气始生于内",
       "qiJiFangWei": "正北",
-      "kongJianFangXiang": "正北",
+      "kongJianFangXiang": "北",
       "siXiangGuiShu": "玄武",
       "cangGan": [{ "stem": "癸", "role": "本气" }]
     },
@@ -49,7 +49,7 @@
       "taiYangHuangJing": ["285°", "315°"]
     },
     "day": { "timeRange": ["01:00", "02:59"] },
-    "spacePosition": "四隅/中"
+    "spacePosition": "四隅"
   },
   {
     "label": "寅",
@@ -101,7 +101,7 @@
       "taiYangHuangJing": ["345°", "15°"]
     },
     "day": { "timeRange": ["05:00", "06:59"] },
-    "spacePosition": "四隅/中"
+    "spacePosition": "四隅"
   },
   {
     "label": "辰",
@@ -111,7 +111,7 @@
       "qiJiJieDuan": "木收土旺",
       "heXinXiang": "纳",
       "miaoShu": "木气渐收，土气初旺",
-      "qiJiFangWei": "中央",
+      "qiJiFangWei": "东南偏中",
       "kongJianFangXiang": "中央",
       "siXiangGuiShu": "青龙",
       "cangGan": [
@@ -129,7 +129,7 @@
       "taiYangHuangJing": ["15°", "45°"]
     },
     "day": { "timeRange": ["07:00", "08:59"] },
-    "spacePosition": "中央"
+    "spacePosition": "中"
   },
   {
     "label": "巳",
@@ -150,8 +150,8 @@
     },
     "year": { "shengXiao": "蛇" },
     "month": {
-      "jie": "小满",
-      "zhongQi": "芒种",
+      "jie": "清明",
+      "zhongQi": "立夏",
       "nongLiYue": "四月",
       "jiJie": "夏季",
       "taiYangHuangJing": ["45°", "75°"]
@@ -174,8 +174,8 @@
     },
     "year": { "shengXiao": "马" },
     "month": {
-      "jie": "夏至",
-      "zhongQi": "小暑",
+      "jie": "立夏",
+      "zhongQi": "小满",
       "nongLiYue": "五月",
       "jiJie": "夏季",
       "taiYangHuangJing": ["75°", "105°"]
@@ -202,14 +202,14 @@
     },
     "year": { "shengXiao": "羊" },
     "month": {
-      "jie": "芒种",
-      "zhongQi": "立夏",
+      "jie": "小满",
+      "zhongQi": "芒种",
       "nongLiYue": "六月",
       "jiJie": "夏季",
       "taiYangHuangJing": ["105°", "135°"]
     },
     "day": { "timeRange": ["13:00", "14:59"] },
-    "spacePosition": "四隅/中"
+    "spacePosition": "四隅"
   },
   {
     "label": "申",
@@ -230,10 +230,10 @@
     },
     "year": { "shengXiao": "猴" },
     "month": {
-      "jie": "立秋",
-      "zhongQi": "处暑",
+      "jie": "芒种",
+      "zhongQi": "夏至",
       "nongLiYue": "七月",
-      "jiJie": "秋季",
+      "jiJie": "夏季",
       "taiYangHuangJing": ["135°", "165°"]
     },
     "day": { "timeRange": ["15:00", "16:59"] },
@@ -254,10 +254,10 @@
     },
     "year": { "shengXiao": "鸡" },
     "month": {
-      "jie": "处暑",
-      "zhongQi": "白露",
+      "jie": "夏至",
+      "zhongQi": "小暑",
       "nongLiYue": "八月",
-      "jiJie": "秋季",
+      "jiJie": "夏季",
       "taiYangHuangJing": ["165°", "195°"]
     },
     "day": { "timeRange": ["17:00", "18:59"] },
@@ -282,14 +282,14 @@
     },
     "year": { "shengXiao": "狗" },
     "month": {
-      "jie": "白露",
-      "zhongQi": "霜降",
+      "jie": "小暑",
+      "zhongQi": "立秋",
       "nongLiYue": "九月",
       "jiJie": "秋季",
       "taiYangHuangJing": ["195°", "225°"]
     },
     "day": { "timeRange": ["19:00", "20:59"] },
-    "spacePosition": "四隅/中"
+    "spacePosition": "四隅"
   },
   {
     "label": "亥",
@@ -309,10 +309,10 @@
     },
     "year": { "shengXiao": "猪" },
     "month": {
-      "jie": "霜降",
-      "zhongQi": "立冬",
+      "jie": "立秋",
+      "zhongQi": "处暑",
       "nongLiYue": "十月",
-      "jiJie": "冬季",
+      "jiJie": "秋季",
       "taiYangHuangJing": ["225°", "255°"]
     },
     "day": { "timeRange": ["21:00", "22:59"] },
