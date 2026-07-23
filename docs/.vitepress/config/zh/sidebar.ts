@@ -6,6 +6,7 @@ export function getSidebar(): DefaultTheme.Sidebar {
     "/zh/diary/": sidebarDiary(),
     "/zh/tools/": sidebarTools(),
     "/zh/english/": sidebarEnglish(),
+    "/zh/dao/": sidebarDao(),
     "/zh/yao/": sidebarYao(),
   };
 }
@@ -398,6 +399,10 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
   ];
 }
 
+function sidebarDao(): DefaultTheme.SidebarItem[] {
+  return [{ text: "无极", link: "/zh/dao/wuji" }];
+}
+
 function sidebarYao(): DefaultTheme.SidebarItem[] {
   return [
     { text: "五行", link: "/zh/yao/wuxing" },
@@ -412,7 +417,7 @@ function sidebarYao(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "炁机互动",
-      link: "/zh/yao/qi-ji-hu-dong/he",
+      link: "/zh/yao/qi-ji-hu-dong/index",
       items: [
         {
           text: "合",

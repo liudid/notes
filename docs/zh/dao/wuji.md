@@ -9,5 +9,5 @@ pageClass: no-aside-page
 
 
 <div class="container">
-  <GanzhiHudongHe></GanzhiHudongHe>
+  <TaiJiTu></TaiJiTu>
 </div>

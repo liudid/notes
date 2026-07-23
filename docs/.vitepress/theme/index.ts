@@ -12,8 +12,14 @@ import Segmented from "./components/Segmented.vue";
 
 import IntroTitle from "./components/ui/IntroTitle.vue";
 import IntroFrom from "./components/ui/IntroFrom.vue";
+
+import TaiJiTu from "./components/dao/TaiJiTu.vue";
+
 import WuXing from "./components/WuXing.vue";
 import TianGan from "./components/TianGan.vue";
+
+import GanzhiHudongHe from "./components/ganzhi/GanzhiHudongHe.vue";
+
 import LiuShiJiaZi from "./components/LiuShiJiaZi.vue";
 import YueGanzhi from "./components/ganzhi/YueGanzhi.vue";
 import RiGanzhi from "./components/ganzhi/RiGanzhi.vue";
@@ -36,8 +42,14 @@ export default {
 
     app.component("IntroFrom", IntroFrom);
     app.component("IntroTitle", IntroTitle);
+
+    app.component("TaiJiTu", TaiJiTu);
+
     app.component("WuXing", WuXing);
     app.component("TianGan", TianGan);
+
+    app.component("GanzhiHudongHe", GanzhiHudongHe);
+
     app.component("LiuShiJiaZi", LiuShiJiaZi);
     app.component("YueGanzhi", YueGanzhi);
     app.component("RiGanzhi", RiGanzhi);
