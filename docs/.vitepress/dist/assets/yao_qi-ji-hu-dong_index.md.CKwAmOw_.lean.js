@@ -1,1 +1,0 @@
-import{H as e,Mt as t,ut as n}from"./chunks/framework.DWfRCYNt.js";var r=JSON.parse(`{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"yao/qi-ji-hu-dong/index.md","filePath":"yao/qi-ji-hu-dong/index.md"}`),i={name:`yao/qi-ji-hu-dong/index.md`};function a(e,r,i,a,o,s){return t(),n(`div`)}var o=e(i,[[`render`,a]]);export{r as __pageData,o as default};
