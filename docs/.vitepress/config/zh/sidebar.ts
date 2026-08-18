@@ -1,7 +1,9 @@
 import { type DefaultTheme } from "vitepress";
 export function getSidebar(): DefaultTheme.Sidebar {
   return {
-    "/zh/notes/": sidebarNotes(),
+    "/zh/shuo-wen-jie-zi/": sidebarShuowenjiezi(),
+    "/zh/xing-gong/": sidebarXinggong(),
+    "/zh/ming-gong/": sidebarMinggong(),
     "/zh/dev/": sidebarDev(),
     "/zh/diary/": sidebarDiary(),
     "/zh/tools/": sidebarTools(),
@@ -11,15 +13,30 @@ export function getSidebar(): DefaultTheme.Sidebar {
   };
 }
 
-function sidebarNotes(): DefaultTheme.SidebarItem[] {
+function sidebarShuowenjiezi(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: "钱",
-      link: "/zh/notes/money",
+      text: "丹",
+      link: "/zh/notes/dan",
     },
   ];
 }
 
+function sidebarXinggong(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: "1",
+    },
+  ];
+}
+
+function sidebarMinggong(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: "1",
+    },
+  ];
+}
 function sidebarDev(): DefaultTheme.SidebarItem[] {
   return [
     {
