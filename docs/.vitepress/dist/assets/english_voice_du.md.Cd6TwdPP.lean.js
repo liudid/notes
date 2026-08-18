@@ -1,1 +1,0 @@
-import{ax as e,z as t,A as a}from"./chunks/framework.DyCj89kV.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"english/voice/du.md","filePath":"english/voice/du.md"}'),o={name:"english/voice/du.md"};function s(n,r,c,i,d,p){return a(),t("div")}const m=e(o,[["render",s]]);export{_ as __pageData,m as default};

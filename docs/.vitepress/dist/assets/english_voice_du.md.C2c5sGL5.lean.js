@@ -1,0 +1,1 @@
+import{H as e,Mt as t,ut as n}from"./chunks/framework.DWfRCYNt.js";var r=JSON.parse(`{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"english/voice/du.md","filePath":"english/voice/du.md"}`),i={name:`english/voice/du.md`};function a(e,r,i,a,o,s){return t(),n(`div`)}var o=e(i,[[`render`,a]]);export{r as __pageData,o as default};

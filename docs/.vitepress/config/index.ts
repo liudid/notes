@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
-import { shared } from "./shared";
-import { getNav } from "./nav";
-import { getSidebar } from "./sidebar";
+import { shared } from "./shared.ts";
+import { getNav } from "./nav.ts";
+import { getSidebar } from "./sidebar.ts";
 
 export default defineConfig({
   ...shared,
