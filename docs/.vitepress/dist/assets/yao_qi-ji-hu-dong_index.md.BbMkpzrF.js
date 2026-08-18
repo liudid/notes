@@ -1,0 +1,1 @@
+import{ax as e,z as t,A as a}from"./chunks/framework.DyCj89kV.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"yao/qi-ji-hu-dong/index.md","filePath":"yao/qi-ji-hu-dong/index.md"}'),n={name:"yao/qi-ji-hu-dong/index.md"};function o(i,r,d,s,c,p){return a(),t("div")}const f=e(n,[["render",o]]);export{m as __pageData,f as default};

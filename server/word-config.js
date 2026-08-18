@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs/promises";
 import { fileURLToPath } from "url";
 
-const WORD_JSON_PATH = "../docs/zh/english/words.json";
+const WORD_JSON_PATH = "../docs/english/words.json";
 
 export function getWordJsonPath() {
   const currentFilePath = fileURLToPath(import.meta.url);

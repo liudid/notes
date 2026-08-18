@@ -1,0 +1,1 @@
+import{ax as e,z as t,A as o}from"./chunks/framework.DyCj89kV.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"english/morphology/tense.md","filePath":"english/morphology/tense.md"}'),s={name:"english/morphology/tense.md"};function n(a,r,c,p,i,l){return o(),t("div")}const h=e(s,[["render",n]]);export{d as __pageData,h as default};
