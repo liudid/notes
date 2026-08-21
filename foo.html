@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS等分圆</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      .circle-left {
+        width: 62.5px;
+        height: 125px;
+        border-radius: 0px 62.5px 62.5px 0px;
+        position: absolute;
+        right: 0;
+        transform-origin: 0 50%;
+      }
+
+      .circle-left:hover {
+        background-color: yellowgreen !important;
+      }
+      .circle-right {
+        width: 62.5px;
+        height: 125px;
+        border-radius: 62.5px 0px 0px 62.5px;
+        position: absolute;
+        right: 0;
+        transform-origin: 100% 50%;
+      }
+      #circle0 {
+        width: 125px;
+        height: 125px;
+        border-radius: 62.5px;
+        background-color: yellowgreen;
+        position: relative;
+        transform: rotate(-22.5deg);
+      }
+      #circle2 {
+        background-color: #70f3ff;
+      }
+      #circle3 {
+        background-color: #ff461f;
+        transform: rotate(45deg);
+      }
+      #circle4 {
+        background-color: #bce672;
+        transform: rotate(90deg);
+      }
+      #circle5 {
+        background-color: #ffffff;
+        transform: rotate(135deg);
+      }
+      #circle6 {
+        background-color: #3b2e7e;
+        transform: rotate(-135deg);
+      }
+      #circle7 {
+        background-color: #ff2121;
+        transform: rotate(270deg);
+      }
+      #circle8 {
+        background-color: #16a951;
+        transform: rotate(315deg);
+      }
+      #circle9 {
+        background-color: #e0eee8;
+        transform: rotate(45deg);
+      }
+      #left {
+        clip: rect(0px 62.5px 125px 0px);
+        position: absolute;
+        right: 0px;
+        width: 62.5px;
+        height: 125px;
+        overflow: hidden;
+      }
+      #right {
+        clip: rect(0px 62.5px 125px 0px);
+        position: absolute;
+        left: 0px;
+        width: 62.5px;
+        height: 125px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle0">
+      <div id="left">
+        <div class="circle-left" id="circle2">1</div>
+        <div class="circle-left" id="circle3">2</div>
+        <div class="circle-left" id="circle4">3</div>
+        <div class="circle-left" id="circle5">4</div>
+      </div>
+      <div id="right">
+        <div class="circle-right" id="circle9">6</div>
+        <div class="circle-right" id="circle8">7</div>
+        <div class="circle-right" id="circle7">8</div>
+        <div class="circle-right" id="circle6">9</div>
+      </div>
+    </div>
+  </body>
+</html>

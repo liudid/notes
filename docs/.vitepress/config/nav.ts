@@ -30,6 +30,11 @@ export function getNav(): DefaultTheme.NavItem[] {
       activeMatch: "/dao/",
     },
     {
+      text: "易学",
+      link: "/yi-xue/xian-tian-ba-gua",
+      activeMatch: "/yi-xue/",
+    },
+    {
       text: "钥匙",
       link: "/yao/liushijiazi",
       activeMatch: "/yao/",

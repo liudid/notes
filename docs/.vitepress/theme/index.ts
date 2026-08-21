@@ -14,6 +14,10 @@ import IntroTitle from "./components/ui/IntroTitle.vue";
 import IntroFrom from "./components/ui/IntroFrom.vue";
 
 import TaiJiTu from "./components/dao/TaiJiTu.vue";
+import Gua from "./components/yi-xue/Gua.vue";
+import XianTianBaGua from "./components/yi-xue/XianTianBaGua.vue";
+import HouTianBaGua from "./components/yi-xue/HouTianBaGua.vue";
+import FangWei from "./components/yi-xue/FangWei.vue";
 
 import WuXing from "./components/WuXing.vue";
 import TianGan from "./components/TianGan.vue";
@@ -44,6 +48,10 @@ export default {
     app.component("IntroTitle", IntroTitle);
 
     app.component("TaiJiTu", TaiJiTu);
+    app.component("Gua", Gua);
+    app.component("XianTianBaGua", XianTianBaGua);
+    app.component("HouTianBaGua", HouTianBaGua);
+    app.component("FangWei", FangWei);
 
     app.component("WuXing", WuXing);
     app.component("TianGan", TianGan);

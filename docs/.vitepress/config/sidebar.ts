@@ -8,6 +8,7 @@ export function getSidebar(): DefaultTheme.Sidebar {
     "/tools/": sidebarTools(),
     "/english/": sidebarEnglish(),
     "/dao/": sidebarDao(),
+    "/yi-xue/": sidebarYixue(),
     "/yao/": sidebarYao(),
   };
 }
@@ -362,6 +363,14 @@ function sidebarEnglish(): DefaultTheme.SidebarItem[] {
 
 function sidebarDao(): DefaultTheme.SidebarItem[] {
   return [{ text: "无极", link: "/dao/wuji" }];
+}
+
+function sidebarYixue(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: "方位", link: "/yi-xue/fan-wei" },
+    { text: "先天八卦", link: "/yi-xue/xian-tian-ba-gua" },
+    { text: "后天八卦", link: "/yi-xue/hou-tian-ba-gua" },
+  ];
 }
 
 function sidebarYao(): DefaultTheme.SidebarItem[] {
