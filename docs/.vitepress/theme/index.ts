@@ -16,8 +16,13 @@ import IntroFrom from "./components/ui/IntroFrom.vue";
 import TaiJiTu from "./components/dao/TaiJiTu.vue";
 import Gua from "./components/yi-xue/Gua.vue";
 import XianTianBaGua from "./components/yi-xue/XianTianBaGua.vue";
+import XianTianHeJiu from "./components/yi-xue/XianTianHeJiu.vue";
+import XianTianLeiXiang from "./components/yi-xue/XianTianLeiXiang.vue";
 import HouTianBaGua from "./components/yi-xue/HouTianBaGua.vue";
 import FangWei from "./components/yi-xue/FangWei.vue";
+import ValuesRowTable from "./components/yi-xue/ValuesRowTable.vue";
+import ShiKongTouYing from "./components/yi-xue/ShiKongTouYing.vue";
+import LiuShiSiGuaMatrix from "./components/yi-xue/LiuShiSiGuaMatrix.vue";
 
 import WuXing from "./components/WuXing.vue";
 import TianGan from "./components/TianGan.vue";
@@ -50,8 +55,13 @@ export default {
     app.component("TaiJiTu", TaiJiTu);
     app.component("Gua", Gua);
     app.component("XianTianBaGua", XianTianBaGua);
+    app.component("XianTianHeJiu", XianTianHeJiu);
+    app.component("XianTianLeiXiang", XianTianLeiXiang);
     app.component("HouTianBaGua", HouTianBaGua);
     app.component("FangWei", FangWei);
+    app.component("ValuesRowTable", ValuesRowTable);
+    app.component("ShiKongTouYing", ShiKongTouYing);
+    app.component("LiuShiSiGuaMatrix", LiuShiSiGuaMatrix);
 
     app.component("WuXing", WuXing);
     app.component("TianGan", TianGan);

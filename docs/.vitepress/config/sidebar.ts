@@ -367,9 +367,41 @@ function sidebarDao(): DefaultTheme.SidebarItem[] {
 
 function sidebarYixue(): DefaultTheme.SidebarItem[] {
   return [
+    {
+      text: "初始",
+      link: "/yi-xue/chu-shi",
+      collapsed: false,
+      items: [
+        { text: "三易", link: "/yi-xue/chu-shi/san-yi" },
+        { text: "三原则", link: "/yi-xue/chu-shi/san-yuanze" },
+        { text: "三法则", link: "/yi-xue/chu-shi/san-faze" },
+      ],
+    },
+    {
+      text: "爻",
+      link: "/yi-xue/yao",
+      collapsed: false,
+      items: [
+        {
+          text: "六画之象",
+          link: "/yi-xue/yao/liu-hua-zhi-xiang",
+          collapsed: false,
+          items: [
+            { text: "正", link: "/yi-xue/yao/liu-hua-zhi-xiang/zheng" },
+            { text: "承", link: "/yi-xue/yao/liu-hua-zhi-xiang/cheng" },
+            { text: "乘", link: "/yi-xue/yao/liu-hua-zhi-xiang/cheng-yao" },
+            { text: "比", link: "/yi-xue/yao/liu-hua-zhi-xiang/bi" },
+            { text: "应", link: "/yi-xue/yao/liu-hua-zhi-xiang/ying" },
+            { text: "中", link: "/yi-xue/yao/liu-hua-zhi-xiang/zhong" },
+            { text: "据", link: "/yi-xue/yao/liu-hua-zhi-xiang/ju" },
+          ],
+        },
+      ],
+    },
     { text: "方位", link: "/yi-xue/fan-wei" },
     { text: "先天八卦", link: "/yi-xue/xian-tian-ba-gua" },
     { text: "后天八卦", link: "/yi-xue/hou-tian-ba-gua" },
+    { text: "六十四卦", link: "/yi-xue/liu-shi-si-gua" },
   ];
 }
 

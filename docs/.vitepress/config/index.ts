@@ -38,4 +38,10 @@ export default defineConfig({
       next: "下一页",
     },
   },
+
+  vite: {
+    server: {
+      port: 3000,
+    },
+  },
 });
