@@ -19,11 +19,11 @@ export function getNav(): DefaultTheme.NavItem[] {
       activeMatch: "/ming-gong/",
     },
     { text: "好用工具", link: "/tools/life", activeMatch: "/tools/" },
-    {
-      text: "Learning English",
-      link: "/english/middle-school-words",
-      activeMatch: "/english/",
-    },
+    // {
+    //   text: "Learning English",
+    //   link: "/english/middle-school-words",
+    //   activeMatch: "/english/",
+    // },
     {
       text: "道",
       link: "/dao/wuji",
