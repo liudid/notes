@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>卦体结构图 · 卦详情示例</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #e9e1cb;
+    --ink: #241f18;
+    --ink-soft: #5a4d3c;
+    --ink-faint: #8a7c66;
+    --cinnabar: #a83a2c;
+    --cinnabar-soft: #c05a44;
+    --rule: rgba(36,31,24,0.55);
+    --good:#4c6b3f;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(ellipse at 15% 10%, rgba(255,255,255,0.10), transparent 45%),
+      radial-gradient(ellipse at 85% 90%, rgba(0,0,0,0.05), transparent 50%),
+      var(--paper);
+    color:var(--ink);
+    font-family:'Noto Serif SC', 'Songti SC', serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:48px 20px 64px;
+  }
+  .sheet{ width:100%; max-width:640px; position:relative; }
+
+  .seal{
+    position:absolute; top:-6px; right:0;
+    width:52px; height:52px;
+    background:var(--cinnabar); color:#f2e9d6;
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px; letter-spacing:2px;
+    transform:rotate(3deg);
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.15);
+    writing-mode: vertical-rl;
+  }
+  header{ text-align:center; padding-bottom:22px; margin-bottom:28px; border-bottom:1px solid var(--rule); }
+  h1{ font-family:'Ma Shan Zheng', cursive; font-weight:400; font-size:44px; margin:0 0 6px; letter-spacing:4px; }
+  header p{ margin:0; font-size:13px; color:var(--ink-soft); letter-spacing:3px; }
+
+  .result{
+    display:flex; align-items:baseline; justify-content:center; gap:14px;
+    padding:16px 20px; border:1px solid var(--ink); margin-bottom:8px;
+    background:rgba(255,255,255,0.18); cursor:pointer; transition:background .15s;
+  }
+  .result:hover{ background:rgba(168,58,44,0.08); }
+  .result .tag{ font-size:12px; color:var(--ink-soft); letter-spacing:2px; align-self:center; }
+  .result .name{ font-size:30px; font-weight:700; color:var(--cinnabar); letter-spacing:2px; }
+  .result .make{ font-size:13px; color:var(--ink-soft); align-self:center; }
+  .result .hint{ font-size:11px; color:var(--ink-faint); align-self:center; }
+  .caption{ text-align:center; font-size:12px; color:var(--ink-faint); margin-bottom:30px; }
+
+  .presets{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:36px; }
+  .presets button{
+    font-family:inherit; font-size:13px; color:var(--ink-soft); background:transparent;
+    border:1px solid var(--ink-faint); padding:5px 12px; cursor:pointer; letter-spacing:1px;
+    transition:border-color .15s, color .15s, background .15s;
+  }
+  .presets button:hover{ border-color:var(--cinnabar); color:var(--cinnabar); background:rgba(168,58,44,0.06); }
+
+  .col-head{ display:grid; grid-template-columns:64px 1fr 70px 76px; gap:14px; padding:0 4px 8px; font-size:12px; color:var(--cinnabar); letter-spacing:3px; font-weight:600; }
+  .col-head span:nth-child(3), .col-head span:nth-child(4){ text-align:center; }
+  .col-head span:nth-child(1){ text-align:center; }
+
+  .group{ border:1px dashed var(--ink-faint); padding:14px 16px; margin-bottom:4px; position:relative; }
+  .group + .group{ margin-top:22px; }
+  .group-tag{ position:absolute; left:-1px; top:-13px; background:var(--paper); padding:0 8px 0 0; font-size:14px; display:flex; align-items:center; gap:8px; }
+  .group-tag .sym{ font-size:18px; color:var(--cinnabar); }
+  .group-tag .tname{ font-size:12px; color:var(--ink-soft); }
+
+  .row{ display:grid; grid-template-columns:64px 1fr 70px 76px; align-items:center; gap:14px; padding:14px 4px; }
+  .row + .row{ border-top:1px solid rgba(36,31,24,0.14); }
+  .pos-label{ font-size:15px; text-align:center; }
+  .pos-attr{ font-size:13px; text-align:center; color:var(--ink-soft); }
+  .status{ font-size:12.5px; text-align:center; letter-spacing:1px; }
+  .status.correct{ color:var(--good); }
+  .status.wrong{ color:var(--cinnabar); }
+
+  .line-box{ height:34px; display:flex; align-items:center; gap:10%; cursor:pointer; outline-offset:4px; }
+  .line-box:focus-visible{ outline:2px solid var(--cinnabar); }
+  .bar{ height:12px; background:var(--ink); border-radius:1px; transition:all .18s ease; }
+  .line-box.yang .bar{ width:100%; }
+  .line-box.yin .bar{ width:45%; }
+  .line-box:hover .bar{ background:var(--cinnabar-soft); }
+
+  footer{ margin-top:30px; padding-top:16px; border-top:1px solid var(--rule); font-size:12.5px; line-height:1.9; color:var(--ink-soft); }
+  footer b{ color:var(--ink); }
+
+  /* ---------- Modal ---------- */
+  .overlay{
+    position:fixed; inset:0; background:rgba(20,16,10,0.55);
+    display:none; align-items:flex-start; justify-content:center;
+    padding:40px 16px; overflow-y:auto; z-index:50;
+  }
+  .overlay.open{ display:flex; }
+  .modal{
+    width:100%; max-width:620px; background:var(--paper);
+    border:1px solid var(--ink); position:relative;
+    box-shadow:0 12px 40px rgba(0,0,0,0.35);
+  }
+  .modal-close{
+    position:absolute; top:10px; right:14px;
+    font-size:22px; line-height:1; background:none; border:none;
+    color:var(--ink-soft); cursor:pointer; padding:4px 8px;
+  }
+  .modal-close:hover{ color:var(--cinnabar); }
+
+  .modal-head{
+    padding:26px 28px 18px; border-bottom:1px solid var(--rule);
+    display:flex; gap:20px; align-items:center;
+  }
+  .modal-hexa{ display:flex; flex-direction:column; gap:4px; width:60px; flex:none; }
+  .modal-hexa .hbar{ height:8px; background:var(--ink); border-radius:1px; }
+  .modal-hexa .hbar.yin{ background:linear-gradient(90deg, var(--ink) 42%, transparent 42%, transparent 58%, var(--ink) 58%); }
+  .modal-title .order{ font-size:11px; color:var(--ink-faint); letter-spacing:2px; margin-bottom:2px; }
+  .modal-title .name{ font-size:28px; font-weight:700; color:var(--cinnabar); }
+  .modal-title .make{ font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
+
+  .modal-body{ padding:20px 28px 28px; }
+  .sec{ margin-bottom:22px; }
+  .sec-title{ font-size:12px; color:var(--cinnabar); letter-spacing:3px; font-weight:600; margin-bottom:8px; }
+  .sec-text{ font-size:14.5px; line-height:2; color:var(--ink); }
+  .sec-text.empty{ color:var(--ink-faint); font-size:13px; }
+
+  .yao-list{ border-top:1px solid var(--rule); }
+  .yao-item{ border-bottom:1px solid rgba(36,31,24,0.14); }
+  .yao-head{
+    display:flex; align-items:center; gap:10px; padding:12px 2px; cursor:pointer;
+  }
+  .yao-head .ytitle{ font-size:14px; font-weight:600; width:44px; flex:none; }
+  .yao-head .ypreview{ flex:1; font-size:13px; color:var(--ink-soft); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .yao-head .ybadge{ font-size:11px; color:var(--good); flex:none; }
+  .yao-head .ybadge.wrong{ color:var(--cinnabar); }
+  .yao-head .arrow{ font-size:11px; color:var(--ink-faint); transition:transform .15s; flex:none; }
+  .yao-item.open .arrow{ transform:rotate(90deg); }
+  .yao-detail{ display:none; padding:0 2px 16px 54px; }
+  .yao-item.open .yao-detail{ display:block; }
+  .yao-detail .yline{ font-size:14px; line-height:1.9; margin-bottom:8px; }
+  .yao-detail .yxiang{ font-size:13px; color:var(--ink-soft); margin-bottom:10px; }
+  .yao-detail .yxiang b{ color:var(--ink); font-weight:600; }
+  .badges{ display:flex; flex-wrap:wrap; gap:6px; }
+  .badge{
+    font-size:11px; padding:2px 8px; border:1px solid var(--ink-faint); color:var(--ink-soft);
+    letter-spacing:1px;
+  }
+  .badge.good{ border-color:var(--good); color:var(--good); }
+  .badge.warn{ border-color:var(--cinnabar); color:var(--cinnabar); }
+
+  .legend{ margin-top:18px; padding-top:14px; border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft); line-height:2; }
+  .legend b{ color:var(--ink); }
+
+  @media (max-width:480px){
+    h1{ font-size:36px; }
+    .row, .col-head{ grid-template-columns:48px 1fr 54px 60px; gap:8px; }
+    .pos-label,.pos-attr{ font-size:12.5px; }
+    .status{ font-size:11px; }
+    .result .name{ font-size:24px; }
+    .seal{ width:40px; height:40px; font-size:16px; }
+    .modal-head{ padding:22px 18px 16px; gap:14px; }
+    .modal-body{ padding:16px 18px 22px; }
+    .yao-detail{ padding-left:0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="seal">易卦</div>
+  <header>
+    <h1>卦体结构图</h1>
+    <p>六 爻 · 爻 位 · 阴 阳</p>
+  </header>
+
+  <div class="result" id="resultBtn">
+    <span class="tag">本卦</span>
+    <span class="name" id="hexName">水火既济</span>
+    <span class="make" id="hexMake">（坎上离下）</span>
+    <span class="hint">点击查看详情 ›</span>
+  </div>
+  <p class="caption">点击爻线可切换阴阳；点击上方卦名查看该卦完整详情</p>
+
+  <div class="presets" id="presets"></div>
+
+  <div class="col-head"><span>爻位</span><span>爻</span><span>位属性</span><span>是否当位</span></div>
+
+  <div class="group" id="groupUpper">
+    <div class="group-tag"><span>上卦（外卦）</span><span class="sym" id="upperSym">☵</span><span class="tname" id="upperName">坎</span></div>
+    <div class="row" data-index="5"><div class="pos-label">上爻</div><div class="line-box" tabindex="0"><div class="bar"></div><div class="bar"></div></div><div class="pos-attr">阴位</div><div class="status"></div></div>
+    <div class="row" data-index="4"><div class="pos-label">五爻</div><div class="line-box" tabindex="0"><div class="bar"></div><div class="bar"></div></div><div class="pos-attr">阳位</div><div class="status"></div></div>
+    <div class="row" data-index="3"><div class="pos-label">四爻</div><div class="line-box" tabindex="0"><div class="bar"></div><div class="bar"></div></div><div class="pos-attr">阴位</div><div class="status"></div></div>
+  </div>
+
+  <div class="group" id="groupLower">
+    <div class="group-tag"><span>下卦（内卦）</span><span class="sym" id="lowerSym">☲</span><span class="tname" id="lowerName">离</span></div>
+    <div class="row" data-index="2"><div class="pos-label">三爻</div><div class="line-box" tabindex="0"><div class="bar"></div><div class="bar"></div></div><div class="pos-attr">阳位</div><div class="status"></div></div>
+    <div class="row" data-index="1"><div class="pos-label">二爻</div><div class="line-box" tabindex="0"><div class="bar"></div><div class="bar"></div></div><div class="pos-attr">阴位</div><div class="status"></div></div>
+    <div class="row" data-index="0"><div class="pos-label">初爻</div><div class="line-box" tabindex="0"><div class="bar"></div><div class="bar"></div></div><div class="pos-attr">阳位</div><div class="status"></div></div>
+  </div>
+
+  <footer>
+    <b>规则说明：</b>爻位由下而上依次为初、二、三、四、五、上；奇数位（初、三、五）为阳位，偶数位（二、四、上）为阴位。<br>
+    <b>当位：</b>阳爻居阳位、阴爻居阴位为"当位"（得正）；反之为"不当位"。<br>
+    <b>本卦：</b>下三爻组成下卦（内卦），上三爻组成上卦（外卦），二者相叠即为本卦。点击上方卦名可查看该卦卦辞、彖辞、象辞、爻辞及爻位关系的完整示例。
+  </footer>
+</div>
+
+<!-- ============ 详情弹窗 ============ -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="关闭">×</button>
+    <div class="modal-head">
+      <div class="modal-hexa" id="modalHexa"></div>
+      <div class="modal-title">
+        <div class="order" id="modalOrder">第 63 卦</div>
+        <div class="name" id="modalName">水火既济</div>
+        <div class="make" id="modalMake">坎上离下</div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="sec">
+        <div class="sec-title">卦辞</div>
+        <div class="sec-text" id="modalGuaci"></div>
+      </div>
+      <div class="sec">
+        <div class="sec-title">彖曰</div>
+        <div class="sec-text" id="modalTuan"></div>
+      </div>
+      <div class="sec">
+        <div class="sec-title">象曰（大象）</div>
+        <div class="sec-text" id="modalDaxiang"></div>
+      </div>
+      <div class="sec">
+        <div class="sec-title">六爻 · 爻辞 / 小象 / 爻位关系</div>
+        <div class="yao-list" id="yaoList"></div>
+      </div>
+      <div class="legend">
+        <b>当位</b>：阳爻居阳位或阴爻居阴位。&nbsp; <b>得中</b>：居二、五爻（上下卦之中）。<br>
+        <b>承</b>：阴爻在阳爻之下、紧邻其下方。&nbsp; <b>乘</b>：阴爻凌驾于其下方相邻的阳爻之上。<br>
+        <b>据</b>：阳爻在其下方相邻的阴爻之上。&nbsp; <b>应</b>：初与四、二与五、三与上，阴阳相异为"正应"，相同为"无应"。
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const posNames   = ['初爻','二爻','三爻','四爻','五爻','上爻'];
+const posIsYang  = [true, false, true, false, true, false];
+const trigramSym  = {'乾':'☰','兑':'☱','离':'☲','震':'☳','巽':'☴','坎':'☵','艮':'☶','坤':'☷'};
+const trigramName = {'111':'乾','110':'兑','101':'离','100':'震','011':'巽','010':'坎','001':'艮','000':'坤'};
+
+const hexagramTable = {
+  '乾': {'乾':'乾为天','兑':'天泽履','离':'天火同人','震':'天雷无妄','巽':'天风姤','坎':'天水讼','艮':'天山遁','坤':'天地否'},
+  '兑': {'乾':'泽天夬','兑':'兑为泽','离':'泽火革','震':'泽雷随','巽':'泽风大过','坎':'泽水困','艮':'泽山咸','坤':'泽地萃'},
+  '离': {'乾':'火天大有','兑':'火泽睽','离':'离为火','震':'火雷噬嗑','巽':'火风鼎','坎':'火水未济','艮':'火山旅','坤':'火地晋'},
+  '震': {'乾':'雷天大壮','兑':'雷泽归妹','离':'雷火丰','震':'震为雷','巽':'雷风恒','坎':'雷水解','艮':'雷山小过','坤':'雷地豫'},
+  '巽': {'乾':'风天小畜','兑':'风泽中孚','离':'风火家人','震':'风雷益','巽':'巽为风','坎':'风水涣','艮':'风山渐','坤':'风地观'},
+  '坎': {'乾':'水天需','兑':'水泽节','离':'水火既济','震':'水雷屯','巽':'水风井','坎':'坎为水','艮':'水山蹇','坤':'水地比'},
+  '艮': {'乾':'山天大畜','兑':'山泽损','离':'山火贲','震':'山雷颐','巽':'山风蛊','坎':'山水蒙','艮':'艮为山','坤':'山地剥'},
+  '坤': {'乾':'地天泰','兑':'地泽临','离':'地火明夷','震':'地雷复','巽':'地风升','坎':'地水师','艮':'地山谦','坤':'坤为地'}
+};
+
+/* ============================================================
+   卦经文数据库 —— 结构示例
+   每个卦名对应一条记录：order（序卦位次）、guaci（卦辞）、
+   tuan（彖辞）、daxiang（大象）、yao[6]（初→上，各含 title/text/xiaoxiang）。
+   本示例完整填写了"乾"卦作为参照；其余 63 卦可按相同结构继续补充，
+   未填写时详情弹窗会显示占位提示，但爻位关系（当位/得中/承乘据应）
+   是即时计算的，对任意一卦都自动生效，无需额外数据。
+   ============================================================ */
+const hexagramData = {
+  '乾为天': {
+    order: 1,
+    guaci: '元、亨、利、贞。',
+    tuan: '大哉乾元，万物资始，乃统天。云行雨施，品物流形。大明终始，六位时成，时乘六龙以御天。乾道变化，各正性命，保合太和，乃利贞。首出庶物，万国咸宁。',
+    daxiang: '天行健，君子以自强不息。',
+    yao: [
+      {title:'初九', text:'潜龙勿用。', xiaoxiang:'潜龙勿用，阳在下也。'},
+      {title:'九二', text:'见龙在田，利见大人。', xiaoxiang:'见龙在田，德施普也。'},
+      {title:'九三', text:'君子终日乾乾，夕惕若厉，无咎。', xiaoxiang:'终日乾乾，反复道也。'},
+      {title:'九四', text:'或跃在渊，无咎。', xiaoxiang:'或跃在渊，进无咎也。'},
+      {title:'九五', text:'飞龙在天，利见大人。', xiaoxiang:'飞龙在天，大人造也。'},
+      {title:'上九', text:'亢龙有悔。', xiaoxiang:'亢龙有悔，盈不可久也。'}
+    ]
+  }
+  // '坤为地': { ... },  ← 其余 63 卦按同样结构继续添加
+};
+
+const presets = [
+  {label:'乾为天', lines:[1,1,1,1,1,1]},
+  {label:'坤为地', lines:[0,0,0,0,0,0]},
+  {label:'地天泰', lines:[1,1,1,0,0,0]},
+  {label:'天地否', lines:[0,0,0,1,1,1]},
+  {label:'水火既济（皆当位）', lines:[1,0,1,0,1,0]},
+  {label:'火水未济（皆不当位）', lines:[0,1,0,1,0,1]}
+];
+
+let lineState = presets[4].lines.slice();
+
+function trigramFromBits(bits){ return trigramName[bits.map(b=>b?'1':'0').join('')]; }
+
+function currentHex(){
+  const lowerBits=[lineState[0],lineState[1],lineState[2]];
+  const upperBits=[lineState[3],lineState[4],lineState[5]];
+  const lower=trigramFromBits(lowerBits), upper=trigramFromBits(upperBits);
+  return { lower, upper, name: hexagramTable[upper][lower] };
+}
+
+function render(){
+  document.querySelectorAll('.row').forEach(row=>{
+    const i=Number(row.dataset.index);
+    const isYang=!!lineState[i];
+    const box=row.querySelector('.line-box');
+    box.classList.toggle('yang', isYang);
+    box.classList.toggle('yin', !isYang);
+    const correct = isYang===posIsYang[i];
+    const s=row.querySelector('.status');
+    s.textContent = correct?'当位':'不当位';
+    s.className='status '+(correct?'correct':'wrong');
+  });
+  const {lower, upper, name} = currentHex();
+  document.getElementById('lowerSym').textContent=trigramSym[lower];
+  document.getElementById('lowerName').textContent=lower;
+  document.getElementById('upperSym').textContent=trigramSym[upper];
+  document.getElementById('upperName').textContent=upper;
+  document.getElementById('hexName').textContent=name;
+  document.getElementById('hexMake').textContent=`（${upper}上${lower}下）`;
+}
+
+document.querySelectorAll('.line-box').forEach(box=>{
+  const row=box.closest('.row'); const i=Number(row.dataset.index);
+  const toggle=()=>{ lineState[i]=lineState[i]?0:1; render(); };
+  box.addEventListener('click', toggle);
+  box.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); }});
+});
+
+const presetWrap=document.getElementById('presets');
+presets.forEach(p=>{
+  const btn=document.createElement('button');
+  btn.textContent=p.label;
+  btn.addEventListener('click', ()=>{ lineState=p.lines.slice(); render(); });
+  presetWrap.appendChild(btn);
+});
+
+/* ---------------- 详情弹窗逻辑 ---------------- */
+const overlay=document.getElementById('overlay');
+document.getElementById('resultBtn').addEventListener('click', openModal);
+document.getElementById('modalClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', e=>{ if(e.target===overlay) closeModal(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+
+function closeModal(){ overlay.classList.remove('open'); }
+
+function relationsFor(i, state){
+  const isYang = !!state[i];
+  const rel = [];
+  rel.push(isYang===posIsYang[i] ? {t:'当位', c:'good'} : {t:'不当位', c:'warn'});
+  if(i===1 || i===4) rel.push({t:'得中', c:'good'});
+
+  const below = i>0 ? !!state[i-1] : null;
+  const above = i<5 ? !!state[i+1] : null;
+  if(!isYang && above===true) rel.push({t:'承', c:''});
+  if(!isYang && below===true) rel.push({t:'乘', c:'warn'});
+  if(isYang && below===false) rel.push({t:'据', c:''});
+
+  const pairMap = {0:3,1:4,2:5,3:0,4:1,5:2};
+  const j = pairMap[i];
+  const other = !!state[j];
+  if(other!==isYang) rel.push({t:`正应（与${posNames[j]}）`, c:'good'});
+  else rel.push({t:`无应（与${posNames[j]}）`, c:''});
+  return rel;
+}
+
+function openModal(){
+  const {lower, upper, name} = currentHex();
+  const data = hexagramData[name];
+
+  document.getElementById('modalName').textContent = name;
+  document.getElementById('modalMake').textContent = `${upper}上${lower}下`;
+  document.getElementById('modalOrder').textContent = data ? `第 ${data.order} 卦` : '序卦位次待补';
+
+  const hexaEl = document.getElementById('modalHexa');
+  hexaEl.innerHTML='';
+  for(let i=5;i>=0;i--){
+    const d=document.createElement('div');
+    d.className='hbar'+(lineState[i]?'':' yin');
+    hexaEl.appendChild(d);
+  }
+
+  const guaciEl=document.getElementById('modalGuaci');
+  const tuanEl=document.getElementById('modalTuan');
+  const daxiangEl=document.getElementById('modalDaxiang');
+  if(data){
+    guaciEl.textContent=data.guaci; guaciEl.className='sec-text';
+    tuanEl.textContent=data.tuan; tuanEl.className='sec-text';
+    daxiangEl.textContent=data.daxiang; daxiangEl.className='sec-text';
+  }else{
+    guaciEl.textContent='（示例数据库暂未收录此卦，可按"乾为天"的结构继续补充）';
+    guaciEl.className='sec-text empty';
+    tuanEl.textContent='（待补充）'; tuanEl.className='sec-text empty';
+    daxiangEl.textContent='（待补充）'; daxiangEl.className='sec-text empty';
+  }
+
+  const yaoList=document.getElementById('yaoList');
+  yaoList.innerHTML='';
+  for(let i=5;i>=0;i--){
+    const yaoData = data ? data.yao[i] : null;
+    const rel = relationsFor(i, lineState);
+    const mainStatus = rel[0];
+
+    const item=document.createElement('div');
+    item.className='yao-item';
+
+    const head=document.createElement('div');
+    head.className='yao-head';
+    head.innerHTML = `
+      <span class="ytitle">${yaoData ? yaoData.title : posNames[i]}</span>
+      <span class="ypreview">${yaoData ? yaoData.text : '（该爻辞待补充）'}</span>
+      <span class="ybadge ${mainStatus.c==='warn'?'wrong':''}">${mainStatus.t}</span>
+      <span class="arrow">▸</span>
+    `;
+    head.addEventListener('click', ()=> item.classList.toggle('open'));
+
+    const detail=document.createElement('div');
+    detail.className='yao-detail';
+    const badgesHtml = rel.map(r=>`<span class="badge ${r.c}">${r.t}</span>`).join('');
+    detail.innerHTML = `
+      <div class="yline">${yaoData ? yaoData.text : '（该爻辞待补充）'}</div>
+      <div class="yxiang">${yaoData ? '<b>小象：</b>'+yaoData.xiaoxiang : '（小象待补充）'}</div>
+      <div class="badges">${badgesHtml}</div>
+    `;
+
+    item.appendChild(head);
+    item.appendChild(detail);
+    yaoList.appendChild(item);
+  }
+
+  overlay.classList.add('open');
+}
+
+render();
+</script>
+</body>
+</html>

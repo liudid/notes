@@ -1,5 +1,11 @@
 <template>
-  <div v-if="hex" class="cell">
+  <button
+    v-if="hex"
+    type="button"
+    class="cell"
+    :aria-label="`${hex.full}，第${hex.num}卦`"
+    @click="$emit('select', hex)"
+  >
     <span class="seal">{{ hex.num }}</span>
     <span class="lines">
       <span
@@ -16,11 +22,13 @@
       <span class="nm">{{ hex.name }}</span>
       <span class="full">{{ hex.full }}</span>
     </span>
-  </div>
+  </button>
 </template>
 
 <script setup>
 import { computed } from "vue";
+
+defineEmits(["select"]);
 
 const props = defineProps({
   hex: {
@@ -54,6 +62,17 @@ const yaoList = computed(() => {
   color: inherit;
   position: relative;
   box-sizing: border-box;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.liu-shi-si-gua .matrix .cell:hover {
+  background: rgba(172, 57, 43, 0.06);
+}
+
+.liu-shi-si-gua .matrix .cell:focus-visible {
+  outline: 2px solid var(--cinnabar);
+  outline-offset: -2px;
 }
 
 .liu-shi-si-gua .matrix .seal {

@@ -401,7 +401,97 @@ function sidebarYixue(): DefaultTheme.SidebarItem[] {
     { text: "方位", link: "/yi-xue/fan-wei" },
     { text: "先天八卦", link: "/yi-xue/xian-tian-ba-gua" },
     { text: "后天八卦", link: "/yi-xue/hou-tian-ba-gua" },
-    { text: "六十四卦", link: "/yi-xue/liu-shi-si-gua" },
+    {
+      text: "六十四卦",
+      link: "/yi-xue/liu-shi-si-gua",
+      collapsed: false,
+      items: [
+        {
+          text: "规范术语",
+          link: "/yi-xue/liu-shi-si-gua/gui-fan-shu-yu",
+        },
+        {
+          text: "卦体结构",
+          link: "/yi-xue/liu-shi-si-gua/gua-ti-jie-gou",
+        },
+        {
+          text: "经文《周易》",
+          link: "/yi-xue/liu-shi-si-gua/jing-wen",
+          collapsed: false,
+          items: [
+            {
+              text: "卦辞（总论）",
+              link: "/yi-xue/liu-shi-si-gua/jing-wen/gua-ci",
+            },
+            {
+              text: "爻辞（分论）",
+              link: "/yi-xue/liu-shi-si-gua/jing-wen/yao-ci",
+            },
+          ],
+        },
+        {
+          text: "传文《易传》",
+          link: "/yi-xue/liu-shi-si-gua/zhuan-wen",
+          collapsed: false,
+          items: [
+            {
+              text: "《彖传上》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/tuan-zhuan-shang",
+            },
+            {
+              text: "《彖传下》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/tuan-zhuan-xia",
+            },
+            {
+              text: "《象传上》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/xiang-zhuan-shang",
+            },
+            {
+              text: "《象传下》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/xiang-zhuan-xia",
+            },
+            {
+              text: "《系辞传上》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/xi-ci-zhuan-shang",
+            },
+            {
+              text: "《系辞传下》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/xi-ci-zhuan-xia",
+            },
+            {
+              text: "《文言传》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/wen-yan-zhuan",
+            },
+            {
+              text: "《说卦传》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/shuo-gua-zhuan",
+            },
+            {
+              text: "《序卦传》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/xu-gua-zhuan",
+            },
+            {
+              text: "《杂卦传》",
+              link: "/yi-xue/liu-shi-si-gua/zhuan-wen/za-gua-zhuan",
+            },
+          ],
+        },
+        {
+          text: "十二消息卦",
+          link: "/yi-xue/liu-shi-si-gua/shi-er-xiao-xi-gua",
+        },
+        {
+          text: "卜、筮、占",
+          link: "/yi-xue/bu-shi/bu-shi",
+          items: [
+            {
+              text: "纳甲筮法",
+              link: "/yi-xue/bu-shi/na-jia-shi-fa",
+            },
+          ],
+        },
+      ],
+    },
   ];
 }
 

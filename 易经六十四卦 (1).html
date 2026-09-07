@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易经六十四卦 · 卦序矩阵</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE2C9;
+    --paper-deep:#E1D3AE;
+    --paper-card:#F5EEDA;
+    --ink:#241F17;
+    --ink-soft:#655B47;
+    --ink-faint:#8B806A;
+    --cinnabar:#AC392B;
+    --cinnabar-deep:#832A20;
+    --gold:#8E7434;
+    --rule:#B7A87C;
+    --shadow:rgba(36,31,23,.22);
+    --radius:3px;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Noto Sans SC',sans-serif;
+    min-height:100vh;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  /* 纸纹叠层 */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+    opacity:.5;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.13  0 0 0 0 0.11  0 0 0 0 0.08  0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap{
+    position:relative;
+    z-index:2;
+    max-width:1180px;
+    margin:0 auto;
+    padding:56px 24px 90px;
+  }
+
+  /* ---------- 标题区 ---------- */
+  header{
+    text-align:center;
+    margin-bottom:44px;
+  }
+  .plate{
+    display:inline-block;
+    padding:20px 46px 24px;
+    border-top:3px solid var(--ink);
+    border-bottom:3px solid var(--ink);
+    position:relative;
+  }
+  .plate::before,.plate::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;
+    height:1px;
+    background:var(--ink);
+  }
+  .plate::before{top:5px;}
+  .plate::after{bottom:5px;}
+  h1{
+    font-family:'Noto Serif SC',serif;
+    font-weight:900;
+    font-size:clamp(30px,5vw,46px);
+    letter-spacing:.5em;
+    margin:0 0 4px -.5em;
+    color:var(--ink);
+  }
+  .subtitle{
+    font-family:'Noto Serif SC',serif;
+    font-size:13px;
+    letter-spacing:.3em;
+    color:var(--cinnabar-deep);
+    margin-left:-.3em;
+  }
+  .intro{
+    max-width:640px;
+    margin:22px auto 0;
+    font-size:13.5px;
+    line-height:2;
+    color:var(--ink-soft);
+  }
+  .intro b{color:var(--ink);font-weight:600;}
+
+  /* ---------- 工具条 ---------- */
+  .toolbar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+  }
+  .search-box{
+    position:relative;
+    width:260px;
+  }
+  .search-box input{
+    width:100%;
+    font-family:'Noto Serif SC',serif;
+    font-size:14px;
+    padding:9px 14px;
+    border:1px solid var(--rule);
+    background:var(--paper-card);
+    color:var(--ink);
+    border-radius:2px;
+    outline:none;
+    letter-spacing:.05em;
+  }
+  .search-box input::placeholder{color:var(--ink-faint);}
+  .search-box input:focus-visible{
+    border-color:var(--cinnabar);
+    box-shadow:0 0 0 2px rgba(172,57,43,.18);
+  }
+  .stat{
+    font-size:12px;
+    color:var(--ink-faint);
+    letter-spacing:.1em;
+  }
+
+  /* ---------- 卦序矩阵 ---------- */
+  .matrix-scroll{
+    overflow-x:auto;
+    border:1px solid var(--ink);
+    background:var(--paper-card);
+    box-shadow:0 10px 26px -14px var(--shadow);
+  }
+  table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:820px;
+  }
+  th,td{
+    border:1px solid var(--rule);
+    text-align:center;
+    padding:0;
+  }
+  thead th{
+    position:sticky;
+    top:0;
+    z-index:3;
+    background:var(--paper-deep);
+  }
+  tbody th{
+    position:sticky;
+    left:0;
+    z-index:2;
+    background:var(--paper-deep);
+  }
+  thead th:first-child{
+    z-index:4;
+    left:0;
+  }
+  .axis-label{
+    font-family:'Noto Serif SC',serif;
+    font-size:11px;
+    color:var(--ink-faint);
+    padding:10px 6px;
+    line-height:1.5;
+    letter-spacing:.05em;
+  }
+  .trig-head{
+    padding:10px 4px 12px;
+    min-width:96px;
+  }
+  .trig-head .sym{
+    font-size:20px;
+    line-height:1;
+    color:var(--cinnabar-deep);
+  }
+  .trig-head .zh{
+    font-family:'Noto Serif SC',serif;
+    font-weight:700;
+    font-size:14px;
+    margin-top:2px;
+  }
+  .trig-head .el{
+    font-size:10.5px;
+    color:var(--ink-faint);
+    letter-spacing:.15em;
+  }
+  tbody th{
+    padding:8px 10px;
+    min-width:64px;
+  }
+  tbody th .sym{
+    font-size:18px;
+    color:var(--cinnabar-deep);
+    display:block;
+  }
+  tbody th .zh{
+    font-family:'Noto Serif SC',serif;
+    font-weight:700;
+    font-size:13px;
+  }
+  tbody th .el{
+    font-size:10px;
+    color:var(--ink-faint);
+    letter-spacing:.15em;
+  }
+
+  .cell{
+    width:100%;
+    height:100%;
+    padding:10px 4px 8px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    font-family:inherit;
+    color:inherit;
+    position:relative;
+    transition:background .15s ease;
+  }
+  .cell:hover{background:rgba(172,57,43,.08);}
+  .cell:focus-visible{
+    outline:2px solid var(--cinnabar);
+    outline-offset:-2px;
+  }
+  .cell .seal{
+    position:absolute;
+    top:4px;
+    left:4px;
+    font-size:9px;
+    color:#fff;
+    background:var(--cinnabar);
+    width:15px;height:15px;
+    border-radius:2px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Noto Serif SC',serif;
+  }
+  .lines{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:32px;
+  }
+  .yao{
+    width:100%;
+    height:3px;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:3px;
+  }
+  .yao:last-child{margin-bottom:0;}
+  .yao .seg{
+    height:100%;
+    background:var(--ink);
+    border-radius:1px;
+  }
+  .yao.yang .seg{width:100%;}
+  .yao.yin .seg{width:44%;}
+  .cell .nm{
+    font-family:'Noto Serif SC',serif;
+    font-weight:600;
+    font-size:13px;
+    color:var(--ink);
+  }
+  .cell.dim{opacity:.25;}
+  .cell.match .nm{color:var(--cinnabar);}
+  .cell.match{background:rgba(172,57,43,.12);}
+
+  @media (prefers-reduced-motion:no-preference){
+    .cell{animation:rise .5s ease both;}
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(6px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  footer{
+    text-align:center;
+    margin-top:40px;
+    font-size:11.5px;
+    color:var(--ink-faint);
+    letter-spacing:.08em;
+  }
+
+  /* ---------- 详情面板 ---------- */
+  .backdrop{
+    position:fixed;
+    inset:0;
+    background:rgba(20,16,10,.55);
+    z-index:10;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  }
+  .backdrop.open{display:flex;}
+  .panel{
+    background:var(--paper-card);
+    border:1px solid var(--ink);
+    max-width:420px;
+    width:100%;
+    max-height:88vh;
+    overflow-y:auto;
+    position:relative;
+    box-shadow:0 24px 60px -20px rgba(0,0,0,.5);
+  }
+  .panel-inner{padding:34px 30px 26px;}
+  .panel .close{
+    position:absolute;
+    top:14px; right:14px;
+    width:28px;height:28px;
+    border:1px solid var(--rule);
+    background:transparent;
+    cursor:pointer;
+    font-size:15px;
+    color:var(--ink-soft);
+    line-height:1;
+    border-radius:2px;
+  }
+  .panel .close:hover{color:var(--cinnabar);border-color:var(--cinnabar);}
+  .panel .close:focus-visible{outline:2px solid var(--cinnabar);}
+
+  .panel-head{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--rule);
+  }
+  .panel .lines-lg{display:flex;flex-direction:column;align-items:center;width:56px;flex-shrink:0;}
+  .panel .lines-lg .yao{height:5px;margin-bottom:6px;}
+  .panel .lines-lg .yao:last-child{margin-bottom:0;}
+  .panel-title-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .panel-num{
+    font-family:'Noto Serif SC',serif;
+    font-size:11px;
+    color:#fff;
+    background:var(--cinnabar);
+    padding:2px 7px;
+    border-radius:2px;
+  }
+  .panel-name{
+    font-family:'Noto Serif SC',serif;
+    font-weight:900;
+    font-size:30px;
+  }
+  .panel-py{
+    font-size:13px;
+    color:var(--ink-faint);
+    letter-spacing:.05em;
+  }
+  .panel-full{
+    font-family:'Noto Serif SC',serif;
+    font-size:14px;
+    color:var(--ink-soft);
+    margin-top:4px;
+  }
+
+  .panel-body{padding-top:20px;}
+  .comp-row{
+    display:flex;
+    gap:18px;
+    margin-bottom:18px;
+  }
+  .comp{
+    flex:1;
+    font-size:12px;
+    color:var(--ink-soft);
+    border-left:2px solid var(--cinnabar);
+    padding-left:10px;
+    line-height:1.6;
+  }
+  .comp b{
+    display:block;
+    font-family:'Noto Serif SC',serif;
+    font-size:15px;
+    color:var(--ink);
+  }
+  .gloss{
+    font-family:'Noto Serif SC',serif;
+    font-size:16px;
+    line-height:1.9;
+    color:var(--ink);
+    padding:14px 0 4px;
+  }
+
+  .related{
+    display:flex;
+    gap:12px;
+    margin-top:18px;
+    padding-top:18px;
+    border-top:1px dashed var(--rule);
+  }
+  .rel-btn{
+    flex:1;
+    background:var(--paper);
+    border:1px solid var(--rule);
+    cursor:pointer;
+    padding:10px 8px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    font-family:inherit;
+  }
+  .rel-btn:hover{border-color:var(--cinnabar);}
+  .rel-btn:focus-visible{outline:2px solid var(--cinnabar);}
+  .rel-btn .lines{width:26px;}
+  .rel-btn .yao{height:2.5px;margin-bottom:2.5px;}
+  .rel-btn .tag{font-size:10px;color:var(--ink-faint);letter-spacing:.1em;}
+  .rel-btn .nm{font-family:'Noto Serif SC',serif;font-size:13px;font-weight:600;}
+
+  .nav-row{
+    display:flex;
+    justify-content:space-between;
+    margin-top:22px;
+    padding-top:16px;
+    border-top:1px solid var(--rule);
+  }
+  .nav-btn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-family:'Noto Serif SC',serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .nav-btn:hover{color:var(--cinnabar);}
+  .nav-btn:focus-visible{outline:2px solid var(--cinnabar);}
+
+  @media (max-width:640px){
+    .wrap{padding:36px 14px 60px;}
+    h1{letter-spacing:.32em;margin-left:-.32em;}
+    .plate{padding:16px 22px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="plate">
+      <h1>易經六十四卦</h1>
+      <div class="subtitle">卦 序 矩 陣</div>
+    </div>
+    <p class="intro">
+      六十四卦由八卦两两相叠而成。下表<b>横向为外卦（上卦）</b>，<b>纵向为内卦（下卦）</b>，
+      每一格即为内外相叠所得之卦——这正是历代卦序图的原始排列方式。
+      点按任意一卦，可查看卦名、卦象与其错卦、综卦的对应关系。
+    </p>
+  </header>
+
+  <div class="toolbar">
+    <div class="search-box">
+      <input id="search" type="text" placeholder="输入卦名或拼音，如「乾」「kun」…" autocomplete="off">
+    </div>
+    <div class="stat">共 64 卦 · 8 × 8 矩阵</div>
+  </div>
+
+  <div class="matrix-scroll">
+    <table id="matrix" aria-label="六十四卦卦序矩阵，横向为外卦，纵向为内卦"></table>
+  </div>
+
+  <footer>点按卦格查看详情 · 键盘 Tab 可依序浏览 · Esc 关闭详情面板</footer>
+</div>
+
+<div class="backdrop" id="backdrop">
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="panelName">
+    <button class="close" id="closeBtn" aria-label="关闭">✕</button>
+    <div class="panel-inner">
+      <div class="panel-head">
+        <div class="lines-lg" id="panelLines"></div>
+        <div>
+          <div class="panel-title-row">
+            <span class="panel-num" id="panelNum"></span>
+            <span class="panel-name" id="panelName"></span>
+            <span class="panel-py" id="panelPy"></span>
+          </div>
+          <div class="panel-full" id="panelFull"></div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="comp-row">
+          <div class="comp"><b id="panelUpper"></b>外卦（上）</div>
+          <div class="comp"><b id="panelLower"></b>内卦（下）</div>
+        </div>
+        <div class="gloss" id="panelGloss"></div>
+        <div class="related">
+          <button class="rel-btn" id="relCuo">
+            <span class="tag">错卦</span>
+            <span class="lines" id="cuoLines"></span>
+            <span class="nm" id="cuoName"></span>
+          </button>
+          <button class="rel-btn" id="relZong">
+            <span class="tag">综卦</span>
+            <span class="lines" id="zongLines"></span>
+            <span class="nm" id="zongName"></span>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="nav-btn" id="prevBtn">← 上一卦</button>
+          <button class="nav-btn" id="nextBtn">下一卦 →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var T = {
+    qian:{zh:'乾',el:'天',bits:'111',sym:'☰'},
+    kun: {zh:'坤',el:'地',bits:'000',sym:'☷'},
+    zhen:{zh:'震',el:'雷',bits:'100',sym:'☳'},
+    gen: {zh:'艮',el:'山',bits:'001',sym:'☶'},
+    li:  {zh:'离',el:'火',bits:'101',sym:'☲'},
+    kan: {zh:'坎',el:'水',bits:'010',sym:'☵'},
+    dui: {zh:'兑',el:'泽',bits:'110',sym:'☱'},
+    xun: {zh:'巽',el:'风',bits:'011',sym:'☴'}
+  };
+  var ORDER = ['qian','kun','zhen','gen','li','kan','dui','xun'];
+
+  var HEX = [
+    {num:1,name:'乾',full:'乾为天',py:'qián',lower:'qian',upper:'qian',gloss:'刚健自强，元亨利贞'},
+    {num:2,name:'坤',full:'坤为地',py:'kūn',lower:'kun',upper:'kun',gloss:'柔顺承载，厚德载物'},
+    {num:3,name:'屯',full:'水雷屯',py:'zhūn',lower:'zhen',upper:'kan',gloss:'初生艰难，蓄势待发'},
+    {num:4,name:'蒙',full:'山水蒙',py:'méng',lower:'kan',upper:'gen',gloss:'蒙昧未开，启蒙求知'},
+    {num:5,name:'需',full:'水天需',py:'xū',lower:'qian',upper:'kan',gloss:'静待时机，蓄力守正'},
+    {num:6,name:'讼',full:'天水讼',py:'sòng',lower:'kan',upper:'qian',gloss:'争讼相持，慎断是非'},
+    {num:7,name:'师',full:'地水师',py:'shī',lower:'kan',upper:'kun',gloss:'兴师动众，纪律为本'},
+    {num:8,name:'比',full:'水地比',py:'bǐ',lower:'kun',upper:'kan',gloss:'亲比相依，团结互助'},
+    {num:9,name:'小畜',full:'风天小畜',py:'xiǎo xù',lower:'qian',upper:'xun',gloss:'小有积蓄，蓄势未成'},
+    {num:10,name:'履',full:'天泽履',py:'lǚ',lower:'dui',upper:'qian',gloss:'谨慎而行，如履薄冰'},
+    {num:11,name:'泰',full:'地天泰',py:'tài',lower:'qian',upper:'kun',gloss:'上下交泰，通达安康'},
+    {num:12,name:'否',full:'天地否',py:'pǐ',lower:'kun',upper:'qian',gloss:'闭塞不通，逆境待变'},
+    {num:13,name:'同人',full:'天火同人',py:'tóng rén',lower:'li',upper:'qian',gloss:'与人和同，志同道合'},
+    {num:14,name:'大有',full:'火天大有',py:'dà yǒu',lower:'qian',upper:'li',gloss:'大有所获，盛大丰足'},
+    {num:15,name:'谦',full:'地山谦',py:'qiān',lower:'gen',upper:'kun',gloss:'谦逊自守，德行渐彰'},
+    {num:16,name:'豫',full:'雷地豫',py:'yù',lower:'kun',upper:'zhen',gloss:'悦豫顺时，未雨绸缪'},
+    {num:17,name:'随',full:'泽雷随',py:'suí',lower:'zhen',upper:'dui',gloss:'随时而动，顺势而为'},
+    {num:18,name:'蛊',full:'山风蛊',py:'gǔ',lower:'xun',upper:'gen',gloss:'积弊待治，革故图新'},
+    {num:19,name:'临',full:'地泽临',py:'lín',lower:'dui',upper:'kun',gloss:'居高临下，教化亲民'},
+    {num:20,name:'观',full:'风地观',py:'guān',lower:'kun',upper:'xun',gloss:'观察省思，以观化人'},
+    {num:21,name:'噬嗑',full:'火雷噬嗑',py:'shì kè',lower:'zhen',upper:'li',gloss:'刚断除弊，明察而断'},
+    {num:22,name:'贲',full:'山火贲',py:'bì',lower:'li',upper:'gen',gloss:'文饰有度，质朴为本'},
+    {num:23,name:'剥',full:'山地剥',py:'bō',lower:'kun',upper:'gen',gloss:'阳消阴长，静观其变'},
+    {num:24,name:'复',full:'地雷复',py:'fù',lower:'zhen',upper:'kun',gloss:'一阳来复，否极泰来'},
+    {num:25,name:'无妄',full:'天雷无妄',py:'wú wàng',lower:'zhen',upper:'qian',gloss:'顺应自然，不妄不欺'},
+    {num:26,name:'大畜',full:'山天大畜',py:'dà xù',lower:'qian',upper:'gen',gloss:'蓄养积厚，待时而发'},
+    {num:27,name:'颐',full:'山雷颐',py:'yí',lower:'zhen',upper:'gen',gloss:'颐养有道，慎言节食'},
+    {num:28,name:'大过',full:'泽风大过',py:'dà guò',lower:'xun',upper:'dui',gloss:'非常之时，刚过而济'},
+    {num:29,name:'坎',full:'坎为水',py:'kǎn',lower:'kan',upper:'kan',gloss:'重险相叠，行险如常'},
+    {num:30,name:'离',full:'离为火',py:'lí',lower:'li',upper:'li',gloss:'附丽而明，光明相继'},
+    {num:31,name:'咸',full:'泽山咸',py:'xián',lower:'gen',upper:'dui',gloss:'相感相应，虚心以待'},
+    {num:32,name:'恒',full:'雷风恒',py:'héng',lower:'xun',upper:'zhen',gloss:'恒久守常，历久弥坚'},
+    {num:33,name:'遁',full:'天山遁',py:'dùn',lower:'gen',upper:'qian',gloss:'知机而退，全身远害'},
+    {num:34,name:'大壮',full:'雷天大壮',py:'dà zhuàng',lower:'qian',upper:'zhen',gloss:'刚盛势壮，守正戒躁'},
+    {num:35,name:'晋',full:'火地晋',py:'jìn',lower:'kun',upper:'li',gloss:'顺势上进，光明渐显'},
+    {num:36,name:'明夷',full:'地火明夷',py:'míng yí',lower:'li',upper:'kun',gloss:'光明受损，韬光养晦'},
+    {num:37,name:'家人',full:'风火家人',py:'jiā rén',lower:'li',upper:'xun',gloss:'齐家有道，各正其位'},
+    {num:38,name:'睽',full:'火泽睽',py:'kuí',lower:'dui',upper:'li',gloss:'乖离相异，异中求同'},
+    {num:39,name:'蹇',full:'水山蹇',py:'jiǎn',lower:'gen',upper:'kan',gloss:'险阻在前，反身修德'},
+    {num:40,name:'解',full:'雷水解',py:'xiè',lower:'kan',upper:'zhen',gloss:'危解患释，宽缓待人'},
+    {num:41,name:'损',full:'山泽损',py:'sǔn',lower:'dui',upper:'gen',gloss:'损下益上，损而有孚'},
+    {num:42,name:'益',full:'风雷益',py:'yì',lower:'zhen',upper:'xun',gloss:'损上益下，损己利人'},
+    {num:43,name:'夬',full:'泽天夬',py:'guài',lower:'qian',upper:'dui',gloss:'刚决柔退，果断有度'},
+    {num:44,name:'姤',full:'天风姤',py:'gòu',lower:'xun',upper:'qian',gloss:'阴阳相遇，防微杜渐'},
+    {num:45,name:'萃',full:'泽地萃',py:'cuì',lower:'kun',upper:'dui',gloss:'聚萃有序，同心协力'},
+    {num:46,name:'升',full:'地风升',py:'shēng',lower:'xun',upper:'kun',gloss:'积小成大，柔顺渐升'},
+    {num:47,name:'困',full:'泽水困',py:'kùn',lower:'kan',upper:'dui',gloss:'身处困境，守志不移'},
+    {num:48,name:'井',full:'水风井',py:'jǐng',lower:'xun',upper:'kan',gloss:'井养不穷，恒常利物'},
+    {num:49,name:'革',full:'泽火革',py:'gé',lower:'li',upper:'dui',gloss:'变革除旧，顺时而改'},
+    {num:50,name:'鼎',full:'火风鼎',py:'dǐng',lower:'xun',upper:'li',gloss:'鼎新革故，稳重承重'},
+    {num:51,name:'震',full:'震为雷',py:'zhèn',lower:'zhen',upper:'zhen',gloss:'震动惊惧，处变不惊'},
+    {num:52,name:'艮',full:'艮为山',py:'gèn',lower:'gen',upper:'gen',gloss:'止而不动，安分守静'},
+    {num:53,name:'渐',full:'风山渐',py:'jiàn',lower:'gen',upper:'xun',gloss:'循序渐进，稳步而行'},
+    {num:54,name:'归妹',full:'雷泽归妹',py:'guī mèi',lower:'dui',upper:'zhen',gloss:'少女出嫁，谨守正道'},
+    {num:55,name:'丰',full:'雷火丰',py:'fēng',lower:'li',upper:'zhen',gloss:'丰盛之时，居安思危'},
+    {num:56,name:'旅',full:'火山旅',py:'lǚ',lower:'gen',upper:'li',gloss:'羁旅在外，柔顺谨慎'},
+    {num:57,name:'巽',full:'巽为风',py:'xùn',lower:'xun',upper:'xun',gloss:'谦逊随顺，渐入渐深'},
+    {num:58,name:'兑',full:'兑为泽',py:'duì',lower:'dui',upper:'dui',gloss:'喜悦交流，和悦待人'},
+    {num:59,name:'涣',full:'风水涣',py:'huàn',lower:'kan',upper:'xun',gloss:'涣散离析，聚合人心'},
+    {num:60,name:'节',full:'水泽节',py:'jié',lower:'dui',upper:'kan',gloss:'节制有度，进退有节'},
+    {num:61,name:'中孚',full:'风泽中孚',py:'zhōng fú',lower:'dui',upper:'xun',gloss:'诚信中孚，感通万物'},
+    {num:62,name:'小过',full:'雷山小过',py:'xiǎo guò',lower:'gen',upper:'zhen',gloss:'小事可过，大事守常'},
+    {num:63,name:'既济',full:'水火既济',py:'jì jì',lower:'kan',upper:'li',gloss:'功成之际，居安思危'},
+    {num:64,name:'未济',full:'火水未济',py:'wèi jì',lower:'li',upper:'kan',gloss:'事未竟功，慎终如始'}
+  ];
+
+  // 预处理：卦码（自下而上6位） + 各类索引
+  var byPair = {};   // "lower-upper" -> hex
+  var byNum  = {};   // num -> hex
+  var byCode = {};   // 6位二进制码 -> hex
+
+  HEX.forEach(function(h){
+    h.code = T[h.lower].bits + T[h.upper].bits; // 自下而上
+    byPair[h.lower + '-' + h.upper] = h;
+    byNum[h.num] = h;
+    byCode[h.code] = h;
+  });
+
+  function invert(code){
+    var out = '';
+    for (var i=0;i<code.length;i++) out += code[i]==='1' ? '0' : '1';
+    return out;
+  }
+  function reverseStr(code){
+    return code.split('').reverse().join('');
+  }
+
+  function renderLines(code, size){
+    // code: 自下而上6位字符串；渲染需自上而下（i=5 -> i=0）
+    var cls = size === 'lg' ? '' : '';
+    var html = '';
+    for (var i=5;i>=0;i--){
+      var isYang = code[i] === '1';
+      html += '<div class="yao ' + (isYang?'yang':'yin') + '">';
+      if (isYang){
+        html += '<div class="seg"></div>';
+      } else {
+        html += '<div class="seg"></div><div class="seg"></div>';
+      }
+      html += '</div>';
+    }
+    return html;
+  }
+
+  // ---------- 构建矩阵 ----------
+  var table = document.getElementById('matrix');
+  var thead = document.createElement('thead');
+  var trHead = document.createElement('tr');
+
+  var corner = document.createElement('th');
+  corner.className = 'axis-label';
+  corner.innerHTML = '内卦 ＼ 外卦';
+  trHead.appendChild(corner);
+
+  ORDER.forEach(function(key){
+    var th = document.createElement('th');
+    th.className = 'trig-head';
+    th.scope = 'col';
+    var t = T[key];
+    th.innerHTML = '<div class="sym">'+t.sym+'</div><div class="zh">'+t.zh+'</div><div class="el">'+t.el+'</div>';
+    trHead.appendChild(th);
+  });
+  thead.appendChild(trHead);
+  table.appendChild(thead);
+
+  var tbody = document.createElement('tbody');
+  var animIndex = 0;
+
+  ORDER.forEach(function(rowKey){
+    var tr = document.createElement('tr');
+    var rowTh = document.createElement('th');
+    rowTh.scope = 'row';
+    var rt = T[rowKey];
+    rowTh.innerHTML = '<span class="sym">'+rt.sym+'</span><span class="zh">'+rt.zh+'</span><br><span class="el">'+rt.el+'</span>';
+    tr.appendChild(rowTh);
+
+    ORDER.forEach(function(colKey){
+      var h = byPair[rowKey + '-' + colKey];
+      var td = document.createElement('td');
+      var btn = document.createElement('button');
+      btn.className = 'cell';
+      btn.type = 'button';
+      btn.dataset.num = h.num;
+      btn.style.animationDelay = (animIndex * 10) + 'ms';
+      animIndex++;
+      btn.innerHTML =
+        '<span class="seal">'+h.num+'</span>' +
+        '<span class="lines">'+renderLines(h.code)+'</span>' +
+        '<span class="nm">'+h.name+'</span>';
+      btn.addEventListener('click', function(){ openPanel(h.num); });
+      td.appendChild(btn);
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+
+  // ---------- 搜索过滤 ----------
+  var searchInput = document.getElementById('search');
+  var allCells = Array.prototype.slice.call(document.querySelectorAll('.cell'));
+
+  searchInput.addEventListener('input', function(){
+    var v = searchInput.value.trim().toLowerCase();
+    if (!v){
+      allCells.forEach(function(c){ c.classList.remove('dim','match'); });
+      return;
+    }
+    allCells.forEach(function(c){
+      var h = byNum[c.dataset.num];
+      var hit = h.name.indexOf(v) > -1 ||
+                h.py.toLowerCase().indexOf(v) > -1 ||
+                h.full.indexOf(v) > -1 ||
+                String(h.num) === v;
+      c.classList.toggle('match', hit);
+      c.classList.toggle('dim', !hit);
+    });
+  });
+
+  searchInput.addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){
+      var firstMatch = document.querySelector('.cell.match');
+      if (firstMatch) openPanel(Number(firstMatch.dataset.num));
+    }
+  });
+
+  // ---------- 详情面板 ----------
+  var backdrop = document.getElementById('backdrop');
+  var lastFocused = null;
+
+  function fillRelated(elLines, elName, code){
+    var target = byCode[code];
+    elLines.parentElement.querySelector ? null : null;
+    if (target){
+      elLines.innerHTML = renderLines(code);
+      elName.textContent = target.name + '（第' + target.num + '卦）';
+      elLines.closest('.rel-btn').onclick = function(){ openPanel(target.num); };
+      elLines.closest('.rel-btn').disabled = false;
+    }
+  }
+
+  function openPanel(num){
+    var h = byNum[num];
+    lastFocused = document.activeElement;
+
+    document.getElementById('panelLines').innerHTML = renderLines(h.code);
+    document.getElementById('panelNum').textContent = '第 ' + h.num + ' 卦';
+    document.getElementById('panelName').textContent = h.name;
+    document.getElementById('panelPy').textContent = h.py;
+    document.getElementById('panelFull').textContent = h.full;
+    document.getElementById('panelUpper').textContent = T[h.upper].zh + '（' + T[h.upper].el + '）';
+    document.getElementById('panelLower').textContent = T[h.lower].zh + '（' + T[h.lower].el + '）';
+    document.getElementById('panelGloss').textContent = h.gloss;
+
+    var cuoCode = invert(h.code);
+    var zongCode = reverseStr(h.code);
+    fillRelated(document.getElementById('cuoLines'), document.getElementById('cuoName'), cuoCode);
+    fillRelated(document.getElementById('zongLines'), document.getElementById('zongName'), zongCode);
+
+    document.getElementById('prevBtn').onclick = function(){
+      openPanel(h.num === 1 ? 64 : h.num - 1);
+    };
+    document.getElementById('nextBtn').onclick = function(){
+      openPanel(h.num === 64 ? 1 : h.num + 1);
+    };
+
+    backdrop.classList.add('open');
+    document.getElementById('closeBtn').focus();
+    document.addEventListener('keydown', escHandler);
+  }
+
+  function closePanel(){
+    backdrop.classList.remove('open');
+    document.removeEventListener('keydown', escHandler);
+    if (lastFocused) lastFocused.focus();
+  }
+
+  function escHandler(e){
+    if (e.key === 'Escape') closePanel();
+  }
+
+  document.getElementById('closeBtn').addEventListener('click', closePanel);
+  backdrop.addEventListener('click', function(e){
+    if (e.target === backdrop) closePanel();
+  });
+
+})();
+</script>
+</body>
+</html>

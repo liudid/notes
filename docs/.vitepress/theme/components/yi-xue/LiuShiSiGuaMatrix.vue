@@ -40,12 +40,14 @@
               </template>
             </th>
             <td v-for="(hex, ci) in row" :key="`${ri}-${ci}`">
-              <HexCell v-if="hex" :hex="hex" />
+              <HexCell v-if="hex" :hex="hex" @select="openDetail" />
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+
+    <LiuShiSiGuaDetailDrawer v-model="drawerVisible" :hex="selectedHex" />
   </div>
 </template>
 
@@ -53,6 +55,7 @@
 import { computed, ref } from "vue";
 import Segmented from "../Segmented.vue";
 import HexCell from "./HexCell.vue";
+import LiuShiSiGuaDetailDrawer from "./LiuShiSiGuaDetailDrawer.vue";
 import {
   HEX,
   T,
@@ -64,6 +67,13 @@ import {
 } from "../../config/liuShiSiGua.ts";
 
 const mode = ref("zhouyi");
+const drawerVisible = ref(false);
+const selectedHex = ref(null);
+
+function openDetail(hex) {
+  selectedHex.value = hex;
+  drawerVisible.value = true;
+}
 
 const modeOptions = [
   { label: "周易卦序", value: "zhouyi" },
