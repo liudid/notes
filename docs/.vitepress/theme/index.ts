@@ -23,6 +23,8 @@ import FangWei from "./components/yi-xue/FangWei.vue";
 import ValuesRowTable from "./components/yi-xue/ValuesRowTable.vue";
 import ShiKongTouYing from "./components/yi-xue/ShiKongTouYing.vue";
 import LiuShiSiGuaMatrix from "./components/yi-xue/LiuShiSiGuaMatrix.vue";
+import JingWenGuaCi from "./components/yi-xue/JingWenGuaCi.vue";
+import JingWenYaoCi from "./components/yi-xue/JingWenYaoCi.vue";
 
 import WuXing from "./components/WuXing.vue";
 import TianGan from "./components/TianGan.vue";
@@ -62,6 +64,8 @@ export default {
     app.component("ValuesRowTable", ValuesRowTable);
     app.component("ShiKongTouYing", ShiKongTouYing);
     app.component("LiuShiSiGuaMatrix", LiuShiSiGuaMatrix);
+    app.component("JingWenGuaCi", JingWenGuaCi);
+    app.component("JingWenYaoCi", JingWenYaoCi);
 
     app.component("WuXing", WuXing);
     app.component("TianGan", TianGan);

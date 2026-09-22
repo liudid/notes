@@ -109,33 +109,22 @@
               <section class="detail-sec">
                 <h4 class="sec-label">爻辞（分论）</h4>
                 <p class="sec-desc">每个爻的具体情况</p>
-                <el-collapse v-model="activeYao" class="yao-collapse">
-                  <el-collapse-item
-                    v-for="(yao, idx) in yaoRows"
-                    :key="idx"
-                    :name="String(idx)"
-                    :title="yao.label"
-                  >
-                    <div class="yao-block">
-                      <p class="yao-ci" :class="{ empty: !yao.yaoCi }">
-                        {{ yao.yaoCi || "（待补充）" }}
-                      </p>
-                      <p v-if="yao.xiaoXiang" class="yao-xiang">
-                        <b>小象：</b>{{ yao.xiaoXiang }}
-                      </p>
-                      <div class="wei-tags">
-                        <span
-                          v-for="(tag, ti) in yao.weiTags"
-                          :key="ti"
-                          class="wei-tag"
-                          :class="tag.tone"
-                        >
-                          {{ tag.label }}
-                        </span>
-                      </div>
-                    </div>
-                  </el-collapse-item>
-                </el-collapse>
+                <ul class="yao-ci-list">
+                  <li v-for="(yao, idx) in yaoRows" :key="idx">
+                    <span class="yao-ci-label">{{ yao.label }}</span>
+                    <span class="yao-ci" :class="{ empty: !yao.yaoCi }">
+                      {{ yao.yaoCi || "（待补充）" }}
+                    </span>
+                  </li>
+                  <li v-if="detail?.jingWen.yongJiu">
+                    <span class="yao-ci-label">用九</span>
+                    <span class="yao-ci">{{ detail.jingWen.yongJiu }}</span>
+                  </li>
+                  <li v-if="detail?.jingWen.yongLiu">
+                    <span class="yao-ci-label">用六</span>
+                    <span class="yao-ci">{{ detail.jingWen.yongLiu }}</span>
+                  </li>
+                </ul>
               </section>
             </el-collapse-item>
 
@@ -168,8 +157,29 @@
                 <ul class="xiaoxiang-list">
                   <li v-for="(yao, idx) in yaoRows" :key="idx">
                     <span class="xiaoxiang-label">{{ yao.label }}</span>
-                    <span :class="{ empty: !yao.xiaoXiang }">
+                    <span
+                      class="xiaoxiang-text"
+                      :class="{ empty: !yao.xiaoXiang }"
+                    >
                       {{ yao.xiaoXiang || "（待补充）" }}
+                    </span>
+                  </li>
+                  <li v-if="detail?.jingWen.yongJiu">
+                    <span class="xiaoxiang-label">用九</span>
+                    <span
+                      class="xiaoxiang-text"
+                      :class="{ empty: !detail.jingWen.yongJiuXiaoXiang }"
+                    >
+                      {{ detail.jingWen.yongJiuXiaoXiang || "（待补充）" }}
+                    </span>
+                  </li>
+                  <li v-if="detail?.jingWen.yongLiu">
+                    <span class="xiaoxiang-label">用六</span>
+                    <span
+                      class="xiaoxiang-text"
+                      :class="{ empty: !detail.jingWen.yongLiuXiaoXiang }"
+                    >
+                      {{ detail.jingWen.yongLiuXiaoXiang || "（待补充）" }}
                     </span>
                   </li>
                 </ul>
@@ -302,7 +312,6 @@ const props = defineProps({
 const emit = defineEmits(["update:modelValue"]);
 
 const activePanels = ref(["jing", "zhuan"]);
-const activeYao = ref(["0", "1", "2", "3", "4", "5"]);
 
 const visible = computed({
   get: () => props.modelValue,
@@ -317,7 +326,7 @@ const detail = computed(() => (props.hex ? getHexDetail(props.hex.num) : null));
 
 function buildYaoRow(index) {
   const isYang = props.hex.code[index] === "1";
-  const mock = detail.value?.jingWen.yaoCi?.[index];
+  const yao = detail.value?.jingWen.yaoCi?.[index];
   return {
     index,
     posLabel: posLabelWithOrdinal(index),
@@ -325,7 +334,7 @@ function buildYaoRow(index) {
     dangWei: isYang === POS_IS_YANG[index],
     yaoXing: yaoXingLabel(isYang),
     posAttr: posAttrLabel(index),
-    callName: mock?.label || yaoTraditionalLabel(index, isYang),
+    callName: yao?.label || yaoTraditionalLabel(index, isYang),
   };
 }
 
@@ -363,17 +372,17 @@ const bianGua = computed(() =>
 
 const yaoRows = computed(() => {
   if (!props.hex) return [];
-  const mockYao = detail.value?.jingWen.yaoCi ?? [];
+  const sourceYao = detail.value?.jingWen.yaoCi ?? [];
 
   return Array.from({ length: 6 }, (_, i) => {
-    const mock = mockYao[i];
+    const yao = sourceYao[i];
     const isYang = props.hex.code[i] === "1";
     return {
       index: i,
       posName: POS_NAMES[i],
-      label: mock?.label || yaoTraditionalLabel(i, isYang),
-      yaoCi: mock?.yaoCi ?? "",
-      xiaoXiang: mock?.xiaoXiang ?? "",
+      label: yao?.label || yaoTraditionalLabel(i, isYang),
+      yaoCi: yao?.yaoCi ?? "",
+      xiaoXiang: yao?.xiaoXiang ?? "",
       weiTags: weiByIndex.value[i] ?? [],
     };
   }).reverse();
@@ -383,7 +392,6 @@ watch(
   () => props.hex,
   () => {
     activePanels.value = ["jing", "zhuan"];
-    activeYao.value = ["0", "1", "2", "3", "4", "5"];
   }
 );
 </script>
@@ -399,6 +407,7 @@ watch(
   --cinnabar-deep: #832a20;
   --good: #4c6b3f;
   --serif: "Noto Serif SC", "Songti SC", "Source Han Serif SC", "STSong", serif;
+  --kaiti: "KaiTi", "STKaiti", "Kaiti SC", "楷体", serif;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -803,7 +812,8 @@ watch(
 
 .liu-shi-si-gua-detail .sec-text {
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--kaiti);
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.9;
   color: var(--ink);
@@ -811,37 +821,42 @@ watch(
 
 .liu-shi-si-gua-detail .sec-text.empty,
 .liu-shi-si-gua-detail .yao-ci.empty,
+.liu-shi-si-gua-detail .xiaoxiang-text.empty,
 .liu-shi-si-gua-detail .empty {
   color: var(--ink-faint);
   font-size: 13px;
+  font-weight: 400;
 }
 
-.liu-shi-si-gua-detail .yao-collapse {
-  border: 1px solid var(--paper-deep);
-  border-radius: 4px;
+.liu-shi-si-gua-detail .yao-ci-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.liu-shi-si-gua-detail .yao-collapse .el-collapse-item__header {
+.liu-shi-si-gua-detail .yao-ci-list li {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--paper-deep);
+  align-items: baseline;
+}
+
+.liu-shi-si-gua-detail .yao-ci-label {
+  flex: none;
+  width: 48px;
   font-size: 13px;
-  padding-left: 12px;
-}
-
-.liu-shi-si-gua-detail .yao-block {
-  padding: 0 12px 12px;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .liu-shi-si-gua-detail .yao-ci {
-  margin: 0 0 8px;
-  font-family: var(--serif);
+  margin: 0;
+  font-family: var(--kaiti);
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.8;
-}
-
-.liu-shi-si-gua-detail .yao-xiang {
-  margin: 0 0 10px;
-  font-size: 13px;
-  color: var(--ink-soft);
-  line-height: 1.7;
+  color: var(--ink);
 }
 
 .liu-shi-si-gua-detail .xiaoxiang-list {
@@ -857,12 +872,21 @@ watch(
   border-bottom: 1px solid var(--paper-deep);
   font-size: 13px;
   line-height: 1.7;
+  align-items: baseline;
 }
 
 .liu-shi-si-gua-detail .xiaoxiang-label {
   flex: none;
   width: 48px;
   font-weight: 600;
+  color: var(--ink);
+}
+
+.liu-shi-si-gua-detail .xiaoxiang-text {
+  font-family: var(--kaiti);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.8;
   color: var(--ink);
 }
 
