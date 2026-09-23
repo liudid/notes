@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>爻的「据」· 阳据阴</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-soft: #f6f7f8;
+        --text-1: #1f2d3d;
+        --text-2: #5b6b7c;
+        --text-3: #99a4b0;
+        --divider: #e5e7ea;
+        --stroke: #445667;
+        --ju: #2b6cb0;
+
+        --row-h: 36px;
+        --gap-h: 14px;
+        --bar-h: 12px;
+        --board-h: calc(6 * var(--row-h) + 5 * var(--gap-h));
+        --link-w: 88px;
+        --ease: 0.28s ease;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #17181c;
+          --bg-soft: #202228;
+          --text-1: #e3e4e1;
+          --text-2: #a5afba;
+          --text-3: #737e8a;
+          --divider: #2b2e35;
+          --stroke: #c2ccd7;
+          --ju: #6ba3e8;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 24px 64px;
+        background: var(--bg);
+        color: var(--text-1);
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      [v-cloak] {
+        display: none;
+      }
+
+      .wrap {
+        max-width: 620px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 4px;
+        letter-spacing: 0.02em;
+      }
+
+      .sub {
+        margin: 0;
+        font-size: 13px;
+        color: var(--text-3);
+        line-height: 1.6;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 22px 0 0;
+      }
+
+      .seg {
+        display: inline-flex;
+        border: 1px solid var(--divider);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .seg button {
+        font: inherit;
+        font-size: 13px;
+        padding: 6px 14px;
+        border: 0;
+        border-right: 1px solid var(--divider);
+        background: transparent;
+        color: var(--text-2);
+        cursor: pointer;
+        transition: background 0.16s ease, color 0.16s ease;
+      }
+
+      .seg button:last-child {
+        border-right: 0;
+      }
+
+      .seg button:hover {
+        background: var(--bg-soft);
+        color: var(--text-1);
+      }
+
+      .seg button.on {
+        background: var(--text-1);
+        color: var(--bg);
+      }
+
+      .spacer {
+        flex: 1;
+      }
+
+      .text-btn {
+        font: inherit;
+        font-size: 13px;
+        padding: 6px 12px;
+        border: 1px solid var(--divider);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--text-2);
+        cursor: pointer;
+      }
+
+      .text-btn:hover {
+        background: var(--bg-soft);
+        color: var(--text-1);
+      }
+
+      .readout {
+        min-height: 60px;
+        margin: 16px 0 0;
+        padding: 9px 14px;
+        border-radius: 8px;
+        background: var(--bg-soft);
+        overflow: hidden;
+      }
+
+      .readout .main {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text-1);
+      }
+
+      .readout .tick {
+        flex: none;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--text-3);
+      }
+
+      .readout.adj .tick {
+        background: var(--ju);
+      }
+
+      .readout .note {
+        margin-top: 3px;
+        padding-left: 17px;
+        font-size: 11px;
+        line-height: 1.5;
+        color: var(--text-3);
+      }
+
+      .stage {
+        display: grid;
+        grid-template-columns: minmax(0, 260px) var(--link-w) 24px;
+        gap: 0 4px;
+        align-items: start;
+        max-width: 480px;
+        margin: 26px auto 0;
+        user-select: none;
+      }
+
+      .board {
+        position: relative;
+        height: var(--board-h);
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 2.75rem 1fr;
+        column-gap: 12px;
+        align-items: center;
+        height: var(--row-h);
+      }
+
+      .row + .row {
+        margin-top: var(--gap-h);
+      }
+
+      .cell {
+        display: contents;
+        cursor: pointer;
+      }
+
+      .cell .label {
+        font-size: 13px;
+        color: var(--text-3);
+        letter-spacing: 0.05em;
+        transition: color 0.2s ease, opacity var(--ease);
+      }
+
+      .glyph {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        height: var(--bar-h);
+        transition: opacity var(--ease);
+      }
+
+      .bar {
+        flex: 1;
+        height: var(--bar-h);
+        border-radius: 3px;
+        background: var(--stroke);
+        transition: box-shadow 0.25s ease;
+      }
+
+      .cell.faint .label,
+      .cell.faint .glyph {
+        opacity: 0.16;
+      }
+
+      .cell.lit .label {
+        color: var(--text-1);
+        font-weight: 600;
+      }
+
+      .cell.lit.adj .bar {
+        box-shadow: 0 0 0 1px var(--ju), 0 0 10px -2px var(--ju);
+      }
+
+      .links {
+        width: var(--link-w);
+        height: var(--board-h);
+        display: block;
+        overflow: visible;
+      }
+
+      .link-hit {
+        fill: transparent;
+        stroke: transparent;
+        stroke-width: 14;
+        cursor: pointer;
+        pointer-events: stroke;
+      }
+
+      .link-path {
+        fill: none;
+        stroke: var(--ju);
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+        pointer-events: none;
+        transition: stroke-opacity var(--ease), stroke-width var(--ease);
+      }
+
+      .link-path.idle {
+        stroke-opacity: 0.5;
+        stroke-width: 2;
+      }
+
+      .link-path.faint {
+        stroke-opacity: 0.1;
+        stroke-width: 2;
+      }
+
+      .link-path.active {
+        stroke-opacity: 1;
+        stroke-width: 2.5;
+      }
+
+      .dots {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: var(--board-h);
+        padding: 0;
+        margin: 0;
+        position: relative;
+      }
+
+      .dot-wrap {
+        position: absolute;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      .dot {
+        width: 22px;
+        height: 22px;
+        display: grid;
+        place-items: center;
+        border: 0;
+        padding: 0;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .dot i {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 2px solid var(--ju);
+        background: transparent;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      .dot.on i {
+        background: var(--ju);
+        transform: scale(1.15);
+      }
+
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 24px;
+        margin-top: 18px;
+        font-size: 12px;
+        color: var(--text-2);
+      }
+
+      .legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .legend i {
+        width: 22px;
+        height: 16px;
+        display: inline-block;
+        position: relative;
+      }
+
+      .legend i.adj::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        bottom: 2px;
+        width: 14px;
+        border: 2px solid var(--ju);
+        border-left: 0;
+      }
+
+      .hintbar {
+        margin: 14px 0 0;
+        text-align: center;
+        font-size: 12px;
+        color: var(--text-3);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 24px 14px 48px;
+        }
+
+        .stage {
+          grid-template-columns: minmax(0, 1fr) var(--link-w) 22px;
+          max-width: 100%;
+        }
+
+        .row {
+          grid-template-columns: 2.4rem 1fr;
+          column-gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="wrap" v-cloak>
+      <h1>爻的「据」· 阳据阴</h1>
+      <p class="sub">
+        相邻两爻中，阳在上、阴在下，则阳爻「据」阴爻（阳据阴，理之所常）。与阴承阳为同一结构的两面：从阳爻看叫据，从阴爻看叫承。
+      </p>
+
+      <div class="toolbar">
+        <div class="seg">
+          <button
+            v-for="(h, i) in hexagrams"
+            :key="h.num"
+            :class="{ on: current === i }"
+            @click="selectHex(i)"
+          >
+            {{ h.name }}
+          </button>
+        </div>
+        <span class="spacer"></span>
+        <button v-if="focusKey !== null" class="text-btn" @click="clear">
+          通览
+        </button>
+      </div>
+
+      <div class="readout" :class="focusKind">
+        <div class="main">
+          <span class="tick"></span>
+          <span>{{ headline }}</span>
+        </div>
+        <div class="note">{{ note }}</div>
+      </div>
+
+      <div class="stage">
+        <div class="board">
+          <div
+            v-for="row in yaoRows"
+            :key="row.i"
+            class="row"
+          >
+            <div
+              class="cell"
+              :class="[yaoTone(row.i), toneKind]"
+              role="button"
+              :aria-label="'看 ' + row.label + ' 的据'"
+              @click="tapYao(row.i)"
+            >
+              <div class="label">{{ row.label }}</div>
+              <div class="glyph">
+                <span class="bar"></span>
+                <span v-if="!row.yang" class="bar"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <svg
+          class="links"
+          :viewBox="'0 0 ' + LINK_W + ' ' + BOARD_H"
+          preserveAspectRatio="xMinYMin meet"
+          aria-hidden="true"
+        >
+          <g v-for="p in adjPairs" :key="'a' + p.index">
+            <path
+              class="link-hit"
+              :d="adjPath(p)"
+              @click="focus(p.key)"
+            />
+            <path
+              class="link-path"
+              :class="linkState(p.key)"
+              :d="adjPath(p)"
+            />
+          </g>
+        </svg>
+
+        <div class="dots">
+          <div
+            v-for="d in dotItems"
+            :key="d.key"
+            class="dot-wrap"
+            :style="{ top: d.top + 'px' }"
+          >
+            <button
+              type="button"
+              class="dot"
+              :class="{ on: focusKey === d.key }"
+              :aria-label="'看：' + d.title"
+              @click="focus(d.key)"
+            >
+              <i></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><i class="adj"></i>相邻据 · 阳据阴</span>
+      </div>
+
+      <p class="hintbar">
+        点爻、方线或右侧圆点看单独一对；再点同一项回到通览
+      </p>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+      if (!window.Vue) {
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"><\/script>'
+        );
+      }
+    </script>
+    <script>
+      const { createApp, ref, computed } = Vue;
+
+      const ROW_H = 36;
+      const GAP_H = 14;
+      const BOARD_H = 6 * ROW_H + 5 * GAP_H;
+      const LINK_W = 88;
+      const X_STEM = 2;
+
+      function yCenter(i) {
+        return (5 - i) * (ROW_H + GAP_H) + ROW_H / 2;
+      }
+
+      function yaoTraditionalLabel(index, isYang) {
+        const yy = isYang ? "九" : "六";
+        if (index === 0) return `初${yy}`;
+        if (index === 5) return `上${yy}`;
+        return `${yy}${["二", "三", "四", "五"][index - 1]}`;
+      }
+
+      function slotLabel(lo, hi) {
+        const names = ["初", "二", "三", "四", "五", "上"];
+        return `${names[hi]}据${names[lo]}`;
+      }
+
+      /** 相邻据：阳在上、阴在下 */
+      function buildAdjPairs(lines) {
+        const out = [];
+        for (let hi = 1; hi <= 5; hi++) {
+          const lo = hi - 1;
+          if (lines[hi] && !lines[lo]) {
+            const a = yaoTraditionalLabel(lo, false);
+            const b = yaoTraditionalLabel(hi, true);
+            out.push({
+              index: out.length,
+              key: `adj-${lo}-${hi}`,
+              kind: "adj",
+              lo,
+              hi,
+              slot: slotLabel(lo, hi),
+              title: `${b} 据 ${a}`,
+              hint: "阳爻在阴爻之上，相邻据阴",
+            });
+          }
+        }
+        return out;
+      }
+
+      const raw = [
+        {
+          num: 4,
+          name: "蒙",
+          full: "山水蒙",
+          code: "010001",
+          notes: {
+            "adj-0-1":
+              "九二《象》曰「应五据初」——九二对初六为相邻据，对六五为正应。",
+          },
+        },
+        {
+          num: 64,
+          name: "未济",
+          full: "火水未济",
+          code: "101010",
+          notes: {
+            "adj-1-2": "九三据六二：阳据阴，理之所常。",
+            "adj-3-4": "九五据六四：全卦皆不当位，据亦不救其失位。",
+          },
+        },
+        {
+          num: 16,
+          name: "豫",
+          full: "雷地豫",
+          code: "000100",
+          notes: {
+            "adj-2-3": "九四据六三：相邻阳据阴。",
+          },
+        },
+      ];
+
+      const hexagrams = raw.map((h) => ({
+        ...h,
+        yao: h.code.split("").map((c, i) => ({
+          yang: c === "1",
+          label: yaoTraditionalLabel(i, c === "1"),
+        })),
+      }));
+
+      createApp({
+        setup() {
+          const current = ref(0);
+          const focusKey = ref(null);
+
+          const hex = computed(() => hexagrams[current.value]);
+          const lines = computed(() => hex.value.yao.map((y) => y.yang));
+          const adjPairs = computed(() => buildAdjPairs(lines.value));
+
+          const focusItem = computed(() => {
+            if (focusKey.value === null) return null;
+            return adjPairs.value.find((p) => p.key === focusKey.value) || null;
+          });
+
+          const focusKind = computed(() =>
+            focusItem.value ? focusItem.value.kind : ""
+          );
+
+          const toneKind = computed(() => focusKind.value);
+
+          const yaoRows = computed(() => {
+            const out = [];
+            for (let i = 5; i >= 0; i--) {
+              out.push({ i, ...hex.value.yao[i] });
+            }
+            return out;
+          });
+
+          const headline = computed(() => {
+            const f = focusItem.value;
+            if (f) return `${f.title} · ${f.hint}`;
+            return `${hex.value.full} · 相邻据 ${adjPairs.value.length}`;
+          });
+
+          const note = computed(() => {
+            if (focusKey.value === null)
+              return "相邻两爻：阳在上、阴在下即为据";
+            return hex.value.notes[focusKey.value] || "";
+          });
+
+          function adjPath(p) {
+            const yHi = yCenter(p.hi);
+            const yLo = yCenter(p.lo);
+            const xOuter = 28 + (adjPairs.value.length - 1 - p.index) * 12;
+            return `M ${X_STEM} ${yHi} L ${xOuter} ${yHi} L ${xOuter} ${yLo} L ${X_STEM} ${yLo}`;
+          }
+
+          const dotItems = computed(() =>
+            adjPairs.value.map((p) => ({
+              key: p.key,
+              title: p.title,
+              top: (yCenter(p.hi) + yCenter(p.lo)) / 2,
+            }))
+          );
+
+          function yaoTone(i) {
+            const f = focusItem.value;
+            if (!f) return "";
+            return i === f.lo || i === f.hi ? "lit" : "faint";
+          }
+
+          function linkState(key) {
+            if (focusKey.value === null) return "idle";
+            return focusKey.value === key ? "active" : "faint";
+          }
+
+          function focus(key) {
+            focusKey.value = focusKey.value === key ? null : key;
+          }
+
+          function clear() {
+            focusKey.value = null;
+          }
+
+          function tapYao(i) {
+            const adj = adjPairs.value.find((p) => p.lo === i || p.hi === i);
+            if (adj) focus(adj.key);
+          }
+
+          function selectHex(i) {
+            current.value = i;
+            focusKey.value = null;
+          }
+
+          return {
+            BOARD_H,
+            LINK_W,
+            hexagrams,
+            current,
+            focusKey,
+            focusKind,
+            toneKind,
+            adjPairs,
+            yaoRows,
+            dotItems,
+            headline,
+            note,
+            adjPath,
+            yaoTone,
+            linkState,
+            focus,
+            clear,
+            tapYao,
+            selectHex,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

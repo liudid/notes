@@ -241,47 +241,28 @@
             </section>
           </div>
 
-          <section class="detail-sec">
-            <h4 class="sec-label">位（看位置）</h4>
-            <p class="sec-desc">承、乘、比、应 — 判断静态好坏</p>
-            <div v-for="(yao, idx) in yaoRows" :key="idx" class="wei-row">
-              <span class="wei-pos">{{ yao.posName }}</span>
-              <div class="wei-tags">
-                <span
-                  v-for="(tag, ti) in yao.weiTags.filter(
-                    (t) => t.key !== 'zhong' && t.key !== 'zheng'
-                  )"
-                  :key="ti"
-                  class="wei-tag"
-                  :class="tag.tone"
-                >
-                  {{ tag.label }}
-                </span>
-              </div>
-            </div>
+          <section class="detail-sec bi-sec">
+            <h4 class="sec-label">比（看相邻）</h4>
+            <p class="sec-desc">相邻两爻：一阴一阳为亲比（承/乘），同性为敌比</p>
+            <YaoBiMini v-if="hex" :code="hex.code" />
           </section>
 
-          <section class="detail-sec">
+          <section class="detail-sec ying-sec">
+            <h4 class="sec-label">应（看隔位）</h4>
+            <p class="sec-desc">初四、二五、三上：异性为正应，同性为无应</p>
+            <YaoYingMini v-if="hex" :code="hex.code" />
+          </section>
+
+          <section class="detail-sec ju-sec">
+            <h4 class="sec-label">据（看阳据阴）</h4>
+            <p class="sec-desc">相邻两爻：阳在上、阴在下，则阳据阴</p>
+            <YaoJuMini v-if="hex" :code="hex.code" />
+          </section>
+
+          <section class="detail-sec bian-sec">
             <h4 class="sec-label">变（看变化）</h4>
-            <p class="sec-desc">错、综、互、变 — 判断动态发展</p>
-            <div class="bian-grid">
-              <div class="bian-card">
-                <span class="bian-key">错</span>
-                <span class="bian-val">{{ bianGua.cuo }}</span>
-              </div>
-              <div class="bian-card">
-                <span class="bian-key">综</span>
-                <span class="bian-val">{{ bianGua.zong }}</span>
-              </div>
-              <div class="bian-card">
-                <span class="bian-key">互</span>
-                <span class="bian-val">{{ bianGua.hu }}</span>
-              </div>
-              <div class="bian-card">
-                <span class="bian-key">变</span>
-                <span class="bian-val muted">{{ bianGua.bianGua }}</span>
-              </div>
-            </div>
+            <p class="sec-desc">错综互由本卦推出；之卦需指定动爻</p>
+            <YaoBianMini v-if="hex" :code="hex.code" />
           </section>
         </aside>
       </div>
@@ -294,15 +275,16 @@ import { computed, ref, watch } from "vue";
 import { T } from "../../config/liuShiSiGua.ts";
 import { getHexDetail } from "../../config/liuShiSiGuaDetail.ts";
 import {
-  computeBianGua,
-  computeYaoWei,
   POS_IS_YANG,
-  POS_NAMES,
   posAttrLabel,
   posLabelWithOrdinal,
   yaoTraditionalLabel,
   yaoXingLabel,
 } from "../../config/liuShiSiGuaWei.ts";
+import YaoBiMini from "./YaoBiMini.vue";
+import YaoYingMini from "./YaoYingMini.vue";
+import YaoJuMini from "./YaoJuMini.vue";
+import YaoBianMini from "./YaoBianMini.vue";
 
 const props = defineProps({
   modelValue: { type: Boolean, default: false },
@@ -338,10 +320,6 @@ function buildYaoRow(index) {
   };
 }
 
-function shortPosName(index) {
-  return POS_NAMES[index].replace("爻", "");
-}
-
 const headBranchLabels = computed(() => {
   if (!props.hex) {
     return {
@@ -360,16 +338,6 @@ const headYaoRows = computed(() => {
   return [5, 4, 3, 2, 1, 0].map(buildYaoRow);
 });
 
-const weiByIndex = computed(() =>
-  props.hex ? computeYaoWei(props.hex.code) : []
-);
-
-const bianGua = computed(() =>
-  props.hex
-    ? computeBianGua(props.hex.code)
-    : { cuo: "", zong: "", hu: "", bianGua: "" }
-);
-
 const yaoRows = computed(() => {
   if (!props.hex) return [];
   const sourceYao = detail.value?.jingWen.yaoCi ?? [];
@@ -379,11 +347,9 @@ const yaoRows = computed(() => {
     const isYang = props.hex.code[i] === "1";
     return {
       index: i,
-      posName: POS_NAMES[i],
       label: yao?.label || yaoTraditionalLabel(i, isYang),
       yaoCi: yao?.yaoCi ?? "",
       xiaoXiang: yao?.xiaoXiang ?? "",
-      weiTags: weiByIndex.value[i] ?? [],
     };
   }).reverse();
 });
@@ -888,77 +854,6 @@ watch(
   font-size: 14px;
   line-height: 1.8;
   color: var(--ink);
-}
-
-.liu-shi-si-gua-detail .wei-row {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--paper-deep);
-}
-
-.liu-shi-si-gua-detail .wei-pos {
-  flex: none;
-  width: 40px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.liu-shi-si-gua-detail .wei-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.liu-shi-si-gua-detail .wei-tag {
-  font-size: 11px;
-  padding: 2px 8px;
-  border: 1px solid var(--ink-faint);
-  color: var(--ink-soft);
-  border-radius: 2px;
-}
-
-.liu-shi-si-gua-detail .wei-tag.good {
-  border-color: var(--good);
-  color: var(--good);
-}
-
-.liu-shi-si-gua-detail .wei-tag.warn {
-  border-color: var(--cinnabar);
-  color: var(--cinnabar);
-}
-
-.liu-shi-si-gua-detail .bian-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.liu-shi-si-gua-detail .bian-card {
-  border: 1px solid var(--paper-deep);
-  padding: 10px 12px;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 4px;
-}
-
-.liu-shi-si-gua-detail .bian-key {
-  display: block;
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--cinnabar-deep);
-  margin-bottom: 4px;
-}
-
-.liu-shi-si-gua-detail .bian-val {
-  font-size: 13px;
-  color: var(--ink);
-}
-
-.liu-shi-si-gua-detail .bian-val.muted {
-  color: var(--ink-faint);
-  font-size: 12px;
 }
 
 @media (max-width: 768px) {

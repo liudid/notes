@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>爻的「应」· 隔位呼应</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-soft: #f6f7f8;
+        --text-1: #1f2d3d;
+        --text-2: #5b6b7c;
+        --text-3: #99a4b0;
+        --divider: #e5e7ea;
+        --stroke: #445667;
+        --ying: #17976a;
+        --void: #9aa5b1;
+
+        --row-h: 36px;
+        --gap-h: 14px;
+        --bar-h: 12px;
+        --board-h: calc(6 * var(--row-h) + 5 * var(--gap-h));
+        --link-w: 88px;
+        --ease: 0.28s ease;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #17181c;
+          --bg-soft: #202228;
+          --text-1: #e3e4e1;
+          --text-2: #a5afba;
+          --text-3: #737e8a;
+          --divider: #2b2e35;
+          --stroke: #c2ccd7;
+          --ying: #46d999;
+          --void: #6f7a86;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 24px 64px;
+        background: var(--bg);
+        color: var(--text-1);
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      [v-cloak] {
+        display: none;
+      }
+
+      .wrap {
+        max-width: 620px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 4px;
+        letter-spacing: 0.02em;
+      }
+
+      .sub {
+        margin: 0;
+        font-size: 13px;
+        color: var(--text-3);
+        line-height: 1.6;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 22px 0 0;
+      }
+
+      .seg {
+        display: inline-flex;
+        border: 1px solid var(--divider);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .seg button {
+        font: inherit;
+        font-size: 13px;
+        padding: 6px 14px;
+        border: 0;
+        border-right: 1px solid var(--divider);
+        background: transparent;
+        color: var(--text-2);
+        cursor: pointer;
+        transition: background 0.16s ease, color 0.16s ease;
+      }
+
+      .seg button:last-child {
+        border-right: 0;
+      }
+
+      .seg button:hover {
+        background: var(--bg-soft);
+        color: var(--text-1);
+      }
+
+      .seg button.on {
+        background: var(--text-1);
+        color: var(--bg);
+      }
+
+      .spacer {
+        flex: 1;
+      }
+
+      .text-btn {
+        font: inherit;
+        font-size: 13px;
+        padding: 6px 12px;
+        border: 1px solid var(--divider);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--text-2);
+        cursor: pointer;
+      }
+
+      .text-btn:hover {
+        background: var(--bg-soft);
+        color: var(--text-1);
+      }
+
+      .readout {
+        min-height: 60px;
+        margin: 16px 0 0;
+        padding: 9px 14px;
+        border-radius: 8px;
+        background: var(--bg-soft);
+        overflow: hidden;
+      }
+
+      .readout .main {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text-1);
+      }
+
+      .readout .tick {
+        flex: none;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--text-3);
+      }
+
+      .readout.match .tick {
+        background: var(--ying);
+      }
+
+      .readout.void .tick {
+        background: var(--void);
+      }
+
+      .readout .note {
+        margin-top: 3px;
+        padding-left: 17px;
+        font-size: 11px;
+        line-height: 1.5;
+        color: var(--text-3);
+      }
+
+      /* ---------- 盘：爻列 + SVG 弧 ---------- */
+
+      .stage {
+        display: grid;
+        grid-template-columns: minmax(0, 260px) var(--link-w) 24px;
+        gap: 0 4px;
+        align-items: start;
+        max-width: 480px;
+        margin: 26px auto 0;
+        user-select: none;
+      }
+
+      .board {
+        position: relative;
+        height: var(--board-h);
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 2.75rem 1fr;
+        column-gap: 12px;
+        align-items: center;
+        height: var(--row-h);
+      }
+
+      .row + .row {
+        margin-top: var(--gap-h);
+      }
+
+      .cell {
+        display: contents;
+        cursor: pointer;
+      }
+
+      .cell .label {
+        font-size: 13px;
+        color: var(--text-3);
+        letter-spacing: 0.05em;
+        transition: color 0.2s ease, opacity var(--ease);
+      }
+
+      .glyph {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        height: var(--bar-h);
+        transition: opacity var(--ease);
+      }
+
+      .bar {
+        flex: 1;
+        height: var(--bar-h);
+        border-radius: 3px;
+        background: var(--stroke);
+        transition: box-shadow 0.25s ease;
+      }
+
+      .cell.faint .label,
+      .cell.faint .glyph {
+        opacity: 0.16;
+      }
+
+      .cell.lit .label {
+        color: var(--text-1);
+        font-weight: 600;
+      }
+
+      .cell.lit.match .bar {
+        box-shadow: 0 0 0 1px var(--ying), 0 0 12px -2px var(--ying);
+      }
+
+      .cell.lit.void .bar {
+        box-shadow: 0 0 0 1px var(--void);
+      }
+
+      .links {
+        width: var(--link-w);
+        height: var(--board-h);
+        display: block;
+        overflow: visible;
+      }
+
+      .link-hit {
+        fill: transparent;
+        stroke: transparent;
+        stroke-width: 16;
+        cursor: pointer;
+        pointer-events: stroke;
+      }
+
+      .link-path {
+        fill: none;
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+        pointer-events: none;
+        transition: stroke-opacity var(--ease), stroke-width var(--ease);
+      }
+
+      .link-path.match {
+        stroke: var(--ying);
+      }
+
+      .link-path.void {
+        stroke: var(--void);
+        stroke-dasharray: 4 4;
+      }
+
+      .link-path.idle {
+        stroke-opacity: 0.45;
+        stroke-width: 2;
+      }
+
+      .link-path.faint {
+        stroke-opacity: 0.12;
+        stroke-width: 2;
+      }
+
+      .link-path.active.match {
+        stroke-opacity: 1;
+        stroke-width: 2.5;
+      }
+
+      .link-path.active.void {
+        stroke-opacity: 0.95;
+        stroke-width: 2.5;
+      }
+
+      .dots {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: var(--board-h);
+        padding: 0;
+        margin: 0;
+      }
+
+      .dot {
+        width: 22px;
+        height: 22px;
+        display: grid;
+        place-items: center;
+        border: 0;
+        padding: 0;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .dot i {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--text-3);
+        opacity: 0.4;
+        transition: all 0.22s ease;
+      }
+
+      .dot:hover i {
+        opacity: 0.85;
+      }
+
+      .dot.on i {
+        width: 9px;
+        height: 9px;
+        opacity: 1;
+      }
+
+      .dot.on.match i {
+        background: var(--ying);
+      }
+
+      .dot.on.void i {
+        background: var(--void);
+      }
+
+      .legend {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin: 26px 0 0;
+        padding-top: 18px;
+        border-top: 1px solid var(--divider);
+        font-size: 12px;
+        color: var(--text-3);
+      }
+
+      .legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .legend i {
+        width: 22px;
+        height: 16px;
+        display: inline-block;
+        position: relative;
+        border: 0;
+      }
+
+      .legend i.m,
+      .legend i.v {
+        border: none;
+        background: transparent;
+      }
+
+      /* 图例：小方括号示意 */
+      .legend i.m::before,
+      .legend i.v::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        bottom: 2px;
+        width: 14px;
+        border: 2px solid var(--ying);
+        border-left: 0;
+      }
+
+      .legend i.v::before {
+        border-color: var(--void);
+        border-style: dashed;
+        border-left: 0;
+        border-top-style: dashed;
+        border-right-style: dashed;
+        border-bottom-style: dashed;
+      }
+
+      .hintbar {
+        margin: 14px 0 0;
+        text-align: center;
+        font-size: 12px;
+        color: var(--text-3);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cell .label,
+        .glyph,
+        .arc-path,
+        .dot i {
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 24px 14px 48px;
+        }
+
+        .stage {
+          grid-template-columns: minmax(0, 1fr) var(--link-w) 22px;
+          max-width: 100%;
+        }
+
+        .row {
+          grid-template-columns: 2.4rem 1fr;
+          column-gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="wrap" v-cloak>
+      <h1>爻的「应」· 隔位呼应</h1>
+      <p class="sub">
+        应不是相邻之比，而是隔位相呼：初与四、二与五、三与上。异性为正应，同性为无应——同样符合「同性相斥，异性相吸」。
+      </p>
+
+      <div class="toolbar">
+        <div class="seg">
+          <button
+            v-for="(h, i) in hexagrams"
+            :key="h.num"
+            :class="{ on: current === i }"
+            @click="selectHex(i)"
+          >
+            {{ h.name }}
+          </button>
+        </div>
+        <span class="spacer"></span>
+        <button v-if="focusIdx !== null" class="text-btn" @click="clear">
+          通览
+        </button>
+      </div>
+
+      <div class="readout" :class="focusPair ? focusPair.kind : ''">
+        <div class="main">
+          <span class="tick"></span>
+          <span>{{ headline }}</span>
+        </div>
+        <div class="note">{{ note }}</div>
+      </div>
+
+      <div class="stage">
+        <div class="board">
+          <div
+            v-for="row in yaoRows"
+            :key="row.i"
+            class="row"
+            :data-i="row.i"
+          >
+            <div
+              class="cell"
+              :class="[yaoTone(row.i), toneKind]"
+              role="button"
+              :aria-label="'看 ' + row.label + ' 的应'"
+              @click="tapYao(row.i)"
+            >
+              <div class="label">{{ row.label }}</div>
+              <div class="glyph">
+                <span class="bar"></span>
+                <span v-if="!row.yang" class="bar"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <svg
+          class="links"
+          :viewBox="'0 0 ' + LINK_W + ' ' + BOARD_H"
+          preserveAspectRatio="xMinYMin meet"
+          aria-hidden="true"
+        >
+          <g v-for="p in pairs" :key="'h' + p.index">
+            <path
+              class="link-hit"
+              :d="linkPath(p)"
+              @click="focus(p.index)"
+            />
+            <path
+              class="link-path"
+              :class="[p.kind, linkState(p.index)]"
+              :d="linkPath(p)"
+            />
+          </g>
+        </svg>
+
+        <div class="dots">
+          <button
+            v-for="p in pairsVisual"
+            :key="'d' + p.index"
+            type="button"
+            class="dot"
+            :class="[p.kind, { on: focusIdx === p.index }]"
+            :aria-label="'看这一对：' + p.title"
+            @click="focus(p.index)"
+          >
+            <i></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><i class="m"></i>正应 · 异性相吸</span>
+        <span><i class="v"></i>无应 · 同性不相得</span>
+      </div>
+
+      <p class="hintbar">
+        点爻、方线或右侧圆点看单独一对；再点同一对回到通览
+      </p>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+      if (!window.Vue) {
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"><\/script>'
+        );
+      }
+    </script>
+    <script>
+      const { createApp, ref, computed } = Vue;
+
+      // 自下而上：初=0 … 上=5
+      const YING_PAIRS = [
+        [0, 3],
+        [1, 4],
+        [2, 5],
+      ];
+
+      const PAIR_NAMES = ["初四", "二五", "三上"];
+
+      // 与 CSS --row-h / --gap-h / --link-w / --board-h 保持一致
+      const ROW_H = 36;
+      const GAP_H = 14;
+      const BOARD_H = 6 * ROW_H + 5 * GAP_H;
+      const LINK_W = 88;
+      const X_STEM = 2;
+      // 三对脊线外鼓，错开避免重叠（初四最外、三上最内）
+      const X_OUTER = [56, 40, 24];
+
+      /** 爻位 i 的竖直中心（与盘面公式一致：上在顶） */
+      function yCenter(i) {
+        return (5 - i) * (ROW_H + GAP_H) + ROW_H / 2;
+      }
+
+      function yaoTraditionalLabel(index, isYang) {
+        const yy = isYang ? "九" : "六";
+        if (index === 0) return `初${yy}`;
+        if (index === 5) return `上${yy}`;
+        return `${yy}${["二", "三", "四", "五"][index - 1]}`;
+      }
+
+      const raw = [
+        {
+          num: 4,
+          name: "蒙",
+          full: "山水蒙",
+          // 与站点 hex.code 一致：下坎上艮
+          code: "010001",
+          notes: {
+            1: "《彖传》：「匪我求童蒙，童蒙求我……志应也。」指九二与六五阴阳相应。",
+          },
+        },
+        {
+          num: 3,
+          name: "屯",
+          full: "水雷屯",
+          code: "100010",
+          notes: {
+            1: "蒙倒过来为屯：六二与九五仍为正应，志同道合。",
+          },
+        },
+        {
+          num: 1,
+          name: "乾",
+          full: "乾为天",
+          code: "111111",
+          notes: {},
+        },
+      ];
+
+      const hexagrams = raw.map((h) => {
+        const lines = h.code.split("").map((c) => c === "1");
+        return {
+          ...h,
+          yao: lines.map((yang, i) => ({
+            yang,
+            label: yaoTraditionalLabel(i, yang),
+          })),
+        };
+      });
+
+      function buildYingPairs(yao) {
+        return YING_PAIRS.map(([lo, hi], index) => {
+          const a = yao[lo];
+          const b = yao[hi];
+          const match = a.yang !== b.yang;
+          return {
+            index,
+            lo,
+            hi,
+            kind: match ? "match" : "void",
+            tag: match ? "正应" : "无应",
+            slot: PAIR_NAMES[index],
+            title: `${a.label} 与 ${b.label}`,
+            hint: match
+              ? "异性相吸，志同相应"
+              : `同为${a.yang ? "阳" : "阴"}爻，隔位不相得`,
+          };
+        });
+      }
+
+      createApp({
+        setup() {
+          const current = ref(0);
+          const focusIdx = ref(null);
+
+          const hex = computed(() => hexagrams[current.value]);
+          const pairs = computed(() => buildYingPairs(hex.value.yao));
+
+          // 圆点自上而下：三上、二五、初四
+          const pairsVisual = computed(() => [...pairs.value].reverse());
+
+          const focusPair = computed(() =>
+            focusIdx.value === null ? null : pairs.value[focusIdx.value]
+          );
+
+          // 渲染自上而下：上→初
+          const yaoRows = computed(() => {
+            const out = [];
+            for (let i = 5; i >= 0; i--) {
+              out.push({ i, ...hex.value.yao[i] });
+            }
+            return out;
+          });
+
+          const toneKind = computed(() =>
+            focusPair.value ? focusPair.value.kind : ""
+          );
+
+          const headline = computed(() => {
+            const p = focusPair.value;
+            if (p) return `${p.title} · ${p.tag} · ${p.hint}`;
+            const c = { match: 0, void: 0 };
+            pairs.value.forEach((x) => (c[x.kind] += 1));
+            return `${hex.value.full} · 正应 ${c.match} · 无应 ${c.void}`;
+          });
+
+          const note = computed(() => {
+            if (focusIdx.value === null)
+              return "三对应位：初四、二五、三上（隔两爻相望）";
+            return hex.value.notes[focusIdx.value] || "";
+          });
+
+          /** 直角方线：横 → 竖脊 → 横 */
+          function linkPath(p) {
+            const yHi = yCenter(p.hi);
+            const yLo = yCenter(p.lo);
+            const xOuter = X_OUTER[p.index];
+            return `M ${X_STEM} ${yHi} L ${xOuter} ${yHi} L ${xOuter} ${yLo} L ${X_STEM} ${yLo}`;
+          }
+
+          function yaoTone(i) {
+            const p = focusPair.value;
+            if (!p) return "";
+            return i === p.lo || i === p.hi ? "lit" : "faint";
+          }
+
+          function linkState(i) {
+            if (focusIdx.value === null) return "idle";
+            return focusIdx.value === i ? "active" : "faint";
+          }
+
+          function focus(i) {
+            focusIdx.value = focusIdx.value === i ? null : i;
+          }
+
+          function clear() {
+            focusIdx.value = null;
+          }
+
+          function tapYao(i) {
+            const idx = YING_PAIRS.findIndex(([a, b]) => a === i || b === i);
+            if (idx < 0) return;
+            focus(idx);
+          }
+
+          function selectHex(i) {
+            current.value = i;
+            focusIdx.value = null;
+          }
+
+          return {
+            BOARD_H,
+            LINK_W,
+            hexagrams,
+            current,
+            focusIdx,
+            focusPair,
+            pairs,
+            pairsVisual,
+            yaoRows,
+            headline,
+            note,
+            toneKind,
+            linkPath,
+            yaoTone,
+            linkState,
+            focus,
+            clear,
+            tapYao,
+            selectHex,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

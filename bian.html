@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>卦的「变」· 错综互变</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-soft: #f6f7f8;
+        --text-1: #1f2d3d;
+        --text-2: #5b6b7c;
+        --text-3: #99a4b0;
+        --divider: #e5e7ea;
+        --stroke: #445667;
+        --accent: #2b6cb0;
+        --cuo: #17976a;
+        --zong: #c47a2c;
+        --hu: #5b6b9a;
+        --bian: #ac392b;
+        --ease: 0.28s ease;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #17181c;
+          --bg-soft: #202228;
+          --text-1: #e3e4e1;
+          --text-2: #a5afba;
+          --text-3: #737e8a;
+          --divider: #2b2e35;
+          --stroke: #c2ccd7;
+          --accent: #6ba3e8;
+          --cuo: #46d999;
+          --zong: #e0a45a;
+          --hu: #8a9bc4;
+          --bian: #e07060;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 24px 64px;
+        background: var(--bg);
+        color: var(--text-1);
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      [v-cloak] {
+        display: none;
+      }
+
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 4px;
+        letter-spacing: 0.02em;
+      }
+
+      .sub {
+        margin: 0;
+        font-size: 13px;
+        color: var(--text-3);
+        line-height: 1.6;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 22px 0 0;
+      }
+
+      .seg {
+        display: inline-flex;
+        border: 1px solid var(--divider);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .seg button {
+        font: inherit;
+        font-size: 13px;
+        padding: 6px 14px;
+        border: 0;
+        border-right: 1px solid var(--divider);
+        background: transparent;
+        color: var(--text-2);
+        cursor: pointer;
+      }
+
+      .seg button:last-child {
+        border-right: 0;
+      }
+
+      .seg button:hover {
+        background: var(--bg-soft);
+        color: var(--text-1);
+      }
+
+      .seg button.on {
+        background: var(--text-1);
+        color: var(--bg);
+      }
+
+      .spacer {
+        flex: 1;
+      }
+
+      .text-btn {
+        font: inherit;
+        font-size: 13px;
+        padding: 6px 12px;
+        border: 1px solid var(--divider);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--text-2);
+        cursor: pointer;
+      }
+
+      .text-btn:hover {
+        background: var(--bg-soft);
+        color: var(--text-1);
+      }
+
+      .readout {
+        margin: 16px 0 0;
+        padding: 9px 14px;
+        border-radius: 8px;
+        background: var(--bg-soft);
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text-2);
+      }
+
+      /* ---------- 树 ---------- */
+
+      .tree {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .root .tag {
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: var(--text-3);
+      }
+
+      .root .name {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .stem {
+        width: 2px;
+        height: 22px;
+        background: var(--divider);
+      }
+
+      .fork {
+        position: relative;
+        width: min(100%, 560px);
+        height: 28px;
+      }
+
+      .fork::before {
+        content: "";
+        position: absolute;
+        left: 16.66%;
+        right: 16.66%;
+        top: 0;
+        height: 2px;
+        background: var(--divider);
+      }
+
+      .fork::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 2px;
+        height: 14px;
+        background: var(--divider);
+        transform: translateX(-50%);
+      }
+
+      .fork .leg {
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 28px;
+        background: var(--divider);
+      }
+
+      .fork .leg:nth-child(1) {
+        left: 16.66%;
+        transform: translateX(-50%);
+      }
+
+      .fork .leg:nth-child(2) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .fork .leg:nth-child(3) {
+        left: 83.33%;
+        transform: translateX(-50%);
+      }
+
+      .branches {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        width: min(100%, 560px);
+      }
+
+      .branch {
+        border: 1px solid var(--divider);
+        border-radius: 10px;
+        padding: 12px 10px 14px;
+        text-align: center;
+        background: var(--bg);
+      }
+
+      .branch .op {
+        font-size: 11px;
+        color: var(--text-3);
+        margin-bottom: 2px;
+      }
+
+      .branch .kind {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .branch.cuo .kind {
+        color: var(--cuo);
+      }
+
+      .branch.zong .kind {
+        color: var(--zong);
+      }
+
+      .branch.hu .kind {
+        color: var(--hu);
+      }
+
+      .branch .full {
+        margin-top: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-1);
+      }
+
+      .branch .hint {
+        margin-top: 4px;
+        font-size: 11px;
+        color: var(--text-3);
+        line-height: 1.4;
+      }
+
+      /* 变卦区 */
+
+      .bian-sec {
+        margin-top: 28px;
+        width: min(100%, 560px);
+        border: 1px dashed color-mix(in srgb, var(--bian) 45%, var(--divider));
+        border-radius: 12px;
+        padding: 16px 16px 18px;
+        background: color-mix(in srgb, var(--bian) 5%, transparent);
+      }
+
+      .bian-head {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 4px;
+      }
+
+      .bian-head .kind {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--bian);
+      }
+
+      .bian-head .badge {
+        font-size: 11px;
+        padding: 2px 7px;
+        border-radius: 999px;
+        border: 1px solid color-mix(in srgb, var(--bian) 35%, var(--divider));
+        color: var(--bian);
+      }
+
+      .bian-desc {
+        font-size: 12px;
+        color: var(--text-3);
+        margin: 0 0 12px;
+        line-height: 1.5;
+      }
+
+      .si-xiang {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin: 0 0 8px;
+        table-layout: fixed;
+      }
+
+      .si-xiang th,
+      .si-xiang td {
+        padding: 6px 8px;
+        border-bottom: 1px solid var(--divider);
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .si-xiang th {
+        font-weight: 600;
+        color: var(--text-2);
+        background: color-mix(in srgb, var(--bg-soft) 80%, transparent);
+      }
+
+      .si-xiang td.num {
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
+        color: var(--text-1);
+      }
+
+      .si-xiang .yao-cell {
+        display: flex;
+        justify-content: center;
+      }
+
+      .si-xiang .yao-cell .yao {
+        width: 36px;
+        height: 6px;
+      }
+
+      .si-xiang td.change {
+        color: var(--bian);
+        font-weight: 600;
+      }
+
+      .si-xiang td.keep {
+        color: var(--text-3);
+      }
+
+      .si-xiang-note {
+        margin: 0 0 14px;
+        font-size: 11px;
+        color: var(--text-3);
+        line-height: 1.45;
+      }
+
+      .bian-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+      }
+
+      .bian-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .bian-panel .label {
+        font-size: 11px;
+        color: var(--text-3);
+        letter-spacing: 0.06em;
+      }
+
+      .bian-panel .full {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .bian-panel .placeholder {
+        font-size: 13px;
+        color: var(--text-3);
+        min-height: 88px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 0 8px;
+      }
+
+      .arrow {
+        font-size: 20px;
+        color: var(--bian);
+        opacity: 0.7;
+      }
+
+      /* 卦象 */
+
+      .glyph {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 72px;
+      }
+
+      .glyph.lg {
+        width: 96px;
+        gap: 7px;
+      }
+
+      .glyph.sm {
+        width: 56px;
+        gap: 4px;
+      }
+
+      .yao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 8px;
+      }
+
+      .glyph.lg .yao {
+        height: 10px;
+      }
+
+      .glyph.sm .yao {
+        height: 6px;
+      }
+
+      .yao .seg {
+        height: 100%;
+        background: var(--stroke);
+        border-radius: 1px;
+      }
+
+      .yao.yang .seg {
+        width: 100%;
+      }
+
+      .yao.yin .seg {
+        width: 42%;
+      }
+
+      .yao.moving .seg {
+        background: var(--bian);
+        box-shadow: 0 0 0 1px var(--bian);
+      }
+
+      .yao-row {
+        display: grid;
+        grid-template-columns: 2rem 48px auto;
+        column-gap: 8px;
+        align-items: center;
+      }
+
+      .yao-row .lab {
+        font-size: 11px;
+        color: var(--text-3);
+        text-align: right;
+      }
+
+      .yao-row.moving .lab {
+        color: var(--bian);
+        font-weight: 600;
+      }
+
+      .yao-row .glyph-slot .yao {
+        width: 48px;
+      }
+
+      .state-btns {
+        display: inline-flex;
+        gap: 4px;
+      }
+
+      .state-btn {
+        font: inherit;
+        font-size: 10px;
+        line-height: 1.2;
+        padding: 3px 7px;
+        border: 1px solid var(--divider);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--text-3);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background 0.15s ease, color 0.15s ease,
+          border-color 0.15s ease;
+      }
+
+      .state-btn:hover {
+        color: var(--text-2);
+        background: var(--bg-soft);
+      }
+
+      .state-btn.on.jing {
+        border-color: var(--stroke);
+        color: var(--text-1);
+        background: var(--bg-soft);
+      }
+
+      .state-btn.on.dong {
+        border-color: var(--bian);
+        color: var(--bian);
+        background: color-mix(in srgb, var(--bian) 12%, transparent);
+      }
+
+      .src-board {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+      }
+
+      .bian-panel.src {
+        align-items: stretch;
+      }
+
+      .bian-panel.src .label {
+        text-align: center;
+      }
+
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+        margin-top: 22px;
+        font-size: 12px;
+        color: var(--text-2);
+      }
+
+      .legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .legend i {
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        display: inline-block;
+      }
+
+      .legend i.cuo {
+        background: var(--cuo);
+      }
+
+      .legend i.zong {
+        background: var(--zong);
+      }
+
+      .legend i.hu {
+        background: var(--hu);
+      }
+
+      .legend i.bian {
+        background: var(--bian);
+      }
+
+      .hintbar {
+        margin: 14px 0 0;
+        text-align: center;
+        font-size: 12px;
+        color: var(--text-3);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 24px 14px 48px;
+        }
+
+        .branches {
+          gap: 8px;
+        }
+
+        .branch {
+          padding: 10px 6px 12px;
+        }
+
+        .bian-row {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .arrow {
+          transform: rotate(90deg);
+          justify-self: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="wrap" v-cloak>
+      <h1>卦的「变」· 错综互变</h1>
+      <p class="sub">
+        错、综、互由本卦唯一推出；变卦需先指定动爻，与前三者不同类。本页用「本卦为根 → 三支常在 → 变卦单独交互」展示。
+      </p>
+
+      <div class="toolbar">
+        <div class="seg">
+          <button
+            v-for="(h, i) in samples"
+            :key="h.num"
+            :class="{ on: current === i }"
+            @click="selectHex(i)"
+          >
+            {{ h.name }}
+          </button>
+        </div>
+        <span class="spacer"></span>
+        <button v-if="moving.size" class="text-btn" @click="clearMoving">
+          清空变爻
+        </button>
+      </div>
+
+      <div class="readout">{{ hex.full }} · {{ hex.gloss }}</div>
+
+      <div class="tree">
+        <div class="root">
+          <div class="tag">本卦</div>
+          <div class="name">{{ hex.full }}</div>
+          <div class="glyph lg" aria-hidden="true">
+            <div
+              v-for="row in yaoRows(hex.code)"
+              :key="'r' + row.i"
+              class="yao"
+              :class="row.yang ? 'yang' : 'yin'"
+            >
+              <span class="seg"></span>
+              <span v-if="!row.yang" class="seg"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stem" aria-hidden="true"></div>
+        <div class="fork" aria-hidden="true">
+          <span class="leg"></span>
+          <span class="leg"></span>
+          <span class="leg"></span>
+        </div>
+
+        <div class="branches">
+          <div class="branch cuo">
+            <div class="op">阴阳全反</div>
+            <div class="kind">错卦（旁通卦）</div>
+            <div class="glyph sm" aria-hidden="true">
+              <div
+                v-for="row in yaoRows(derived.cuoCode)"
+                :key="'c' + row.i"
+                class="yao"
+                :class="row.yang ? 'yang' : 'yin'"
+              >
+                <span class="seg"></span>
+                <span v-if="!row.yang" class="seg"></span>
+              </div>
+            </div>
+            <div class="full">{{ derived.cuo }}</div>
+            <div class="hint">对面</div>
+          </div>
+
+          <div class="branch zong">
+            <div class="op">上下颠倒</div>
+            <div class="kind">综卦（覆卦）</div>
+            <div class="glyph sm" aria-hidden="true">
+              <div
+                v-for="row in yaoRows(derived.zongCode)"
+                :key="'z' + row.i"
+                class="yao"
+                :class="row.yang ? 'yang' : 'yin'"
+              >
+                <span class="seg"></span>
+                <span v-if="!row.yang" class="seg"></span>
+              </div>
+            </div>
+            <div class="full">{{ derived.zong }}</div>
+            <div class="hint">镜面 · 反对</div>
+          </div>
+
+          <div class="branch hu">
+            <div class="op">取二三四·三四五</div>
+            <div class="kind">互卦</div>
+            <div class="glyph sm" aria-hidden="true">
+              <div
+                v-for="row in yaoRows(derived.huCode)"
+                :key="'h' + row.i"
+                class="yao"
+                :class="row.yang ? 'yang' : 'yin'"
+              >
+                <span class="seg"></span>
+                <span v-if="!row.yang" class="seg"></span>
+              </div>
+            </div>
+            <div class="full">{{ derived.hu }}</div>
+            <div class="hint">中间过程</div>
+          </div>
+        </div>
+
+        <div class="bian-sec">
+          <div class="bian-head">
+            <span class="kind">之卦（变卦）</span>
+            <span class="badge">特殊 · 需指定变爻</span>
+          </div>
+          <p class="bian-desc">
+            右侧选静/动；动爻（老阳/老阴）参与成之卦。错综互不依赖动爻。
+          </p>
+
+          <table class="si-xiang" aria-label="四象与是否变化">
+            <thead>
+              <tr>
+                <th>数</th>
+                <th>名称</th>
+                <th>爻</th>
+                <th>是否变化</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="num">6</td>
+                <td>老阴</td>
+                <td>
+                  <div class="yao-cell">
+                    <div class="yao yin" aria-hidden="true">
+                      <span class="seg"></span><span class="seg"></span>
+                    </div>
+                  </div>
+                </td>
+                <td class="change">变阳</td>
+              </tr>
+              <tr>
+                <td class="num">7</td>
+                <td>少阳</td>
+                <td>
+                  <div class="yao-cell">
+                    <div class="yao yang" aria-hidden="true">
+                      <span class="seg"></span>
+                    </div>
+                  </div>
+                </td>
+                <td class="keep">不变</td>
+              </tr>
+              <tr>
+                <td class="num">8</td>
+                <td>少阴</td>
+                <td>
+                  <div class="yao-cell">
+                    <div class="yao yin" aria-hidden="true">
+                      <span class="seg"></span><span class="seg"></span>
+                    </div>
+                  </div>
+                </td>
+                <td class="keep">不变</td>
+              </tr>
+              <tr>
+                <td class="num">9</td>
+                <td>老阳</td>
+                <td>
+                  <div class="yao-cell">
+                    <div class="yao yang" aria-hidden="true">
+                      <span class="seg"></span>
+                    </div>
+                  </div>
+                </td>
+                <td class="change">变阴</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="si-xiang-note">
+            右侧「动·老阴 / 老阳」≈ 得 6 / 9；「静·少阴 / 少阳」≈ 得 8 / 7。
+          </p>
+
+          <div class="bian-row">
+            <div class="bian-panel src">
+              <div class="label">本卦 · 静 / 动</div>
+              <div class="src-board">
+                <div
+                  v-for="row in yaoRows(hex.code)"
+                  :key="'b' + row.i"
+                  class="yao-row"
+                  :class="{ moving: moving.has(row.i) }"
+                >
+                  <span class="lab">{{ row.label }}</span>
+                  <div class="glyph-slot">
+                    <div
+                      class="yao"
+                      :class="[
+                        row.yang ? 'yang' : 'yin',
+                        { moving: moving.has(row.i) },
+                      ]"
+                      aria-hidden="true"
+                    >
+                      <span class="seg"></span>
+                      <span v-if="!row.yang" class="seg"></span>
+                    </div>
+                  </div>
+                  <div class="state-btns">
+                    <button
+                      type="button"
+                      class="state-btn jing"
+                      :class="{ on: !moving.has(row.i) }"
+                      @click="setMoving(row.i, false)"
+                    >
+                      {{ row.yang ? "静·少阳" : "静·少阴" }}
+                    </button>
+                    <button
+                      type="button"
+                      class="state-btn dong"
+                      :class="{ on: moving.has(row.i) }"
+                      @click="setMoving(row.i, true)"
+                    >
+                      {{ row.yang ? "动·老阳" : "动·老阴" }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="arrow" aria-hidden="true">→</div>
+
+            <div class="bian-panel">
+              <div class="label">之卦（变卦）</div>
+              <template v-if="bianResult">
+                <div class="glyph" aria-hidden="true">
+                  <div
+                    v-for="row in yaoRows(bianResult.code)"
+                    :key="'v' + row.i"
+                    class="yao"
+                    :class="row.yang ? 'yang' : 'yin'"
+                  >
+                    <span class="seg"></span>
+                    <span v-if="!row.yang" class="seg"></span>
+                  </div>
+                </div>
+                <div class="full">{{ bianResult.full }}</div>
+              </template>
+              <div v-else class="placeholder">选动爻（老阳/老阴）成之卦</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><i class="cuo"></i>错 · 旁通</span>
+        <span><i class="zong"></i>综 · 覆</span>
+        <span><i class="hu"></i>互 · 中间</span>
+        <span><i class="bian"></i>变 · 之卦</span>
+      </div>
+
+      <p class="hintbar">
+        切换样例卦；变卦区选静/动看之卦。错综互随本卦自动更新。
+      </p>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+      if (!window.Vue) {
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"><\/script>'
+        );
+      }
+    </script>
+    <script>
+      const { createApp, ref, computed } = Vue;
+
+      const T = {
+        qian: { zh: "乾", el: "天", bits: "111" },
+        kun: { zh: "坤", el: "地", bits: "000" },
+        zhen: { zh: "震", el: "雷", bits: "100" },
+        gen: { zh: "艮", el: "山", bits: "001" },
+        li: { zh: "离", el: "火", bits: "101" },
+        kan: { zh: "坎", el: "水", bits: "010" },
+        dui: { zh: "兑", el: "泽", bits: "110" },
+        xun: { zh: "巽", el: "风", bits: "011" },
+      };
+
+      const HEX_RAW = [
+        { num: 1, name: "乾", full: "乾为天", lower: "qian", upper: "qian", gloss: "刚健自强" },
+        { num: 2, name: "坤", full: "坤为地", lower: "kun", upper: "kun", gloss: "柔顺承载" },
+        { num: 3, name: "屯", full: "水雷屯", lower: "zhen", upper: "kan", gloss: "初生艰难" },
+        { num: 4, name: "蒙", full: "山水蒙", lower: "kan", upper: "gen", gloss: "蒙昧未开，启蒙求知" },
+        { num: 5, name: "需", full: "水天需", lower: "qian", upper: "kan", gloss: "等待时机" },
+        { num: 6, name: "讼", full: "天水讼", lower: "kan", upper: "qian", gloss: "争讼辨理" },
+        { num: 7, name: "师", full: "地水师", lower: "kan", upper: "kun", gloss: "兴师动众" },
+        { num: 8, name: "比", full: "水地比", lower: "kun", upper: "kan", gloss: "亲比相依" },
+        { num: 9, name: "小畜", full: "风天小畜", lower: "qian", upper: "xun", gloss: "小有积蓄" },
+        { num: 10, name: "履", full: "天泽履", lower: "dui", upper: "qian", gloss: "谨慎履道" },
+        { num: 11, name: "泰", full: "地天泰", lower: "qian", upper: "kun", gloss: "上下交泰，通达安康" },
+        { num: 12, name: "否", full: "天地否", lower: "kun", upper: "qian", gloss: "闭塞不通" },
+        { num: 13, name: "同人", full: "天火同人", lower: "li", upper: "qian", gloss: "会同众人" },
+        { num: 14, name: "大有", full: "火天大有", lower: "qian", upper: "li", gloss: "大有收获" },
+        { num: 15, name: "谦", full: "地山谦", lower: "gen", upper: "kun", gloss: "谦逊自守" },
+        { num: 16, name: "豫", full: "雷地豫", lower: "kun", upper: "zhen", gloss: "悦豫顺时" },
+        { num: 17, name: "随", full: "泽雷随", lower: "zhen", upper: "dui", gloss: "随时而动" },
+        { num: 18, name: "蛊", full: "山风蛊", lower: "xun", upper: "gen", gloss: "振敝革新" },
+        { num: 19, name: "临", full: "地泽临", lower: "dui", upper: "kun", gloss: "居高临下" },
+        { num: 20, name: "观", full: "风地观", lower: "kun", upper: "xun", gloss: "观察省思" },
+        { num: 21, name: "噬嗑", full: "火雷噬嗑", lower: "zhen", upper: "li", gloss: "刚断除弊" },
+        { num: 22, name: "贲", full: "山火贲", lower: "li", upper: "gen", gloss: "文饰之美" },
+        { num: 23, name: "剥", full: "山地剥", lower: "kun", upper: "gen", gloss: "阳消阴长" },
+        { num: 24, name: "复", full: "地雷复", lower: "zhen", upper: "kun", gloss: "一阳来复" },
+        { num: 25, name: "无妄", full: "天雷无妄", lower: "zhen", upper: "qian", gloss: "不妄不欺" },
+        { num: 26, name: "大畜", full: "山天大畜", lower: "qian", upper: "gen", gloss: "厚积蓄德" },
+        { num: 27, name: "颐", full: "山雷颐", lower: "zhen", upper: "gen", gloss: "颐养有道" },
+        { num: 28, name: "大过", full: "泽风大过", lower: "xun", upper: "dui", gloss: "过中之象" },
+        { num: 29, name: "坎", full: "坎为水", lower: "kan", upper: "kan", gloss: "险陷重重" },
+        { num: 30, name: "离", full: "离为火", lower: "li", upper: "li", gloss: "附丽光明" },
+        { num: 31, name: "咸", full: "泽山咸", lower: "gen", upper: "dui", gloss: "相感相应" },
+        { num: 32, name: "恒", full: "雷风恒", lower: "xun", upper: "zhen", gloss: "恒久守常" },
+        { num: 33, name: "遁", full: "天山遁", lower: "gen", upper: "qian", gloss: "退避保全" },
+        { num: 34, name: "大壮", full: "雷天大壮", lower: "qian", upper: "zhen", gloss: "刚盛势壮" },
+        { num: 35, name: "晋", full: "火地晋", lower: "kun", upper: "li", gloss: "顺势上进" },
+        { num: 36, name: "明夷", full: "地火明夷", lower: "li", upper: "kun", gloss: "光明受损" },
+        { num: 37, name: "家人", full: "风火家人", lower: "li", upper: "xun", gloss: "齐家有序" },
+        { num: 38, name: "睽", full: "火泽睽", lower: "dui", upper: "li", gloss: "乖离相异" },
+        { num: 39, name: "蹇", full: "水山蹇", lower: "gen", upper: "kan", gloss: "蹇难前行" },
+        { num: 40, name: "解", full: "雷水解", lower: "kan", upper: "zhen", gloss: "危解患释" },
+        { num: 41, name: "损", full: "山泽损", lower: "dui", upper: "gen", gloss: "损下益上" },
+        { num: 42, name: "益", full: "风雷益", lower: "zhen", upper: "xun", gloss: "损上益下" },
+        { num: 43, name: "夬", full: "泽天夬", lower: "qian", upper: "dui", gloss: "决断除去" },
+        { num: 44, name: "姤", full: "天风姤", lower: "xun", upper: "qian", gloss: "不期而遇" },
+        { num: 45, name: "萃", full: "泽地萃", lower: "kun", upper: "dui", gloss: "聚萃有序" },
+        { num: 46, name: "升", full: "地风升", lower: "xun", upper: "kun", gloss: "积小成大" },
+        { num: 47, name: "困", full: "泽水困", lower: "kan", upper: "dui", gloss: "困顿守志" },
+        { num: 48, name: "井", full: "水风井", lower: "xun", upper: "kan", gloss: "井养不穷" },
+        { num: 49, name: "革", full: "泽火革", lower: "li", upper: "dui", gloss: "变革除旧" },
+        { num: 50, name: "鼎", full: "火风鼎", lower: "xun", upper: "li", gloss: "鼎新立业" },
+        { num: 51, name: "震", full: "震为雷", lower: "zhen", upper: "zhen", gloss: "震动惊惧" },
+        { num: 52, name: "艮", full: "艮为山", lower: "gen", upper: "gen", gloss: "止其所止" },
+        { num: 53, name: "渐", full: "风山渐", lower: "gen", upper: "xun", gloss: "渐进有序" },
+        { num: 54, name: "归妹", full: "雷泽归妹", lower: "dui", upper: "zhen", gloss: "少女出嫁" },
+        { num: 55, name: "丰", full: "雷火丰", lower: "li", upper: "zhen", gloss: "盛大丰盈" },
+        { num: 56, name: "旅", full: "火山旅", lower: "gen", upper: "li", gloss: "客旅他乡" },
+        { num: 57, name: "巽", full: "巽为风", lower: "xun", upper: "xun", gloss: "巽顺深入" },
+        { num: 58, name: "兑", full: "兑为泽", lower: "dui", upper: "dui", gloss: "悦泽沟通" },
+        { num: 59, name: "涣", full: "风水涣", lower: "kan", upper: "xun", gloss: "涣散离析" },
+        { num: 60, name: "节", full: "水泽节", lower: "dui", upper: "kan", gloss: "节制有度" },
+        { num: 61, name: "中孚", full: "风泽中孚", lower: "dui", upper: "xun", gloss: "中心诚信" },
+        { num: 62, name: "小过", full: "雷山小过", lower: "gen", upper: "zhen", gloss: "小有过越" },
+        { num: 63, name: "既济", full: "水火既济", lower: "kan", upper: "li", gloss: "功成之际，居安思危" },
+        { num: 64, name: "未济", full: "火水未济", lower: "li", upper: "kan", gloss: "事未竟功" },
+      ];
+
+      // 与站点一致：code = 下卦 bits + 上卦 bits（初→上）
+      const HEX = HEX_RAW.map((h) => ({
+        ...h,
+        code: T[h.lower].bits + T[h.upper].bits,
+      }));
+
+      const BITS_TO_KEY = Object.fromEntries(
+        Object.entries(T).map(([k, v]) => [v.bits, k])
+      );
+
+      const byPair = Object.fromEntries(
+        HEX.map((h) => [`${h.lower}-${h.upper}`, h])
+      );
+
+      function hexFromCode(code) {
+        const lower = BITS_TO_KEY[code.slice(0, 3)];
+        const upper = BITS_TO_KEY[code.slice(3, 6)];
+        if (!lower || !upper) return { full: "（未知）", code, name: "?" };
+        return byPair[`${lower}-${upper}`] ?? { full: "（未知）", code, name: "?" };
+      }
+
+      function codeCuo(code) {
+        return code
+          .split("")
+          .map((c) => (c === "1" ? "0" : "1"))
+          .join("");
+      }
+
+      function codeZong(code) {
+        return code.split("").reverse().join("");
+      }
+
+      function codeHu(code) {
+        return code[1] + code[2] + code[3] + code[2] + code[3] + code[4];
+      }
+
+      function yaoTraditionalLabel(index, isYang) {
+        const yy = isYang ? "九" : "六";
+        if (index === 0) return `初${yy}`;
+        if (index === 5) return `上${yy}`;
+        return `${yy}${["二", "三", "四", "五"][index - 1]}`;
+      }
+
+      function yaoRows(code) {
+        const lines = code.split("").map((c) => c === "1");
+        const out = [];
+        for (let i = 5; i >= 0; i--) {
+          out.push({
+            i,
+            yang: lines[i],
+            label: yaoTraditionalLabel(i, lines[i]),
+          });
+        }
+        return out;
+      }
+
+      const SAMPLE_NAMES = ["蒙", "泰", "既济", "乾"];
+
+      createApp({
+        setup() {
+          const samples = SAMPLE_NAMES.map((name) =>
+            HEX.find((h) => h.name === name)
+          );
+          const current = ref(0);
+          // 六个爻是否为动爻
+          const movingFlags = ref([false, false, false, false, false, false]);
+
+          const hex = computed(() => samples[current.value]);
+
+          const moving = computed(() => {
+            const s = new Set();
+            movingFlags.value.forEach((on, i) => {
+              if (on) s.add(i);
+            });
+            return s;
+          });
+
+          const derived = computed(() => {
+            const code = hex.value.code;
+            const cuoCode = codeCuo(code);
+            const zongCode = codeZong(code);
+            const huCode = codeHu(code);
+            return {
+              cuoCode,
+              zongCode,
+              huCode,
+              cuo: hexFromCode(cuoCode).full,
+              zong: hexFromCode(zongCode).full,
+              hu: hexFromCode(huCode).full,
+            };
+          });
+
+          const bianResult = computed(() => {
+            if (!movingFlags.value.some(Boolean)) return null;
+            const chars = hex.value.code.split("");
+            movingFlags.value.forEach((on, i) => {
+              if (on) chars[i] = chars[i] === "1" ? "0" : "1";
+            });
+            const code = chars.join("");
+            const h = hexFromCode(code);
+            return { code, full: h.full };
+          });
+
+          function setMoving(i, on) {
+            const next = movingFlags.value.slice();
+            next[i] = on;
+            movingFlags.value = next;
+          }
+
+          function clearMoving() {
+            movingFlags.value = [false, false, false, false, false, false];
+          }
+
+          function selectHex(i) {
+            current.value = i;
+            clearMoving();
+          }
+
+          return {
+            samples,
+            current,
+            hex,
+            derived,
+            moving,
+            bianResult,
+            yaoRows,
+            setMoving,
+            clearMoving,
+            selectHex,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
