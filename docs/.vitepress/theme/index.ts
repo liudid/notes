@@ -27,6 +27,7 @@ import JingWenGuaCi from "./components/yi-xue/JingWenGuaCi.vue";
 import JingWenYaoCi from "./components/yi-xue/JingWenYaoCi.vue";
 import MinJianZhanBuTu from "./components/yi-xue/MinJianZhanBuTu.vue";
 import MoNiQiGua from "./components/yi-xue/MoNiQiGua.vue";
+import ZhuoZhaoMoNi from "./components/yi-xue/ZhuoZhaoMoNi.vue";
 
 import WuXing from "./components/WuXing.vue";
 import TianGan from "./components/TianGan.vue";
@@ -70,6 +71,7 @@ export default {
     app.component("JingWenYaoCi", JingWenYaoCi);
     app.component("MinJianZhanBuTu", MinJianZhanBuTu);
     app.component("MoNiQiGua", MoNiQiGua);
+    app.component("ZhuoZhaoMoNi", ZhuoZhaoMoNi);
 
     app.component("WuXing", WuXing);
     app.component("TianGan", TianGan);

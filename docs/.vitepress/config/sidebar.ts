@@ -493,6 +493,10 @@ function sidebarYixue(): DefaultTheme.SidebarItem[] {
               link: "/yi-xue/bu-shi/mo-ni-qi-gua",
             },
             {
+              text: "模拟灼兆",
+              link: "/yi-xue/bu-shi/mo-ni-zhuo-zhao",
+            },
+            {
               text: "纳甲筮法",
               link: "/yi-xue/bu-shi/na-jia-shi-fa",
             },
