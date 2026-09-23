@@ -1,4 +1,4 @@
-import { T, byPair, type TrigramKey } from "./liuShiSiGua.ts";
+import { T, byPair, type Hexagram, type TrigramKey } from "./liuShiSiGua.ts";
 
 const POS_NAMES = ["初爻", "二爻", "三爻", "四爻", "五爻", "上爻"];
 export const POS_IS_YANG = [true, false, true, false, true, false];
@@ -48,10 +48,16 @@ function codeToLines(code: string): boolean[] {
 }
 
 function hexFullFromCode(code: string): string {
+  return resolveHex(code)?.full ?? "（未知）";
+}
+
+/** 由六位 code 解析六十四卦（初爻在左，1=阳） */
+export function resolveHex(code: string): Hexagram | null {
+  if (!code || code.length !== 6) return null;
   const lower = BITS_TO_KEY[code.slice(0, 3)];
   const upper = BITS_TO_KEY[code.slice(3, 6)];
-  if (!lower || !upper) return "（未知）";
-  return byPair[`${lower}-${upper}`]?.full ?? "（未知）";
+  if (!lower || !upper) return null;
+  return byPair[`${lower}-${upper}`] ?? null;
 }
 
 /** 由六位 code 解析卦全名 */

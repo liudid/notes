@@ -485,6 +485,14 @@ function sidebarYixue(): DefaultTheme.SidebarItem[] {
           link: "/yi-xue/bu-shi/bu-shi",
           items: [
             {
+              text: "常见起卦方式",
+              link: "/yi-xue/bu-shi/chang-jian-qi-gua-fang-shi",
+            },
+            {
+              text: "模拟起卦",
+              link: "/yi-xue/bu-shi/mo-ni-qi-gua",
+            },
+            {
               text: "纳甲筮法",
               link: "/yi-xue/bu-shi/na-jia-shi-fa",
             },
