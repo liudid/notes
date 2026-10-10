@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>十二消息卦 · 圆图</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1c1915;
+      --mute: #7a7166;
+      --line: #2a241c;
+      --yang: #b45309;
+      --yin: #3f5f73;
+      --paper: #f4efe6;
+      --ring: color-mix(in srgb, var(--ink) 22%, transparent);
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      min-height: 100vh;
+      font-family: "Noto Serif SC", "Songti SC", serif;
+      color: var(--ink);
+      background: var(--paper);
+      background-image:
+        radial-gradient(circle at 50% 40%, #fffaf2 0%, transparent 55%),
+        linear-gradient(180deg, #f7f3eb 0%, #ebe4d7 100%);
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    header h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2rem);
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      margin-left: 0.28em;
+    }
+    header .en {
+      margin-top: 0.35rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.35em;
+      color: var(--mute);
+      text-transform: uppercase;
+      font-family: "JetBrains Mono", monospace;
+    }
+    header .desc {
+      margin: 0.9rem auto 0;
+      max-width: 36rem;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--mute);
+    }
+
+    .tools {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0 0.25rem;
+      align-items: center;
+    }
+    .tools button {
+      font: inherit;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      padding: 0.3rem 0.9rem;
+      border: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
+      background: transparent;
+      cursor: pointer;
+      border-radius: 999px;
+      color: var(--ink);
+    }
+    .tools button.on {
+      background: var(--ink);
+      color: #f4efe6;
+    }
+    .key {
+      font-size: 0.75rem;
+      color: var(--mute);
+      letter-spacing: 0.08em;
+    }
+    .key b.y { color: var(--yang); font-weight: 600; }
+    .key b.n { color: var(--yin); font-weight: 600; }
+
+    .board {
+      position: relative;
+      width: min(100%, 640px);
+      aspect-ratio: 1;
+      margin: 0.5rem auto 0;
+    }
+
+    svg.chart {
+      width: 100%;
+      height: 100%;
+      display: block;
+      overflow: visible;
+    }
+
+    .dir-label {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.35em;
+      fill: var(--ink);
+    }
+    .dir-sub {
+      font-size: 10px;
+      fill: var(--mute);
+      letter-spacing: 0.12em;
+    }
+
+    .gua-hit {
+      cursor: pointer;
+    }
+    .gua-hit:focus { outline: none; }
+    .gua-hit .halo {
+      fill: transparent;
+      transition: fill 0.2s;
+    }
+    .gua-hit:hover .halo,
+    .gua-hit.is-on .halo {
+      fill: color-mix(in srgb, var(--yang) 10%, transparent);
+    }
+    .gua-hit.is-on .halo {
+      stroke: color-mix(in srgb, var(--ink) 35%, transparent);
+      stroke-width: 1;
+    }
+
+    .yao-yang { stroke: var(--line); stroke-width: 2.6; stroke-linecap: square; }
+    .yao-yin { stroke: var(--line); stroke-width: 2.6; stroke-linecap: square; }
+    .gua-hit.xi.is-on .yao-yang,
+    .gua-hit.xi.is-on .yao-yin { stroke: var(--yang); }
+    .gua-hit.xiao.is-on .yao-yang,
+    .gua-hit.xiao.is-on .yao-yin { stroke: var(--yin); }
+
+    .lab-zhi {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      fill: var(--mute);
+    }
+    .lab-name {
+      font-size: 14px;
+      font-weight: 600;
+      fill: var(--ink);
+    }
+    .lab-month {
+      font-size: 9px;
+      fill: var(--mute);
+    }
+
+    .center-block {
+      pointer-events: none;
+    }
+    .center-title {
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      fill: var(--mute);
+    }
+    .center-name {
+      font-size: 28px;
+      font-weight: 700;
+      fill: var(--ink);
+      letter-spacing: 0.2em;
+    }
+
+    .rail {
+      fill: color-mix(in srgb, var(--mute) 18%, transparent);
+    }
+    .rail-yang {
+      fill: var(--yang);
+      transition: width 0.35s ease;
+    }
+
+    .foot {
+      margin-top: 1.25rem;
+      text-align: center;
+      max-width: 34rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .foot .meta {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      color: var(--mute);
+      letter-spacing: 0.04em;
+    }
+    .foot .blurb {
+      margin-top: 0.55rem;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: #3d362e;
+    }
+    .foot .jie {
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: var(--mute);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>十二消息卦</h1>
+      <div class="en">Shi Er Xiao Xi · Di Zhi Fang Wei</div>
+      <p>
+        上北下南。子复正北，午姤正南，卯大壮正东，酉观正西——与十二地支同向。
+        环上仅列爻画与名，顺时针自子而亥：先息后消。
+      </p>
+      <div class="tools">
+        <span class="key"><b class="y">息</b> 阳自下生　　<b class="n">消</b> 阴自下长</span>
+        <button type="button" id="btnPlay">顺时针巡行</button>
+      </div>
+    </header>
+
+    <div class="board">
+      <svg class="chart" id="chart" viewBox="0 0 600 600" role="img" aria-label="十二消息卦方位圆图">
+        <!-- 同心圆 -->
+        <circle cx="300" cy="300" r="268" fill="none" stroke="var(--ring)" stroke-width="1" />
+        <circle cx="300" cy="300" r="218" fill="none" stroke="var(--ring)" stroke-width="1" />
+        <circle cx="300" cy="300" r="118" fill="none" stroke="var(--ring)" stroke-width="1" />
+
+        <!-- 十字方位虚线 -->
+        <line x1="300" y1="32" x2="300" y2="568" stroke="var(--ring)" stroke-width="1" stroke-dasharray="3 5" />
+        <line x1="32" y1="300" x2="568" y2="300" stroke="var(--ring)" stroke-width="1" stroke-dasharray="3 5" />
+
+        <!-- 四正 -->
+        <text class="dir-label" x="300" y="28" text-anchor="middle">北</text>
+        <text class="dir-sub" x="300" y="44" text-anchor="middle">子</text>
+        <text class="dir-label" x="300" y="590" text-anchor="middle">南</text>
+        <text class="dir-sub" x="300" y="574" text-anchor="middle">午</text>
+        <text class="dir-label" x="586" y="306" text-anchor="middle">东</text>
+        <text class="dir-sub" x="572" y="306" text-anchor="end">卯</text>
+        <text class="dir-label" x="14" y="306" text-anchor="middle">西</text>
+        <text class="dir-sub" x="28" y="306" text-anchor="start">酉</text>
+
+        <g id="guas"></g>
+
+        <!-- 中心 -->
+        <g class="center-block">
+          <circle cx="300" cy="300" r="72" fill="#faf6ef" stroke="var(--ring)" stroke-width="1" />
+          <text class="center-title" x="300" y="278" text-anchor="middle">消　息</text>
+          <text class="center-name" id="cName" x="308" y="312" text-anchor="middle">复</text>
+          <rect class="rail" x="248" y="328" width="104" height="7" rx="2" />
+          <rect class="rail-yang" id="cBar" x="248" y="328" width="17" height="7" rx="2" />
+          <text class="dir-sub" id="cRatio" x="300" y="352" text-anchor="middle">阳1 阴5</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="foot" id="foot"></div>
+  </div>
+
+  <script>
+    const GUAS = [
+      { name: "复", bits: "100000", zhi: "子", fang: "正北", month: "十一月", jie: "冬至 · 一阳来复", kind: "xi",
+        blurb: "一阳来复，潜阳在下。阴极而阳生，息卦之始。" },
+      { name: "临", bits: "110000", zhi: "丑", fang: "北偏东", month: "十二月", jie: "大寒 · 二阳浸长", kind: "xi",
+        blurb: "二阳浸长，临于地上。阳气渐足以临事。" },
+      { name: "泰", bits: "111000", zhi: "寅", fang: "东偏北", month: "正月", jie: "雨水 · 三阳开泰", kind: "xi",
+        blurb: "三阳开泰，天地交而万物通。" },
+      { name: "大壮", bits: "111100", zhi: "卯", fang: "正东", month: "二月", jie: "春分 · 四阳壮盛", kind: "xi",
+        blurb: "四阳壮盛，雷在天上。阳长已过半。" },
+      { name: "夬", bits: "111110", zhi: "辰", fang: "东偏南", month: "三月", jie: "谷雨 · 五阳决阴", kind: "xi",
+        blurb: "五阳决一阴，决而去之。阳将纯。" },
+      { name: "乾", bits: "111111", zhi: "巳", fang: "南偏东", month: "四月", jie: "小满 · 六阳纯健", kind: "xi",
+        blurb: "六阳纯健，息之极。阳极而阴将生。" },
+      { name: "姤", bits: "011111", zhi: "午", fang: "正南", month: "五月", jie: "夏至 · 一阴始生", kind: "xiao",
+        blurb: "一阴始遇，阴生自下。阳极而阴生，消卦之始。" },
+      { name: "遁", bits: "001111", zhi: "未", fang: "南偏西", month: "六月", jie: "大暑 · 二阴浸长", kind: "xiao",
+        blurb: "二阴浸长，阳道当遁。退而守正。" },
+      { name: "否", bits: "000111", zhi: "申", fang: "西偏南", month: "七月", jie: "处暑 · 三阴否塞", kind: "xiao",
+        blurb: "三阴否塞，天地不交。闭塞之象。" },
+      { name: "观", bits: "000011", zhi: "酉", fang: "正西", month: "八月", jie: "秋分 · 四阴在下", kind: "xiao",
+        blurb: "四阴在下，二阳在上。可观而不可躁进。" },
+      { name: "剥", bits: "000001", zhi: "戌", fang: "西偏北", month: "九月", jie: "霜降 · 五阴剥阳", kind: "xiao",
+        blurb: "五阴剥一阳，硕果仅存于上。" },
+      { name: "坤", bits: "000000", zhi: "亥", fang: "北偏西", month: "十月", jie: "小雪 · 六阴纯顺", kind: "xiao",
+        blurb: "六阴纯顺，消之极。阴极而阳将复。" },
+    ];
+
+    const NS = "http://www.w3.org/2000/svg";
+    const gRoot = document.getElementById("guas");
+    const CX = 300, CY = 300;
+    const R_YAO = 168;   // 爻画中心半径
+    const R_LAB = 242;   // 外侧文字
+
+    let idx = 0;
+    let timer = null;
+    const hits = [];
+
+    function el(name, attrs = {}) {
+      const n = document.createElementNS(NS, name);
+      for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+      return n;
+    }
+
+    function yangCount(bits) {
+      return [...bits].filter((c) => c === "1").length;
+    }
+
+    /** 在局部坐标画六爻：上爻在上，局部 y 向下 */
+    function drawHex(g, bits, x, y, rotDeg) {
+      const wrap = el("g", {
+        transform: `translate(${x},${y}) rotate(${rotDeg})`,
+      });
+      const w = 28;
+      const gap = 5.2;
+      const lines = bits.split("").reverse(); // 上→初
+      lines.forEach((b, i) => {
+        const yy = -14 + i * gap;
+        if (b === "1") {
+          wrap.appendChild(
+            el("line", {
+              class: "yao-yang",
+              x1: -w / 2,
+              y1: yy,
+              x2: w / 2,
+              y2: yy,
+            }),
+          );
+        } else {
+          const cut = 3.2;
+          wrap.appendChild(
+            el("line", {
+              class: "yao-yin",
+              x1: -w / 2,
+              y1: yy,
+              x2: -cut / 2,
+              y2: yy,
+            }),
+          );
+          wrap.appendChild(
+            el("line", {
+              class: "yao-yin",
+              x1: cut / 2,
+              y1: yy,
+              x2: w / 2,
+              y2: yy,
+            }),
+          );
+        }
+      });
+      g.appendChild(wrap);
+    }
+
+    GUAS.forEach((g, i) => {
+      // 子在北（上），顺时针
+      const ang = -Math.PI / 2 + (i / 12) * Math.PI * 2;
+      const deg = (ang * 180) / Math.PI;
+      const xY = CX + R_YAO * Math.cos(ang);
+      const yY = CY + R_YAO * Math.sin(ang);
+      const xL = CX + R_LAB * Math.cos(ang);
+      const yL = CY + R_LAB * Math.sin(ang);
+
+      const group = el("g", {
+        class: `gua-hit ${g.kind}`,
+        tabindex: "0",
+        role: "button",
+        "aria-label": `${g.zhi}${g.name}`,
+      });
+
+      group.appendChild(
+        el("circle", {
+          class: "halo",
+          cx: xY,
+          cy: yY,
+          r: 28,
+        }),
+      );
+
+      // 爻画：使「上爻」大致朝外（沿径向）
+      drawHex(group, g.bits, xY, yY, deg + 90);
+
+      const lab = el("g", {
+        transform: `translate(${xL},${yL})`,
+      });
+      lab.appendChild(
+        el("text", {
+          class: "lab-zhi",
+          x: 0,
+          y: -12,
+          "text-anchor": "middle",
+        }),
+      ).textContent = g.zhi;
+      lab.appendChild(
+        el("text", {
+          class: "lab-name",
+          x: 0,
+          y: 6,
+          "text-anchor": "middle",
+        }),
+      ).textContent = g.name;
+      lab.appendChild(
+        el("text", {
+          class: "lab-month",
+          x: 0,
+          y: 20,
+          "text-anchor": "middle",
+        }),
+      ).textContent = g.month;
+      group.appendChild(lab);
+
+      group.addEventListener("click", () => select(i));
+      group.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          select(i);
+        }
+      });
+      gRoot.appendChild(group);
+      hits.push(group);
+    });
+
+    function select(i) {
+      idx = i;
+      const g = GUAS[i];
+      hits.forEach((h, j) => h.classList.toggle("is-on", j === i));
+      const y = yangCount(g.bits);
+      document.getElementById("cName").textContent = g.name;
+      document.getElementById("cBar").setAttribute("width", String((y / 6) * 104));
+      document.getElementById("cRatio").textContent = `阳${y} 阴${6 - y}`;
+      document.getElementById("foot").innerHTML = `
+        <div class="meta">${g.kind === "xi" ? "息卦" : "消卦"} · ${g.zhi} · ${g.fang} · ${g.month}</div>
+        <p class="blurb">${g.blurb}</p>
+        <div class="jie">${g.jie}</div>
+      `;
+    }
+
+    const btn = document.getElementById("btnPlay");
+    btn.addEventListener("click", () => {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+        btn.classList.remove("on");
+        btn.textContent = "顺时针巡行";
+        return;
+      }
+      btn.classList.add("on");
+      btn.textContent = "停";
+      timer = setInterval(() => select((idx + 1) % 12), 850);
+    });
+
+    select(0);
+  </script>
+</body>
+</html>

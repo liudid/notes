@@ -35,9 +35,19 @@ export function getNav(): DefaultTheme.NavItem[] {
       activeMatch: "/yi-xue/",
     },
     {
-      text: "钥匙",
-      link: "/yao/liushijiazi",
-      activeMatch: "/yao/",
+      text: "卜筮",
+      link: "/bu-shi/gui-bu",
+      activeMatch: "^/bu-shi/",
+    },
+    {
+      text: "命理",
+      link: "/ming-li/zi-ping-si-zhu",
+      activeMatch: "/ming-li/",
+    },
+    {
+      text: "干支五行",
+      link: "/gan-zhi/liushijiazi",
+      activeMatch: "/gan-zhi/",
     },
   ];
 }

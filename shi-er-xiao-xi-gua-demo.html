@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>十二消息卦 · Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1714;
+      --paper: #f3eee4;
+      --wash: #e8dfd0;
+      --line: #2c2419;
+      --yang: #c45c26;
+      --yin: #3d5a6c;
+      --muted: #6b6258;
+      --card: rgba(255, 252, 246, 0.92);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Noto Serif SC", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, #efe6d6 0%, transparent 55%),
+        linear-gradient(165deg, #f7f2e8 0%, #e5dccb 45%, #d9cfc0 100%);
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 2.35rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+    header p {
+      margin: 0.6rem auto 0;
+      max-width: 34rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.25rem 0 0.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 0.7rem;
+      height: 0.7rem;
+      margin-right: 0.35rem;
+      border-radius: 2px;
+      vertical-align: -0.05rem;
+    }
+    .legend .xi::before { background: var(--yang); }
+    .legend .xiao::before { background: var(--yin); }
+
+    .stage {
+      position: relative;
+      width: min(100%, 520px);
+      aspect-ratio: 1;
+      margin: 1rem auto 1.5rem;
+    }
+
+    .ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid color-mix(in srgb, var(--line) 18%, transparent);
+      background:
+        radial-gradient(circle at 50% 50%, transparent 28%, color-mix(in srgb, var(--wash) 55%, transparent) 29% 31%, transparent 32%);
+    }
+
+    .hub {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 28%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--card);
+      border: 1px solid color-mix(in srgb, var(--line) 20%, transparent);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.5rem;
+      box-shadow: 0 8px 28px rgb(40 30 15 / 8%);
+    }
+    .hub strong {
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+    }
+    .hub small {
+      margin-top: 0.25rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .node {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 4.6rem;
+      margin: -2.7rem 0 0 -2.3rem;
+      padding: 0.4rem 0.35rem 0.45rem;
+      border-radius: 8px;
+      background: var(--card);
+      border: 1px solid color-mix(in srgb, var(--line) 16%, transparent);
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+      box-shadow: 0 4px 14px rgb(40 30 15 / 6%);
+      font: inherit;
+      color: inherit;
+    }
+    .node:hover,
+    .node.is-active {
+      transform: scale(1.06);
+      border-color: color-mix(in srgb, var(--line) 45%, transparent);
+      box-shadow: 0 8px 22px rgb(40 30 15 / 12%);
+      z-index: 2;
+    }
+    .node.xi { outline: 2px solid color-mix(in srgb, var(--yang) 35%, transparent); }
+    .node.xiao { outline: 2px solid color-mix(in srgb, var(--yin) 35%, transparent); }
+    .node .name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+    .node .meta {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+    .yao-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      width: 2.4rem;
+      margin: 0.35rem auto 0;
+    }
+    .yao {
+      height: 4px;
+      border-radius: 1px;
+    }
+    .yao.yang { background: var(--line); }
+    .yao.yin {
+      background: transparent;
+      box-shadow:
+        inset 11px 0 0 var(--line),
+        inset -11px 0 0 var(--line);
+    }
+
+    .detail {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 1.1rem 1.25rem;
+      background: var(--card);
+      border: 1px solid color-mix(in srgb, var(--line) 14%, transparent);
+      border-radius: 10px;
+      min-height: 7.5rem;
+    }
+    .detail h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+    }
+    .detail .tags {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+      font-family: "JetBrains Mono", monospace;
+    }
+    .detail p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: #3a342c;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>十二消息卦</h1>
+      <p>
+        阳自下息为「息」，阴自下长为「消」。自复至乾，一阳至于纯阳；自姤至坤，一阴至于纯阴。配十二地支与十二月，见阴阳消长之序。
+      </p>
+      <div class="legend">
+        <span class="xi">息卦 · 阳息</span>
+        <span class="xiao">消卦 · 阴长</span>
+      </div>
+    </header>
+
+    <div class="stage" id="stage">
+      <div class="ring"></div>
+      <div class="hub">
+        <strong>消息</strong>
+        <small>子→巳息<br />午→亥消</small>
+      </div>
+    </div>
+
+    <section class="detail" id="detail" aria-live="polite">
+      <h2>点击环上任一卦</h2>
+      <div class="tags">十二辟卦 · 十二消长</div>
+      <p>息者阳来，消者阴往。点击卦位查看爻象、月建与简述。</p>
+    </section>
+
+    <footer>独立 Demo · 十二消息卦（辟卦）环图</footer>
+  </div>
+
+  <script>
+    // bits: 初→上，1阳0阴
+    const GUAS = [
+      { name: "复", bits: "100000", zhi: "子", month: "十一月", kind: "xi",
+        blurb: "一阳来复，潜阳在下。冬至阴极而阳生。" },
+      { name: "临", bits: "110000", zhi: "丑", month: "十二月", kind: "xi",
+        blurb: "二阳浸长，临于地上。阳气渐足以临事。" },
+      { name: "泰", bits: "111000", zhi: "寅", month: "正月", kind: "xi",
+        blurb: "三阳开泰，天地交而万物通。" },
+      { name: "大壮", bits: "111100", zhi: "卯", month: "二月", kind: "xi",
+        blurb: "四阳壮盛，雷在天上。阳长已过半。" },
+      { name: "夬", bits: "111110", zhi: "辰", month: "三月", kind: "xi",
+        blurb: "五阳决一阴，决而去之。阳将纯。" },
+      { name: "乾", bits: "111111", zhi: "巳", month: "四月", kind: "xi",
+        blurb: "六阳纯健，息之极。阳极而阴将生。" },
+      { name: "姤", bits: "011111", zhi: "午", month: "五月", kind: "xiao",
+        blurb: "一阴始遇，阴生自下。夏至阳极而阴生。" },
+      { name: "遁", bits: "001111", zhi: "未", month: "六月", kind: "xiao",
+        blurb: "二阴浸长，阳道当遁。退而守正。" },
+      { name: "否", bits: "000111", zhi: "申", month: "七月", kind: "xiao",
+        blurb: "三阴否塞，天地不交。闭塞成冬之始象。" },
+      { name: "观", bits: "000011", zhi: "酉", month: "八月", kind: "xiao",
+        blurb: "四阴在下，二阳在上。可观而不可进。" },
+      { name: "剥", bits: "000001", zhi: "戌", month: "九月", kind: "xiao",
+        blurb: "五阴剥一阳，硕果仅存于上。" },
+      { name: "坤", bits: "000000", zhi: "亥", month: "十月", kind: "xiao",
+        blurb: "六阴纯顺，消之极。阴极而阳将复。" },
+    ];
+
+    const stage = document.getElementById("stage");
+    const detail = document.getElementById("detail");
+    const R = 42;
+
+    function yaoHtml(bits) {
+      const lines = bits.split("").reverse();
+      return `<div class="yao-stack">${lines
+        .map((b) => `<div class="yao ${b === "1" ? "yang" : "yin"}"></div>`)
+        .join("")}</div>`;
+    }
+
+    GUAS.forEach((g, i) => {
+      const angle = (i / 12) * Math.PI * 2 + Math.PI / 2;
+      const x = 50 + R * Math.cos(angle);
+      const y = 50 + R * Math.sin(angle);
+      const el = document.createElement("button");
+      el.type = "button";
+      el.className = `node ${g.kind}`;
+      el.style.left = `${x}%`;
+      el.style.top = `${y}%`;
+      el.innerHTML = `
+        <div class="name">${g.name}</div>
+        <div class="meta">${g.zhi} · ${g.month}</div>
+        ${yaoHtml(g.bits)}
+      `;
+      el.addEventListener("click", () => select(g, el));
+      stage.appendChild(el);
+    });
+
+    function select(g, el) {
+      stage.querySelectorAll(".node").forEach((n) => n.classList.remove("is-active"));
+      el.classList.add("is-active");
+      const yang = g.bits.split("").filter((b) => b === "1").length;
+      detail.innerHTML = `
+        <h2>${g.name}</h2>
+        <div class="tags">${g.kind === "xi" ? "息卦" : "消卦"} · 地支${g.zhi} · ${g.month} · 阳爻${yang}</div>
+        <p>${g.blurb}</p>
+      `;
+    }
+
+    const first = stage.querySelector(".node");
+    if (first) select(GUAS[0], first);
+  </script>
+</body>
+</html>

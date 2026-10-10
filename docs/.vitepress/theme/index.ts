@@ -41,6 +41,7 @@ import ShiGanzhi from "./components/ganzhi/ShiGanzhi.vue";
 import GanZhiSlider from "./components/GanZhiSlider.vue";
 import GanZhi from "./components/GanZhi.vue";
 import DiZhi from "./components/DiZhi.vue";
+import RiZhu from "./components/ming-li/RiZhu.vue";
 
 export default {
   extends: DefaultTheme,
@@ -85,6 +86,7 @@ export default {
     app.component("GanZhiSlider", GanZhiSlider);
     app.component("GanZhi", GanZhi);
     app.component("DiZhi", DiZhi);
+    app.component("RiZhu", RiZhu);
     // ...
   },
 } satisfies Theme;

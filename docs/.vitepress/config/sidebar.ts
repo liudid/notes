@@ -9,7 +9,9 @@ export function getSidebar(): DefaultTheme.Sidebar {
     "/english/": sidebarEnglish(),
     "/dao/": sidebarDao(),
     "/yi-xue/": sidebarYixue(),
-    "/yao/": sidebarYao(),
+    "/bu-shi/": sidebarBuShi(),
+    "/ming-li/": sidebarMingLi(),
+    "/gan-zhi/": sidebarGanZhi(),
   };
 }
 
@@ -507,59 +509,98 @@ function sidebarYixue(): DefaultTheme.SidebarItem[] {
   ];
 }
 
-function sidebarYao(): DefaultTheme.SidebarItem[] {
+function sidebarMingLi(): DefaultTheme.SidebarItem[] {
   return [
-    { text: "五行", link: "/yao/wuxing" },
-    { text: "天干", link: "/yao/tiangan" },
+    {
+      text: "子平四柱",
+      link: "/ming-li/zi-ping-si-zhu",
+      collapsed: false,
+      items: [
+        { text: "日主", link: "/ming-li/zi-ping-si-zhu/ri-zhu" },
+        { text: "十神", link: "/ming-li/zi-ping-si-zhu/shi-shen" },
+        { text: "六亲", link: "/ming-li/zi-ping-si-zhu/liu-qin" },
+        { text: "旺衰", link: "/ming-li/zi-ping-si-zhu/wang-shuai" },
+        { text: "格局", link: "/ming-li/zi-ping-si-zhu/ge-ju" },
+        { text: "用神", link: "/ming-li/zi-ping-si-zhu/yong-shen" },
+        { text: "大运", link: "/ming-li/zi-ping-si-zhu/da-yun" },
+        { text: "流年", link: "/ming-li/zi-ping-si-zhu/liu-nian" },
+      ],
+    },
+    { text: "禄命法", link: "/ming-li/lu-ming-fa" },
+    { text: "纳音命", link: "/ming-li/na-yin-ming" },
+    { text: "紫微斗数", link: "/ming-li/zi-wei-dou-shu" },
+    { text: "七政四余", link: "/ming-li/qi-zheng-si-yu" },
+    { text: "星命诸法", link: "/ming-li/xing-ming-zhu-fa" },
+  ];
+}
+
+function sidebarBuShi(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: "龟卜", link: "/bu-shi/gui-bu" },
+    { text: "蓍草筮 / 大衍筮法", link: "/bu-shi/shi-cao-shi" },
+    { text: "六爻纳甲", link: "/bu-shi/liu-yao-na-jia" },
+    { text: "梅花易数", link: "/bu-shi/mei-hua-yi-shu" },
+    { text: "金钱卦", link: "/bu-shi/jin-qian-gua" },
+    { text: "灵棋经", link: "/bu-shi/ling-qi-jing" },
+    { text: "太乙", link: "/bu-shi/tai-yi" },
+    { text: "六壬", link: "/bu-shi/liu-ren" },
+    { text: "奇门遁甲", link: "/bu-shi/qi-men-dun-jia" },
+  ];
+}
+
+function sidebarGanZhi(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: "五行", link: "/gan-zhi/wuxing" },
+    { text: "天干", link: "/gan-zhi/tiangan" },
     {
       text: "地支",
-      link: "/yao/dizhi",
+      link: "/gan-zhi/dizhi",
     },
     {
       text: "天干地支（四序干支）",
-      link: "/yao/ganzhi",
+      link: "/gan-zhi/ganzhi",
     },
     {
       text: "炁机互动",
-      link: "/yao/qi-ji-hu-dong/index",
+      link: "/gan-zhi/qi-ji-hu-dong/index",
       items: [
         {
           text: "合",
-          link: "/yao/qi-ji-hu-dong/he",
+          link: "/gan-zhi/qi-ji-hu-dong/he",
         },
         {
           text: "冲",
-          link: "/yao/qi-ji-hu-dong/he",
+          link: "/gan-zhi/qi-ji-hu-dong/he",
         },
         {
           text: "刑",
-          link: "/yao/qi-ji-hu-dong/he",
+          link: "/gan-zhi/qi-ji-hu-dong/he",
         },
         {
           text: "害",
-          link: "/yao/qi-ji-hu-dong/he",
+          link: "/gan-zhi/qi-ji-hu-dong/he",
         },
         {
           text: "会",
-          link: "/yao/qi-ji-hu-dong/he",
+          link: "/gan-zhi/qi-ji-hu-dong/he",
         },
       ],
     },
     {
       text: "年干支",
-      link: "/yao/liushijiazi",
+      link: "/gan-zhi/liushijiazi",
     },
     {
       text: "月干支",
-      link: "/yao/yueganzhi",
+      link: "/gan-zhi/yueganzhi",
     },
     {
       text: "日干支",
-      link: "/yao/riganzhi",
+      link: "/gan-zhi/riganzhi",
     },
     {
       text: "时干支",
-      link: "/yao/shiganzhi",
+      link: "/gan-zhi/shiganzhi",
     },
   ];
 }
